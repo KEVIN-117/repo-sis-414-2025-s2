@@ -1,0 +1,464 @@
+<!DOCTYPE html><html lang="en" data-bs-theme="light"><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Laboratorio 2 - SIS-414 G-2</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="https://unpkg.com/katex@0/dist/katex.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">SIS-414 G-2</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Apuntes</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../apuntes/ASINCRONIA/" class="dropdown-item">Asincronismo con JavaScript</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/DOM/" class="dropdown-item">DOM (Document Object Model)</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/FUNDAMENTOS_REACT/" class="dropdown-item">React</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/GitGitHub/" class="dropdown-item">Introducción a Git: Guía para Principiantes</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/MODULOS_ES/" class="dropdown-item">Modulos en ES6</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/PETICIONES/" class="dropdown-item">Peticiones HTTP</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/js/" class="dropdown-item">JAVASCRIPT</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown" aria-expanded="false">Laboratorios</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Laboratorio%201/" class="dropdown-item">LABORATORIO 1 SIS-414</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Laboratorio 2</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Practicas</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../practicas/Practica%201%20-%20JavaScript%20%2B%20Git/" class="dropdown-item">Practica 1   JavaScript + Git</a>
+</li>
+                                    
+<li>
+    <a href="../../practicas/Practica%202%20-%20DOM/" class="dropdown-item">PRACTICA 2: Manipulación del DOM + Formularios y Persistencia en Memoria</a>
+</li>
+                                    
+<li>
+    <a href="../../practicas/Practica%203%20-%20Template/" class="dropdown-item">PRACTICA 3: Manipulación del DOM + Formularios y Persistencia en Memoria</a>
+</li>
+                                    
+<li>
+    <a href="../../practicas/Practica%204%20-%20Integrcion%20MUI/" class="dropdown-item">PRACTICA 4: Integración de MUI en Proyecto Web</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                            <li class="nav-item">
+                                <a rel="prev" href="../Laboratorio%201/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../practicas/Practica%201%20-%20JavaScript%20%2B%20Git/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="2"><a href="#laboratorio-mini-sistema-de-gestion-de-eventos" class="nav-link">🧪 Laboratorio: Mini sistema de gestión de eventos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#objetivo" class="nav-link">🌟 Objetivo</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#tecnologias" class="nav-link">⚙️ Tecnologías</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#alcance-funcional" class="nav-link">🔨 Alcance funcional</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#endpoints-disponibles" class="nav-link">Endpoints Disponibles</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#conceptos-que-se-pondran-en-practica" class="nav-link">🧐 Conceptos que se pondrán en práctica</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#cronograma-sugerido-2-horas" class="nav-link">⏱️ Cronograma sugerido (2 horas)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#estructura-esperada" class="nav-link">📂 Estructura esperada</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#extras-opcionales" class="nav-link">🔀 Extras opcionales</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#entregables" class="nav-link">📄 Entregables</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h2 id="laboratorio-mini-sistema-de-gestion-de-eventos">🧪 Laboratorio: Mini sistema de gestión de eventos<a class="headerlink" href="#laboratorio-mini-sistema-de-gestion-de-eventos" title="Permanent link">¶</a></h2>
+<h2 id="objetivo">🌟 Objetivo<a class="headerlink" href="#objetivo" title="Permanent link">¶</a></h2>
+<p>Construir una aplicación web funcional donde los estudiantes puedan:</p>
+<ol>
+<li>Registrar usuarios.</li>
+<li>Crear eventos asociados a un usuario.</li>
+<li>Listar los eventos de un usuario en particular.</li>
+</ol>
+<p>Este laboratorio está diseñado para realizarse en un máximo de 2 horas.</p>
+<hr>
+<h2 id="tecnologias">⚙️ Tecnologías<a class="headerlink" href="#tecnologias" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Backend</strong>: Java 21+, Spring Boot (Spring Web).</li>
+<li><strong>Frontend</strong>: React 19 con Next.js 15.</li>
+<li><strong>Comunicación</strong>: JSON vía fetch/Axios.</li>
+</ul>
+<hr>
+<h2 id="alcance-funcional">🔨 Alcance funcional<a class="headerlink" href="#alcance-funcional" title="Permanent link">¶</a></h2>
+<h3 id="backend-spring-boot">Backend - Spring Boot<a class="headerlink" href="#backend-spring-boot" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Ruta</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST</td>
+<td><code>/users</code></td>
+<td>Crear nuevo usuario</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/users/{id}/events</code></td>
+<td>Obtener eventos del usuario</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/users/{id}/events</code></td>
+<td>Crear evento para un usuario específico</td>
+</tr>
+</tbody>
+</table>
+<h3 id="modelo-user">Modelo <code>User</code><a class="headerlink" href="#modelo-user" title="Permanent link">¶</a></h3>
+<ul>
+<li><code>id</code>: Long</li>
+<li><code>name</code>: String</li>
+</ul>
+<h3 id="modelo-event">Modelo <code>Event</code><a class="headerlink" href="#modelo-event" title="Permanent link">¶</a></h3>
+<ul>
+<li><code>id</code>: Long</li>
+<li><code>title</code>: String</li>
+<li><code>description</code>: String</li>
+<li><code>userId</code>: Long (referencia al usuario)</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../diagram.png" data-desc-position="bottom"><img alt="image.png" src="../diagram.png"></a></p>
+<hr>
+<h2 id="endpoints-disponibles"><strong>Endpoints Disponibles</strong><a class="headerlink" href="#endpoints-disponibles" title="Permanent link">¶</a></h2>
+<h3 id="usuarios"><strong>Usuarios</strong><a class="headerlink" href="#usuarios" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong><code>POST /api/users</code></strong>&nbsp;- Crear un nuevo usuario</li>
+<li><strong><code>GET /api/users</code></strong>&nbsp;- Obtener todos los usuarios</li>
+<li><strong><code>GET /api/users/{id}</code></strong>&nbsp;- Obtener un usuario por ID</li>
+<li><strong><code>PUT /api/users/{id}</code></strong>&nbsp;- Actualizar un usuario</li>
+<li><strong><code>DELETE /api/users/{id}</code></strong>&nbsp;- Eliminar un usuario</li>
+</ul>
+<h3 id="eventos"><strong>Eventos</strong><a class="headerlink" href="#eventos" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong><code>POST /api/users/{userId}/events</code></strong>&nbsp;- Crear un nuevo evento para un usuario</li>
+<li><strong><code>GET /api/users/{userId}/events</code></strong>&nbsp;- Obtener todos los eventos de un usuario</li>
+<li><strong><code>GET /api/users/{userId}/events/{eventId}</code></strong>&nbsp;- Obtener un evento por ID</li>
+<li><strong><code>PUT /api/users/{userId}/events/{eventId}</code></strong>&nbsp;- Actualizar un evento</li>
+<li><strong><code>DELETE /api/users/{userId}/events/{eventId}</code></strong>&nbsp;- Eliminar un evento</li>
+</ul>
+<hr>
+<h3 id="frontend-nextjs">Frontend - Next.js<a class="headerlink" href="#frontend-nextjs" title="Permanent link">¶</a></h3>
+<h3 id="funcionalidades">Funcionalidades<a class="headerlink" href="#funcionalidades" title="Permanent link">¶</a></h3>
+<ol>
+<li><strong>Página principal</strong> (<code>/users</code>):<ul>
+<li>Lista de usuarios.</li>
+<li>Formulario para registrar nuevo usuario.</li>
+</ul>
+</li>
+<li><strong>Página de usuario</strong> (<code>/users/[id]</code>):<ul>
+<li>Lista de eventos del usuario.</li>
+<li>Formulario para crear nuevo evento.</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>Utilizar fetch o axios para conectarse al backend. Se recomienda usar el enrutamiento dinámico de Next.js para /users/[id].
+</p>
+</blockquote>
+<hr>
+<h2 id="conceptos-que-se-pondran-en-practica">🧐 Conceptos que se pondrán en práctica<a class="headerlink" href="#conceptos-que-se-pondran-en-practica" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Backend</th>
+<th>Frontend</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rutas RESTful con parámetros</td>
+<td>Páginas dinámicas con rutas (<code>[id].tsx</code>)</td>
+</tr>
+<tr>
+<td>Validación básica (campos vacíos)</td>
+<td>Manejo de estado local con hooks</td>
+</tr>
+<tr>
+<td>Relaciones (usuario-evento)</td>
+<td>Forms controlados y envío de datos</td>
+</tr>
+<tr>
+<td>DTOs / separación de modelos</td>
+<td>Navegación entre vistas usando Next.js</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="cronograma-sugerido-2-horas">⏱️ Cronograma sugerido (2 horas)<a class="headerlink" href="#cronograma-sugerido-2-horas" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Tiempo</th>
+<th>Actividad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0-15m</td>
+<td>Crear entidades y endpoints en Spring Boot</td>
+</tr>
+<tr>
+<td>15-30m</td>
+<td>Implementar lógica de negocio</td>
+</tr>
+<tr>
+<td>30-40m</td>
+<td>Probar API con Postman o curl</td>
+</tr>
+<tr>
+<td>40-60m</td>
+<td>Crear frontend base con Next.js</td>
+</tr>
+<tr>
+<td>60-90m</td>
+<td>Implementar vista de usuarios y eventos</td>
+</tr>
+<tr>
+<td>90-120m</td>
+<td>Pruebas, mejoras, entrega de evidencias</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="estructura-esperada">📂 Estructura esperada<a class="headerlink" href="#estructura-esperada" title="Permanent link">¶</a></h2>
+<h3 id="backend">Backend:<a class="headerlink" href="#backend" title="Permanent link">¶</a></h3>
+<pre class="highlight"><code>src/
+├─ controller/
+│  ├─ UserController.java
+│  └─ EventController.java
+├─ model/
+│  ├─ User.java
+│  └─ Event.java
+└─ service/
+   └─ EventService.java
+</code></pre>
+<h3 id="frontend-nextjs_1">Frontend (Next.js):<a class="headerlink" href="#frontend-nextjs_1" title="Permanent link">¶</a></h3>
+<pre class="highlight"><code>pages/
+├─ users/
+│  └─ [id].tsx       &lt;- Vista de eventos del usuario
+├─ index.tsx         &lt;- Vista de usuarios
+components/
+├─ UserForm.tsx
+├─ EventForm.tsx
+</code></pre>
+<hr>
+<h2 id="extras-opcionales">🔀 Extras opcionales<a class="headerlink" href="#extras-opcionales" title="Permanent link">¶</a></h2>
+<ul>
+<li>Filtro por nombre de evento.</li>
+<li>Validaciones en el frontend.</li>
+<li>Indicadores de carga (spinners).</li>
+<li>Alerta de éxito/error tras enviar formularios.</li>
+</ul>
+<hr>
+<h2 id="entregables">📄 Entregables<a class="headerlink" href="#entregables" title="Permanent link">¶</a></h2>
+<ul>
+<li>Código fuente del backend y frontend (repositorio Git).</li>
+<li>Captura de pantalla con:<ul>
+<li>Lista de usuarios.</li>
+<li>Lista de eventos de un usuario.</li>
+</ul>
+</li>
+<li>Respuestas a estas preguntas:<ol>
+<li>¿Cómo se comunican React y Spring Boot?</li>
+<li>¿Qué retos enfrentaste al hacer la integración?</li>
+</ol>
+</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright © 2025 by K3V1N 117</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../javascripts/katex.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+
+        <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body></html>

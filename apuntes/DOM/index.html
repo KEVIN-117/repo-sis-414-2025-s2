@@ -1,0 +1,536 @@
+<!DOCTYPE html><html lang="en" data-bs-theme="light"><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>DOM (Document Object Model) - SIS-414 G-2</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="https://unpkg.com/katex@0/dist/katex.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">SIS-414 G-2</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown" aria-expanded="false">Apuntes</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../ASINCRONIA/" class="dropdown-item">Asincronismo con JavaScript</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">DOM (Document Object Model)</a>
+</li>
+                                    
+<li>
+    <a href="../FUNDAMENTOS_REACT/" class="dropdown-item">React</a>
+</li>
+                                    
+<li>
+    <a href="../GitGitHub/" class="dropdown-item">Introducción a Git: Guía para Principiantes</a>
+</li>
+                                    
+<li>
+    <a href="../MODULOS_ES/" class="dropdown-item">Modulos en ES6</a>
+</li>
+                                    
+<li>
+    <a href="../PETICIONES/" class="dropdown-item">Peticiones HTTP</a>
+</li>
+                                    
+<li>
+    <a href="../js/" class="dropdown-item">JAVASCRIPT</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Laboratorios</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../laboratorios/Laboratorio%201/" class="dropdown-item">LABORATORIO 1 SIS-414</a>
+</li>
+                                    
+<li>
+    <a href="../../laboratorios/Laboratorio%202/" class="dropdown-item">Laboratorio 2</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Practicas</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../practicas/Practica%201%20-%20JavaScript%20%2B%20Git/" class="dropdown-item">Practica 1   JavaScript + Git</a>
+</li>
+                                    
+<li>
+    <a href="../../practicas/Practica%202%20-%20DOM/" class="dropdown-item">PRACTICA 2: Manipulación del DOM + Formularios y Persistencia en Memoria</a>
+</li>
+                                    
+<li>
+    <a href="../../practicas/Practica%203%20-%20Template/" class="dropdown-item">PRACTICA 3: Manipulación del DOM + Formularios y Persistencia en Memoria</a>
+</li>
+                                    
+<li>
+    <a href="../../practicas/Practica%204%20-%20Integrcion%20MUI/" class="dropdown-item">PRACTICA 4: Integración de MUI en Proyecto Web</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                            <li class="nav-item">
+                                <a rel="prev" href="../ASINCRONIA/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../FUNDAMENTOS_REACT/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#dom-document-object-model" class="nav-link">DOM (Document Object Model)</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#que-es-el-dom" class="nav-link">Qué es el DOM?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#crear-eliminar-modificar-elementos" class="nav-link">Crear, eliminar, modificar elementos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#manejo-de-atributos" class="nav-link">Manejo de atributos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="dom-document-object-model">DOM (Document Object Model)<a class="headerlink" href="#dom-document-object-model" title="Permanent link">¶</a></h1>
+<h2 id="que-es-el-dom">Qué es el DOM?<a class="headerlink" href="#que-es-el-dom" title="Permanent link">¶</a></h2>
+<ul>
+<li>Hasta este punto hemos ido trabajando unicamente con HTML y CSS que estas son las tecnologias que se encargan de la estructura y el diseño de la pagina web, permitiendonos crear unicamente oaginas web staticas. Pero de que nos sirve solo crear paginas web estaticas si no podemos interactuar con ellas?, y es aqui donde surge js que nos permite crear paginas qeb dinamicas para crear paginas cin mucha mas funcionalidad y que se puedan interactuar con el usuario. Todo esto gracias a que con js podemos manipular el DOM.</li>
+<li>
+<p>El DOM por sus siglas en ingles <code>Document Object Model</code>, es una interfaz de programación de aplicaciones (API) para documentos HTML y XML. Proporciona un conjunto de objetos para acceder, eliminar, modificar el contenido de y la estructura de un documento web.</p>
+</li>
+<li>
+<p>Un documento <code>html</code>esta formado por multiples etiquetas anidadas una dentro de otra, crerando una estructura de arbol. y el DOM es esto mismo, una representacion de este arbol en forma de objetos que podemos manipular con js.</p>
+</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../img/domImage.png" data-desc-position="bottom"><img alt="img.png" src="../img/domImage.png"></a></p>
+<h3 id="el-objeto-document">El objeto <code>document</code>:<a class="headerlink" href="#el-objeto-document" title="Permanent link">¶</a></h3>
+<ul>
+<li>El objeto <code>document</code> es el objeto principal del DOM, y representa el documento HTML. dentro de ella encontramos todos los elementos que conforman el documento, como los elementos <code>html</code>, <code>head</code>, <code>body</code>, etc. Pero estas se engoban con <code>Element</code>, <code>Node</code>.</li>
+<li><code>Element</code>: Representa una etiqueta de manera generica como <code>div</code>, <code>p</code>, <code>h1</code>, etc, tomando el tipo de HTMLElement.</li>
+<li><code>Node</code>: Representa cualquier tipo de nodo, ya sea un elemento, texto, comentario, etc.
+  Estas se clasifican dependiendo del tipo de elemento que sean</li>
+</ul>
+<!--table-->
+<table>
+<thead>
+<tr>
+<th>Tipo de dato Generico</th>
+<th>Tipo especifico</th>
+<th>Etiqueta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Element</code> <code>HTMLElement</code></td>
+<td><code>HTMLDivElement</code></td>
+<td><code>&lt;div&gt;</code></td>
+</tr>
+<tr>
+<td><code>Element</code> <code>HTMLElement</code></td>
+<td><code>HTMLParagraphElement</code></td>
+<td><code>&lt;p&gt;</code></td>
+</tr>
+<tr>
+<td><code>Element</code> <code>HTMLElement</code></td>
+<td><code>HTMLHeadingElement</code></td>
+<td><code>&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, &lt;h6&gt;</code></td>
+</tr>
+<tr>
+<td><code>Element</code> <code>HTMLElement</code></td>
+<td><code>HTMLImageElement</code></td>
+<td><code>&lt;img&gt;</code></td>
+</tr>
+<tr>
+<td><code>Element</code> <code>HTMLElement</code></td>
+<td><code>HTMLInputElement</code></td>
+<td><code>&lt;input&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="crear-eliminar-modificar-elementos">Crear, eliminar, modificar elementos<a class="headerlink" href="#crear-eliminar-modificar-elementos" title="Permanent link">¶</a></h2>
+<ul>
+<li>Para poder manipular el DOM, primero debemos seleccionar los elementos que queremos manipular, y para esto tenemos varias formas de hacerlo, como por ejemplo:</li>
+<li><code>document.getElementById()</code>: Nos permite seleccionar un elemento por su <code>id</code>.</li>
+<li><code>document.getElementsByClassName()</code>: Nos permite seleccionar un elemento por su <code>clase</code>.</li>
+<li><code>document.getElementsByTagName()</code>: Nos permite seleccionar un elemento por su <code>etiqueta</code>.</li>
+<li><code>document.querySelector()</code>: Nos permite seleccionar un elemento por un <code>selector css</code>.</li>
+<li><code>document.querySelectorAll()</code>: Nos permite seleccionar todos los elementos que cumplan con un <code>selector css</code>.</li>
+</ul>
+<h3 id="crear-elementos">Crear elementos<a class="headerlink" href="#crear-elementos" title="Permanent link">¶</a></h3>
+<ul>
+<li>Para poder crear un elemento, primero debemos crearlo con el metodo <code>document.createElement()</code>, y luego podemos añadirlo al documento con el metodo <code>appendChild()</code>.</li>
+</ul>
+<pre class="highlight"><code class="language-js">// Crear un elemento
+const div = document.createElement('div');
+
+// Añadir un texto al elemento
+div.textContent = 'Hola mundo';
+
+// Añadir el elemento al documento
+document.body.appendChild(div);</code></pre>
+<ul>
+<li>Existen aun mas metodos que nos permiten crear elementos, como por ejemplo:</li>
+<li><code>document.createTextNode()</code>: Nos permite crear un nodo de texto.</li>
+<li><code>document.createComment()</code>: Nos permite crear un nodo de comentario.</li>
+<li><code>document.createDocumentFragment()</code>: Nos permite crear un fragmento de documento.</li>
+<li><code>document.createAttribute()</code>: Nos permite crear un atributo.</li>
+<li><code>document.createEvent()</code>: Nos permite crear un evento.
+cada uno de estos metodos lleva un parametro que es el valor que se le asignara al elemento.</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../img/createEl.png" data-desc-position="bottom"><img alt="img.png" src="../img/createEl.png"></a></p>
+<ul>
+<li>nota que en la imagen se muestra que el metodo <code>document.createElement()</code>, este solo nos permite crear el elemento pero no lo agrega al documento, para esto debemos usar el metodo <code>appendChild()</code>.</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../img/appendChild.png" data-desc-position="bottom"><img alt="img.png" src="../img/appendChild.png"></a></p>
+<h3 id="eliminar-elementos">Eliminar elementos<a class="headerlink" href="#eliminar-elementos" title="Permanent link">¶</a></h3>
+<ul>
+<li>Para poder eliminar un elemento, primero debemos seleccionarlo y luego podemos eliminarlo con el metodo <code>remove()</code>.</li>
+</ul>
+<pre class="highlight"><code class="language-js">// Seleccionar un elemento
+const div = document.getElementById('my_modal_7');
+
+// Eliminar el elemento
+div.remove();</code></pre>
+<h3 id="modificar-elementos">Modificar elementos<a class="headerlink" href="#modificar-elementos" title="Permanent link">¶</a></h3>
+<ul>
+<li>Para poder modificar un elemento, primero debemos seleccionarlo y luego podemos modificarlo con sus propiedades.</li>
+</ul>
+<pre class="highlight"><code class="language-js">// Seleccionar un elemento
+const div = document.getElementById('myDiv');
+
+// Modificar el contenido del elemento
+div.textContent = 'Hola mundo';</code></pre>
+<ul>
+<li>en cada elemento del DOM tenemos propiedades que podemos modificar, como por ejemplo:</li>
+<li><code>textContent</code>: Nos permite modificar el contenido de texto de un elemento.</li>
+<li><code>innerHTML</code>: Nos permite modificar el contenido de html de un elemento.</li>
+<li><code>style</code>: Nos permite modificar el estilo de un elemento.</li>
+<li><code>classList</code>: Nos permite modificar las clases de un elemento.</li>
+</ul>
+<h2 id="manejo-de-atributos">Manejo de atributos<a class="headerlink" href="#manejo-de-atributos" title="Permanent link">¶</a></h2>
+<p>Para entender como manipular los atributos de un elemento, primero debemos entender que son los atributos de un elemento. Entonces bayamos a definir que es un atributo.</p>
+<h3 id="que-es-un-atributo">Qué es un atributo?<a class="headerlink" href="#que-es-un-atributo" title="Permanent link">¶</a></h3>
+<p>Priemeramenete hablemos de elementos <code>html</code>, seguramente as visto que en cada elemento <code>html</code> lo siguiente:
+</p><pre class="highlight"><code class="language-html">&lt;div class="container" id="myDiv" style="color: red;"&gt;&lt;/div&gt;</code></pre>
+- En este caso <code>class</code>, <code>id</code>, <code>style</code> pero que es esto, estos son los atributos de un elemento <code>html</code>, y estos son los que nos permiten darle caracteristicas a un elemento, como por ejemplo:
+  - <code>class</code>: Nos permite asignarle una clase a un elemento.
+  - <code>id</code>: Nos permite asignarle un identificador a un elemento.
+  - <code>style</code>: Nos permite asignarle estilos a un elemento.
+- Entonces los atributos son pares de clave-valor que se encuentran dentro de las etiquetas de un elemento <code>html</code>, y estos nos permiten darle caracteristicas o definir su comportamiento de la estiqueta a la que pertenecen.
+- Existen atributos generales que tienen todos los elementos <code>html</code> y tambien existen atributos especificos que tienen ciertos elementos <code>html</code>.<p></p>
+<p>Ahora que ya sabemos que es un atributo, vamos a ver como podemos manipular estos atributos con js.</p>
+<h3 id="acceder-a-atributos">Acceder a atributos<a class="headerlink" href="#acceder-a-atributos" title="Permanent link">¶</a></h3>
+<ul>
+<li>Para poder acceder a los atributos de un elemento, primero debemos seleccionarlo y luego podemos acceder a sus atributos del elemento seleccionado. para ello tomemos como ejemplo el siguiente codigo: HTML
+<pre class="highlight"><code class="language-html">&lt;div id="myDiv"&gt;&lt;/div&gt;</code></pre></li>
+</ul>
+<pre class="highlight"><code class="language-js">// Seleccionar un elemento
+
+const div = document.getElementById('myDiv'); // &lt;div id="myDiv"&gt;&lt;/div&gt;
+
+// Acceder a los atributos del elemento
+element.id = "page";           // &lt;div id="page" class="container"&gt;&lt;/div&gt;
+element.style = "color: red";  // &lt;div id="page" class="container" style="color: red"&gt;&lt;/div&gt;
+element.className = "data";    // &lt;div id="page" class="data" style="color: red"&gt;&lt;/div&gt;</code></pre>
+<ul>
+<li>
+<p>Con el codigo anterior podemos ver como podemos acceder a los atributos de un elemento, y como podemos modificarlos. En este caso estamos accediendo a los atributos <code>id</code>, <code>style</code>, <code>class</code>.</p>
+</li>
+<li>
+<p>Algo nuevo que talves as notado es al momento de acceder <code>element.className</code>, pero no se supone que el atributo es <code>class</code>, entonces que es lo que esta pasando aqui, pues resulta que <code>class</code> es una palabra reservada en js, por lo que no podemos usarla como nombre de una variable, por lo que en su lugar usamos <code>className</code>.</p>
+</li>
+<li>
+<p>Oh pero que interesante verdad, pero entonces donde uso <code>class</code> porque es una palabra reservada, pues resulta que en js tambien acepta la programacon orientada a objetos, pero en js se le denomina <code>prototipos</code>, y en este caso <code>class</code> es una palabra reservada para la creacion de prototipos, por lo que no podemos usarla como nombre de una variable. Ejemplo
+    </p><pre class="highlight"><code class="language-js">class Persona {
+  constructor(nombre, edad) {
+    this.nombre = nombre;
+    this.edad = edad;
+  }
+}</code></pre><p></p>
+<ul>
+<li>No te preocupes si no lo entiendes, ya llegara el momento de que hablemos de POO en javascript, por el momento solo dire que aqui no paso nada :).</li>
+</ul>
+</li>
+<li>
+<p>Pero entonces como puedo acceder a los atributos que tienen guiones, como por ejemplo <code>data-</code>, pues resulta que en js no podemos usar guiones en los nombres de las variables, por lo que en su lugar usamos <code>dataset</code>. Ejemplo
+    </p><pre class="highlight"><code class="language-html">&lt;div data-name="John"&gt;&lt;/div&gt;</code></pre>
+    <pre class="highlight"><code class="language-js">const div = document.querySelector('div');
+console.log(div.dataset.name); // John</code></pre><p></p>
+</li>
+<li>
+<p>Ahora hablemos de algunos metodos que nos permiten acceder a los atributos de un elemento, como por ejemplo:</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Metodo</th>
+<th>Valor de retorno</th>
+<th>Descripcion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>getAttribute()</code></td>
+<td><code>String</code></td>
+<td>Nos permite obtener el valor de un atributo de un elemento</td>
+</tr>
+<tr>
+<td><code>setAttribute()</code></td>
+<td>no retorna nada</td>
+<td>Nos permite establecer el valor de un atributo de un elemento</td>
+</tr>
+<tr>
+<td><code>hasAttribute()</code></td>
+<td><code>Boolean</code></td>
+<td>Nos permite saber si un elemento tiene un atributo</td>
+</tr>
+<tr>
+<td><code>hastAttributes()</code></td>
+<td><code>Boolean</code></td>
+<td>Nos permite saber si un elemento tiene atributos</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Ahora veamos un ejemplo de como podemos usar estos metodos:</li>
+</ul>
+<pre class="highlight"><code class="language-html">
+&lt;div id="myDiv" class="container" style="color: red;"&gt;&lt;/div&gt;</code></pre>
+<pre class="highlight"><code class="language-js">// Seleccionar un elemento
+const div = document.getElementById('myDiv');
+
+// Obtener el valor de un atributo
+console.log(div.getAttribute('id'));    // myDiv
+console.log(div.getAttribute('class')); // container
+console.log(div.getAttribute('style')); // color: red
+
+// Establecer el valor de un atributo
+div.setAttribute('id', 'page');
+div.setAttribute('class', 'data');
+div.setAttribute('style', 'color: blue');
+
+// Saber si un elemento tiene un atributo
+console.log(div.hasAttribute('id'));    // true
+console.log(div.hasAttribute('class')); // true
+console.log(div.hasAttribute('style')); // true
+console.log(div.hasAttributes());       // true</code></pre>
+<h3 id="modificar-o-eliminar-atributos">Modificar o Eliminar atributos<a class="headerlink" href="#modificar-o-eliminar-atributos" title="Permanent link">¶</a></h3>
+<ul>
+<li>Tambien tenemos funcione que no permten poder modificar o eliminar direcatmente estos atributos, como por ejemplo:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Metodo</th>
+<th>Valor de retorno</th>
+<th>Descripcion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>removeAttribute()</code></td>
+<td>no retorna nada</td>
+<td>Nos permite eliminar un atributo de un elemento</td>
+</tr>
+<tr>
+<td><code>toggleAttribute()</code></td>
+<td><code>Boolean</code></td>
+<td>Nos permite agregar o eliminar un atributo de un elemento</td>
+</tr>
+<tr>
+<td><code>replaceWith()</code></td>
+<td>no retorna nada</td>
+<td>Nos permite reemplazar un atributo de un elemento</td>
+</tr>
+<tr>
+<td><code>setAtriute()</code></td>
+<td>no retorna nada</td>
+<td>Nos permite establecer el valor de un atributo de un elemento</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Ahora veamos un ejemplo de como podemos usar estos metodos:</li>
+</ul>
+<pre class="highlight"><code class="language-html">&lt;div id="myDiv" class="container" style="color: red;"&gt;&lt;/div&gt;</code></pre>
+<pre class="highlight"><code class="language-js">// Seleccionar un elemento
+const div = document.getElementById('myDiv');
+
+// Eliminar un atributo
+
+div.removeAttribute('id');
+div.removeAttribute('class');
+div.removeAttribute('style');
+
+// Agregar o eliminar un atributo
+div.toggleAttribute('id');
+div.toggleAttribute('class');
+div.toggleAttribute('style');
+
+// Reemplazar un atributo
+div.replaceWith('id', 'page');
+div.replaceWith('class', 'data');
+div.replaceWith('style', 'color: blue');
+
+// Establecer el valor de un atributo
+div.setAttribute('id', 'page');
+div.setAttribute('class', 'data');
+div.setAttribute('style', 'color: blue');</code></pre>
+<h3 id="atributos-booleanos">Atributos booleanos<a class="headerlink" href="#atributos-booleanos" title="Permanent link">¶</a></h3>
+<ul>
+<li>Existe un caso especial que son los atributos <code>booleanos</code>, estos son atributos que no necesitan un valor, como por ejemplo <code>disabled</code>, <code>checked</code>, <code>selected</code>, etc. En estos casos si el atributo esta presente, entonces su valor es <code>true</code>, de lo contrario su valor es <code>false</code>.</li>
+<li>Entonces como hago para modificarlos directamente con <code>js</code>, pues resulta que estos atributos son un poco especiales, ya que si el atributo esta presente, entonces su valor es <code>true</code>, de lo contrario su valor es <code>false</code>. Ejemplo
+<pre class="highlight"><code class="language-html">&lt;input type="checkbox" id="myCheckbox" checked&gt;
+&lt;button id="myButton" disabled&gt;Click me&lt;/button&gt;</code></pre>
+<pre class="highlight"><code class="language-js">const checkbox = document.getElementById('myCheckbox');
+console.log(checkbox.checked); // true
+
+// en el caso de un boton si esta habilitado o no
+const button = document.getElementById('myButton');
+console.log(button.disabled); // true
+
+// hasta aqui todo bien pero como hago para modificar estos atributos, por lo que se vio en lo anterior podriamos pensar que modificar el valor de estos atributos seria de esta manera
+button.setAttribute("disabled", true);   // ❌ &lt;button disabled="true"&gt;Clickme!&lt;/button&gt;
+button.disabled = true;                  // ✅ &lt;button disabled&gt;Clickme!&lt;/button&gt;
+button.setAttribute("disabled", "");     // ✅ &lt;button disabled&gt;Clickme!&lt;/button&gt;</code></pre></li>
+</ul>
+<p>pero esto es un poco confuso, ya que si el atributo esta presente, entonces su valor es <code>true</code>, de lo contrario su valor es <code>false</code>, por lo que si queremos modificar estos atributos, entonces debemos hacerlo de la siguiente manera:
+</p><pre class="highlight"><code class="language-js">// utilizando el toggleAttribute es mas facil
+button.toggleAttribute("disabled"); // ✅ Como ya existe "disabled", entonces lo eliminara
+button.toggleAttribute("hidden"); // ✅ Como no existe "hidden", lo añade</code></pre><p></p>
+<h3 id="ahora-nos-toca-ver-la-api-classlist">Ahora nos toca ver la API classList<a class="headerlink" href="#ahora-nos-toca-ver-la-api-classlist" title="Permanent link">¶</a></h3></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright © 2025 by K3V1N 117</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../javascripts/katex.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+
+        <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body></html>

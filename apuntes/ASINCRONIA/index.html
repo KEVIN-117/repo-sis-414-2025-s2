@@ -1,0 +1,352 @@
+<!DOCTYPE html><html lang="en" data-bs-theme="light"><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Asincronismo con JavaScript - SIS-414 G-2</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="https://unpkg.com/katex@0/dist/katex.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">SIS-414 G-2</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown" aria-expanded="false">Apuntes</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Asincronismo con JavaScript</a>
+</li>
+                                    
+<li>
+    <a href="../DOM/" class="dropdown-item">DOM (Document Object Model)</a>
+</li>
+                                    
+<li>
+    <a href="../FUNDAMENTOS_REACT/" class="dropdown-item">React</a>
+</li>
+                                    
+<li>
+    <a href="../GitGitHub/" class="dropdown-item">Introducción a Git: Guía para Principiantes</a>
+</li>
+                                    
+<li>
+    <a href="../MODULOS_ES/" class="dropdown-item">Modulos en ES6</a>
+</li>
+                                    
+<li>
+    <a href="../PETICIONES/" class="dropdown-item">Peticiones HTTP</a>
+</li>
+                                    
+<li>
+    <a href="../js/" class="dropdown-item">JAVASCRIPT</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Laboratorios</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../laboratorios/Laboratorio%201/" class="dropdown-item">LABORATORIO 1 SIS-414</a>
+</li>
+                                    
+<li>
+    <a href="../../laboratorios/Laboratorio%202/" class="dropdown-item">Laboratorio 2</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Practicas</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../practicas/Practica%201%20-%20JavaScript%20%2B%20Git/" class="dropdown-item">Practica 1   JavaScript + Git</a>
+</li>
+                                    
+<li>
+    <a href="../../practicas/Practica%202%20-%20DOM/" class="dropdown-item">PRACTICA 2: Manipulación del DOM + Formularios y Persistencia en Memoria</a>
+</li>
+                                    
+<li>
+    <a href="../../practicas/Practica%203%20-%20Template/" class="dropdown-item">PRACTICA 3: Manipulación del DOM + Formularios y Persistencia en Memoria</a>
+</li>
+                                    
+<li>
+    <a href="../../practicas/Practica%204%20-%20Integrcion%20MUI/" class="dropdown-item">PRACTICA 4: Integración de MUI en Proyecto Web</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                            <li class="nav-item">
+                                <a rel="prev" href="../.." class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../DOM/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#asincronismo-con-javascript" class="nav-link">Asincronismo con JavaScript</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#callbacks" class="nav-link">Callbacks</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#promesas" class="nav-link">Promesas</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#asyncawait" class="nav-link">Async/Await</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#resumen" class="nav-link">Resumen</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejercicios" class="nav-link">Ejercicios</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#siguientes-pasos" class="nav-link">Siguientes pasos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="asincronismo-con-javascript">Asincronismo con JavaScript<a class="headerlink" href="#asincronismo-con-javascript" title="Permanent link">¶</a></h1>
+<p>El asincronismo indica que las tareas se pueden realizar mas tarde, no necesariamente en el orden en que se escriben. En JavaScript, las tareas asincrónicas se realizan mediante el uso de callbacks, promesas y async/await.
+Primero hay ciertas particularidades a tener en cuenta antes de empezar a trabajar con el asincronismo en JavaScript:
+- Single Thread: JavaScript es un lenguaje de programación de un solo hilo, lo que significa que solo puede realizar una tarea a la vez.
+- Call Stack: Es una estructura de datos que se encarga de almacenar las tareas que se están ejecutando en ese momento.
+- Sincronico: Las tareas se realizan en el orden en que se escriben.
+- Asincronico: Las tareas se realizan en un orden distinto al que se escriben, es decir las tareas se ejecutan en segundo plano.
+- Event Loop: JavaScript maneja la concurrencia mediante un bucle de eventos (Event Loop), que se encarga de manejar las tareas asincrónicas. El Evento loop controla el flujo de ejecución de las tareas en JavaScript, las partes más importantes del Event Loop son:
+    - Call Stack: Se encarga de almacenar las tareas que se están ejecutando en ese momento.
+    - Callback Queue: Se encarga de almacenar las tareas asincrónicas que se han completado.
+    - Microtask Queue: Se encarga de almacenar las tareas asincrónicas de alta prioridad.
+    - Task Queue: Se encarga de almacenar las tareas asincrónicas de baja prioridad.
+    - Event Loop: Se encarga de manejar las tareas asincrónicas y de decidir cuándo se ejecutan.
+    - Web APIs: Son las APIs que proporcionan los navegadores para realizar tareas asincrónicas, como hacer peticiones HTTP, manejar eventos, etc.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="https://miro.medium.com/v2/resize:fit:1358/1*GcbS54bJHWgvLDbUOhj_Eg.png" data-desc-position="bottom"><img alt="img.png" src="https://miro.medium.com/v2/resize:fit:1358/1*GcbS54bJHWgvLDbUOhj_Eg.png"></a>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../img/event-loop.png" data-desc-position="bottom"><img alt="img.png" src="../img/event-loop.png"></a></p>
+<ul>
+<li><a href="http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D">Event Loop Simulador</a></li>
+</ul>
+<p>Teniendo en cuenta estas definiciones podemos empezar a trabajar con el asincronismo en JavaScript. Hablemos de como maneja JavaScript las tareas asincrónicas.</p>
+<h2 id="callbacks">Callbacks<a class="headerlink" href="#callbacks" title="Permanent link">¶</a></h2>
+<p>Los callbacks son funciones que se pasan como argumentos a otras funciones y se ejecutan después de que una tarea asincrónica se haya completado. Los callbacks son la forma más antigua de trabajar con el asincronismo en JavaScript.</p>
+<ul>
+<li>Los callbacks como funciones de orden superior: Esto indica que las fucniones son tratados como ciudadanos de primera clase, es decir estas fucniones pueden ser asignadas a variables, pasadas como argumentos y retornadas como valores.</li>
+<li>Anidamiento de callbacks: Es una mala práctica, ya que se puede caer en el callback hell, que es un código difícil de leer y mantener.</li>
+</ul>
+<p>La forma triangular que produce es conocida como Callback Hell o Pyramid of Doom, debido a su forma, resultando un código muy poco elegante que se puede complicar demasiado de cara a la legibilidad. Es cuando entran en juego las promesas, que veremos en el siguiente capítulo.</p>
+<pre class="highlight"><code class="language-javascript">function callback() {
+    console.log('Hola Mundo');
+}
+
+setTimeout(callback, 1000);</code></pre>
+<h2 id="promesas">Promesas<a class="headerlink" href="#promesas" title="Permanent link">¶</a></h2>
+<p>Las promesas son objetos que representan la terminación o el fracaso de una tarea asincrónica. Las promesas tienen tres estados:
+Como su nombre lo indica una promesa es algo que en un pricnipio pensamos que ocurrira pero en el futuro pueden pasar muchas cosas, puede cumplirse o no cumplirse.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../img/img_2.png" data-desc-position="bottom"><img alt="img_2.png" src="../img/img_2.png"></a></p>
+<p>Las promesas tienen tres estados:
+- Pending (Promesa Pendiente): Estado inicial, la promesa no se ha cumplido ni rechazado.
+- resolve (Promesa Cumplida): La promesa se ha cumplido.
+- Rejected (Promesa Rechazada): La promesa no se ha cumplido.</p>
+<pre class="highlight"><code class="language-javascript">const promesa = new Promise((resolve, reject) =&gt; {
+    setTimeout(() =&gt; {
+        resolve('Promesa resuelta');
+    }, 1000);
+});
+
+promesa.then((response) =&gt; {
+    console.log(response);
+});</code></pre>
+<p>cada promesa tiene las siguientes funciones:</p>
+<ul>
+<li>then: Se ejecuta cuando la promesa se ha cumplido.</li>
+<li>catch: Se ejecuta cuando la promesa no se ha cumplido.</li>
+<li>finally: Se ejecuta siempre, tanto si la promesa se ha cumplido como si no.</li>
+</ul>
+<pre class="highlight"><code class="language-javascript">const promesa = new Promise((resolve, reject) =&gt; {
+    setTimeout(() =&gt; {
+        reject('Promesa rechazada');
+    }, 1000);
+});
+
+promesa.then((response) =&gt; {
+    console.log(response);
+}).catch((error) =&gt; {
+    console.log(error);
+}).finally(() =&gt; {
+    console.log('Promesa finalizada');
+});</code></pre>
+<h2 id="asyncawait">Async/Await<a class="headerlink" href="#asyncawait" title="Permanent link">¶</a></h2>
+<p>Async/Await es una forma de trabajar con promesas de una manera más sencilla y legible. Async <code>asíncrono</code> es una palabra clave que se utiliza para declarar una función asincrónica, mientras que Await <code>esperar</code> es una palabra clave que se utiliza para esperar a que una promesa se resuelva. Es lo que utilizaremos en la mayoría de los casos para trabajar con el asincronismo en JavaScript.</p>
+<p></p><pre class="highlight"><code class="language-javascript">
+// uso de promesas
+fetch('https://jsonplaceholder.typicode.com/todos/1')
+    .then(response =&gt; response.json())
+    .then(data =&gt; console.log(data));
+
+// uso de async/await
+async function miFuncion() {
+    const reponse = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+    const data = await response.json();
+    console.log(data);
+}
+
+miFuncion();</code></pre>
+- Async: Se utiliza para declarar una función asincrónica.
+- Await: Se utiliza para esperar a que una promesa se resuelva.
+- Fetch: Es una función que se utiliza para hacer peticiones HTTP.
+- JSON: Es un formato de intercambio de datos.<p></p>
+<h2 id="resumen">Resumen<a class="headerlink" href="#resumen" title="Permanent link">¶</a></h2>
+<ul>
+<li>cons async y await seguimos manejanod promesas pero de una forma mas sencilla y legible.</li>
+<li>await solo se puede utilizar dentro de una función asincrónica.</li>
+<li>await pausa la ejecución de la función hasta que la promesa se resuelva.</li>
+<li>No encadenamos promesas con then, sino que utilizamos async y await.</li>
+</ul>
+<h2 id="ejercicios">Ejercicios<a class="headerlink" href="#ejercicios" title="Permanent link">¶</a></h2>
+<ol>
+<li>Crear una función que reciba un número y retorne una promesa que determine si el número es par o impar. La promesa debe cumplirse si el número es par y rechazarse si el número es impar.</li>
+<li>Crear una función asíncrona que reciba un número como parámetro y retorne el mensaje "El número es par" si el número es par o "El número es impar" si el número es impar.</li>
+<li>Crear una función asíncrona que reciba un array de números como parámetro y retorne la suma de todos los números. La función debe rechazar la promesa si alguno de los elementos no es un número.</li>
+<li>Crear una función asíncrona que reciba un array de números como parámetro y retorne la suma de todos los números. La función debe rechazar la promesa si alguno de los elementos no es un número.</li>
+<li>Crear una función asíncrona que reciba un array de números como parámetro y retorne un array con los números elevados al cuadrado. La función debe rechazar la promesa si alguno de los elementos no es un número.</li>
+</ol>
+<h2 id="siguientes-pasos">Siguientes pasos<a class="headerlink" href="#siguientes-pasos" title="Permanent link">¶</a></h2>
+<p>Ahora que sabemos como funcuiona el asincronismo en JavaScript, podemos empezar a trabajar con APIs, bases de datos, etc. Para ello necesitamos conocer cómo hacer peticiones HTTP, cómo trabajar con bases de datos, etc. En los siguientes capítulos veremos cómo trabajar con APIs, bases de datos, etc.</p>
+<ul>
+<li>DOM: Document Object Model</li>
+<li>Eventos</li>
+<li>Petición HTTP con Fetch</li>
+<li>Modulos</li>
+</ul>
+<p>En el siguiente capítulo veremos cómo trabajar con el DOM en JavaScript.
+para dirigete al siguiente capítulo <a href="../DOM/">DOM</a></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright © 2025 by K3V1N 117</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../javascripts/katex.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+
+        <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body></html>
