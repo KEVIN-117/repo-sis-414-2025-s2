@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Manipulación del DOM + Formularios y Persistencia en Memoria - SIS-414 G-2</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="https://unpkg.com/katex@0/dist/katex.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+     <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">SIS-414 G-2</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Laboratorios</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../laboratorios/Laboratorio%201/" class="dropdown-item">Laboratorio 1</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Practicas</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Practica%201%20-%20JavaScript%20%2B%20Git/" class="dropdown-item">Practica 1   JavaScript + Git</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Manipulación del DOM + Formularios y Persistencia en Memoria</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                            <li class="nav-item">
+                                <a rel="prev" href="../Practica%201%20-%20JavaScript%20%2B%20Git/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#manipulacion-del-dom-formularios-y-persistencia-en-memoria" class="nav-link">Manipulación del DOM + Formularios y Persistencia en Memoria</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#parte-teorica" class="nav-link">Parte Teórica</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#parte-practica" class="nav-link">Parte Práctica</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#proyecto-editor-de-texto-dinamico" class="nav-link">Proyecto: "Editor de Texto Dinámico"</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#proyecto-registro-de-usuarios-en-memoria" class="nav-link">Proyecto: "Registro de Usuarios en Memoria"</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#parte-avanzada" class="nav-link">Parte Avanzada</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#criterios-de-evaluacion" class="nav-link">📌 Criterios de Evaluación</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="manipulacion-del-dom-formularios-y-persistencia-en-memoria"><strong>Manipulación del DOM + Formularios y Persistencia en Memoria</strong><a class="headerlink" href="#manipulacion-del-dom-formularios-y-persistencia-en-memoria" title="Permanent link">&para;</a></h1>
+<p><strong>Objetivo:</strong></p>
+<ul>
+<li>Comprender cómo interactuar con el DOM usando JavaScript.</li>
+<li>Aplicar los conocimientos en un proyecto realista.</li>
+</ul>
+<hr />
+<h1 id="parte-teorica"><strong>Parte Teórica</strong><a class="headerlink" href="#parte-teorica" title="Permanent link">&para;</a></h1>
+<h3 id="1-preguntas-conceptuales"><strong>1. Preguntas Conceptuales</strong><a class="headerlink" href="#1-preguntas-conceptuales" title="Permanent link">&para;</a></h3>
+<p><strong>a)</strong> ¿Qué es el DOM y cómo se relaciona con HTML?</p>
+<p><strong>b)</strong> Explica la diferencia entre:</p>
+<ul>
+<li><code>document.getElementById()</code> vs <code>document.querySelector()</code>.</li>
+<li><code>textContent</code> vs <code>innerHTML</code>.</li>
+</ul>
+<p><strong>c)</strong> ¿Para qué sirve <code>addEventListener</code>? Proporciona un ejemplo.</p>
+<p><strong>d)</strong> ¿Qué métodos del DOM se usan para capturar valores de un formulario?</p>
+<p><strong>e)</strong> Explica cómo prevenir el envío por defecto de un formulario con JavaScript.</p>
+<p><strong>f)</strong> ¿Qué es el "almacenamiento en memoria" y en qué se diferencia de <code>localStorage</code>?</p>
+<h3 id="2-analisis-de-codigo"><strong>2. Análisis de Código</strong><a class="headerlink" href="#2-analisis-de-codigo" title="Permanent link">&para;</a></h3>
+<p>Dado el siguiente código:</p>
+<div class="language-html highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;btn&quot;</span><span class="p">&gt;</span>Haz clic<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;mensaje&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="language-jsx highlight"><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;btn&quot;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;mensaje&quot;</span><span class="p">).</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;¡Botón presionado!&quot;</span><span class="p">;</span>
+<span class="p">});</span>
+</code></pre></div>
+<p><strong>Preguntas:</strong></p>
+<ul>
+<li>¿Qué hace el código?</li>
+<li>¿Qué pasaría si cambiamos <code>textContent</code> por <code>innerHTML</code>?</li>
+</ul>
+<hr />
+<h3 id="3-analisis-de-codigo"><strong>3. Análisis de Código</strong><a class="headerlink" href="#3-analisis-de-codigo" title="Permanent link">&para;</a></h3>
+<p>Dado el siguiente formulario:</p>
+<div class="language-html highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">form</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;form-usuario&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;nombre&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Nombre&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span><span class="p">&gt;</span>Guardar<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">ul</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;lista-usuarios&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="language-jsx highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">usuarios</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span><span class="w"> </span><span class="c1">// Array para simular persistencia</span>
+
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;form-usuario&quot;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;submit&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span><span class="w"> </span><span class="c1">// ¿Por qué es importante esta línea?</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;nombre&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">usuarios</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">nombre</span><span class="p">);</span><span class="w"> </span><span class="c1">// Almacena en memoria</span>
+<span class="w">  </span><span class="nx">actualizarListaUsuarios</span><span class="p">();</span>
+<span class="p">});</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">actualizarListaUsuarios</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">lista</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;lista-usuarios&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">lista</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">usuarios</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">user</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="sb">`&lt;li&gt;</span><span class="si">${</span><span class="nx">user</span><span class="si">}</span><span class="sb">&lt;/li&gt;`</span><span class="p">).</span><span class="nx">join</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Preguntas:</strong></p>
+<ul>
+<li>¿Qué hace el código al enviar el formulario?</li>
+<li>¿Cómo se simula la "persistencia de datos" aquí?</li>
+</ul>
+<hr />
+<aside>
+⚠️
+
+Es importante que tomes en cuenta que también se tomara en cuenta el dis de la paina
+
+</aside>
+
+<h1 id="parte-practica"><strong>Parte Práctica</strong><a class="headerlink" href="#parte-practica" title="Permanent link">&para;</a></h1>
+<h2 id="proyecto-editor-de-texto-dinamico"><strong>Proyecto: "Editor de Texto Dinámico"</strong><a class="headerlink" href="#proyecto-editor-de-texto-dinamico" title="Permanent link">&para;</a></h2>
+<p><strong>Requisitos:</strong></p>
+<ol>
+<li>Crea un HTML con:<ul>
+<li>Un <code>&lt;textarea&gt;</code> para que el usuario escriba.</li>
+<li>Un botón "Aplicar".</li>
+<li>Un <code>&lt;div&gt;</code> vacío con ID <code>"resultado"</code>.</li>
+</ul>
+</li>
+<li>Usa JavaScript para:<ul>
+<li>Capturar el texto del <code>&lt;textarea&gt;</code> cuando se haga clic en el botón.</li>
+<li>Mostrar ese texto en el <code>&lt;div id="resultado"&gt;</code> (usando <code>textContent</code>).</li>
+<li><strong>Bonus:</strong><ul>
+<li>Cambiar el color del texto a azul cuando se muestre en el <code>div</code>.</li>
+<li>Añadir un contador de caracteres debajo del <code>textarea</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="proyecto-registro-de-usuarios-en-memoria"><strong>Proyecto: "Registro de Usuarios en Memoria"</strong><a class="headerlink" href="#proyecto-registro-de-usuarios-en-memoria" title="Permanent link">&para;</a></h2>
+<p><strong>Requisitos:</strong></p>
+<ol>
+<li>Crea un formulario HTML con:<ul>
+<li>Campos: <code>Nombre</code>, <code>Email</code> y <code>Edad</code>.</li>
+<li>Botón de envío.</li>
+</ul>
+</li>
+<li>Usa JavaScript para:<ul>
+<li>Capturar los datos del formulario y guardarlos en un array (simulando una DB en memoria).</li>
+<li>Mostrar los usuarios registrados en una lista (<code>&lt;ul&gt;</code>) en tiempo real.</li>
+<li><strong>Validación:</strong> No permitir campos vacíos. Mostrar un mensaje de error si es necesario.</li>
+</ul>
+</li>
+<li><strong>Bonus:</strong><ul>
+<li>Añadir un botón para eliminar usuarios de la lista.</li>
+<li>Mostrar el total de usuarios registrados.</li>
+</ul>
+</li>
+</ol>
+<h3 id="estructura-html-sugerida"><strong>Estructura HTML Sugerida:</strong><a class="headerlink" href="#estructura-html-sugerida" title="Permanent link">&para;</a></h3>
+<div class="language-html highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">form</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;formulario-usuario&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;nombre&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Nombre&quot;</span> <span class="na">required</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;email&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;email&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Email&quot;</span> <span class="na">required</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;number&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;edad&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Edad&quot;</span> <span class="na">required</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span><span class="p">&gt;</span>Registrar<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;error&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;color: red;&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">ul</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;lista-usuarios&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;total-usuarios&quot;</span><span class="p">&gt;</span>Total: 0<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+<h1 id="parte-avanzada"><strong>Parte Avanzada</strong><a class="headerlink" href="#parte-avanzada" title="Permanent link">&para;</a></h1>
+<aside>
+⚠️
+
+Esto es un reto puedes aprovechar en realizar esto para poder mejorar la nota que quieras
+
+</aside>
+
+<h3 id="reto-busqueda-en-tiempo-real"><strong>Reto: Búsqueda en Tiempo Real</strong><a class="headerlink" href="#reto-busqueda-en-tiempo-real" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Añade un <code>&lt;input&gt;</code> de búsqueda que filtre los usuarios por nombre en tiempo real (usando el evento <code>input</code>).</li>
+<li><strong>Ejemplo:</strong></li>
+</ul>
+<div class="language-jsx highlight"><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;buscador&quot;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;input&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">busqueda</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">();</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">usuariosFiltrados</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">usuarios</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">user</span><span class="w"> </span><span class="p">=&gt;</span>
+<span class="w">    </span><span class="nx">user</span><span class="p">.</span><span class="nx">nombre</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">().</span><span class="nx">includes</span><span class="p">(</span><span class="nx">busqueda</span><span class="p">)</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="w">  </span><span class="c1">// Mostrar solo los filtrados...</span>
+<span class="p">});</span>
+</code></pre></div>
+<hr />
+<h1 id="criterios-de-evaluacion"><strong>📌 Criterios de Evaluación</strong><a class="headerlink" href="#criterios-de-evaluacion" title="Permanent link">&para;</a></h1>
+<h3 id="parte-1-teoria">Parte 1: Teoría<a class="headerlink" href="#parte-1-teoria" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Preguntas Conceptuales (10)</li>
+<li>Análisis de Código 2 y 3 (20)</li>
+</ul>
+<h3 id="parte-2-parte-practica">Parte 2: Parte Practica<a class="headerlink" href="#parte-2-parte-practica" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Proyecto Editor de Texto Básico (30)</li>
+<li>Proyecto Registro de Usuarios (40)</li>
+<li>Parte 3: Parte Avanzada 20</li>
+</ul>
+<hr />
+<h3 id="recursos-adicionales"><strong>🔗 Recursos Adicionales</strong><a class="headerlink" href="#recursos-adicionales" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model/Introduction">Documentación MDN sobre DOM</a>.</li>
+<li><a href="https://developer.mozilla.org/es/docs/Web/API/HTMLFormElement/submit_event">Eventos de Formularios en MDN</a>.</li>
+<li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array">Métodos de Arrays en JavaScript</a>.</li>
+<li><a href="https://codepen.io/pen/">Práctica interactiva en CodePen</a>.</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2025 by K3V1N 117</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../javascripts/katex.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+
+        <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body>
+</html>
