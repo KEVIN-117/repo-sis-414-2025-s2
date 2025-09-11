@@ -1,0 +1,2272 @@
+<!DOCTYPE html><html lang="en" data-bs-theme="light"><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Java 21 + Spring Boot Backend Developer - SIS-414 G-2</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="https://unpkg.com/katex@0/dist/katex.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">SIS-414 G-2</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown" aria-expanded="false">Apuntes</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../ASINCRONIA/" class="dropdown-item">Asincronismo con JavaScript</a>
+</li>
+                                    
+<li>
+    <a href="../DOM/" class="dropdown-item">DOM (Document Object Model)</a>
+</li>
+                                    
+<li>
+    <a href="../FUNDAMENTOS_REACT/" class="dropdown-item">React</a>
+</li>
+                                    
+<li>
+    <a href="../GitGitHub/" class="dropdown-item">Introducción a Git: Guía para Principiantes</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Java 21 + Spring Boot Backend Developer</a>
+</li>
+                                    
+<li>
+    <a href="../MODULOS_ES/" class="dropdown-item">Modulos en ES6</a>
+</li>
+                                    
+<li>
+    <a href="../PETICIONES/" class="dropdown-item">Peticiones HTTP</a>
+</li>
+                                    
+<li>
+    <a href="../js/" class="dropdown-item">JAVASCRIPT</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Laboratorios</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../laboratorios/Laboratorio%201/" class="dropdown-item">LABORATORIO 1 SIS-414</a>
+</li>
+                                    
+<li>
+    <a href="../../laboratorios/Laboratorio%202/" class="dropdown-item">Laboratorio 2</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Practicas</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../practicas/Practica%201%20-%20JavaScript%20%2B%20Git/" class="dropdown-item">Practica 1   JavaScript + Git</a>
+</li>
+                                    
+<li>
+    <a href="../../practicas/Practica%202%20-%20DOM/" class="dropdown-item">PRACTICA 2: Manipulación del DOM + Formularios y Persistencia en Memoria</a>
+</li>
+                                    
+<li>
+    <a href="../../practicas/Practica%203%20-%20Template/" class="dropdown-item">PRACTICA 3: Manipulación del DOM + Formularios y Persistencia en Memoria</a>
+</li>
+                                    
+<li>
+    <a href="../../practicas/Practica%204%20-%20Integrcion%20MUI/" class="dropdown-item">PRACTICA 4: Integración de MUI en Proyecto Web</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                            <li class="nav-item">
+                                <a rel="prev" href="../GitGitHub/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../MODULOS_ES/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#java-21-spring-boot-backend-developer" class="nav-link">Java 21 + Spring Boot Backend Developer</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#objetivo" class="nav-link">Objetivo</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#modulo-0-introduccion-a-la-programacion-y-al-lenguaje-java" class="nav-link">📘 Módulo 0: Introducción a la programación y al lenguaje Java</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#modulo-1-fundamentos-de-programacion-orientada-a-objetos-poo" class="nav-link">🧱 Módulo 1: Fundamentos de Programación Orientada a Objetos (POO)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#modulo-2-ecosistema-de-java-maven-y-lombok" class="nav-link">⚙️ Módulo 2: Ecosistema de Java - Maven y Lombok</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#modulo-3-colecciones-genericos-y-programacion-funcional" class="nav-link">🌀 Módulo 3: Colecciones, Genéricos y Programación Funcional</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#colecciones" class="nav-link">Colecciones</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#genericos" class="nav-link">Genéricos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#programacion-funcional" class="nav-link">Programación Funcional</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#-proposito-es-una-especializacion-de-bifunction-donde-los-dos-argumentos-y-el-resultado-son-del-mismo-tipo-t" class="nav-link">- Propósito: Es una especialización de BiFunction donde los dos argumentos y el resultado son del mismo tipo T.</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#modulo-4-java-21-novedades-utiles-y-modernas" class="nav-link">🚀 Módulo 4: Java 21 – Novedades útiles y modernas</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#parte-1-esenciales-para-empezar" class="nav-link">Parte 1: Esenciales para empezar</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#parte-2-avanzadas-optativo" class="nav-link">Parte 2: Avanzadas (optativo)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#practiquemos-todo-lo-aprendido" class="nav-link">Practiquemos todo lo aprendido</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#modulo-5-apis-sin-spring-fundamentos-web-en-java" class="nav-link">🧩 Módulo 5: APIs sin Spring - Fundamentos Web en Java</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#modulo-6-spring-boot-basico-y-buenas-practicas-rest" class="nav-link">🌱 Módulo 6: Spring Boot básico y buenas prácticas REST</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#modulo-7-persistencia-de-datos-con-spring-data-jpa" class="nav-link">🗃️ Módulo 7: Persistencia de datos con Spring Data JPA</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#modulo-8-seguridad-con-spring-security" class="nav-link">🔐 Módulo 8: Seguridad con Spring Security</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#modulo-9-pruebas-automatizadas-en-java" class="nav-link">🧪 Módulo 9: Pruebas automatizadas en Java</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#modulo-10-consumo-de-api-desde-frontend-js" class="nav-link">🌐 Módulo 10: Consumo de API desde Frontend JS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#modulo-11-concurrencia-moderna-en-java" class="nav-link">🧵 Módulo 11: Concurrencia moderna en Java</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#modulo-12-spring-ai" class="nav-link">🤖 Módulo 12: Spring AI</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#notas-adicionales" class="nav-link">Notas adicionales</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="java-21-spring-boot-backend-developer">Java 21 + Spring Boot Backend Developer<a class="headerlink" href="#java-21-spring-boot-backend-developer" title="Permanent link">¶</a></h1>
+<h2 id="objetivo">Objetivo<a class="headerlink" href="#objetivo" title="Permanent link">¶</a></h2>
+<p>Facilitar el aprendizaje progresivo para personas que están iniciando en el desarrollo <code>backend</code> con Java, integrando buenas prácticas, tecnologías actuales y fundamentos sólidos.</p>
+<hr>
+<p>Para poder abordar de manera correcta al desarrollo <code>backend</code> con java, es necesario conocer los conceptos básicos y necesarios para poder entender los tópicos que se enumeran a continuación:</p>
+<h1 id="modulo-0-introduccion-a-la-programacion-y-al-lenguaje-java">📘 Módulo 0: Introducción a la programación y al lenguaje Java<a class="headerlink" href="#modulo-0-introduccion-a-la-programacion-y-al-lenguaje-java" title="Permanent link">¶</a></h1>
+<ul>
+<li>
+<p>¿Qué es un lenguaje de programación?</p>
+<p>A un lenguaje de programación podríamos definirlo como un lenguaje formal que por medio de instrucciones permite el desarrollo de algoritmos que interactúen con el so</p>
+</li>
+<li>
+<p>Variables, condicionales, ciclos, funciones.</p>
+<ul>
+<li>Variables: las variables podríamos definirlo como un lugar en el que podemos guardar algo, estas variables en algunos lenguajes manejan tipos de datos.</li>
+<li>Condicionales: las estructuras condicionales son aquellas que durante le ejecución del algoritmo permite cambiar la ejecución del algoritmo en base a condiciones.</li>
+<li>Ciclos: los ciclos o bucles son estructuras repetitivas que permite realizar tareas repetitivas en algoritmos.</li>
+<li>Funciones: las funciones permiten definir lógica reutilizable, en alguno java estas funciones deben retornar un valor o tambien no, todo dependerá de como se baya a definir.</li>
+</ul>
+</li>
+<li>Introducción a la JVM y JDK.<ul>
+<li>JVM: Es la maquina virtual de java es decir el compilador, lo cual permite ejecutar código java, de hay nace la frase “escribe una sola ves y ejecuta en cualquier lugar”.</li>
+<li>JDK: Es el kit de desarrollo de java, es el lugar donde se encuentran todas las utilizades de java.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="modulo-1-fundamentos-de-programacion-orientada-a-objetos-poo">🧱 Módulo 1: Fundamentos de Programación Orientada a Objetos (POO)<a class="headerlink" href="#modulo-1-fundamentos-de-programacion-orientada-a-objetos-poo" title="Permanent link">¶</a></h1>
+<p>La POO es uno de los paradigmas más importantes que se utiliza para el desarrollo de software, entonces es fundamental entender sus conceptos básicos, entender los pilares fundamentales.</p>
+<ul>
+<li>Clases y Objetos<ul>
+<li>Clases: Podremos definir una clase como un molde que nos permite crear objetos, estas clases pueden tener atributos, métodos (acciones)</li>
+<li>Los objetos no son más que instancias de clases</li>
+</ul>
+</li>
+<li>
+<p>Encapsulamiento, Herencia, Polimorfismo, abstracción</p>
+<p>Estas son los tres pilares fundamentales de la POO, entonces vayamos definiendo cada uno de ellos:</p>
+<ul>
+<li>
+<p>Encapsulamiento: Permite ocultar algunos detalles internos de un objeto (<code>atributos</code>) privados y expone solo lo necesario mediante métodos públicos (<code>get</code> y <code>set</code>),</p>
+<pre class="highlight"><code class="language-java">// 🔒 La variable contraseña está protegida, y solo se puede acceder mediante el método verificarContraseña.
+public class Usuario {
+    private String contraseña;
+
+    public Usuario(String contraseña) {
+        this.contraseña = contraseña;
+    }
+
+    public boolean verificarContraseña(String input) {
+        return input.equals(this.contraseña);
+    }
+}
+</code></pre>
+</li>
+<li>
+<p>Polimorfismo: El polimorfismo es una de las cosas más fascinantes que se puede logras con la POO, podemos definirlo con lo siguiente <code>muchas formas</code> es decir, permite que diferentes clases respondan al mismo método, pero de forma distinta</p>
+<pre class="highlight"><code class="language-java">interface Notificador {
+    void enviar(String mensaje);
+}
+
+public class Email implements Notificador {
+    public void enviar(String mensaje) {
+        System.out.println("Enviando email: " + mensaje);
+    }
+}
+
+public class SMS implements Notificador {
+    public void enviar(String mensaje) {
+        System.out.println("Enviando SMS: " + mensaje);
+    }
+}</code></pre>
+</li>
+<li>
+<p>Herencia: La herencia nos permite simular una estructura jerárquica en el desarrollo de software, es decir permite que una clase hija herede todas las propiedades y métodos de una clase padre. para poder hacer referencia a la clase padre se usa <code>super</code></p>
+<pre class="highlight"><code class="language-java">public class Animal {
+    public void mover() {
+        System.out.println("El animal se mueve");
+    }
+}
+
+// 🐶 Perro hereda el método mover() de Animal y añade su propio comportamiento.
+public class Perro extends Animal {
+    public void ladrar() {
+        System.out.println("Guau!");
+    }
+}</code></pre>
+</li>
+<li>
+<p>Abstracción: Permite esconder la complejidad interna y solo expone lo esencial</p>
+<pre class="highlight"><code class="language-java">🧩 La clase abstracta define el contrato, y las clases concretas lo implementan según sus necesidades.
+abstract class BaseDeDatos {
+    abstract void conectar();
+}
+
+public class MongoDB extends BaseDeDatos {
+    public void conectar() {
+        System.out.println("Conectando a MongoDB...");
+    }
+}</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>Interfaces y clases abstractas</p>
+<p>Estos conceptos son fundamentales, podemos definir las interfaces y las clases abstractas como contratos, es decir las todas las clases que implementen a una de estas tienen la obligación de darle un comportamiento a los métodos que las interfaces y clases abstractas definen.</p>
+<p>Tanto las interfaces y clases abstractas no son iguales algunas de las diferencias claves son:</p>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Clase Abstracta</th>
+<th>Interfaz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Herencia</td>
+<td>Solo se puede heredar de una clase abstracta</td>
+<td>Se pueden implementar múltiples interfaces</td>
+</tr>
+<tr>
+<td>Métodos</td>
+<td>Puede tener métodos abstractos y concretos</td>
+<td>Solo métodos abstractos (desde Java 8, también default y static)</td>
+</tr>
+<tr>
+<td>Atributos</td>
+<td>Puede tener atributos con cualquier modificador</td>
+<td>Solo constantes (<code>public static final</code>)</td>
+</tr>
+<tr>
+<td>Constructores</td>
+<td>Puede tener constructores</td>
+<td>No puede tener constructores</td>
+</tr>
+<tr>
+<td>Modificadores de acceso</td>
+<td>Métodos pueden ser <code>public</code>, <code>protected</code></td>
+<td>Todos los métodos son <code>public</code></td>
+</tr>
+<tr>
+<td>Uso típico</td>
+<td>Base común con lógica compartida</td>
+<td>Contrato que define comportamiento</td>
+</tr>
+</tbody>
+</table>
+<p>Su uso se da en los siguientes casos:</p>
+<ul>
+<li>
+<p>Una clase abstracta suele usarse varias clases comparten lógica común y además de ello necesitan una base de métodos ya implementados</p>
+<pre class="highlight"><code class="language-java">// Figura define un método abstracto y uno concreto. Cuadrado implementa el cálculo específico.
+abstract class Figura {
+    abstract float calcularArea();
+
+    public void mostrarTipo() {
+        System.out.println("Soy una figura geométrica");
+    }
+}
+
+class Cuadrado extends Figura {
+    private float lado;
+
+    public Cuadrado(float lado) {
+        this.lado = lado;
+    }
+
+    public float calcularArea() {
+        return lado * lado;
+    }
+}</code></pre>
+</li>
+<li>
+<p>Una interfaz permite definir solo métodos o también llamados contratos y las clases que lo implemente están en la obligación de cumplirlo sin compartir la implementación.</p>
+<pre class="highlight"><code class="language-java">// Notificador define el contrato. Cada clase lo implementa a su manera.
+interface Notificador {
+    void enviar(String mensaje);
+}
+
+class Email implements Notificador {
+    public void enviar(String mensaje) {
+        System.out.println("Enviando email: " + mensaje);
+    }
+}
+
+class SMS implements Notificador {
+    public void enviar(String mensaje) {
+        System.out.println("Enviando SMS: " + mensaje);
+    }
+}</code></pre>
+<p>estas interfaces podemos clasificarlo en dos:</p>
+<ul>
+<li>
+<p>Interfaces funcionales: Estas interfaces solo definen un solo método abstracto, a usarlo nos da una facilidad de usarlo usando expresiones lambda o referencias a métodos estos conceptos se profundizarán más en la sección de programación funcional</p>
+<pre class="highlight"><code class="language-java">// La anotación @FunctionalInterface no es obligatoria, pero ayuda a que el compilador verifique que la interfaz cumple con la regla.
+@FunctionalInterface
+interface Operacion {
+    int apply(int a, int b);
+}</code></pre>
+<ul>
+<li>Su uso es ideal para programación funcional, callbacks, Streams, y APIs modernas.
+        - Interfaces no funcionales: Este tipo de interfaces son lo contrario, es decir definen a más de un método abstracto</li>
+</ul>
+<pre class="highlight"><code class="language-java">interface Operaciones {
+    int sumar(int a, int b);
+    int restar(int a, int b);
+}</code></pre>
+<ul>
+<li>Útil para definir contratos más complejos, como en arquitecturas orientadas a servicios o patrones como Strategy.</li>
+<li>Asociaciones entre clases (UML → código Java)<ul>
+<li>Tipos de asociaciones UML y su equivalente en Java</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Tipo de relación</th>
+<th>UML (símbolo)</th>
+<th>Java (implementación)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Asociación</td>
+<td>Línea simple</td>
+<td>Atributo con tipo de otra clase</td>
+</tr>
+<tr>
+<td>Agregación</td>
+<td>Línea con rombo vacío</td>
+<td>Atributo con tipo de otra clase (sin dependencia fuerte)</td>
+</tr>
+<tr>
+<td>Composición</td>
+<td>Línea con rombo lleno</td>
+<td>Atributo con tipo de otra clase (con dependencia fuerte)</td>
+</tr>
+<tr>
+<td>Herencia</td>
+<td>Flecha con triángulo</td>
+<td><code>extends</code> entre clases</td>
+</tr>
+<tr>
+<td>Implementación</td>
+<td>Línea punteada</td>
+<td><code>implements</code> entre clase e interfaz</td>
+</tr>
+<tr>
+<td>Dependencia</td>
+<td>Flecha punteada</td>
+<td>Uso temporal de otra clase (como parámetro o método)</td>
+</tr>
+</tbody>
+</table>
+<p>Fuente: <a href="https://blog.visual-paradigm.com/es/what-are-the-six-types-of-relationships-in-uml-class-diagrams/">Visual Paradigm Blog Español</a></p>
+<ul>
+<li>
+<p>Ejemplos en Java</p>
+<ul>
+<li>
+<ol>
+<li>Asociación (↔)</li>
+</ol>
+<pre class="highlight"><code class="language-java">public class Profesor {
+    private Curso curso; // Asociación: un profesor tiene un curso
+}</code></pre>
+</li>
+<li>
+<ol>
+<li>Agregación (◇)</li>
+</ol>
+<pre class="highlight"><code class="language-java">public class Departamento {
+    private List&lt;Profesor&gt; profesores; // Agregación: los profesores pueden existir sin el departamento
+}</code></pre>
+</li>
+<li>
+<ol>
+<li>Composición (◆)</li>
+</ol>
+<pre class="highlight"><code class="language-java">public class Casa {
+    private Habitacion habitacion; // Composición: si la casa se destruye, la habitación también
+}</code></pre>
+</li>
+<li>
+<ol>
+<li>Herencia (△)</li>
+</ol>
+<pre class="highlight"><code class="language-java">public class Animal {
+    public void mover() {}
+}
+
+public class Perro extends Animal {
+    public void ladrar() {}
+}</code></pre>
+</li>
+<li>
+<ol>
+<li>Implementación (⋯)</li>
+</ol>
+<pre class="highlight"><code class="language-java">interface Volador {
+    void volar();
+}
+
+public class Pajaro implements Volador {
+    public void volar() {
+        System.out.println("El pájaro vuela");
+    }
+}</code></pre>
+</li>
+<li>
+<ol>
+<li>Dependencia (→)</li>
+</ol>
+<pre class="highlight"><code class="language-java">public class ServicioEmail {
+    public void enviarMensaje(Usuario usuario) {
+        // Usa Usuario temporalmente
+    }
+}</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>¿Cómo modelarlo en UML?</p>
+<ul>
+<li><strong>Clase A tiene una referencia a Clase B</strong> → Asociación (↔)</li>
+<li><strong>Clase A contiene objetos de Clase B, pero B puede vivir sin A</strong> → Agregación (◇)</li>
+<li><strong>Clase A contiene objetos de Clase B, y B depende del ciclo de vida de A</strong> → Composición (◆)</li>
+<li><strong>Clase B extiende A</strong> → Herencia (△)</li>
+<li><strong>Clase B implementa interfaz A</strong> → Implementación (⋯)</li>
+<li><strong>Clase A usa Clase B como parámetro o variable local</strong> → Dependencia (→)</li>
+</ul>
+</li>
+<li>
+<p>Un Ejemplo más elaborado</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../img/image.png" data-desc-position="bottom"><img alt="image.png" src="../img/image.png"></a></p>
+</li>
+<li>
+<p>Traducción a codigo</p>
+<ul>
+<li>Relación entre clases<ul>
+<li><code>Curso</code> <strong>compone</strong> <code>Evaluacion</code> → si el curso se elimina, las evaluaciones también.</li>
+<li><code>Profesor</code> <strong>asociado</strong> a un <code>Curso</code> → relación directa.</li>
+<li><code>Curso</code> <strong>agrega</strong> <code>Estudiantes</code> → los estudiantes existen independientemente del curso.</li>
+</ul>
+</li>
+</ul>
+<h3 id="cursojava"><code>Curso.java</code><a class="headerlink" href="#cursojava" title="Permanent link">¶</a></h3>
+<pre class="highlight"><code class="language-java">public class Curso {
+    private String nombre;
+    private String codigo;
+    private List&lt;Evaluacion&gt; evaluaciones = new ArrayList&lt;&gt;();
+
+    public void agregarEvaluacion(Evaluacion eval) {
+        evaluaciones.add(eval);
+    }
+}
+</code></pre>
+<h3 id="profesorjava"><code>Profesor.java</code><a class="headerlink" href="#profesorjava" title="Permanent link">¶</a></h3>
+<pre class="highlight"><code class="language-java">public class Profesor {
+    private String nombre;
+    private Curso curso;
+
+    public Profesor(String nombre, Curso curso) {
+        this.nombre = nombre;
+        this.curso = curso;
+    }
+}
+</code></pre>
+<h3 id="estudiantejava"><code>Estudiante.java</code><a class="headerlink" href="#estudiantejava" title="Permanent link">¶</a></h3>
+<pre class="highlight"><code class="language-java">public class Estudiante {
+    private String nombre;
+    private String matricula;
+
+    public Estudiante(String nombre, String matricula) {
+        this.nombre = nombre;
+        this.matricula = matricula;
+    }
+}
+</code></pre>
+<h3 id="evaluacionjava"><code>Evaluacion.java</code><a class="headerlink" href="#evaluacionjava" title="Permanent link">¶</a></h3>
+<pre class="highlight"><code class="language-java">public class Evaluacion {
+    private String tipo;
+    private double nota;
+
+    public Evaluacion(String tipo, double nota) {
+        this.tipo = tipo;
+        this.nota = nota;
+    }
+}
+</code></pre>
+<hr>
+</li>
+</ul>
+</li>
+<li>
+<p>Introducción a pruebas con JUnit (tests simples de lógica de clases)</p>
+<p>Testing es otro mundo, pero solo hablaremos de testing en java con JUnit, es ideal para verificar la lógica de clases y detectar errores.</p>
+<ul>
+<li>
+<p>Estructura básica de una prueba</p>
+<p>El patrón típico es <strong>AAA</strong>:</p>
+<ol>
+<li><strong><code>Arrange</code></strong>: Preparar los datos y objetos.</li>
+<li><strong><code>Act</code></strong>: Ejecutar el método que se quiere probar.</li>
+<li><strong><code>Assert</code></strong>: Verificar que el resultado sea el esperado.<ul>
+<li>Veamos un ejemplo</li>
+</ul>
+</li>
+</ol>
+<pre class="highlight"><code class="language-java">public class Calculadora {
+    public int sumar(int a, int b) {
+        return a + b;
+    }
+
+    public int dividir(int a, int b) {
+        if (b == 0) throw new IllegalArgumentException("No se puede dividir por cero");
+        return a / b;
+    }
+}</code></pre>
+<p>Test</p>
+<pre class="highlight"><code class="language-java">import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class CalculadoraTest {
+
+    @Test
+    public void testSuma() {
+        Calculadora calc = new Calculadora();
+        assertEquals(5, calc.sumar(2, 3));
+    }
+
+    @Test
+    public void testDivision() {
+        Calculadora calc = new Calculadora();
+        assertEquals(2, calc.dividir(4, 2));
+    }
+
+    @Test
+    public void testDivisionPorCero() {
+        Calculadora calc = new Calculadora();
+        assertThrows(IllegalArgumentException.class, () -&gt; calc.dividir(4, 0));
+    }
+}
+</code></pre>
+</li>
+<li>
+<p>Algunos de los métodos más usados son:</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>assertEquals(a, b)</code></td>
+<td>Verifica que <code>a == b</code></td>
+</tr>
+<tr>
+<td><code>assertTrue(cond)</code></td>
+<td>Verifica que la condición es verdadera</td>
+</tr>
+<tr>
+<td><code>assertFalse(cond)</code></td>
+<td>Verifica que la condición es falsa</td>
+</tr>
+<tr>
+<td><code>assertThrows()</code></td>
+<td>Verifica que se lanza una excepción</td>
+</tr>
+<tr>
+<td><code>assertNull(obj)</code></td>
+<td>Verifica que el objeto es <code>null</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="modulo-2-ecosistema-de-java-maven-y-lombok">⚙️ Módulo 2: Ecosistema de Java - Maven y Lombok<a class="headerlink" href="#modulo-2-ecosistema-de-java-maven-y-lombok" title="Permanent link">¶</a></h1>
+<ul>
+<li>
+<p>¿Qué es Maven y para qué sirve?</p>
+<p>Es una herramienta de gestión de proyectos y automatización permite simplificar el siclo de vida del desarrollo de sofware, desde la compilación, empaquetado y despliegue.</p>
+<p>Maven sirve para:</p>
+<ul>
+<li>Gestionar dependencias desde repositorios provenientes de Maven central</li>
+<li>Permite compilar y empaquetar el código en archivos <code>.jar</code> o <code>.war</code></li>
+<li>Permite ejecutar comandos para correr las pruebas, generar documentación e instalar artefactos</li>
+<li>Permite estandarizar la estructura del proyecto</li>
+<li>Creación de un proyecto con Maven</li>
+</ul>
+<p>Estructura de un proyecto</p>
+<pre class="highlight"><code>mi-proyecto/
+├── pom.xml
+└── src/
+    ├── main/
+    │   └── java/
+    └── test/
+        └── java/</code></pre>
+<p>El comando para poder crear un nuevo proyecto es</p>
+<pre class="highlight"><code class="language-java">mvn archetype:generate -DgroupId=com.kevin.app -DartifactId=mi-proyecto -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false</code></pre>
+<ul>
+<li>Donde:<ul>
+<li><code>groupId</code>: Identificador del grupo (como el nombre del paquete base).</li>
+<li><code>artifactId</code>: Nombre del proyecto.</li>
+<li><code>archetypeArtifactId</code>: Plantilla base (quickstart incluye estructura básica con clase Main y test).</li>
+<li><code>interactiveMode=false</code>: Evita preguntas interactivas.</li>
+</ul>
+</li>
+<li>
+<p>Comandos</p>
+<table>
+<thead>
+<tr>
+<th>Comando</th>
+<th>Propósito</th>
+<th>Ejemplo de uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mvn clean</code></td>
+<td>Elimina la carpeta <code>target</code> y limpia el proyecto</td>
+<td><code>mvn clean</code></td>
+</tr>
+<tr>
+<td><code>mvn compile</code></td>
+<td>Compila el código fuente Java</td>
+<td><code>mvn compile</code></td>
+</tr>
+<tr>
+<td><code>mvn test</code></td>
+<td>Ejecuta las pruebas unitarias con JUnit</td>
+<td><code>mvn test</code></td>
+</tr>
+<tr>
+<td><code>mvn package</code></td>
+<td>Compila y empaqueta el proyecto en un <code>.jar</code> o <code>.war</code></td>
+<td><code>mvn package</code></td>
+</tr>
+<tr>
+<td><code>mvn install</code></td>
+<td>Instala el artefacto en el repositorio local</td>
+<td><code>mvn install</code></td>
+</tr>
+<tr>
+<td><code>mvn verify</code></td>
+<td>Ejecuta pruebas de integración y verifica el proyecto</td>
+<td><code>mvn verify</code></td>
+</tr>
+<tr>
+<td><code>mvn site</code></td>
+<td>Genera documentación del proyecto</td>
+<td><code>mvn site</code></td>
+</tr>
+<tr>
+<td><code>mvn dependency:tree</code></td>
+<td>Muestra el árbol de dependencias</td>
+<td><code>mvn dependency:tree</code></td>
+</tr>
+<tr>
+<td><code>mvn exec:java</code></td>
+<td>Ejecuta una clase Java con <code>main()</code></td>
+<td><code>mvn exec:java -Dexec.mainClass="com.kevin.Main"</code></td>
+</tr>
+<tr>
+<td></td>
+<td>Ejecutar el proyecto</td>
+<td><code>java -jar target/mi-proyecto-1.0-SNAPSHOT.jar</code></td>
+</tr>
+<tr>
+<td>- Lombok y sus anotaciones: @Getter, @Setter, @Data, @Builder...</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p>Lombok es una librería de java, que permite eliminar el código repetitivo en clases modelo (<code>POJOs</code>), esto por medio de decoradores, estas se integran en tiempo de compilación para generar 
+<code>getters</code>, <code>setters</code>, <code>constructores</code>, <code>equals()</code>, <code>hashCode()</code>, <code>toString()</code> y más.</p>
+<p>Ejemplo</p>
+<p>Sin lombok: Es necesario generar todo lo necesario para que la clase funcione</p>
+<pre class="highlight"><code class="language-java">public class Usuario {
+    private String nombre;
+    private int edad;
+
+    public Usuario() {}
+    public String getNombre() { return nombre; }
+    public void setNombre(String nombre) { this.nombre = nombre; }
+    public int getEdad() { return edad; }
+    public void setEdad(int edad) { this.edad = edad; }
+}
+</code></pre>
+<p>Con lombok: Al usarlo con el decorador @Data, esta generara automáticamente los <code>Getters</code> y <code>setters</code> <code>toString()</code> <code>equals()</code> y <code>hashCode()</code> Constructor sin argumentos o con argumentos</p>
+<pre class="highlight"><code class="language-java">import lombok.Data;
+
+@Data
+public class Usuario {
+    private String nombre;
+    private int edad;
+}
+</code></pre>
+<p>Anotaciones principales</p>
+<table>
+<thead>
+<tr>
+<th><code>@Getter/@Setter</code></th>
+<th>Genera getters y setters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>@Data</code></td>
+<td>Todo en uno: getters, setters, <code>toString</code>, etc.</td>
+</tr>
+<tr>
+<td><code>@NoArgsConstructor</code></td>
+<td>Constructor sin argumentos</td>
+</tr>
+<tr>
+<td><code>@AllArgsConstructor</code></td>
+<td>Constructor con todos los campos</td>
+</tr>
+<tr>
+<td><code>@Builder</code></td>
+<td>Patrón builder para instanciación flexible</td>
+</tr>
+<tr>
+<td><code>@Value</code></td>
+<td>Clase inmutable (campos <code>final</code>)</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<hr>
+<h1 id="modulo-3-colecciones-genericos-y-programacion-funcional">🌀 Módulo 3: Colecciones, Genéricos y Programación Funcional<a class="headerlink" href="#modulo-3-colecciones-genericos-y-programacion-funcional" title="Permanent link">¶</a></h1>
+<p>Para esta sección se espera que ya domines los conceptos básicos, entonces definamos antes que son las colecciones, genéricos y que es la programación funcional:</p>
+<h2 id="colecciones">Colecciones<a class="headerlink" href="#colecciones" title="Permanent link">¶</a></h2>
+<p>Las colecciones son estructuras que nos permiten almacenar y manipular grupos de objetos</p>
+<h3 id="interfaces-principales">Interfaces principales<a class="headerlink" href="#interfaces-principales" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p>List</p>
+<ul>
+<li><strong>Características:</strong><ul>
+<li>Permite elementos duplicados.</li>
+<li>Mantiene el orden de inserción.</li>
+<li>Acceso por índice.</li>
+</ul>
+</li>
+<li><strong>Implementaciones comunes:</strong><ul>
+<li><code>ArrayList</code>: basada en un array dinámico; acceso rápido por índice, lenta para inserciones intermedias.</li>
+<li><code>LinkedList</code>: lista doblemente enlazada; inserciones/eliminaciones rápidas en posiciones intermedias, acceso secuencial.</li>
+<li><code>Vector</code>: similar a <code>ArrayList</code> pero sincronizado (menos eficiente en entornos monohilo).</li>
+</ul>
+</li>
+<li>
+<p><strong>Ejemplo:</strong></p>
+<pre class="highlight"><code class="language-java">List&lt;String&gt; nombres = new ArrayList&lt;&gt;();
+nombres.add("Ana");
+nombres.add("Luis");
+nombres.add("Ana"); // duplicados permitidos
+System.out.println(nombres.get(1)); // "Luis"</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>Set</p>
+<ul>
+<li><strong>Características:</strong><ul>
+<li>No permite elementos duplicados.</li>
+<li>No garantiza un orden específico (excepto implementaciones ordenadas).</li>
+</ul>
+</li>
+<li><strong>Implementaciones comunes:</strong><ul>
+<li><code>HashSet</code>: basado en tabla hash; no garantiza orden.</li>
+<li><code>LinkedHashSet</code>: mantiene orden de inserción.</li>
+<li><code>TreeSet</code>: mantiene elementos ordenados según <code>Comparable</code> o <code>Comparator</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Ejemplo:</strong></p>
+<pre class="highlight"><code class="language-java">Set&lt;Integer&gt; numeros = new HashSet&lt;&gt;();
+numeros.add(3);
+numeros.add(1);
+numeros.add(3); // ignorado
+System.out.println(numeros); // orden no garantizado</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>Map</p>
+<ul>
+<li><strong>Características:</strong><ul>
+<li>Almacena pares clave-valor.</li>
+<li>No permite claves duplicadas; los valores pueden repetirse.</li>
+</ul>
+</li>
+<li><strong>Implementaciones comunes:</strong><ul>
+<li><code>HashMap</code>: rápido, no garantiza orden.</li>
+<li><code>LinkedHashMap</code>: mantiene orden de inserción.</li>
+<li><code>TreeMap</code>: ordena según las claves.</li>
+</ul>
+</li>
+<li>
+<p><strong>Ejemplo:</strong></p>
+<pre class="highlight"><code class="language-java">Map&lt;String, Integer&gt; edades = new HashMap&lt;&gt;();
+edades.put("Ana", 30);
+edades.put("Luis", 25);
+System.out.println(edades.get("Ana")); // 30</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>Sus usos comunes</p>
+<h3 id="list"><strong>List</strong><a class="headerlink" href="#list" title="Permanent link">¶</a></h3>
+<ul>
+<li>Ideal para colecciones donde importa el orden.</li>
+<li>Útil cuando se requieren accesos por índice.</li>
+</ul>
+<h3 id="set"><strong>Set</strong><a class="headerlink" href="#set" title="Permanent link">¶</a></h3>
+<ul>
+<li>Útil para eliminar duplicados.</li>
+<li>Ideal para búsquedas rápidas de pertenencia.</li>
+</ul>
+<h3 id="map"><strong>Map</strong><a class="headerlink" href="#map" title="Permanent link">¶</a></h3>
+<ul>
+<li>Para asociaciones clave-valor.</li>
+<li>Uso común en conteo de frecuencias o configuración.</li>
+<li>Colecciones inmutables</li>
+<li>
+<p>Desde Java 9:</p>
+<pre class="highlight"><code class="language-java">List&lt;String&gt; listaInmutable = List.of("A", "B");
+Set&lt;Integer&gt; setInmutable = Set.of(1, 2, 3);
+Map&lt;String, String&gt; mapInmutable = Map.of("clave", "valor");</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="genericos">Genéricos<a class="headerlink" href="#genericos" title="Permanent link">¶</a></h2>
+<p>Los genéricos nos permiten definir clases y funciones con tipos de datos parametrizado permitiendo mantener la seguridad de tipos, es decir supongamos que quiero declarar una función, pero esta función debe recibir atributos y también se le debe dar el tipo de dato que esta retornara, pero no sé cuál es entonces le indicamos que tome una letra genérica, entonces toma esta <code>T</code> (genérico) y en la implementación te pasare el tipo de dato adecuado</p>
+<p>Al usar genéricos garantizamos:</p>
+<ul>
+<li><strong>Seguridad de tipos:</strong> Previene errores en tiempo de compilación evitando conversiones inseguras.</li>
+<li><strong>Reutilización de código:</strong> Un mismo método o clase funciona con múltiples tipos.</li>
+<li><strong>Legibilidad y mantenibilidad:</strong> El tipo esperado queda claro al usarlo.</li>
+</ul>
+<p>Hagamos una comparativa de una implementación usando genéricos y sin genéricos</p>
+<ul>
+<li>
+<p><strong>Ejemplo sin genéricos:</strong></p>
+<pre class="highlight"><code class="language-java">List lista = new ArrayList();
+lista.add("Hola");
+String texto = (String) lista.get(0); // Necesita casting</code></pre>
+</li>
+<li>
+<p><strong>Ejemplo con genéricos:</strong></p>
+<pre class="highlight"><code class="language-java">List&lt;String&gt; lista = new ArrayList&lt;&gt;();
+lista.add("Hola");
+String texto = lista.get(0); // No necesita casti</code></pre>
+</li>
+</ul>
+<h3 id="sintaxis-basica">Sintaxis Basica<a class="headerlink" href="#sintaxis-basica" title="Permanent link">¶</a></h3>
+<p>Para hacer referencia a los parámetros de tipo estas deben de ir entre <code>&lt;&gt;</code> , las letras que generalmente se usan son:</p>
+<ul>
+<li><code>T</code> → <em>Type</em> (tipo genérico)</li>
+<li><code>E</code> → <em>Element</em> (colecciones)</li>
+<li><code>K</code> → <em>Key</em>, <code>V</code> → <em>Value</em> (Mapas)</li>
+<li><code>N</code> → <em>Number</em></li>
+</ul>
+<p>Veamos un ejemplo de una clase genérica</p>
+<pre class="highlight"><code class="language-java">public class Caja&lt;T&gt; { // T es el parametro de tipo
+    private T contenido;
+
+    public void guardar(T valor) {
+        this.contenido = valor;
+    }
+
+    public T obtener() {
+        return contenido;
+    }
+}
+
+Caja&lt;String&gt; cajaDeTexto = new Caja&lt;&gt;();
+cajaDeTexto.guardar("Hola");
+System.out.println(cajaDeTexto.obtener());</code></pre>
+<h3 id="bounded-type-parameters"><strong>Bounded Type Parameters</strong><a class="headerlink" href="#bounded-type-parameters" title="Permanent link">¶</a></h3>
+<p>Los parámetros de tipo con limite que es como se le conoce a esto es una de las partes más interesantes que se puede lograr con la programación genérica, pongamos este caso de uso para su correcta compresión.</p>
+<p>Tenemos una caja en donde podemos guardar lo que queramos (cuadernos, juguetes, monedas, etc), pero a usar los <strong><code>Bounded Type Parameters</code></strong> nosotros podemos definir reglas es decir nosotros podemos especificar que en esta caja solo se aceptan Perritos o sus subtipos (herencia). A esto lo conocemos como <strong><code>Bounded Type Parameters</code></strong> cajas genéricas que solo aceptan ciertos tipos y esto los clasificamos en dos:</p>
+<ul>
+<li>
+<p><code>Upper Bound</code> — Límite Superior (<code>extends</code>)</p>
+<p>Al usar esta clasificación en código podemos decir que esta cajita generica puede aceptar animales o cosas que sean subtipos de animal (gatitos o perritos), veamos un ejemplo</p>
+<pre class="highlight"><code class="language-java">
+class Caja&lt;T extends Animal&gt; {
+    T contenido;
+}</code></pre>
+<p>En el ejemplo T tiene restricciones, en este caso T solo puede Gato, Perro; pero no puede ser algo que no esté relacionado con Animal por decir Auto</p>
+<p>Muy útil para usar metodos comunes para todos aquellos que se encuentran dentro de la cajita</p>
+</li>
+<li>
+<p><code>Lower Bound</code> — Límite Inferior (<code>super</code>) con wildcard</p>
+<p>Esta clasificación es similar pero lo contrario del anterior, retomemos la cajita magica en donde podemos almacenar Fotos, pero al usar <code>Lower Bound</code> podemos guardar cualquier cosa que se mas general a Fotos por ejemplo Documentos, por ejemplo, si hacemos <code>List&lt;? super Foto&gt;</code> entonces podemos guardar fotos, pero no una foto con firma que está ya llegar a ser un subtipo de Foto, pero si podemos guardar otro tipo de archivo que este más arriba de Foto si simulamos una estructura jerárquica.</p>
+<p>Entonces restringe a un tipo especifico o sus supertipos, veamos un ejemplo</p>
+<pre class="highlight"><code class="language-java">public static void addNumbers(List&lt;? super Integer&gt; list) {
+  for (int i = 1; i &lt;= 10; i++) {
+    list.add(i);
+  }
+}
+</code></pre>
+<p>La lista puede ser de tipo <code>Integer</code>, <code>Number</code> o <code>Object</code> y aun así podemos agregar o guardar números sin problema</p>
+</li>
+</ul>
+<p>En java casi todo está construido bajo genéricos, las colecciones en Java están definidas usando genéricos (<code>List&lt;T&gt;</code>, <code>Set&lt;T&gt;</code>, <code>Map&lt;K,V&gt;</code>), al usarlo nos permite evitar errores de tipo <code>ClassCastException</code> en tiempo de ejecución.</p>
+<h3 id="limitaciones-y-buenas-practicas">Limitaciones y buenas practicas<a class="headerlink" href="#limitaciones-y-buenas-practicas" title="Permanent link">¶</a></h3>
+<ul>
+<li>Limitaciones:<ul>
+<li>No se pueden crear instancias de tipos genéricos <code>new T()</code> —&gt; error</li>
+<li>No se pueden usar tipos primitivos tales como (<code>int</code>, <code>double</code>, <code>float</code>) solo <code>Object</code></li>
+</ul>
+</li>
+<li>Buenas prácticas:<ul>
+<li>Se recomienda usar nombres significativos si se conoce bien el contexto y como lo requiera por ejemplo usar <code>&lt;User&gt;</code> en lugar de <code>&lt;T&gt;</code></li>
+<li>Preferir <strong>upper bounds</strong> para lectura y <strong>lower bounds</strong> para escritura:<ul>
+<li>
+<p><strong>PECS (Producer Extends, Consumer Super)</strong>: <em>Producer → extends</em>, <em>Consumer → super</em>.</p>
+<ul>
+<li>
+<p><strong>Producer Extends</strong>: Si una colección solo va a <strong>producir</strong> datos (es decir, vas a <strong>leer</strong> elementos), utiliza <code>&lt;? extends T&gt;</code>.</p>
+<p>Imaginemos que tenemos una lista que solo será de lectura</p>
+<pre class="highlight"><code class="language-java">void procesar(List&lt;? extends Animal&gt; lista) { … }</code></pre>
+<p>En el ejemplo anterior podemos pasarle una lista a la función por ejemplo pasar <code>List&lt;Perro&gt;</code> o <code>List&lt;Gato&gt;</code> (ya que <code>Perro</code> y <code>Gato</code> son subtipos de <code>Animal</code>), y de la lista puedes leer sin problemas como <code>Animal</code>. Sin embargo, <strong>no puedes añadir nada</strong> (excepto <code>null</code>)</p>
+</li>
+<li>
+<p><strong>Consumer Super</strong>: Si una colección solo va a <strong>consumir</strong> datos (es decir, vas a <strong>añadir</strong> elementos), utiliza <code>&lt;? super T&gt;</code>. Imaginemos una lista en las cual es de escritura, entonces podemos defirnirlo como</p>
+<pre class="highlight"><code class="language-java">void agregarPerros(List&lt;? super Perro&gt; lista) {
+    lista.add(new Perro());
+}</code></pre>
+<p>Aquí podemos pasar <code>List&lt;Perro&gt;</code>, <code>List&lt;Animal&gt;</code> o incluso <code>List&lt;Object&gt;</code>. Puedes añadir un <code>Perro</code> sin problema, pero al <strong>leer</strong>, solo obtendrás <code>Object</code>, porque el compilador no sabe qué tipo exacto contiene la lista.</p>
+</li>
+</ul>
+<blockquote>
+<p>"Si solo está extrayendo elementos de una colección genérica, es un productor y debe usar extensiones; si solo está insertando elementos, es un consumidor y debe usar super</p>
+<ul>
+<li>Para métodos que <strong>producen</strong> (retornan datos): usar <code>extends</code>.</li>
+<li>Para métodos que <strong>consumen</strong> (aceptan datos): usar <code>super</code>.</li>
+</ul>
+</blockquote>
+<p>Lectura</p>
+<p>https://www.cs.rice.edu/~javaplt/nv4/pecs/?utm_source=chatgpt.com</p>
+<p>https://www.baeldung.com/java-generics-pecs?utm_source=chatgpt.com</p>
+<p>Vemos un ejemplo mas elaborado</p>
+<pre class="highlight"><code class="language-java">public static &lt;T extends Comparable&lt;? super T&gt;&gt; T maximo(List&lt;T&gt; lista) {
+    T max = lista.get(0);
+    for (T elem : lista) {
+        if (elem.compareTo(max) &gt; 0) {
+            max = elem;
+        }
+    }
+    return max;
+}
+
+// Pregunta esto es un productor o consumidor ?</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="programacion-funcional">Programación Funcional<a class="headerlink" href="#programacion-funcional" title="Permanent link">¶</a></h2>
+<h3 id="que-es-la-programacion-funcional">¿Qué es la Programación Funcional?<a class="headerlink" href="#que-es-la-programacion-funcional" title="Permanent link">¶</a></h3>
+<p>Es un paradigma que considera la computación como la evaluación de funciones matemáticas, evitando estado mutable y efectos secundarios. </p>
+<p>La programación funcional es declarativa en lugar de imperativa es decir la forma imperativa se centra en cómo se hace, pero la declarativa se centra solo en el resultado.</p>
+<p>Haciendo una comparativa con la POO en donde el estado se comparte dentro de objetos; en la programación funcional el estado fluye a través de funciones puras.</p>
+<h3 id="que-es-lo-que-marca-su-llegada">¿Que es lo que marca su llegada?<a class="headerlink" href="#que-es-lo-que-marca-su-llegada" title="Permanent link">¶</a></h3>
+<p>La llegada de la programación funcional es a partir de java 8 donde se introduce lo siguiente:</p>
+<ul>
+<li>Se introduce un nuevo paquete <code>java.util.function</code> que contiene interfaces funcionales, aquí la documentación https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html</li>
+<li>Se introduce las funciones lambda y referencias de métodos</li>
+<li>
+<p>Ejemplo con <code>Predicate</code>:</p>
+<p>Un ejemplo es la interfaz funcional <code>Predicate</code> que tiene un método <code>test(T t)</code> que devuelve un valor booleano. Esta interfaz se puede usar para expresiones lambda y referencias de métodos.</p>
+<pre class="highlight"><code class="language-java">public interface Predicate&lt;T&gt; {
+        boolean test(T t);  
+}
+
+public class Example{    
+        public static void main(String[] args) {        
+                Predicate&lt;String&gt; predicate = (s) -&gt; !s.isEmpty();        
+                predicate.test("foo");              // true        
+                predicate.negate().test("foo");     // false  
+                // Referencia a metodos con ::
+                Predicate&lt;Boolean&gt; nonNull = Objects::nonNull;      
+                Predicate&lt;Boolean&gt; isNull = Objects::isNull;        
+                Predicate&lt;String&gt; isEmpty = String::isEmpty;        
+                Predicate&lt;String&gt; isNotEmpty = isEmpty.negate();    
+        }
+}</code></pre>
+</li>
+</ul>
+<h3 id="interfaces-funcionales">Interfaces funcionales<a class="headerlink" href="#interfaces-funcionales" title="Permanent link">¶</a></h3>
+<p>Es una interfaz con un solo método abstracto o también conocido como SAM – <code>*Single Abstract Methoh</code>* , estas interfaces se usan para representar funciones como objetos, un ejemplo muy claro es el anterior ya que solo tiene un método abstracto lo cual es <code>test(T t)</code> recordemos que <code>T</code> es un genérico</p>
+<h3 id="expresiones-lambda">Expresiones Lambda<a class="headerlink" href="#expresiones-lambda" title="Permanent link">¶</a></h3>
+<p>Son funciones anónimas como generalmente se los conoce esto es debido a que no necesitan un nombre, estas son bloques cortos de código donde se les pueden enviar parámetros y que retornen un valor.</p>
+<p>Ahora para poder entender el concepto de la programación funcional es importante tomar en cuentas los siguientes conceptos:</p>
+<p>Ejemplo de sintaxis básica es <code>(parametros) -&gt; {cuerpo}</code></p>
+<ul>
+<li>
+<p>Funciones</p>
+<p>Son bloques de código reutilizables que reciben entradas, los procesan y devuelven un valor</p>
+</li>
+<li>
+<p>Inmutabilidad</p>
+<p>La inmutabilidad se refiere a que el estado de un objeto debe permanecer inmutable, es decir no se puede modificar después de su creacion, esto nos da una ventaja lo cual es evitar los efectos secundarios.</p>
+<pre class="highlight"><code class="language-java">List&lt;String&gt; nombres = List.of("Juan", "Ana"); // esto es inmutable</code></pre>
+</li>
+<li>
+<p>Funciones como ciudadanos de primera clase</p>
+<p>Se les llama de esta manera porque estas mismas funciones tienen la capacidad de:</p>
+<ul>
+<li>
+<p>Asignarse a una variable:  Puedes asignar una función a una variable, de manera similar a como asignas un valor entero o una cadena.</p>
+<pre class="highlight"><code class="language-java">Function&lt;Integer, Integer&gt; cuadrado = x -&gt; x * x;</code></pre>
+</li>
+<li>
+<p>Pasarse como parámetro o argumento</p>
+<pre class="highlight"><code class="language-java">public static void procesarNumero(int numero, Function&lt;Integer, Integer&gt; operacion) {    
+        int resultado = operacion.apply(numero);    
+        System.out.println("Resultado: " + resultado);
+}
+// Uso
+procesarNumero(5, cuadrado);</code></pre>
+</li>
+<li>
+<p>Devolver funciones</p>
+<pre class="highlight"><code class="language-java">public static Function&lt;Integer, Integer&gt; obtenerFuncion(boolean doblar) {    
+        if (doblar) {        
+                return x -&gt; x * 2;    
+        } else {        
+                return x -&gt; x + 5;    
+        }
+}
+// Uso
+Function&lt;Integer, Integer&gt; funcion = obtenerFuncion(true);
+int resultado = funcion.apply(3);</code></pre>
+</li>
+<li>
+<p>Guardarse en colecciones</p>
+<pre class="highlight"><code class="language-java">List&lt;Function&lt;Integer, Integer&gt;&gt; operaciones = new ArrayList&lt;&gt;();
+operaciones.add(x -&gt; x * 2);
+operaciones.add(x -&gt; x + 5);
+// Uso
+int resultado1 = operaciones.get(0).apply(3);  // resultado1 = 6
+int resultado2 = operaciones.get(1).apply(3);  // resultado2 = 8</code></pre>
+</li>
+</ul>
+<p>Este enfoque es parte fundamental de la programación funcional y permite escribir código más modular, reutilizable y expresivo en Java</p>
+</li>
+<li>
+<p>Funciones puras e impuras</p>
+<ul>
+<li>
+<p>Puras</p>
+<p>Se les denomina funciones puras a aquellos que son deterministas no generan efectos secundarios y además de ello si cumplen con uno de los principios <code>SOLID</code> lo cual es el SRP (<code>Una unica responsavilidad</code>)</p>
+</li>
+<li>
+<p>Impuras</p>
+<p>Estas funciones son aquellas que dependen de un estado externo o en todo caso modifican el estado</p>
+</li>
+</ul>
+</li>
+</ul>
+<aside>
+💡
+
+Estos conceptos son la clave para poder entender la progrmacion funcional
+
+</aside>
+
+<h3 id="sam-y-functionalinterface"><strong>SAM y <code>@FunctionalInterface</code></strong><a class="headerlink" href="#sam-y-functionalinterface" title="Permanent link">¶</a></h3>
+<p>Estos dos terminos van de la mano y se definen de la siguiente manera:</p>
+<ul>
+<li><strong>SAM:</strong> Interfaz con un solo método abstracto.</li>
+<li><code>@FunctionalInterface</code>: indica que la interfaz es funcional.</li>
+</ul>
+<h3 id="operador-de-referencia"><strong>Operador de Referencia (<code>::</code>)</strong><a class="headerlink" href="#operador-de-referencia" title="Permanent link">¶</a></h3>
+<p>Es un operador que se introdujo para poder simplificar las expresiones lambda utilizados comúnmente con interfaces funcionales</p>
+<p>Tipos:</p>
+<ol>
+<li>
+<p>Método estático: <code>Integer::parseInt</code> (Puedes referenciar un método estático utilizando el nombre de la clase que lo contiene)</p>
+<pre class="highlight"><code class="language-java">// Expresión lambda
+Function&lt;String, Integer&gt; parseInt = s -&gt; Integer.parseInt(s);
+// Operador de referencia a método estático
+Function&lt;String, Integer&gt; parseIntRef = Integer::parseInt;</code></pre>
+</li>
+<li>
+<p>Método de instancia: <code>objectOfClass::metodo</code> (Puedes referenciar un método de instancia de un objeto específico utilizando el nombre del objeto seguido por el doble colon y el nombre del método.)</p>
+<pre class="highlight"><code class="language-java">// Expresión lambda    
+BiPredicate&lt;String, String&gt; startsWith = (s1, s2) -&gt; s1.startsWith(s2);
+// Operador de referencia a método de instancia
+BiPredicate&lt;String, String&gt; startsWithRef = String::startsWith;</code></pre>
+</li>
+<li>
+<p>Método de tipo arbitrario: <code>String::toUpperCase</code></p>
+<pre class="highlight"><code class="language-java">// Expresión lambda
+Comparator&lt;String&gt; lengthComparator = (s1, s2) -&gt; s1.length() - s2.length();    
+// Operador de referencia a método de instancia de tipo arbitrario
+Comparator&lt;String&gt; lengthComparatorRef = Comparator.comparing(String::length);</code></pre>
+</li>
+<li>
+<p>Constructor: <code>ArrayList::new</code> (Puedes referenciar un constructor utilizando el nombre de la clase seguido por <code>::</code> y <code>new</code>)</p>
+<pre class="highlight"><code class="language-java">// Expresión lambda
+Supplier&lt;List&lt;String&gt;&gt; listSupplier = () -&gt; new ArrayList&lt;&gt;();
+// Operador de referencia a constructor
+Supplier&lt;List&lt;String&gt;&gt; listSupplierRef = ArrayList::new;</code></pre>
+</li>
+</ol>
+<p>Veamos un ejemplo</p>
+<pre class="highlight"><code class="language-java">// Supongamos que tenemos esta lista
+List&lt;String&gt; names = List.of("Juan", "Kevin", "Azrael", "Iris");
+
+// para poder iterar esta lista podemos hacerlo de cualquier forma
+names.forEach(name -&gt; System.out.println(name)); // con un funcion lambda
+names.forEach(System.out::println); // con el operador de referencia</code></pre>
+<h3 id="inferencia-de-tipos">Inferencia de tipos<a class="headerlink" href="#inferencia-de-tipos" title="Permanent link">¶</a></h3>
+<p>A partir de java 10, java tiene soporte a este poder (Inferencia de tipos), es decir en java ya no es necesario indicarle que tipos de dato es el que tendrá una variable con la palabra reservada <code>var</code> java infiere cual es el tipo de dato que tiene dicha variable con ver que valor tiene, a partir de valor el compilador en tiempo de ejecución deduce el tipo de variable</p>
+<pre class="highlight"><code class="language-java">List&lt;String&gt; listaDeCadenas = new ArrayList&lt;String&gt;(); // sin inferencia de tipos
+var lista = new ArrayList&lt;String&gt;(); // con inferencia de tipos</code></pre>
+<h3 id="dandole-nombre-a-un-viejo-amigo-chaining"><strong>Dándole nombre a un viejo amigo: <code>Chaining</code></strong><a class="headerlink" href="#dandole-nombre-a-un-viejo-amigo-chaining" title="Permanent link">¶</a></h3>
+<p>Se le denomina de esta manera a la práctica de encadenar varios metodos u operaciones, a menudo se le asocia con otro de los conceptos fundamentales lo cual es el <code>pipelining</code> o también conocido como composición de funciones. Su funcionamiento es sencillo, llamas a una función y el resultado que te retorna esta función ya no lo guardas en un lugar, al contrario, con el <code>chaining</code> puede pasárselo directamente como entrada a otra función y de esta manera seguir hasta que consigas lo que quiere.</p>
+<pre class="highlight"><code class="language-java">List.of("Ana", "María", "Juan", "Kevin", "Azrael", "Iris")
+    .stream() // comvierte la lista en un stream es decir un flujo continuo de datos
+    .filter(n -&gt; n.length() &gt; 3) // filtra solo a aquellos nombres donde su longitud sea mayor que 3
+    .map(String::toUpperCase)// convierte a todo los nombres en mayuculas (tranformacion)
+    .forEach(System.out::println);// finalmente los vemos por consola</code></pre>
+<h3 id="entendiendo-la-composicion-de-funciones">Entendiendo la composición de funciones<a class="headerlink" href="#entendiendo-la-composicion-de-funciones" title="Permanent link">¶</a></h3>
+<p>La API de <code>Streams</code> en Java es un buen ejemplo de cómo se puede aplicar el “<code>pipelining</code>” para operaciones de procesamiento de datos en colecciones.</p>
+<p>Aplicar funciones secuencialmente (<code>andThen</code>, <code>compose</code>).</p>
+<pre class="highlight"><code class="language-java">Function&lt;Integer, Integer&gt; doble = x -&gt; x * 2;
+Function&lt;Integer, Integer&gt; masTres = x -&gt; x + 3;
+Function&lt;Integer, Integer&gt; combinado = doble.andThen(masTres);</code></pre>
+<ul>
+<li>
+<p>Interfaces de <code>java.util.function</code> (principales)</p>
+<ul>
+<li>
+<p><code>Predicate&lt;T&gt;</code> → <code>boolean test(T)</code></p>
+<ul>
+<li><strong>Propósito:</strong> Evalúa un predicado sobre un solo argumento de tipo T y devuelve un valor booleano.</li>
+<li><strong>Uso:</strong> Se utiliza para realizar pruebas y devolver un valor booleano.</li>
+<li>
+<p><strong>Ejemplo:</strong></p>
+<pre class="highlight"><code class="language-java">Predicate&lt;Integer&gt; esPar = num -&gt; num % 2 == 0;
+boolean resultado = esPar.test(6);</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p><code>Function&lt;T,R&gt;</code> → <code>R apply(T)</code></p>
+<ul>
+<li><strong>Propósito:</strong> Acepta un argumento de tipo T y devuelve un resultado de tipo R.</li>
+<li><strong>Uso:</strong> Se utiliza para transformar un tipo de dato en otro.</li>
+<li>
+<p><strong>Ejemplo:</strong></p>
+<pre class="highlight"><code class="language-java">Function&lt;Integer, String&gt; convertirAString = num -&gt; String.valueOf(num);
+String resultado = convertirAString.apply(42);</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p><code>Supplier&lt;T&gt;</code> → <code>T get()</code></p>
+<ul>
+<li><strong>Propósito:</strong> No toma argumentos y suministra un resultado de tipo T.</li>
+<li><strong>Uso:</strong> Se utiliza para generar o proporcionar valores.</li>
+<li>
+<p><strong>Ejemplo:</strong></p>
+<pre class="highlight"><code class="language-java">Supplier&lt;Double&gt; obtenerNumeroAleatorio = () -&gt; Math.random();
+double numeroAleatorio = obtenerNumeroAleatorio.get();</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p><code>Consumer&lt;T&gt;</code> → <code>void accept(T)</code></p>
+<ul>
+<li><strong>Propósito:</strong> Acepta un argumento de tipo T y realiza operaciones sin devolver resultados.</li>
+<li><strong>Uso:</strong> Se utiliza para operaciones que consumen un solo argumento.</li>
+<li>
+<p><strong>Ejemplo:</strong></p>
+<pre class="highlight"><code class="language-java">Consumer&lt;String&gt; imprimirMensaje = mensaje -&gt; System.out.println(mensaje);
+imprimirMensaje.accept("Hola, mundo!");</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p><code>UnaryOperator&lt;T&gt;</code> → <code>T apply(T)</code></p>
+<ul>
+<li><strong>Propósito:</strong> Es una especialización de <code>Function</code> donde el argumento y el resultado son del mismo tipo T.</li>
+<li><strong>Uso:</strong> Se utiliza para operaciones unarias que comparten el mismo tipo de entrada y salida.</li>
+<li>
+<p><strong>Ejemplo:</strong></p>
+<pre class="highlight"><code class="language-java">UnaryOperator&lt;String&gt; agregarSaludo = mensaje -&gt; "Hola, " + mensaje;
+String resultado = agregarSaludo.apply("mundo");</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p><code>BinaryOperator&lt;T&gt;</code> → <code>(T,T) -&gt; T</code></p>
+<h2 id="-proposito-es-una-especializacion-de-bifunction-donde-los-dos-argumentos-y-el-resultado-son-del-mismo-tipo-t">- <strong>Propósito:</strong> Es una especialización de <code>BiFunction</code> donde los dos argumentos y el resultado son del mismo tipo T.<a class="headerlink" href="#-proposito-es-una-especializacion-de-bifunction-donde-los-dos-argumentos-y-el-resultado-son-del-mismo-tipo-t" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Uso:</strong> Se utiliza para operaciones binarias que comparten el mismo tipo de entrada y salida.</li>
+<li>
+<p><strong>Ejemplo:</strong></p>
+<pre class="highlight"><code class="language-java">BinaryOperator&lt;Integer&gt; multiplicacion = (a, b) -&gt; a * b;
+int resultado = multiplicacion.apply(5, 3);</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p><code>BiFunction&lt;T,U,R&gt;</code> → <code>(T,U) -&gt; R</code></p>
+<ul>
+<li><strong>Propósito:</strong> Acepta dos argumentos de tipo T y U, devuelve un resultado de tipo R.</li>
+<li><strong>Uso:</strong> Se utiliza para transformaciones que involucran dos tipos de datos.</li>
+<li>
+<p><strong>Ejemplo:</strong></p>
+<pre class="highlight"><code class="language-java">BiFunction&lt;Integer, Integer, Integer&gt; suma = (a, b) -&gt; a + b;
+int resultado = suma.apply(3, 4);</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p><code>BiPredicate&lt;T,U&gt;</code> → <code>(T,U) -&gt; boolean</code></p>
+<ul>
+<li><strong>Propósito:</strong> Evalúa un predicado sobre dos argumentos de tipo T y U, devuelve un valor booleano.</li>
+<li><strong>Uso:</strong> Se utiliza para evaluar condiciones que involucran dos tipos de datos.</li>
+<li>
+<p><strong>Ejemplo:</strong></p>
+<pre class="highlight"><code class="language-java">BiPredicate&lt;String, Integer&gt; esLongitudCorrecta = (str, num) -&gt; str.length() == num;
+boolean resultado = esLongitudCorrecta.test("Hola", 4);</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p><code>BiConsumer&lt;T,U&gt;</code> → <code>(T,U) -&gt; void</code></p>
+<ul>
+<li><strong>Propósito:</strong> Acepta dos argumentos de tipo T y U, realiza operaciones sin devolver resultados.</li>
+<li><strong>Uso:</strong> Se utiliza para operaciones que consumen dos argumentos.</li>
+<li>
+<p><strong>Ejemplo:</strong></p>
+<pre class="highlight"><code class="language-java">BiConsumer&lt;String, Integer&gt; imprimirCantidadLetras = (str, num) -&gt; System.out.println("La palabra " + str + " tiene " + num + " letras.");
+imprimirCantidadLetras.accept("Hola", 4);</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>Algunas las interfaces especializadas son</p>
+<ul>
+<li><strong><code>DoubleBinaryOperator</code>, <code>DoubleConsumer</code>, <code>DoubleFunction&lt;R&gt;</code>, <code>DoublePredicate</code>, <code>DoubleSupplier</code>, <code>DoubleToIntFunction</code>, <code>DoubleToLongFunction</code>, <code>DoubleUnaryOperator</code>:</strong><ul>
+<li>Son interfaces especializadas para operaciones con valores de tipo <code>double</code></li>
+</ul>
+</li>
+<li><strong><code>IntBinaryOperator</code>, <code>IntConsumer</code>, <code>IntFunction&lt;R&gt;</code>, <code>IntPredicate</code>, <code>IntSupplier</code>, <code>IntToDoubleFunction</code>, <code>IntToLongFunction</code>, <code>IntUnaryOperator</code>:</strong><ul>
+<li>Son interfaces especializadas para operaciones con valores de tipo <code>int</code></li>
+</ul>
+</li>
+<li><strong><code>LongBinaryOperator</code>, <code>LongConsumer</code>, <code>LongFunction&lt;R&gt;</code>, <code>LongPredicate</code>, <code>LongSupplier</code>, <code>LongToDoubleFunction</code>, <code>LongToIntFunction</code>, <code>LongUnaryOperator</code>:</strong><ul>
+<li>Son interfaces especializadas para operaciones con valores de tipo <code>long</code>.</li>
+</ul>
+</li>
+<li><strong><code>ObjDoubleConsumer&lt;T&gt;</code>, <code>ObjIntConsumer&lt;T&gt;</code>, <code>ObjLongConsumer&lt;T&gt;</code>:</strong><ul>
+<li>Aceptan un objeto de tipo T y un valor primitivo, pero no devuelven resultados.</li>
+<li>Se utilizan para operaciones que consumen un objeto y un valor primitivo.</li>
+</ul>
+</li>
+<li><strong><code>ToDoubleBiFunction&lt;T, U&gt;</code>, <code>ToDoubleFunction&lt;T&gt;</code>, <code>ToIntBiFunction&lt;T, U&gt;</code>, <code>ToIntFunction&lt;T&gt;</code>, <code>ToLongBiFunction&lt;T, U&gt;</code>, <code>ToLongFunction&lt;T&gt;</code>:</strong><ul>
+<li>Convierten objetos de tipo T en valores primitivos (<code>double</code>, <code>int</code>, <code>long</code>).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="streams-api-y-optional">Streams API y Optional<a class="headerlink" href="#streams-api-y-optional" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p>Streams API</p>
+<ul>
+<li>
+<p><strong>¿Qué es?</strong></p>
+<p>La API de <em>Streams</em> (desde Java 8) permite procesar colecciones de forma funcional y declarativa. Un <em>Stream</em> <strong>no es</strong> una estructura de datos; es una secuencia de elementos sobre la que se aplican operaciones.</p>
+</li>
+<li>
+<p><strong>Creación de Streams:</strong></p>
+<ul>
+<li>Desde una colección: <code>collection.stream()</code> o <code>collection.parallelStream()</code>.</li>
+<li>Desde arrays: <code>Arrays.stream(array)</code>.</li>
+<li>Desde valores: <code>Stream.of(a, b, c)</code>.</li>
+</ul>
+</li>
+<li><strong>Operaciones:</strong><ul>
+<li><strong>Intermedias (lazy):</strong> transforman el stream y devuelven otro stream. Ej.: <code>filter</code>, <code>map</code>, <code>flatMap</code>, <code>distinct</code>, <code>sorted</code>, <code>limit</code>.</li>
+<li><strong>Terminales:</strong> consumen el stream y devuelven un resultado o efecto. Ej.: <code>collect</code>, <code>forEach</code>, <code>reduce</code>, <code>count</code>, <code>anyMatch</code>, <code>findFirst</code>.</li>
+<li><strong>Cortocircuito:</strong> algunas terminales e intermedias pueden parar la evaluación antes de procesar todos los elementos (p. ej. <code>anyMatch</code>, <code>findFirst</code>, <code>limit</code>).</li>
+</ul>
+</li>
+<li><strong>Paralelismo:</strong><ul>
+<li><code>parallelStream()</code> permite procesamiento concurrente. Usarlo con cuidado: funciones deben ser <strong>puras</strong> o bien sincronizadas y la colección de origen debe ser segura para el uso concurrente si hay efectos secundarios.</li>
+</ul>
+</li>
+<li><strong>Buenas prácticas:</strong><ul>
+<li>Preferir operaciones sin efectos secundarios (funciones puras).</li>
+<li>Evitar usar <code>forEach</code> con efectos secundarios cuando se quiera un resultado (usar <code>collect</code>).</li>
+<li>Un stream sólo puede recorrerse una vez.</li>
+</ul>
+</li>
+</ul>
+<pre class="highlight"><code class="language-java">// Filtrar pares, multiplicar por 3 y sumar
+List&lt;Integer&gt; nums = List.of(1,2,3,4,5,6);
+int total = nums.stream()
+    .filter(n -&gt; n % 2 == 0)
+    .mapToInt(n -&gt; n * 3)
+    .sum();
+
+// Recolectar en lista
+List&lt;String&gt; nombres = List.of("Ana", "Pedro", "María");
+List&lt;String&gt; mayus = nombres.stream()\    .filter(n -&gt; n.startsWith("M"))\    .map(String::toUpperCase)
+    .collect(Collectors.toList());
+
+// Ejemplo con reduce (producto opcional)
+Optional&lt;Integer&gt; producto = nums.stream()
+    .reduce((a, b) -&gt; a * b);</code></pre>
+</li>
+<li>
+<p><code>Optional</code></p>
+<ul>
+<li><strong>¿Qué es?</strong><ul>
+<li><code>Optional&lt;T&gt;</code> es un contenedor que puede contener o no un valor no nulo. Se introdujo para <strong>reducir el uso de <code>null</code></strong> en las API y evitar <code>NullPointerException</code> obvios.</li>
+</ul>
+</li>
+<li><strong>Creación:</strong><ul>
+<li><code>Optional.of(value)</code> — lanza NPE si <code>value</code> es <code>null</code>.</li>
+<li><code>Optional.ofNullable(value)</code> — crea vacío si <code>value</code> es <code>null</code>.</li>
+<li><code>Optional.empty()</code> — Optional vacío.</li>
+</ul>
+</li>
+<li><strong>Chequeo y consumo:</strong><ul>
+<li><code>isPresent()</code> / <code>isEmpty()</code> — comprobar presencia.</li>
+<li><code>ifPresent(consumer)</code> — ejecutar acción si hay valor.</li>
+<li><strong>Evitar usar</strong> <code>get()</code> sin comprobar; prefiera <code>orElse</code>, <code>orElseGet</code>, <code>orElseThrow</code>.</li>
+</ul>
+</li>
+<li><strong>Transformaciones:</strong><ul>
+<li><code>map</code> — transforma el valor contenido si está presente.</li>
+<li><code>flatMap</code> — similar a <code>map</code> pero espera que la función retorne otro <code>Optional</code>.</li>
+</ul>
+</li>
+<li><strong>Uso recomendado:</strong><ul>
+<li>Principalmente como <strong>tipo de retorno</strong> para indicar que puede no existir un valor.</li>
+<li>Evitar usar <code>Optional</code> en campos de entidades o como parámetros de métodos (no es su propósito ideal).</li>
+</ul>
+</li>
+</ul>
+<pre class="highlight"><code class="language-java">Optional&lt;String&gt; nombre = Optional.ofNullable(getNombre());
+String salida = nombre
+    .map(String::toUpperCase)
+    .orElse("DESCONOCIDO");
+
+// Si quieres lanzar excepción cuando esté vacío
+String valor = nombre.orElseThrow(() -&gt; new IllegalStateException("Falta nombre"));
+
+// Consumir si existe
+nombre.ifPresent(n -&gt; System.out.println("Nombre: " + n));</code></pre>
+</li>
+<li>
+<p><strong>Streams y Optional:</strong></p>
+<ul>
+<li>Muchas operaciones de stream devuelven <code>Optional</code>, p. ej. <code>findFirst</code>, <code>reduce</code> (sin identidad). También puedes convertir un <code>Optional&lt;T&gt;</code> a <code>Stream&lt;T&gt;</code> (desde Java 9 con <code>optional.stream()</code>) para integrarlo en pipelines.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="modulo-4-java-21-novedades-utiles-y-modernas">🚀 Módulo 4: Java 21 – Novedades útiles y modernas<a class="headerlink" href="#modulo-4-java-21-novedades-utiles-y-modernas" title="Permanent link">¶</a></h1>
+<p>LA versión mas reciente de java nos trae nuevas funcionalidades, aunque ya existe la versión 24 pero la versión LTS es la 21, entonces vayamos a descubrir y adquirir nuevos poderes.</p>
+<h2 id="parte-1-esenciales-para-empezar">Parte 1: Esenciales para empezar<a class="headerlink" href="#parte-1-esenciales-para-empezar" title="Permanent link">¶</a></h2>
+<h3 id="textblocks"><code>TextBlocks</code><a class="headerlink" href="#textblocks" title="Permanent link">¶</a></h3>
+<p>Nos permite trabajar con cadenas de texto multilínea de una manera mas sencilla y organizada, antes de esto las cadenas requerían concatenaciones o el uso de caracteres de escape lo cual generaba un código menos legible. </p>
+<p>Algunas de las caracteristicas principales con:</p>
+<ol>
+<li><strong>Sintaxis simplificada</strong>: Se utilizan comillas triples (<code>"""</code>) para definir un bloque de texto.</li>
+<li><strong>Legibilidad mejorada</strong>: Permite escribir cadenas multilínea sin necesidad de caracteres de escape para saltos de línea o comillas.</li>
+<li><strong>Formato automático</strong>: Mantiene el formato del texto tal como se escribe en el código.</li>
+<li><strong>Compatibilidad</strong>: Se puede usar con métodos de cadenas tradicionales como&nbsp;<code>.trim()</code>,&nbsp;<code>.replace()</code> Tenemos acceso a todo el set de metodos que tiene los <code>Strings</code></li>
+</ol>
+<p>Es ideal para poder escribir o visualizar contenido estructurado (<code>JSON</code>) al utilizarlos permite que la cadena mantenga su estructura inicial</p>
+<pre class="highlight"><code class="language-java">public class Main {
+    public static void main(String[] args) {
+        String name = "John Doe";
+        String fullMessage = """
+                Hi %s
+               This is a block-Text in java
+               This is a new text line
+               """.formatted(name);
+        System.out.println(fullMessage);
+    }
+}</code></pre>
+<h3 id="switch-expressions">Switch Expressions<a class="headerlink" href="#switch-expressions" title="Permanent link">¶</a></h3>
+<p>Es otra de las nuevas funcionalidades que se introducen los cuales permiten a las sentencias switch ser mas expresivas, concisas y menos propensas a errores, de forma tradicional en su estructura siempre llevaba un <code>break</code> pero con las expresiones ya no es necesario por que estas expresiones se encargan de retornar directamente un valor y de esta manera eliminar la necesidad de lleva un break para evitar un erro muy común lo cual es <code>fall-through</code></p>
+<p>Su uso se simplifica al uso de <code>→</code> en ves de las típicas llaves <code>{</code> </p>
+<p>Tiene compatibilidad para poder agrupar múltiples valores en un solo caso de uso</p>
+<pre class="highlight"><code class="language-java">int day = 3;
+String dayType = switch (day) {
+    case 1, 7 -&gt; "Fin de semana";
+    case 2, 3, 4, 5, 6 -&gt; "Día laboral";
+    default -&gt; "Día inválido";
+};
+System.out.println(dayType); </code></pre>
+<p>Si en caso necesitas definir lógica dentro de una de las opciones y necesitas retornar datos puedes usar <code>yield</code></p>
+<pre class="highlight"><code class="language-java">int month = 2;
+int daysInMonth = switch (month) {
+    case 1, 3, 5, 7, 8, 10, 12 -&gt; 31;
+    case 4, 6, 9, 11 -&gt; 30;
+    case 2 -&gt; {
+        boolean isLeapYear = true; // Ejemplo
+        yield isLeapYear ? 29 : 28;
+    }
+    default -&gt; throw new IllegalArgumentException("Mes inválido");
+};
+System.out.println(daysInMonth);</code></pre>
+<h3 id="pattern-matching-basico">Pattern Matching básico<a class="headerlink" href="#pattern-matching-basico" title="Permanent link">¶</a></h3>
+<p>Es una característica que nos permite verificar si un objeto coincide con un determinado tipo y si se da el caso nos permite extraer un objeto como ese tipo directamente, de esta maneta nos permite evitar tener que hacer un casting manual.</p>
+<p>Veamos un ejemplo:</p>
+<ul>
+<li>
+<p><strong><code>instanceof</code> con Pattern Matching (Java 16+)</strong></p>
+<pre class="highlight"><code class="language-java">if (obj instanceof String) {
+    String s = (String) obj; // en esta linea hacemos un casting manual
+    System.out.println(s.toUpperCase());
+}</code></pre>
+<p>Ahora</p>
+<pre class="highlight"><code class="language-java">if (obj instanceof String s) { // comprueba que obj sea un string y crea la variable s tipandolo como String
+    System.out.println(s.toUpperCase());
+}</code></pre>
+<p>Como se observa en el ejemplo podemos observar cual es la diferencia, pero esta solución no solo se aplica a condicionales, también podemos usarlo con <code>switch</code></p>
+</li>
+<li>
+<p><strong>Pattern Matching en <code>switch</code> (Java 21)</strong></p>
+<p>Nos permite evaluar tipos directamente, la lógica es el mismo</p>
+<pre class="highlight"><code class="language-java">return switch (shape) {
+    case Rectangle r -&gt; 2 * r.length() + 2 * r.width();
+    case Circle c    -&gt; 2 * c.radius() * Math.PI;
+    default          -&gt; throw new IllegalArgumentException("Forma desconocida");
+};</code></pre>
+<ul>
+<li>
+<p>En este ejemplo observamos que en cada caso <code>case</code> evaluamos el tipo para luego crear una variable con ese el tipo correspondiente, esto también lo hace compatible con condiciones adicionales de tipo <code>guard clauses</code>, veamos un ejemplo:</p>
+<pre class="highlight"><code class="language-java">return switch (obj) {
+    case String s when s.length() &gt; 5 -&gt; "Cadena larga"; // aqui vemos el guard clause depues del when, donde vemos que se evalua una condicion adicional
+    case String s -&gt; "Cadena corta";
+    default -&gt; "Otro tipo";
+};</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p><code>Sealed</code> para <strong>switches:</strong></p>
+<p>Primero entendamos que es un <code>sealed</code></p>
+<p>En java una <strong>clase/interfas</strong>, con <code>sealed</code> podemos restringir la jerarquía de clases, con esto poder controlar que clases pueden heredar o implementarla, por ejemplo:</p>
+<pre class="highlight"><code class="language-java">sealed interface Forma permits Circulo, Rectangulo {} // definimos que a la interface Forma solo pueden implemetarlo las clase Circulo, Rectangulo
+
+final class Circulo implements Forma {
+    double radio;
+    Circulo(double r) { this.radio = r; }
+}
+
+final class Rectangulo implements Forma {
+    double ancho, alto;
+    Rectangulo(double a, double h) { this.ancho = a; this.alto = h; }
+}</code></pre>
+<p>Al trabajar con <code>Sealed</code> podemos logra su uso con <strong>switches</strong> sin la necesidad de que tenga la opción de default, veamos un ejemplo:</p>
+<pre class="highlight"><code class="language-java">double area(Forma f) {
+    return switch (f) {
+        case Circulo c -&gt; Math.PI * c.radio * c.radio;
+        case Rectangulo r -&gt; r.ancho * r.alto;
+    };
+}</code></pre>
+<p>Al usar esta solución logramos que el código se más expresivo y seguro</p>
+</li>
+</ul>
+<h3 id="records">Records<a class="headerlink" href="#records" title="Permanent link">¶</a></h3>
+<p>Los <code>records</code> son una forma moderna de declarar clase, pero lo que lo diferencia de la forma tradicional es que estas son inmutables pensados para representar datos puros.</p>
+<p>Entonces las características que tenemos al usar Records son:</p>
+<ul>
+<li>Inmutabilidad: Los campos se declaran como final al momento de la creación</li>
+<li>Transparencia: Al usar records, estas generan código automáticamente<ul>
+<li>Constructores con todos los campos</li>
+<li>Sobrescribe automáticamente los métodos <code>equals()</code>, <code>hashCode()</code> y <code>toString()</code></li>
+<li>También ganeta los métodos de acceso público (<code>getters</code>), con el mismo nombre del atributo</li>
+</ul>
+</li>
+</ul>
+<p>Veamos un ejemplo haciendo una comparativa de como se declara una clase tradicional a diferencia con un <code>Record</code></p>
+<p>Antes</p>
+<pre class="highlight"><code class="language-java">public final class Persona {
+    private final String nombre;
+    private final int edad;
+
+    public Persona(String nombre, int edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    public String nombre() { return nombre; }
+    public int edad() { return edad; }
+
+    @Override
+    public boolean equals(Object o) { 
+        /* generado automáticamente */ 
+    }
+    @Override
+    public int hashCode() { 
+        /* generado automáticamente */ 
+      }
+    @Override
+    public String toString() { 
+        /* generado automáticamente */ 
+      }
+}</code></pre>
+<p>Después con <code>Records</code>:</p>
+<pre class="highlight"><code class="language-java">public record Persona(String nombre, int edad) {}
+
+// luego automarticamente se tiene
+Persona p = new Persona("Ana", 30);
+System.out.println(p.nombre()); // "Ana"
+System.out.println(p); // Persona[nombre=Ana, edad=30]</code></pre>
+<hr>
+<p>Las diferentes formas en cómo podemos llegar usar un record con muchas las opciones, veamos algunos ejemplos:</p>
+<p>Podemos usar constructores ya sea compactos o incluso aplicar sobrecarga de constructores</p>
+<p>Permite añadir lógica de validación:</p>
+<pre class="highlight"><code class="language-java">public record Persona(String nombre, int edad) {
+    public Persona {
+        if (edad &lt; 0) {
+            throw new IllegalArgumentException("Edad inválida");
+        }
+    }
+}</code></pre>
+<p>Puedes crear constructores adicionales:</p>
+<pre class="highlight"><code class="language-java">public record Persona(String nombre, int edad) {
+    public Persona(String nombre) {
+        this(nombre, 0);
+    }
+}</code></pre>
+<p>Implementación con interfaces</p>
+<pre class="highlight"><code class="language-java">public record Punto(int x, int y) implements Comparable&lt;Punto&gt; {
+    @Override
+    public int compareTo(Punto otro) {
+        return Integer.compare(this.x, otro.x);
+    }
+}</code></pre>
+<p><strong>Uso con Pattern Matching</strong></p>
+<p>Al usarlo de esta manera podemos desestructura el objeto</p>
+<pre class="highlight"><code class="language-java">if (obj instanceof Persona(String nombre, int edad)) {
+    System.out.println(nombre + " tiene " + edad + " años");
+}
+
+// en switch
+switch (obj) {
+    case Persona(String n, int e) -&gt; System.out.println(n + " - " + e);
+    default -&gt; System.out.println("Otro tipo");
+}</code></pre>
+<h2 id="parte-2-avanzadas-optativo">Parte 2: Avanzadas (optativo)<a class="headerlink" href="#parte-2-avanzadas-optativo" title="Permanent link">¶</a></h2>
+<h3 id="sealed-classes">Sealed Classes<a class="headerlink" href="#sealed-classes" title="Permanent link">¶</a></h3>
+<p>Permite definir restricciones en Clases o Interfaces, es decir restringir quienes puedes extender de una clase y quienes pueden implementar una interfaz. Esto se logra usando la palabra clave <code>permits</code> .</p>
+<pre class="highlight"><code class="language-java">public sealed class Shape permits Circle, Square{}</code></pre>
+<p>En el ejemplo anterior podemos ver lo siguiente:</p>
+<ul>
+<li>Definimos a <code>Shape</code> como una clase <code>sealed</code></li>
+<li>Las restricciones son que solo las clases <code>Circle</code> y <code>Square</code> pueden extender o heredar a <code>Shape</code></li>
+<li>Si no se cumple con las restricciones este generar un error en tiempo de compilación.</li>
+</ul>
+<p>Las ventajas son:</p>
+<ul>
+<li>Control de herencia</li>
+<li>Seguridad y mantenibilidad</li>
+</ul>
+<p>Algunas de las reglas clave que se debe tomar en cuenta son:</p>
+<ul>
+<li>Las subclases deben estar en el <strong>mismo módulo o paquete</strong> que la clase sellada.</li>
+<li>
+<p>Cada subclase debe ser marcada como <code>sealed</code>, <code>non-sealed</code> o <code>final</code>:</p>
+<pre class="highlight"><code class="language-java">sealed class Circle extends Shape { /* ... */ }
+non-sealed class Square extends Shape { /* ... */ }
+final class Triangle extends Shape { /* ... */ }</code></pre>
+<p>En el ejemplo anterior podemos ver que al trabajar con <code>sealed</code> se obliga a declarar explícitamente como sigue la jerarquía.</p>
+</li>
+</ul>
+<h3 id="virtual-threads">Virtual Threads<a class="headerlink" href="#virtual-threads" title="Permanent link">¶</a></h3>
+<p>Antes de hablar específicamente de los hilos virtuales, es necesario hablar de <strong><code>Platform Threads tradicionales</code></strong> es como se trabajaba antes con de los hilos virtuales, En java los <strong><code>Threads</code></strong> tradicionales los cuales solían ser creados con <code>new Thread()</code> o mediante <code>ExecutorService</code> . Esto lo que hace es mapear 1:1 a un hilo del sistema operativo, esto significa que cada hilo consume recursos directamente del Sistema.</p>
+<pre class="highlight"><code class="language-java">Thread task = new Thread(() -&gt; {
+    // Código concurrente
+});
+task.start();</code></pre>
+<ul>
+<li>Características principales</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Platform Thread (Tradicional)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gestión</td>
+<td>Sistema operativo</td>
+</tr>
+<tr>
+<td>Consumo de memoria</td>
+<td>Alto (~1MB por hilo)</td>
+</tr>
+<tr>
+<td>Escalabilidad</td>
+<td>Limitada</td>
+</tr>
+<tr>
+<td>Ideal para</td>
+<td>Tareas intensivas en CPU</td>
+</tr>
+<tr>
+<td>Bloqueo</td>
+<td>Ineficiente (ocupa recursos)</td>
+</tr>
+<tr>
+<td>Control</td>
+<td>Total, sobre el ciclo de vida</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<ul>
+<li>¿Cuándo se usan?<ul>
+<li><strong>Procesamiento intensivo en CPU</strong>: como compresión de video, cálculos matemáticos complejos, simulaciones físicas.</li>
+<li><strong>Integración con código nativo</strong>: JNI, bibliotecas C/C++ que requieren hilos del sistema.</li>
+<li><strong>Tareas que no bloquean</strong>: si el hilo está constantemente ocupado y no espera por I/O.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>
+<p>Ejemplo con <code>ExecutorService</code></p>
+<pre class="highlight"><code class="language-java">ExecutorService executor = Executors.newFixedThreadPool(4);
+
+executor.submit(() -&gt; {
+    realizarCalculoPesado();
+});
+</code></pre>
+<p>Este patrón es común en aplicaciones que necesitan paralelismo controlado, como procesamiento de imágenes o simulaciones.</p>
+</li>
+</ul>
+<hr>
+<ul>
+<li>Limitaciones<ul>
+<li>Crear muchos hilos puede agotar memoria y recursos del sistema.</li>
+<li>Si un hilo se bloquea (esperando I/O), sigue ocupando su hilo físico.</li>
+<li>Requiere manejo manual del ciclo de vida (shutdown, join, etc.).</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>Ahora que sabemos las bases podemos pasemos a lo que si nos interesa.</p>
+<ul>
+<li>
+<p>Virtual Threads</p>
+<p>A diferencia de trabajar con los hilos nativos los <code>Virtual Threads</code> son hilos ligeros los cuales son gestionados por la <code>JVM</code> de java, aunque en el fondo siguen siendo instancias de <code>java.lang.Thread</code> </p>
+<pre class="highlight"><code class="language-java">Thread.startVirtualThread(() -&gt; {
+    // Código concurrente
+});</code></pre>
+<hr>
+<p>Diferencias clave con los <code>Platform Threads</code></p>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Platform Thread (Tradicional)</th>
+<th>Virtual Thread</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gestión</td>
+<td>Sistema operativo</td>
+<td>JVM</td>
+</tr>
+<tr>
+<td>Coste de creación</td>
+<td>Alto</td>
+<td>Muy bajo</td>
+</tr>
+<tr>
+<td>Escalabilidad</td>
+<td>Limitada</td>
+<td>Masiva</td>
+</tr>
+<tr>
+<td>Uso ideal</td>
+<td>Tareas intensivas en CPU</td>
+<td>Tareas bloqueantes (I/O)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="cuando-usarlos">¿Cuándo usarlos?<a class="headerlink" href="#cuando-usarlos" title="Permanent link">¶</a></h3>
+<ul>
+<li>Servidores web con miles de conexiones simultáneas.</li>
+<li>Aplicaciones que hacen muchas llamadas a bases de datos o APIs.</li>
+<li>Sistemas reactivos que necesitan alta concurrencia sin complejidad.</li>
+</ul>
+<hr>
+<h3 id="ejemplo-practico">Ejemplo práctico<a class="headerlink" href="#ejemplo-practico" title="Permanent link">¶</a></h3>
+<pre class="highlight"><code class="language-java">ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor();
+
+executor.submit(() -&gt; {
+    var result = fetchDataFromAPI();
+    process(result);
+});
+</code></pre>
+<p>Este patrón permite lanzar tareas concurrentes sin preocuparse por el número de hilos físicos.</p>
+<p>Existe una forma de manejar de forma más segura, legible y modular se conoce como parte del enfoque de <code>structured concurrency</code> lo cual se conoce como <strong><code>StructuredTaskScope</code></strong> </p>
+<p>Entonces definamos que es:</p>
+<p>Es una forma de lanzar subtareas concurrentes, pero en este caso nos permite esperar los resultados de dichas tareas, para controlar de mejor manera los efectos secundarios se usa <code>try-with-resources</code> lo que nos permite gestionar los hilos de mejor manera y evitar hilos huerfanos.</p>
+<pre class="highlight"><code class="language-java">try (var scope = new StructuredTaskScope&lt;Object&gt;()) {
+    var subtask1 = scope.fork(() -&gt; fetchData());
+    var subtask2 = scope.fork(() -&gt; processData());
+    scope.join(); // Espera que todas terminen
+    var result1 = subtask1.get();
+    var result2 = subtask2.get();
+}</code></pre>
+<p>Algunas de las ventajas clave son:</p>
+<ul>
+<li><strong>Encapsulamiento de concurrencia</strong>: Las tareas viven dentro del bloque <code>try</code>, evitando fugas.</li>
+<li><strong>Manejo de errores centralizado</strong>: Puedes detectar fallos y cancelar otras tareas si una falla.</li>
+<li><strong>Control de tiempo</strong>: Puedes establecer <em>timeouts</em> para evitar bloqueos indefinidos.</li>
+<li><strong>Extensiones útiles</strong>: Subclases como <code>ShutdownOnFailure</code> y <code>ShutdownOnSuccess</code> permiten abortar tareas según condiciones.</li>
+</ul>
+<p>Veamos un ejemplo de suma de subtareas</p>
+<pre class="highlight"><code class="language-java">try (var scope = new StructuredTaskScope&lt;Double&gt;()) {
+    List&lt;StructuredTaskScope.Subtask&lt;Double&gt;&gt; tasks = new ArrayList&lt;&gt;();
+    IntStream.range(0, 5).forEach(i -&gt; {
+        var task = scope.fork(() -&gt; Math.random());
+        tasks.add(task);
+    });
+    scope.join();
+    double total = tasks.stream().mapToDouble(StructuredTaskScope.Subtask::get).sum();
+    System.out.println("Suma = " + total);
+}</code></pre>
+<p>El ejemplo anterior es ideal para dividir grandes subtareas ejecutarlos en paralelo y luego agregarlas</p>
+<p>Ahora como se aplican los hilos virtuales, en casos de uso reales:</p>
+<ul>
+<li>
+<p>Procesamiento de pagos: En sistemas financieros, como los que manejan pagos o transacciones bancarias, se usan múltiples servicios: validación de usuario, verificación de fondos, generación de recibos. Con <code>StructuredTaskScope</code>, cada uno se lanza como una subtarea concurrente, y si una falla, se cancelan las demás automáticamente.</p>
+<pre class="highlight"><code class="language-java">try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
+    var userCheck = scope.fork(() -&gt; validateUser());
+    var fundsCheck = scope.fork(() -&gt; verifyFunds());
+    var receiptGen = scope.fork(() -&gt; generateReceipt());
+    scope.join();
+    // Si alguna falla, las demás se cancelan
+}</code></pre>
+</li>
+<li>
+<p>Servicios de notificación: En aplicaciones que envían notificaciones por múltiples canales (email, SMS, push), puedes lanzar cada canal como una subtarea. Si uno tiene éxito (<code>ShutdownOnSuccess</code>), puedes cancelar los demás para ahorrar recursos.</p>
+</li>
+<li>
+<p>Generación de facturas: Un ejemplo clásico: generar una factura requiere obtener datos del pedido, del cliente y de la plantilla. Cada uno se puede obtener en paralelo. Si alguno falla, se aborta todo el proceso para evitar inconsistencias.</p>
+<pre class="highlight"><code class="language-java">try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
+    var order = scope.fork(() -&gt; orderService.getOrder(orderId));
+    var customer = scope.fork(() -&gt; customerService.getCustomer(customerId));
+    var template = scope.fork(() -&gt; invoiceTemplateService.getTemplate(lang));
+    scope.join();
+    return Invoice.generate(order.get(), customer.get(), template.get());
+}</code></pre>
+</li>
+<li>
+<p>Beneficios arquitectónicos</p>
+<ul>
+<li><strong>Evita hilos huérfanos</strong>: Todas las tareas están ligadas al bloque estructurado.</li>
+<li><strong>Simplifica el manejo de errores</strong>: No necesitas lógica manual para cancelar tareas.</li>
+<li><strong>Mejora la trazabilidad</strong>: El flujo de concurrencia es más fácil de seguir y documentar.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<aside>
+💡
+
+Esta es una característica de vista previa en Java 21; por lo tanto, tendríamos que habilitar el modo de vista previa.
+
+</aside>
+
+<h3 id="unnamed-classes">Unnamed Classes<a class="headerlink" href="#unnamed-classes" title="Permanent link">¶</a></h3>
+<p>Es una ventaja muy grande lo cual permite reducir drásticamente la curva de aprendizaje de java, permite escribir programas Java sin declarar una clase explicita, es decir se tiene la capacidad de escribir directamente el método <code>main</code> </p>
+<pre class="highlight"><code class="language-java">void main() {
+    System.out.println("Hola, Kevin!");
+}</code></pre>
+<ul>
+<li>Las ventajas son:<ul>
+<li><strong>Reducir la verbosidad</strong>: Java siempre ha sido criticado por requerir mucho "boilerplate" incluso para tareas simples.</li>
+<li><strong>Facilitar el aprendizaje</strong>: Ideal para estudiantes o para escribir scripts rápidos sin preocuparse por estructuras formales.</li>
+<li><strong>Prototipado ágil</strong>: Útil para probar ideas, algoritmos o fragmentos de código sin crear una clase completa.</li>
+</ul>
+</li>
+<li>
+<p>¿Cómo funciona?</p>
+<ul>
+<li>El compilador genera una clase anónima automáticamente.</li>
+<li>El método <code>main()</code> puede ser <strong>instancia o estático</strong>, con o sin argumentos.</li>
+<li>
+<p>Se ejecuta el primer <code>main()</code> válido que encuentre, siguiendo esta prioridad:</p>
+<pre class="highlight"><code>1. static void main(String[] args)
+2. static void main()
+3. void main(String[] args)
+4. void main()</code></pre>
+</li>
+<li>
+<p>Ejemplo completo</p>
+<pre class="highlight"><code class="language-java">void main() {
+    System.out.println("¡Sin clase, sin problema!");
+}
+</code></pre>
+<p>Para compilar y ejecutar:</p>
+<pre class="highlight"><code class="language-bash">java --enable-preview --source 21 MiArchivo.java
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="string-templates">String Templates<a class="headerlink" href="#string-templates" title="Permanent link">¶</a></h3>
+<p>Es una nueva forma de construir cadenas dinámicas usando interpolación directa, es algo similar a lo que ya existe en leguajes como Python, Kotlin o JavaScript. En lugar de concatenar con <code>+</code> o usar <code>String.format()</code> podemos usar directamente:</p>
+<pre class="highlight"><code class="language-java">import static java.util.FormatProcessor.STR;
+
+String nombre = "Laura";
+int edad = 28;
+String mensaje = STR."Hola, soy \{nombre} y tengo \{edad} años.";
+System.out.println(mensaje);</code></pre>
+<ul>
+<li>
+<p>Los procesadores de plantillas se cladifican en:</p>
+<ul>
+<li>
+<p>Procesador de plantilla <code>STR</code></p>
+<p>realiza la interpolación de cadenas reemplazando iterativamente cada expresión incrustada de la plantilla proporcionada con el valor de cadena de esa expresión.</p>
+<pre class="highlight"><code class="language-java">String interpolationUsingSTRProcessor(String feelsLike, String temperature, String unit) {
+    return STR."Today's weather is \{ feelsLike }, with a temperature of \{ temperature } degrees \{ unit }" ;
+}</code></pre>
+</li>
+<li>
+<p>Procesador de plantilla <code>FMT</code></p>
+<p>Agrega el soporte de comprender los formateadores que se proporcionan al procesador, que formatean los datos de acuerdo con el estilo de formato proporcionado.</p>
+<pre class="highlight"><code class="language-java">String interpolationOfJSONBlockWithFMT(String feelsLike, float temperature, String unit) {
+    return FMT
+      . """
+      {
+        "feelsLike": "%1s\{ feelsLike }",
+        "temperature": "%2.2f\{ temperature }",
+        "unit": "%1s\{ unit }"
+      }
+      """ ;
+      // usamos %s y %f para formatear la cadena y la temperatura en un formato específico.
+}</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="sequenced-collections">Sequenced Collections<a class="headerlink" href="#sequenced-collections" title="Permanent link">¶</a></h3>
+<p>Son <strong>interfaces nuevas</strong> que definen colecciones con <strong>orden de encuentro bien definido</strong> (encounter order). Esto significa que puedes acceder de forma uniforme al <strong>primer y último elemento</strong>, y también obtener una <strong>vista invertida</strong> de la colección.</p>
+<hr>
+<h3 id="por-que-son-importantes">¿Por qué son importantes?<a class="headerlink" href="#por-que-son-importantes" title="Permanent link">¶</a></h3>
+<p>Antes de Java 21, el acceso al primer/último elemento dependía del tipo de colección:</p>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Primer elemento</th>
+<th>Último elemento</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>List</code></td>
+<td><code>list.get(0)</code></td>
+<td><code>list.get(list.size()-1)</code></td>
+</tr>
+<tr>
+<td><code>Deque</code></td>
+<td><code>deque.getFirst()</code></td>
+<td><code>deque.getLast()</code></td>
+</tr>
+<tr>
+<td><code>LinkedHashSet</code></td>
+<td><code>iterator().next()</code></td>
+<td>❌ (no hay método directo)</td>
+</tr>
+</tbody>
+</table>
+<p>Esto generaba <strong>fragmentación y código inconsistente</strong>. Las <em>Sequenced Collections</em> resuelven esto con una API uniforme.</p>
+<hr>
+<h3 id="nuevas-interfaces">Nuevas interfaces<a class="headerlink" href="#nuevas-interfaces" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Interfaz</th>
+<th>Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SequencedCollection&lt;E&gt;</code></td>
+<td>Acceso ordenado a extremos y reversa</td>
+</tr>
+<tr>
+<td><code>SequencedSet&lt;E&gt;</code></td>
+<td>Igual que arriba, pero sin duplicados</td>
+</tr>
+<tr>
+<td><code>SequencedMap&lt;K,V&gt;</code></td>
+<td>Acceso ordenado a claves/valores y reversa</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="metodos-clave">Métodos clave<a class="headerlink" href="#metodos-clave" title="Permanent link">¶</a></h3>
+<pre class="highlight"><code class="language-java">interface SequencedCollection&lt;E&gt; extends Collection&lt;E&gt; {
+    void addFirst(E e);
+    void addLast(E e);
+    E getFirst();
+    E getLast();
+    E removeFirst();
+    E removeLast();
+    SequencedCollection&lt;E&gt; reversed();
+}
+</code></pre>
+<p>Estos métodos son <strong>default</strong>, lo que permite que clases como <code>ArrayList</code>, <code>LinkedHashSet</code> o <code>TreeMap</code> los implementen sin romper compatibilidad.</p>
+<h3 id="ejemplo-practico_1">Ejemplo práctico<a class="headerlink" href="#ejemplo-practico_1" title="Permanent link">¶</a></h3>
+<pre class="highlight"><code class="language-java">SequencedCollection&lt;String&gt; nombres = new ArrayList&lt;&gt;();
+nombres.addFirst("Ana");
+nombres.addLast("Luis");
+
+System.out.println(nombres.getFirst()); // Ana
+System.out.println(nombres.getLast());  // Luis
+
+var invertido = nombres.reversed();
+invertido.forEach(System.out::println); // Luis, Ana
+</code></pre>
+<h3 id="aplicaciones-estrategicas-para-ti">Aplicaciones estratégicas para ti<a class="headerlink" href="#aplicaciones-estrategicas-para-ti" title="Permanent link">¶</a></h3>
+<ul>
+<li>Crear APIs más expresivas y consistentes.</li>
+<li>Documentar patrones de acceso ordenado para estudiantes.</li>
+<li>Diseñar estructuras modulares que respeten el orden lógico de datos.</li>
+<li>Evitar hacks como <code>iterator().next()</code> o <code>Collections.reverse()</code>.</li>
+</ul>
+<p>https://www.baeldung.com/java-21-sequenced-collections</p>
+<h2 id="practiquemos-todo-lo-aprendido">Practiquemos todo lo aprendido<a class="headerlink" href="#practiquemos-todo-lo-aprendido" title="Permanent link">¶</a></h2>
+<p><a href="https://www.notion.so/Ejercicios-Java-FullStack-250db4fab68180d8922dfd0a08ea0d03?pvs=21">Ejercicios Java FullStack</a> </p>
+<hr>
+<h1 id="modulo-5-apis-sin-spring-fundamentos-web-en-java">🧩 Módulo 5: APIs sin Spring - Fundamentos Web en Java<a class="headerlink" href="#modulo-5-apis-sin-spring-fundamentos-web-en-java" title="Permanent link">¶</a></h1>
+<ul>
+<li>¿Qué es una API?</li>
+<li>HTTP y verbos (GET, POST, PUT, DELETE)</li>
+<li>Java con Servlets (muy básico)</li>
+<li>Desventajas y motivación para usar Spring Boot</li>
+</ul>
+<hr>
+<h1 id="modulo-6-spring-boot-basico-y-buenas-practicas-rest">🌱 Módulo 6: Spring Boot básico y buenas prácticas REST<a class="headerlink" href="#modulo-6-spring-boot-basico-y-buenas-practicas-rest" title="Permanent link">¶</a></h1>
+<ul>
+<li>¿Qué es Spring Boot?</li>
+<li>Estructura de un proyecto Spring Boot 3</li>
+<li>Anotaciones clave: @Controller, @RestController, @Service, etc.</li>
+<li>Manejo de excepciones</li>
+<li>Validaciones y uso de DTOs</li>
+<li>Inyección de dependencias</li>
+</ul>
+<hr>
+<h1 id="modulo-7-persistencia-de-datos-con-spring-data-jpa">🗃️ Módulo 7: Persistencia de datos con Spring Data JPA<a class="headerlink" href="#modulo-7-persistencia-de-datos-con-spring-data-jpa" title="Permanent link">¶</a></h1>
+<ul>
+<li>PostgreSQL y configuración</li>
+<li>Entidades: @Entity, @Id, @Table</li>
+<li>Relaciones: @OneToMany, @ManyToOne...</li>
+<li>Consultas: derived queries, native queries, stored procedures</li>
+<li>DTOs + ModelMapper</li>
+<li>Paginación y ordenamiento</li>
+</ul>
+<hr>
+<h1 id="modulo-8-seguridad-con-spring-security">🔐 Módulo 8: Seguridad con Spring Security<a class="headerlink" href="#modulo-8-seguridad-con-spring-security" title="Permanent link">¶</a></h1>
+<ul>
+<li>Fundamentos de seguridad web</li>
+<li>Autenticación vs Autorización</li>
+<li>JWT Tokens y perfiles (@Profiles)</li>
+<li>Configuración básica de seguridad</li>
+</ul>
+<hr>
+<h1 id="modulo-9-pruebas-automatizadas-en-java">🧪 Módulo 9: Pruebas automatizadas en Java<a class="headerlink" href="#modulo-9-pruebas-automatizadas-en-java" title="Permanent link">¶</a></h1>
+<ul>
+<li>JUnit 5 y Test de servicios</li>
+<li>Mockito y simulación de dependencias</li>
+</ul>
+<hr>
+<h1 id="modulo-10-consumo-de-api-desde-frontend-js">🌐 Módulo 10: Consumo de API desde Frontend JS<a class="headerlink" href="#modulo-10-consumo-de-api-desde-frontend-js" title="Permanent link">¶</a></h1>
+<ul>
+<li>Comparativa: Angular vs React.js vs Vue.js</li>
+<li>Ejemplo de consumo de API con cada framework</li>
+</ul>
+<hr>
+<h1 id="modulo-11-concurrencia-moderna-en-java">🧵 Módulo 11: Concurrencia moderna en Java<a class="headerlink" href="#modulo-11-concurrencia-moderna-en-java" title="Permanent link">¶</a></h1>
+<ul>
+<li>Introducción a los hilos</li>
+<li>@Async en Spring</li>
+<li>Virtual Threads con Loom en Spring Boot</li>
+</ul>
+<hr>
+<h1 id="modulo-12-spring-ai">🤖 Módulo 12: Spring AI<a class="headerlink" href="#modulo-12-spring-ai" title="Permanent link">¶</a></h1>
+<ul>
+<li>Introducción a la IA Generativa y LLMs</li>
+<li>Fundamentos de Spring AI</li>
+<li>Integración con OpenAI: prompts, templates, structured output</li>
+<li>Uso de ToolCallback</li>
+<li>Procesamiento de imágenes/audio con OpenAI (DALL·E, Whisper)</li>
+<li>Bases vectoriales con embeddings (ChromaDB)</li>
+<li>Búsquedas semánticas (texto y PDF)</li>
+<li>Frontend integrador con Next.js</li>
+</ul>
+<hr>
+<h1 id="notas-adicionales">Notas adicionales<a class="headerlink" href="#notas-adicionales" title="Permanent link">¶</a></h1>
+<ul>
+<li>Recomendable usar Docker y Docker Compose desde JPA en adelante.</li>
+<li>Incluir prácticas constantes con pequeños proyectos en cada módulo.</li>
+<li>Usar Git desde el inicio para control de versiones y buenas prácticas colaborativas.</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright © 2025 by K3V1N 117</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../javascripts/katex.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+
+        <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body></html>
