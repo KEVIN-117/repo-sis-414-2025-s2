@@ -148,7 +148,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#evaluacion-diagnostica-desarrollo-web-y-java" class="nav-link">📘 Evaluación Diagnóstica – Desarrollo Web y Java</a>
+            <li class="nav-item" data-bs-level="1"><a href="#evaluacion-diagnostica-desarrollo-web-y-java-solucionado" class="nav-link">📘 Evaluación Diagnóstica – Desarrollo Web y Java (solucionado)</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-bs-level="2"><a href="#parte-teorica-20-puntos-30-min" class="nav-link">Parte Teórica (20 puntos, ~30 min)</a>
               <ul class="nav flex-column">
@@ -158,7 +158,7 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#-en-main-guarda-un-objeto-producto-en-una-caja-y-luego-recuperalo-para-mostrarlo-en-consola" class="nav-link">- En Main, guarda un objeto Producto en una Caja y luego recupéralo para mostrarlo en consola.</a>
+            <li class="nav-item" data-bs-level="2"><a href="#boxproduct-box-new-box-product-product1-new-productmilk-125-boxsaveproduct1-product-product2-boxget-systemoutprintlnproduct2" class="nav-link">Box&lt;Product&gt; box = new Box&lt;&gt;(); Product product1 = new Product("Milk", 12.5); box.save(product1); Product product2 = box.get(); System.out.println(product2);</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -174,7 +174,7 @@
                     <div class="col-md-9" role="main">
 
 <hr>
-<h1 id="evaluacion-diagnostica-desarrollo-web-y-java">📘 Evaluación Diagnóstica – Desarrollo Web y Java<a class="headerlink" href="#evaluacion-diagnostica-desarrollo-web-y-java" title="Permanent link">¶</a></h1>
+<h1 id="evaluacion-diagnostica-desarrollo-web-y-java-solucionado">📘 Evaluación Diagnóstica – Desarrollo Web y Java (solucionado)<a class="headerlink" href="#evaluacion-diagnostica-desarrollo-web-y-java-solucionado" title="Permanent link">¶</a></h1>
 <p><strong>Duración:</strong> 2 horas<br>
 <strong>Distribución:</strong></p>
 <ul>
@@ -194,45 +194,85 @@
 <ol>
 <li>
 <p>(1 pts) ¿Qué diferencia existe entre HTML, CSS y JavaScript en una página web?</p>
+<p>Este es el <code>stack</code> de tecnologías que se usa en el desarrollo web es la base
+- <code>HTML</code>: nos permite hacer la maquetación de la página (el esqueleto)
+- <code>CSS</code>: se usa para que la página web tenga estilos, es decir la parte visual
+- <code>JS</code>: se encarga de la funcionalidad de la página web.</p>
 </li>
 <li>
-<p>(1 pts) Menciona todas las etiquetas HTML que conoce y de una descripción de al menos 3 de ellas</p>
+<p>(1 pts) Menciona todas las etiquetas HTML que conoce y de una descripción de al menos 3 de ellas:</p>
+<ul>
+<li><code>div</code></li>
+<li><code>section</code></li>
+<li><code>aside</code></li>
+<li><code>h1-h6</code></li>
+<li><code>span</code></li>
+<li><code>article</code></li>
+<li><code>script</code></li>
+</ul>
 </li>
 <li>
 <p>(2 pts) ¿Qué es un "atributo" en HTML? Da un ejemplo.</p>
+<p>Un atributo es aquella que se le pasa a una etiqueta <code>html</code> en la apertura de la misma ej: <code>&lt;div class=""&gt;&lt;/div&gt;</code></p>
 </li>
 <li>
 <p>(2 pts) ¿Qué diferencia hay entre <code>id</code> y <code>class</code> en etiquetas HTML y como se usan en CSS?</p>
+<ul>
+<li><code>id</code>: se usa para asignar un identificador único a etiquetas HTML</li>
+<li><code>class</code>: permite agrupar muchas etiquetas HTML con una sola palabra</li>
+</ul>
 </li>
 <li>
 <p>(2 pts) ¿Qué es un archivo externo <code>.css</code> y por qué es recomendable usarlo?</p>
+<p>Es un archivo de estilos, usado para poder trabajar de una manera ordenada, es el lugar donde definimos todos los estilos de nuestra página web para luego enlazarlo a un archivo <code>.html</code></p>
 </li>
 </ol>
 <h3 id="seccion-b-java-10-puntos"><strong>Sección B: Java (10 puntos)</strong><a class="headerlink" href="#seccion-b-java-10-puntos" title="Permanent link">¶</a></h3>
 <ol>
 <li>
 <p>(1 pts) ¿Qué significa que Java es un lenguaje "orientado a objetos"?</p>
+<p>Indica que nos soporta el paradigma POO, lo cual se enfoca en trabajar u organizar los datos y comportamientos en estructuras que se conocen como objetos, al seguir este enfoque se garantiza que el software que se desarrolla es modular, escalable y mantenible.</p>
 </li>
 <li>
 <p>(1 pts) Explica qué es la JVM (Java Virtual Machine).</p>
+<p>Java funcion bajo el concepto <code>WORA</code> lo cual dignifica <code>Write once, run anywhere</code> (Escribe una vez, corre en cualquier lugar), una vez que nuestro codigo es compilado a <code>bytecode</code> con la JVM  que es la maquina virtual de java, podemos ejecutar nuestros programas en cualquier sistema.</p>
 </li>
 <li>
 <p>(2 pts) Nombra los cuatro modificadores de acceso en Java y su alcance.</p>
+<ul>
+<li>public: Accesible desde cualquier clase, sin importar el paquete.</li>
+<li>protected: Accesible desde el mismo paquete y desde subclases, incluso en otros paquetes.</li>
+<li>default: Accesible solo dentro del mismo paquete. También se llama package-private.</li>
+<li>private: Accesible solo dentro de la misma clase donde se declara.</li>
+</ul>
 </li>
 <li>
 <p>(1 pts) ¿Qué es una variable y cómo se declara en Java?</p>
+<p>Una variable es donde nosotros almacenamos datos (una cajita), estos datos se guardan de manera temporal <code>&lt;tipo de dato&gt; &lt;nombre variable&gt; = &lt;valor&gt;;</code> ej `int num = 16;</p>
 </li>
 <li>
 <p>(1 pts) ¿Cuál es la diferencia entre <code>==</code> y <code>.equals()</code> en Java?</p>
+<ul>
+<li><code>==</code>: nos permite compara valores con tipos de datos primitivos</li>
+<li><code>.equals()</code>: para comparar objetos</li>
+</ul>
 </li>
 <li>
 <p>(2 pts) ¿Qué es una <strong>interfaz funcional</strong> en Java? Da un ejemplo conocido.</p>
+<p>las interfaces funcionales con aquellas interfaces en java que solo definen un metodo abstracto tambien conocidos como <code>SAM</code> en su cuerpo. Para buenas practicas se les suele dar el decorador <code>@FunctionalInterface</code>
+Ejemplo:
+</p><pre class="highlight"><code class="language-java">@FunctionalInterface
+public interface Runnable{
+    void run();
+}</code></pre><p></p>
 </li>
 <li>
-<p>(2 pts) ¿Para qué sirven las <strong>expresiones lambda</strong> (funciones anónimas) en Java?</p>
+<p>(2 pts) ¿Para qué sirven las <strong>expresiones lambda</strong> (funciones anónimas) en Java?
+    Son funciones anonimas que no necesitan un nombre para ser declarados</p>
 </li>
 <li>
 <p>(2 pts) ¿Qué ventaja ofrecen los <strong>genéricos</strong> (<code>Generics</code>) en Java al momento de programar?</p>
+<p>Los genericos es una parigma en donde nos se nos permite declarar claes y funciones con tipos de datos parametrizados</p>
 </li>
 </ol>
 <hr>
@@ -270,7 +310,132 @@ Crea una página sencilla que contenga:</p>
 </li>
 </ul>
 </li>
+<li>
+<p>Solucionado</p>
+</li>
 </ul>
+<pre class="highlight"><code class="language-html">&lt;h1&gt;YOUR NAME&lt;/h1&gt;
+    &lt;P&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident autem libero illum porro culpa, necessitatibus
+        nostrum consequuntur exercitationem quidem sit enim minus itaque minima eligendi labore facilis consequatur sint
+        recusandae.
+        Sit, laudantium libero dignissimos officiis quisquam ut aut mollitia veritatis obcaecati illo illum ratione
+        porro asperiores delectus, beatae saepe at temporibus, minus inventore adipisci sapiente consectetur
+        praesentium! Fugiat, amet nulla?
+        Doloremque assumenda nisi eaque, amet, voluptatibus voluptatem molestiae quasi recusandae nesciunt quidem
+        ducimus nobis qui officiis veritatis neque iusto dolore ex dolores totam ut quisquam rem! A, dolorum? Neque, ad!
+        Exercitationem libero voluptates incidunt, perferendis illum voluptatem saepe est? Deserunt, nulla. Perferendis
+        aperiam consequuntur delectus labore maxime deleniti voluptatum odio quas voluptate. Mollitia eum quasi quam ad
+        velit eos nam.&lt;/P&gt;
+
+    &lt;ol&gt;
+        &lt;li&gt;Hobby 1&lt;/li&gt;
+        &lt;li&gt;Hobby 2&lt;/li&gt;
+        &lt;li&gt;Hobby 3&lt;/li&gt;
+    &lt;/ol&gt;
+
+    &lt;a href="https://github.com/KEVIN-117"&gt;
+        &lt;button&gt;My GitHub&lt;/button&gt;
+    &lt;/a&gt;
+
+    &lt;table&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Firstname&lt;/th&gt;
+                &lt;th&gt;Lastname&lt;/th&gt;
+                &lt;th&gt;Age&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;John&lt;/td&gt;
+                &lt;td&gt;Doe&lt;/td&gt;
+                &lt;td&gt;25&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Mary&lt;/td&gt;
+                &lt;td&gt;Moe&lt;/td&gt;
+                &lt;td&gt;50&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;July&lt;/td&gt;
+                &lt;td&gt;Dooley&lt;/td&gt;
+                &lt;td&gt;40&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;</code></pre>
+<pre class="highlight"><code class="language-css">&lt;style&gt;
+
+        body {
+            background-color: lightgray;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        h1 {
+            color: blue;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            font-size: 36px;
+        }
+
+        p {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        ol {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+    &lt;/style&gt;</code></pre>
+<ul>
+<li>Resultado</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../image.png" data-desc-position="bottom"><img alt="alt text" src="../image.png"></a></p>
 <p><strong>Ejercicio 2 (25 pts): Página con formulario</strong><br>
 Agrega a la página un <strong>formulario sencillo</strong> con:</p>
 <ul>
@@ -289,20 +454,48 @@ Agrega a la página un <strong>formulario sencillo</strong> con:</p>
 <p>No es necesario que funcione el envío, solo la estructura y el estilo.</p>
 </blockquote>
 </li>
+<li>
+<p>Solucionado</p>
+</li>
 </ul>
+<pre class="highlight"><code class="language-html">&lt;form action=""&gt;
+        &lt;label for="name"&gt;Name:&lt;/label&gt;
+        &lt;input type="text" id="name" name="name" required&gt;
+        &lt;br&gt;&lt;br&gt;
+        &lt;label for="email"&gt;Email:&lt;/label&gt;
+        &lt;input type="email" id="email" name="email" required&gt;
+        &lt;br&gt;&lt;br&gt;
+        &lt;label for="degree"&gt;Degree:&lt;/label&gt;
+        &lt;select id="degree" name="degree" required&gt;
+            &lt;option value=""&gt;Select your degree&lt;/option&gt;
+            &lt;option value="bachelors"&gt;Bachelor's&lt;/option&gt;
+            &lt;option value="masters"&gt;Master's&lt;/option&gt;
+            &lt;option value="phd"&gt;PhD&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;br&gt;&lt;br&gt;
+        &lt;button type="submit"&gt;Submit&lt;/button&gt;
+    &lt;/form&gt;</code></pre>
 <hr>
 <h3 id="seccion-b-java-40-puntos"><strong>Sección B: Java (40 puntos)</strong><a class="headerlink" href="#seccion-b-java-40-puntos" title="Permanent link">¶</a></h3>
 <p><strong>Ejercicio 1 (10 pts): Variables y condicionales</strong><br>
 Escribe un programa en Java que:</p>
 <ul>
 <li>
-<p>Pida la edad de un usuario.</p>
+<p>Pida la edad de un usuario.
+    </p><pre class="highlight"><code class="language-java">Scanner sc = new Scanner(System.in);
+int age = sc.nextInt();</code></pre><p></p>
 </li>
 <li>
-<p>Si es menor de 18, imprima: <em>"Eres menor de edad"</em>.</p>
+<p>Si es menor de 18, imprima: <em>"Eres menor de edad"</em>.
+    </p><pre class="highlight"><code class="language-java">if(age &lt; 18){
+    System.out.println("Eres menor de edad");
+}</code></pre><p></p>
 </li>
 <li>
-<p>Si es 18 o más, imprima: <em>"Eres mayor de edad"</em>.</p>
+<p>Si es 18 o más, imprima: <em>"Eres mayor de edad"</em>.
+    </p><pre class="highlight"><code class="language-java">else {
+    System.out.println("Eres mayor de edad");
+}</code></pre><p></p>
 </li>
 </ul>
 <p><strong>Ejercicio 2 (10 pts): Clases y métodos</strong><br>
@@ -316,40 +509,92 @@ Crea una clase <code>Estudiante</code> con los siguientes atributos:</p>
 </li>
 <li>
 <p><code>carrera</code> (String)</p>
+<pre class="highlight"><code class="language-java">public class Estudent{
+    private String name;
+    private Integer age;
+    private String degree;
+}</code></pre>
 </li>
 </ul>
 <p>La clase debe tener:</p>
 <ul>
 <li>
-<p>Un constructor para inicializar los valores.</p>
+<p>Un constructor para inicializar los valores.
+    </p><pre class="highlight"><code class="language-java">public Estudent(String name, Integer age, String degree){
+    this.name = name;
+    this.age = age;
+    this.degree = degree;
+}</code></pre><p></p>
 </li>
 <li>
 <p>Un método <code>presentarse()</code> que imprima:</p>
 <blockquote>
 <p>"Hola, me llamo [nombre], tengo [edad] años y estudio [carrera]."</p>
 </blockquote>
+<pre class="highlight"><code class="language-java">public void take(){
+    System.out.println("Hola, me llamo" + this.name +" tengo "+ this.edad + " años y estudio " + this.degree);
+}</code></pre>
 <p>En la clase principal (<code>Main</code>), crea dos estudiantes y haz que se presenten.</p>
+<pre class="highlight"><code class="language-java">Estudent est1 =  new Estudent("alguien", 23, "Ciencias de la computacion");
+Estudent est2 =  new Estudent("alguien", 23, "Desarrollo de software");
+
+est1.take();
+est2.take();</code></pre>
 </li>
 </ul>
 <p><strong>Ejercicio 3 (20 pts): Programación orientada a objetos, funcional y genérica</strong></p>
 <ol>
-<li>
-<p>Crea una clase <code>Producto</code> con atributos: <code>nombre</code> (String) y <code>precio</code> (double).</p>
-</li>
-<li>
-<p>Crea una lista de varios productos en la clase principal (<code>Main</code>).</p>
-</li>
-<li>
-<p>Utiliza una <strong>expresión lambda</strong> para filtrar e imprimir solo los productos cuyo precio sea mayor a 50.</p>
-</li>
-<li>
-<p>Crea una clase genérica <code>Caja&lt;T&gt;</code> que permita guardar un objeto de cualquier tipo.</p>
-<ul>
-<li>Debe tener un método <code>guardar(T objeto)</code> y <code>obtener()</code> que devuelva el objeto.</li>
-</ul>
-<h2 id="-en-main-guarda-un-objeto-producto-en-una-caja-y-luego-recuperalo-para-mostrarlo-en-consola">- En <code>Main</code>, guarda un objeto <code>Producto</code> en una <code>Caja</code> y luego recupéralo para mostrarlo en consola.<a class="headerlink" href="#-en-main-guarda-un-objeto-producto-en-una-caja-y-luego-recuperalo-para-mostrarlo-en-consola" title="Permanent link">¶</a></h2>
-</li>
+<li>Crea una clase <code>Producto</code> con atributos: <code>nombre</code> (String) y <code>precio</code> (double).</li>
 </ol>
+<pre class="highlight"><code class="language-java">public class Product{
+    private String name;
+    private Double price;
+
+    public Product(String name, Double price){
+        this.name = name; 
+        this.price = price; 
+    }
+
+    // getters y setters
+}</code></pre>
+<ol>
+<li>Crea una lista de varios productos en la clase principal (<code>Main</code>).</li>
+</ol>
+<pre class="highlight"><code class="language-java">List&lt;Product&gt; products = new ArrayList&lt;&gt;();</code></pre>
+<ol>
+<li>Utiliza una <strong>expresión lambda</strong> para filtrar e imprimir solo los productos cuyo precio sea mayor a 50.</li>
+</ol>
+<p></p><pre class="highlight"><code class="language-java">products.Stream.filter(product -&gt; {
+    if(product.getPrice() &gt; 50){
+        return product
+    }
+});</code></pre>
+4. Crea una clase genérica <code>Caja&lt;T&gt;</code> que permita guardar un objeto de cualquier tipo.<p></p>
+<ul>
+<li>
+<p>Debe tener un método <code>guardar(T objeto)</code> y <code>obtener()</code> que devuelva el objeto.</p>
+<pre class="highlight"><code class="language-java">public class Box&lt;T&gt;{
+    private T obj
+    public void save(T obj){
+        this.obj = obj;
+
+    }
+
+    public T get(){
+        return this.obj;
+    }
+}</code></pre>
+<ul>
+<li>En <code>Main</code>, guarda un objeto <code>Producto</code> en una <code>Caja</code> y luego recupéralo para mostrarlo en consola.</li>
+</ul>
+<h2 id="boxproduct-box-new-box-product-product1-new-productmilk-125-boxsaveproduct1-product-product2-boxget-systemoutprintlnproduct2"><pre class="highlight"><code class="language-java">Box&lt;Product&gt; box =  new Box&lt;&gt;();
+Product product1 = new Product("Milk", 12.5);
+box.save(product1);
+Product product2 = box.get();
+
+System.out.println(product2);</code></pre><a class="headerlink" href="#boxproduct-box-new-box-product-product1-new-productmilk-125-boxsaveproduct1-product-product2-boxget-systemoutprintlnproduct2" title="Permanent link">¶</a></h2>
+</li>
+</ul>
 <div class="admonition note">
 <p class="admonition-title">✅ Con esta evaluación</p>
 <p>Nos permitirá ver desde donde debemos iniciar:</p>
