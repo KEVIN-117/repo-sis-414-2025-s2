@@ -3,6 +3,8 @@ site_name: SIS-414 G-2
 
 extra_css:
   - https://unpkg.com/katex@0/dist/katex.min.css
+  - styles/admonitions.css
+
 
 extra_javascript:
   - javascripts/mathjax.js
@@ -40,6 +42,7 @@ copyright: Copyright &copy; 2025 by K3V1N 117
 markdown_extensions:
   - abbr
   - admonition
+  - pymdownx.details
   - attr_list
   - footnotes
   - md_in_html
@@ -57,7 +60,6 @@ markdown_extensions:
       pygments_style: dracula
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - pymdownx.superfences
   - pymdownx.critic
   - pymdownx.caret
   - pymdownx.keys
@@ -67,4 +69,10 @@ markdown_extensions:
       custom_fences:
         - name: mermaid
           class: mermaid
+          format: fence_code_format
+        - name: diagram
+          class: diagram
+          format: fence_code_format
+        - name: dot
+          class: dot
           format: fence_code_format

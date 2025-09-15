@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
-    <head>
+<!DOCTYPE html><html lang="en" data-bs-theme="light"><head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,16 +13,18 @@
         <link href="../../css/solid.min.css" rel="stylesheet">
         <link href="../../css/v4-font-face.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
-        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
         <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
         <link href="https://unpkg.com/katex@0/dist/katex.min.css" rel="stylesheet">
+        <link href="../../styles/admonitions.css" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
         <script>hljs.highlightAll();</script> 
-     <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-    html.glightbox-open { overflow: initial; height: 100%; }
-    .gslide-title { margin-top: 0px; user-select: text; }
-    .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+    <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
 
     <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
@@ -43,16 +43,57 @@
                                 <a href="../.." class="nav-link">Home</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Laboratorios</a>
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Apuntes</a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../laboratorios/Laboratorio%201/" class="dropdown-item">Laboratorio 1</a>
+    <a href="../../apuntes/ASINCRONIA/" class="dropdown-item">Asincronismo con JavaScript</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/DOM/" class="dropdown-item">DOM (Document Object Model)</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/FUNDAMENTOS_REACT/" class="dropdown-item">React</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/GitGitHub/" class="dropdown-item">Introducción a Git: Guía para Principiantes</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/Java%2021%20%2B%20Spring%20Boot%20Backend%20Developer%201e0db4fab681802aadd4d6c9c44a254d/" class="dropdown-item">Java 21 + Spring Boot Backend Developer</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/MODULOS_ES/" class="dropdown-item">Modulos en ES6</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/PETICIONES/" class="dropdown-item">Peticiones HTTP</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/js/" class="dropdown-item">JAVASCRIPT</a>
 </li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Practicas</a>
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Laboratorios</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../laboratorios/Laboratorio%201/" class="dropdown-item">LABORATORIO 1 SIS-414</a>
+</li>
+                                    
+<li>
+    <a href="../../laboratorios/Laboratorio%202/" class="dropdown-item">Laboratorio 2</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown" aria-expanded="false">Practicas</a>
                                 <ul class="dropdown-menu">
                                     
 <li>
@@ -60,7 +101,19 @@
 </li>
                                     
 <li>
-    <a href="../Practica%202%20-%20DOM/" class="dropdown-item">Manipulación del DOM + Formularios y Persistencia en Memoria</a>
+    <a href="../Practica%202%20-%20DOM/" class="dropdown-item">PRACTICA 2: Manipulación del DOM + Formularios y Persistencia en Memoria</a>
+</li>
+                                    
+<li>
+    <a href="../Practica%203%20-%20Template/" class="dropdown-item">PRACTICA 3: Manipulación del DOM + Formularios y Persistencia en Memoria</a>
+</li>
+                                    
+<li>
+    <a href="../Practica%204%20-%20Integrcion%20MUI/" class="dropdown-item">PRACTICA 4: Integración de MUI en Proyecto Web</a>
+</li>
+                                    
+<li>
+    <a href="../Practica_0_/" class="dropdown-item">Practica 0 </a>
 </li>
                                 </ul>
                             </li>
@@ -68,7 +121,7 @@
 
                     <ul class="nav navbar-nav ms-md-auto">
                             <li class="nav-item">
-                                <a rel="prev" href="../../laboratorios/Laboratorio%201/" class="nav-link">
+                                <a rel="prev" href="../../laboratorios/Laboratorio%202/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
@@ -109,174 +162,159 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h2 id="parte-1-javascript">Parte 1: JavaScript<a class="headerlink" href="#parte-1-javascript" title="Permanent link">&para;</a></h2>
-<h3 id="1-variables-y-tipos-de-datos">1. Variables y Tipos de Datos<a class="headerlink" href="#1-variables-y-tipos-de-datos" title="Permanent link">&para;</a></h3>
-<p><strong>Pregunta 1:</strong><br />
-Declara una variable <code>nombre</code> con tu nombre y otra <code>edad</code> con tu edad. Luego, muestra en consola:<br />
+<h2 id="parte-1-javascript">Parte 1: JavaScript<a class="headerlink" href="#parte-1-javascript" title="Permanent link">¶</a></h2>
+<h3 id="1-variables-y-tipos-de-datos">1. Variables y Tipos de Datos<a class="headerlink" href="#1-variables-y-tipos-de-datos" title="Permanent link">¶</a></h3>
+<p><strong>Pregunta 1:</strong><br>
+Declara una variable <code>nombre</code> con tu nombre y otra <code>edad</code> con tu edad. Luego, muestra en consola:<br>
 <code>"Hola, mi nombre es [nombre] y tengo [edad] años."</code>  </p>
-<p><strong>Solución:</strong><br />
-<div class="language-javascript highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Your name&quot;</span><span class="p">;</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">50</span><span class="p">;</span>
+<p><strong>Solución:</strong><br>
+</p><pre class="highlight"><code class="language-javascript">let name = "Your name";
+let age = 50;
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`&quot;Hola, mi nombre es </span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb"> y tengo </span><span class="si">${</span><span class="nx">age</span><span class="si">}</span><span class="sb"> años.&quot;`</span><span class="p">)</span>
-</code></pre></div></p>
-<hr />
-<h3 id="2-operadores">2. Operadores<a class="headerlink" href="#2-operadores" title="Permanent link">&para;</a></h3>
-<p><strong>Pregunta 2:</strong><br />
+console.log(`"Hola, mi nombre es ${name} y tengo ${age} años."`)</code></pre><p></p>
+<hr>
+<h3 id="2-operadores">2. Operadores<a class="headerlink" href="#2-operadores" title="Permanent link">¶</a></h3>
+<p><strong>Pregunta 2:</strong><br>
 Calcula el área de un rectángulo (base = 5, altura = 3) y muestra el resultado.  </p>
-<p><strong>Solución:</strong><br />
-<div class="language-javascript highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">base</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">altura</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">area</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">base</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">altura</span><span class="p">;</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`El área del rectángulo es: </span><span class="si">${</span><span class="nx">area</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
-</code></pre></div></p>
-<hr />
-<h3 id="3-condicionales">3. Condicionales<a class="headerlink" href="#3-condicionales" title="Permanent link">&para;</a></h3>
-<p><strong>Pregunta 3:</strong><br />
-Crea una condición que verifique si un número es par o impar.<br />
-<div class="language-javascript highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4</span><span class="p">;</span>
-<span class="c1">// Completa el código...</span>
-</code></pre></div></p>
-<p><strong>Solución:</strong><br />
-<div class="language-javascript highlight"><pre><span></span><code><span class="c1">// pasado el tiempo de entrega se pubicara la solucion de la practica aqui</span>
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">numero</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">numero</span><span class="si">}</span><span class="sb"> es par`</span><span class="p">);</span>
-<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">numero</span><span class="si">}</span><span class="sb"> es impar`</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<hr />
-<h3 id="4-bucles">4. Bucles<a class="headerlink" href="#4-bucles" title="Permanent link">&para;</a></h3>
-<p><strong>Pregunta 4:</strong><br />
+<p><strong>Solución:</strong><br>
+</p><pre class="highlight"><code class="language-javascript">let base = 5;
+let altura = 3;
+let area = base * altura;
+console.log(`El área del rectángulo es: ${area}`);
+</code></pre><p></p>
+<hr>
+<h3 id="3-condicionales">3. Condicionales<a class="headerlink" href="#3-condicionales" title="Permanent link">¶</a></h3>
+<p><strong>Pregunta 3:</strong><br>
+Crea una condición que verifique si un número es par o impar.<br>
+</p><pre class="highlight"><code class="language-javascript">let numero = 4;
+// Completa el código...</code></pre><p></p>
+<p><strong>Solución:</strong><br>
+</p><pre class="highlight"><code class="language-javascript">// pasado el tiempo de entrega se pubicara la solucion de la practica aqui
+if (numero % 2 === 0) {
+    console.log(`${numero} es par`);
+} else {
+    console.log(`${numero} es impar`);
+}</code></pre><p></p>
+<hr>
+<h3 id="4-bucles">4. Bucles<a class="headerlink" href="#4-bucles" title="Permanent link">¶</a></h3>
+<p><strong>Pregunta 4:</strong><br>
 Usa un bucle <code>for</code> para imprimir los números del 1 al 5.  </p>
 <p><strong>Solución:</strong>  </p>
-<div class="language-javascript highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
-<hr />
-<h3 id="5-funciones">5. Funciones<a class="headerlink" href="#5-funciones" title="Permanent link">&para;</a></h3>
-<p><strong>Pregunta 5:</strong><br />
+<pre class="highlight"><code class="language-javascript">
+for (let i = 1; i &lt;= 5; i++) {
+    console.log(i);
+}</code></pre>
+<hr>
+<h3 id="5-funciones">5. Funciones<a class="headerlink" href="#5-funciones" title="Permanent link">¶</a></h3>
+<p><strong>Pregunta 5:</strong><br>
 Crea una función <code>sumar</code> que reciba dos números y devuelva su suma.  </p>
-<p><strong>Solución:</strong><br />
-<div class="language-javascript highlight"><pre><span></span><code><span class="c1">// pasado el tiempo de entrega se pubicara la solucion de la practica aqui</span>
-<span class="kd">function</span><span class="w"> </span><span class="nx">sumar</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sumar</span><span class="p">(</span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">));</span><span class="w"> </span><span class="c1">// 7</span>
-</code></pre></div></p>
-<hr />
-<h3 id="6-arrays">6. Arrays<a class="headerlink" href="#6-arrays" title="Permanent link">&para;</a></h3>
-<p><strong>Pregunta 6:</strong><br />
+<p><strong>Solución:</strong><br>
+</p><pre class="highlight"><code class="language-javascript">// pasado el tiempo de entrega se pubicara la solucion de la practica aqui
+function sumar(a, b) {
+    return a + b;
+}
+console.log(sumar(3, 4)); // 7</code></pre><p></p>
+<hr>
+<h3 id="6-arrays">6. Arrays<a class="headerlink" href="#6-arrays" title="Permanent link">¶</a></h3>
+<p><strong>Pregunta 6:</strong><br>
 Dado el array <code>let frutas = ["manzana", "banana", "pera"];</code>, agrega "uva" al final y muestra el array.  </p>
-<p><strong>Solución:</strong><br />
-<div class="language-javascript highlight"><pre><span></span><code><span class="c1">// pasado el tiempo de entrega se pubicara la solucion de la practica aqui</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">frutas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;manzana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;banana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;pera&quot;</span><span class="p">];</span>
-<span class="nx">frutas</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">&quot;uva&quot;</span><span class="p">);</span>
-</code></pre></div></p>
-<hr />
-<h3 id="7-objetos">7. Objetos<a class="headerlink" href="#7-objetos" title="Permanent link">&para;</a></h3>
-<p><strong>Pregunta 7:</strong><br />
+<p><strong>Solución:</strong><br>
+</p><pre class="highlight"><code class="language-javascript">// pasado el tiempo de entrega se pubicara la solucion de la practica aqui
+let frutas = ["manzana", "banana", "pera"];
+frutas.push("uva");
+</code></pre><p></p>
+<hr>
+<h3 id="7-objetos">7. Objetos<a class="headerlink" href="#7-objetos" title="Permanent link">¶</a></h3>
+<p><strong>Pregunta 7:</strong><br>
 Crea un objeto <code>usuario</code> con las propiedades <code>nombre</code> (string) y <code>edad</code> (number), posteriormente muestra la llave y el valor de ese objeto con el bucle correcto, usar el bucle incorrecto anulara la pregunta</p>
-<p><strong>Solución:</strong><br />
-<div class="language-javascript highlight"><pre><span></span><code><span class="c1">// pasado el tiempo de entrega se pubicara la solucion de la practica aqui</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">usuario</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Juan&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">edad</span><span class="o">:</span><span class="w"> </span><span class="mf">30</span>
-<span class="p">};</span>
-<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">key</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">usuario</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">key</span><span class="si">}</span><span class="sb">: </span><span class="si">${</span><span class="nx">usuario</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<hr />
-<h3 id="8-metodos-de-arrays">8. Métodos de Arrays<a class="headerlink" href="#8-metodos-de-arrays" title="Permanent link">&para;</a></h3>
-<p><strong>Pregunta 8:</strong><br />
+<p><strong>Solución:</strong><br>
+</p><pre class="highlight"><code class="language-javascript">// pasado el tiempo de entrega se pubicara la solucion de la practica aqui
+let usuario = {
+    nombre: "Juan",
+    edad: 30
+};
+for (let key in usuario) {
+    console.log(`${key}: ${usuario[key]}`);
+}</code></pre><p></p>
+<hr>
+<h3 id="8-metodos-de-arrays">8. Métodos de Arrays<a class="headerlink" href="#8-metodos-de-arrays" title="Permanent link">¶</a></h3>
+<p><strong>Pregunta 8:</strong><br>
 Dado <code>let numeros = [1, 2, 3, 4];</code>, usa un método para obtener un nuevo array con cada número multiplicado por 2.  </p>
 <p>Pista: para hacer esta pregunta te recomiendo que investigues sobre lo métodos de los arrays, algunos de sus métodos seria <code>map</code>, <code>filter</code>, <code>find</code>. Averigua cual seria la función correcta de <code>Arrays</code> para poder completar este ejercicio</p>
-<p><strong>Solución:</strong><br />
-<div class="language-javascript highlight"><pre><span></span><code><span class="c1">// pasado el tiempo de entrega se pubicara la solucion de la practica aqui</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">numeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">];</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">numerosMultiplicados</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numeros</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">numero</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
-<span class="p">});</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">numerosMultiplicados</span><span class="p">);</span><span class="w"> </span><span class="c1">// [2, 4, 6, 8]</span>
-</code></pre></div></p>
-<hr />
-<h3 id="9-funciones-flecha">9. Funciones Flecha<a class="headerlink" href="#9-funciones-flecha" title="Permanent link">&para;</a></h3>
-<p><strong>Pregunta 9:</strong><br />
-Convierte esta función a una función flecha:<br />
-<div class="language-javascript highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">restar</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">b</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Solución:</strong><br />
-<div class="language-javascript highlight"><pre><span></span><code><span class="c1">// pasado el tiempo de entrega se pubicara la solucion de la practica aqui</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">restar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">b</span><span class="p">;</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">restar</span><span class="p">(</span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">));</span><span class="w"> </span><span class="c1">// 2</span>
-</code></pre></div></p>
-<hr />
-<h3 id="10-ejercicio-integrador">10. Ejercicio Integrador<a class="headerlink" href="#10-ejercicio-integrador" title="Permanent link">&para;</a></h3>
-<p><strong>Pregunta 10:</strong><br />
+<p><strong>Solución:</strong><br>
+</p><pre class="highlight"><code class="language-javascript">// pasado el tiempo de entrega se pubicara la solucion de la practica aqui
+let numeros = [1, 2, 3, 4];
+let numerosMultiplicados = numeros.map(function(numero) {
+    return numero * 2;
+});
+console.log(numerosMultiplicados); // [2, 4, 6, 8]</code></pre><p></p>
+<hr>
+<h3 id="9-funciones-flecha">9. Funciones Flecha<a class="headerlink" href="#9-funciones-flecha" title="Permanent link">¶</a></h3>
+<p><strong>Pregunta 9:</strong><br>
+Convierte esta función a una función flecha:<br>
+</p><pre class="highlight"><code class="language-javascript">function restar(a, b) {
+  return a - b;
+}</code></pre><p></p>
+<p><strong>Solución:</strong><br>
+</p><pre class="highlight"><code class="language-javascript">// pasado el tiempo de entrega se pubicara la solucion de la practica aqui
+const restar = (a, b) =&gt; a - b;
+console.log(restar(5, 3)); // 2</code></pre><p></p>
+<hr>
+<h3 id="10-ejercicio-integrador">10. Ejercicio Integrador<a class="headerlink" href="#10-ejercicio-integrador" title="Permanent link">¶</a></h3>
+<p><strong>Pregunta 10:</strong><br>
 Crea una función <code>filtrarPares</code> que reciba un array de números y devuelva solo los pares.</p>
 <p>Pista: puedes lograrlo con una sola <code>linea</code> de Código</p>
-<p>Ejemplo:<br />
-<div class="language-javascript highlight"><pre><span></span><code><span class="nx">filtrarPares</span><span class="p">([</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">]);</span><span class="w"> </span><span class="c1">// [2, 4]</span>
-</code></pre></div></p>
-<p><strong>Solución:</strong><br />
-<div class="language-javascript highlight"><pre><span></span><code><span class="c1">// pasado el tiempo de entrega se pubicara la solucion de la practica aqui</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">filtrarPares</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">numeros</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">numeros</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">numero</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">filtrarPares</span><span class="p">([</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">]));</span><span class="w"> </span><span class="c1">// [2, 4]</span>
-</code></pre></div></p>
-<hr />
-<h2 id="parte-2-git-5-preguntas">Parte 2: Git (5 preguntas)<a class="headerlink" href="#parte-2-git-5-preguntas" title="Permanent link">&para;</a></h2>
-<h3 id="1-inicializar-un-repositorio">1. Inicializar un repositorio<a class="headerlink" href="#1-inicializar-un-repositorio" title="Permanent link">&para;</a></h3>
-<p><strong>Pregunta 1:</strong><br />
+<p>Ejemplo:<br>
+</p><pre class="highlight"><code class="language-javascript">filtrarPares([1, 2, 3, 4]); // [2, 4]</code></pre><p></p>
+<p><strong>Solución:</strong><br>
+</p><pre class="highlight"><code class="language-javascript">// pasado el tiempo de entrega se pubicara la solucion de la practica aqui
+const filtrarPares = (numeros) =&gt; numeros.filter(numero =&gt; numero % 2 === 0);
+console.log(filtrarPares([1, 2, 3, 4])); // [2, 4]</code></pre><p></p>
+<hr>
+<h2 id="parte-2-git-5-preguntas">Parte 2: Git (5 preguntas)<a class="headerlink" href="#parte-2-git-5-preguntas" title="Permanent link">¶</a></h2>
+<h3 id="1-inicializar-un-repositorio">1. Inicializar un repositorio<a class="headerlink" href="#1-inicializar-un-repositorio" title="Permanent link">¶</a></h3>
+<p><strong>Pregunta 1:</strong><br>
 ¿Qué comando se usa para iniciar un nuevo repositorio de Git en un proyecto local?  </p>
-<p><strong>Respuesta:</strong><br />
-<div class="language-bash highlight"><pre><span></span><code>//<span class="w"> </span>pasado<span class="w"> </span>el<span class="w"> </span>tiempo<span class="w"> </span>de<span class="w"> </span>entrega<span class="w"> </span>se<span class="w"> </span>pubicara<span class="w"> </span>la<span class="w"> </span>solucion<span class="w"> </span>de<span class="w"> </span>la<span class="w"> </span>practica<span class="w"> </span>aqui
-git<span class="w"> </span>init
-</code></pre></div></p>
-<hr />
-<h3 id="2-clonar-un-repositorio">2. Clonar un repositorio<a class="headerlink" href="#2-clonar-un-repositorio" title="Permanent link">&para;</a></h3>
-<p><strong>Pregunta 2:</strong><br />
+<p><strong>Respuesta:</strong><br>
+</p><pre class="highlight"><code class="language-bash">// pasado el tiempo de entrega se pubicara la solucion de la practica aqui
+git init</code></pre><p></p>
+<hr>
+<h3 id="2-clonar-un-repositorio">2. Clonar un repositorio<a class="headerlink" href="#2-clonar-un-repositorio" title="Permanent link">¶</a></h3>
+<p><strong>Pregunta 2:</strong><br>
 ¿Cómo clonarías un repositorio remoto desde GitHub si tuvieras la siguiente URL? (Ejemplo: <code>https://github.com/user/repo.git</code>).  </p>
-<p><strong>Respuesta:</strong><br />
-<div class="language-bash highlight"><pre><span></span><code>//<span class="w"> </span>pasado<span class="w"> </span>el<span class="w"> </span>tiempo<span class="w"> </span>de<span class="w"> </span>entrega<span class="w"> </span>se<span class="w"> </span>pubicara<span class="w"> </span>la<span class="w"> </span>solucion<span class="w"> </span>de<span class="w"> </span>la<span class="w"> </span>practica<span class="w"> </span>aqui
-git<span class="w"> </span>clone<span class="w"> </span>&lt;url_del_repositorio&gt;
-</code></pre></div></p>
-<hr />
-<h3 id="3-hacer-commit">3. Hacer commit<a class="headerlink" href="#3-hacer-commit" title="Permanent link">&para;</a></h3>
-<p><strong>Pregunta 3:</strong><br />
+<p><strong>Respuesta:</strong><br>
+</p><pre class="highlight"><code class="language-bash">// pasado el tiempo de entrega se pubicara la solucion de la practica aqui
+git clone &lt;url_del_repositorio&gt;</code></pre><p></p>
+<hr>
+<h3 id="3-hacer-commit">3. Hacer commit<a class="headerlink" href="#3-hacer-commit" title="Permanent link">¶</a></h3>
+<p><strong>Pregunta 3:</strong><br>
 Explica los pasos para hacer un commit de los cambios en un archivo <code>index.js</code>.  </p>
-<p><strong>Respuesta:</strong><br />
-<div class="language-bash highlight"><pre><span></span><code>//<span class="w"> </span>pasado<span class="w"> </span>el<span class="w"> </span>tiempo<span class="w"> </span>de<span class="w"> </span>entrega<span class="w"> </span>se<span class="w"> </span>pubicara<span class="w"> </span>la<span class="w"> </span>solucion<span class="w"> </span>de<span class="w"> </span>la<span class="w"> </span>practica<span class="w"> </span>aqui
+<p><strong>Respuesta:</strong><br>
+</p><pre class="highlight"><code class="language-bash">// pasado el tiempo de entrega se pubicara la solucion de la practica aqui
 
-git<span class="w"> </span>add<span class="w"> </span>index.js
-git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Descripción del commit&quot;</span>
-git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
-</code></pre></div></p>
-<hr />
-<h3 id="4-ramas-branches">4. Ramas (branches)<a class="headerlink" href="#4-ramas-branches" title="Permanent link">&para;</a></h3>
-<p><strong>Pregunta 4:</strong><br />
-¿Qué comando se usa para inicializar un repositorio local con una rama llamada <code>feature-login</code> ?<br />
-<strong>Respuesta:</strong><br />
-<div class="language-bash highlight"><pre><span></span><code>//<span class="w"> </span>pasado<span class="w"> </span>el<span class="w"> </span>tiempo<span class="w"> </span>de<span class="w"> </span>entrega<span class="w"> </span>se<span class="w"> </span>pubicara<span class="w"> </span>la<span class="w"> </span>solucion<span class="w"> </span>de<span class="w"> </span>la<span class="w"> </span>practica<span class="w"> </span>aqui
-git<span class="w"> </span>init<span class="w"> </span>--initial-branch<span class="o">=</span>feature-login
-</code></pre></div></p>
-<hr />
-<h3 id="5-subir-cambios-a-github">5. Subir cambios a GitHub<a class="headerlink" href="#5-subir-cambios-a-github" title="Permanent link">&para;</a></h3>
-<p><strong>Pregunta 5:</strong><br />
+git add index.js
+git commit -m "Descripción del commit"
+git push origin main</code></pre><p></p>
+<hr>
+<h3 id="4-ramas-branches">4. Ramas (branches)<a class="headerlink" href="#4-ramas-branches" title="Permanent link">¶</a></h3>
+<p><strong>Pregunta 4:</strong><br>
+¿Qué comando se usa para inicializar un repositorio local con una rama llamada <code>feature-login</code> ?<br>
+<strong>Respuesta:</strong><br>
+</p><pre class="highlight"><code class="language-bash">// pasado el tiempo de entrega se pubicara la solucion de la practica aqui
+git init --initial-branch=feature-login</code></pre><p></p>
+<hr>
+<h3 id="5-subir-cambios-a-github">5. Subir cambios a GitHub<a class="headerlink" href="#5-subir-cambios-a-github" title="Permanent link">¶</a></h3>
+<p><strong>Pregunta 5:</strong><br>
 ¿Qué comando envía los commits locales a la rama <code>main</code> del repositorio remoto?  </p>
-<p><strong>Respuesta:</strong><br />
-<div class="language-bash highlight"><pre><span></span><code>//<span class="w"> </span>pasado<span class="w"> </span>el<span class="w"> </span>tiempo<span class="w"> </span>de<span class="w"> </span>entrega<span class="w"> </span>se<span class="w"> </span>pubicara<span class="w"> </span>la<span class="w"> </span>solucion<span class="w"> </span>de<span class="w"> </span>la<span class="w"> </span>practica<span class="w"> </span>aqui
-git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
-</code></pre></div></p></div>
+<p><strong>Respuesta:</strong><br>
+</p><pre class="highlight"><code class="language-bash">// pasado el tiempo de entrega se pubicara la solucion de la practica aqui
+git push origin main</code></pre><p></p></div>
             </div>
         </div>
 
         <footer class="col-md-12">
             <hr>
-                <p>Copyright &copy; 2025 by K3V1N 117</p>
+                <p>Copyright © 2025 by K3V1N 117</p>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script src="../../js/bootstrap.bundle.min.js"></script>
@@ -332,6 +370,7 @@ git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </
     </div>
 </div>
 
-    <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-</script></body>
-</html>
+    
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body></html>
