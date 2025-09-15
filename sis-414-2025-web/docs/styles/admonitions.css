@@ -13,3 +13,14 @@
 .md-typeset .admonition.danger .admonition-title::before {
   content: "🔥";
 }
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
