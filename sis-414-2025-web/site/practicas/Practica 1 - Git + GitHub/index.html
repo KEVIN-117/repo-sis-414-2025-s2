@@ -6,7 +6,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Practica 1   JavaScript + Git - SIS-414 G-2</title>
+        <title>Practica 1   Git + GitHub - SIS-414 G-2</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/fontawesome.min.css" rel="stylesheet">
         <link href="../../css/brands.min.css" rel="stylesheet">
@@ -97,7 +97,7 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="./" class="dropdown-item active" aria-current="page">Practica 1   JavaScript + Git</a>
+    <a href="./" class="dropdown-item active" aria-current="page">Practica 1   Git + GitHub</a>
 </li>
                                     
 <li>
@@ -148,13 +148,20 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="2"><a href="#parte-1-javascript" class="nav-link">Parte 1: JavaScript</a>
+            <li class="nav-item" data-bs-level="1"><a href="#tarea-de-investigacion-introduccion-a-git-y-github" class="nav-link">📑 Tarea de Investigación: Introducción a Git y GitHub</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#entregable" class="nav-link">📦 Entregable</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            
-            <li class="nav-item" data-bs-level="2"><a href="#parte-2-git-5-preguntas" class="nav-link">Parte 2: Git (5 preguntas)</a>
+            <li class="nav-item" data-bs-level="2"><a href="#criterios-de-evaluacion" class="nav-link">📊 Criterios de Evaluación</a>
               <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#instrucciones-de-la-tarea" class="nav-link">📝 Instrucciones de la tarea</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -162,153 +169,141 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h2 id="parte-1-javascript">Parte 1: JavaScript<a class="headerlink" href="#parte-1-javascript" title="Permanent link">¶</a></h2>
-<h3 id="1-variables-y-tipos-de-datos">1. Variables y Tipos de Datos<a class="headerlink" href="#1-variables-y-tipos-de-datos" title="Permanent link">¶</a></h3>
-<p><strong>Pregunta 1:</strong><br>
-Declara una variable <code>nombre</code> con tu nombre y otra <code>edad</code> con tu edad. Luego, muestra en consola:<br>
-<code>"Hola, mi nombre es [nombre] y tengo [edad] años."</code>  </p>
-<p><strong>Solución:</strong><br>
-</p><pre class="highlight"><code class="language-javascript">let name = "Your name";
-let age = 50;
-
-console.log(`"Hola, mi nombre es ${name} y tengo ${age} años."`)</code></pre><p></p>
 <hr>
-<h3 id="2-operadores">2. Operadores<a class="headerlink" href="#2-operadores" title="Permanent link">¶</a></h3>
-<p><strong>Pregunta 2:</strong><br>
-Calcula el área de un rectángulo (base = 5, altura = 3) y muestra el resultado.  </p>
-<p><strong>Solución:</strong><br>
-</p><pre class="highlight"><code class="language-javascript">let base = 5;
-let altura = 3;
-let area = base * altura;
-console.log(`El área del rectángulo es: ${area}`);
-</code></pre><p></p>
+<h1 id="tarea-de-investigacion-introduccion-a-git-y-github">📑 Tarea de Investigación: Introducción a Git y GitHub<a class="headerlink" href="#tarea-de-investigacion-introduccion-a-git-y-github" title="Permanent link">¶</a></h1>
+<p><strong>Objetivo:</strong>
+Conocer los conceptos básicos de Git y GitHub, entender su utilidad en el desarrollo de software y realizar una primera práctica sencilla de uso.</p>
+<p><strong>Duración estimada:</strong> 1 semana</p>
+<div class="admonition warning">
+<p class="admonition-title">⚠️ Requerimientos Previos para la practica</p>
+<ul>
+<li>Debe tener instalado la CLI de <a href="https://git-scm.com/downloads">git</a></li>
+<li>Debe tener una cuenta creada en <a href="https://github.com/">GitHub</a></li>
+</ul>
+</div>
 <hr>
-<h3 id="3-condicionales">3. Condicionales<a class="headerlink" href="#3-condicionales" title="Permanent link">¶</a></h3>
-<p><strong>Pregunta 3:</strong><br>
-Crea una condición que verifique si un número es par o impar.<br>
-</p><pre class="highlight"><code class="language-javascript">let numero = 4;
-// Completa el código...</code></pre><p></p>
-<p><strong>Solución:</strong><br>
-</p><pre class="highlight"><code class="language-javascript">// pasado el tiempo de entrega se pubicara la solucion de la practica aqui
-if (numero % 2 === 0) {
-    console.log(`${numero} es par`);
-} else {
-    console.log(`${numero} es impar`);
-}</code></pre><p></p>
+<h2 id="entregable">📦 Entregable<a class="headerlink" href="#entregable" title="Permanent link">¶</a></h2>
+<ul>
+<li>Documento en MD (<code>investigacion.md</code>).</li>
+<li>Enlace al repositorio de GitHub.</li>
+<li>EL enlace sera entregado en Clasroom</li>
+</ul>
 <hr>
-<h3 id="4-bucles">4. Bucles<a class="headerlink" href="#4-bucles" title="Permanent link">¶</a></h3>
-<p><strong>Pregunta 4:</strong><br>
-Usa un bucle <code>for</code> para imprimir los números del 1 al 5.  </p>
-<p><strong>Solución:</strong>  </p>
-<pre class="highlight"><code class="language-javascript">
-for (let i = 1; i &lt;= 5; i++) {
-    console.log(i);
-}</code></pre>
+<div class="admonition danger">
+<p class="admonition-title">⚡ Tome en cuenta</p>
+<ul>
+<li>Se tomara mucho en cuenta respuestas claras.</li>
+<li>Las preguntas deben ser respondidas puntualmente.</li>
+</ul>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">💁‍♂️ Para realizar la parctica puede usar los siguientes recursos</p>
+<ul>
+<li><a href="https://git-scm.com/doc">Documentacion oficial de Git</a></li>
+<li><a href="https://kevin-117.github.io/repo-sis-414-2025-s2/apuntes/GitGitHub/">Git guia</a></li>
+<li><a href="https://www.w3schools.com/git/default.asp">Git Tutorial</a></li>
+<li><a href="https://github.com/git-guides">Git Guide GitHub</a></li>
+<li><a href="https://education.github.com/git-cheat-sheet-education.pdf">GIT CHEAT SHEET</a></li>
+</ul>
+</div>
 <hr>
-<h3 id="5-funciones">5. Funciones<a class="headerlink" href="#5-funciones" title="Permanent link">¶</a></h3>
-<p><strong>Pregunta 5:</strong><br>
-Crea una función <code>sumar</code> que reciba dos números y devuelva su suma.  </p>
-<p><strong>Solución:</strong><br>
-</p><pre class="highlight"><code class="language-javascript">// pasado el tiempo de entrega se pubicara la solucion de la practica aqui
-function sumar(a, b) {
-    return a + b;
-}
-console.log(sumar(3, 4)); // 7</code></pre><p></p>
+<h2 id="criterios-de-evaluacion">📊 Criterios de Evaluación<a class="headerlink" href="#criterios-de-evaluacion" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Puntos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Respuestas claras en la investigación</td>
+<td>30</td>
+</tr>
+<tr>
+<td>Uso correcto de ejemplos y conceptos básicos</td>
+<td>20</td>
+</tr>
+<tr>
+<td>Creación de repositorio en GitHub</td>
+<td>20</td>
+</tr>
+<tr>
+<td>Commit y archivo <code>aprendizaje.txt</code></td>
+<td>20</td>
+</tr>
+<tr>
+<td>Organización y presentación</td>
+<td>10</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>100</strong></td>
+</tr>
+</tbody>
+</table>
 <hr>
-<h3 id="6-arrays">6. Arrays<a class="headerlink" href="#6-arrays" title="Permanent link">¶</a></h3>
-<p><strong>Pregunta 6:</strong><br>
-Dado el array <code>let frutas = ["manzana", "banana", "pera"];</code>, agrega "uva" al final y muestra el array.  </p>
-<p><strong>Solución:</strong><br>
-</p><pre class="highlight"><code class="language-javascript">// pasado el tiempo de entrega se pubicara la solucion de la practica aqui
-let frutas = ["manzana", "banana", "pera"];
-frutas.push("uva");
-</code></pre><p></p>
+<h2 id="instrucciones-de-la-tarea">📝 Instrucciones de la tarea<a class="headerlink" href="#instrucciones-de-la-tarea" title="Permanent link">¶</a></h2>
+<h3 id="parte-i-investigacion-50"><strong>Parte I – Investigación (50%)</strong><a class="headerlink" href="#parte-i-investigacion-50" title="Permanent link">¶</a></h3>
+<p>En un documento escrito (máx. 2 páginas), responde las siguientes preguntas:</p>
+<ol>
+<li>¿Qué es Git y para qué se utiliza?</li>
+<li>¿Qué diferencia hay entre Git y GitHub?</li>
+<li>Explica en tus palabras qué es un <em>repositorio</em>.</li>
+<li>¿Qué significa hacer un <em>commit</em> en Git?</li>
+<li>Investiga y explica brevemente los siguientes comandos de Git:<ul>
+<li><code>git config --local user.name "&lt;GitHub user name&gt;"</code></li>
+<li><code>git config --local user.email "&lt;GitHub email&gt;"</code></li>
+<li><code>git init</code></li>
+<li><code>git add</code></li>
+<li><code>git commit</code></li>
+<li><code>git push</code></li>
+<li><code>git clone</code></li>
+<li><code>git init --initial-branch=main</code></li>
+<li><code>git remote add origin https://github.com/&lt;user-name&gt;/tarea-git-github.git</code></li>
+<li><code>git add .</code></li>
+<li><code>git commit -m "Initial commit"</code></li>
+<li><code>git push --set-upstream origin main</code></li>
+</ul>
+</li>
+<li>¿Qué es un archivo <code>README.md</code> y por qué es importante?</li>
+</ol>
 <hr>
-<h3 id="7-objetos">7. Objetos<a class="headerlink" href="#7-objetos" title="Permanent link">¶</a></h3>
-<p><strong>Pregunta 7:</strong><br>
-Crea un objeto <code>usuario</code> con las propiedades <code>nombre</code> (string) y <code>edad</code> (number), posteriormente muestra la llave y el valor de ese objeto con el bucle correcto, usar el bucle incorrecto anulara la pregunta</p>
-<p><strong>Solución:</strong><br>
-</p><pre class="highlight"><code class="language-javascript">// pasado el tiempo de entrega se pubicara la solucion de la practica aqui
-let usuario = {
-    nombre: "Juan",
-    edad: 30
-};
-for (let key in usuario) {
-    console.log(`${key}: ${usuario[key]}`);
-}</code></pre><p></p>
-<hr>
-<h3 id="8-metodos-de-arrays">8. Métodos de Arrays<a class="headerlink" href="#8-metodos-de-arrays" title="Permanent link">¶</a></h3>
-<p><strong>Pregunta 8:</strong><br>
-Dado <code>let numeros = [1, 2, 3, 4];</code>, usa un método para obtener un nuevo array con cada número multiplicado por 2.  </p>
-<p>Pista: para hacer esta pregunta te recomiendo que investigues sobre lo métodos de los arrays, algunos de sus métodos seria <code>map</code>, <code>filter</code>, <code>find</code>. Averigua cual seria la función correcta de <code>Arrays</code> para poder completar este ejercicio</p>
-<p><strong>Solución:</strong><br>
-</p><pre class="highlight"><code class="language-javascript">// pasado el tiempo de entrega se pubicara la solucion de la practica aqui
-let numeros = [1, 2, 3, 4];
-let numerosMultiplicados = numeros.map(function(numero) {
-    return numero * 2;
-});
-console.log(numerosMultiplicados); // [2, 4, 6, 8]</code></pre><p></p>
-<hr>
-<h3 id="9-funciones-flecha">9. Funciones Flecha<a class="headerlink" href="#9-funciones-flecha" title="Permanent link">¶</a></h3>
-<p><strong>Pregunta 9:</strong><br>
-Convierte esta función a una función flecha:<br>
-</p><pre class="highlight"><code class="language-javascript">function restar(a, b) {
-  return a - b;
-}</code></pre><p></p>
-<p><strong>Solución:</strong><br>
-</p><pre class="highlight"><code class="language-javascript">// pasado el tiempo de entrega se pubicara la solucion de la practica aqui
-const restar = (a, b) =&gt; a - b;
-console.log(restar(5, 3)); // 2</code></pre><p></p>
-<hr>
-<h3 id="10-ejercicio-integrador">10. Ejercicio Integrador<a class="headerlink" href="#10-ejercicio-integrador" title="Permanent link">¶</a></h3>
-<p><strong>Pregunta 10:</strong><br>
-Crea una función <code>filtrarPares</code> que reciba un array de números y devuelva solo los pares.</p>
-<p>Pista: puedes lograrlo con una sola <code>linea</code> de Código</p>
-<p>Ejemplo:<br>
-</p><pre class="highlight"><code class="language-javascript">filtrarPares([1, 2, 3, 4]); // [2, 4]</code></pre><p></p>
-<p><strong>Solución:</strong><br>
-</p><pre class="highlight"><code class="language-javascript">// pasado el tiempo de entrega se pubicara la solucion de la practica aqui
-const filtrarPares = (numeros) =&gt; numeros.filter(numero =&gt; numero % 2 === 0);
-console.log(filtrarPares([1, 2, 3, 4])); // [2, 4]</code></pre><p></p>
-<hr>
-<h2 id="parte-2-git-5-preguntas">Parte 2: Git (5 preguntas)<a class="headerlink" href="#parte-2-git-5-preguntas" title="Permanent link">¶</a></h2>
-<h3 id="1-inicializar-un-repositorio">1. Inicializar un repositorio<a class="headerlink" href="#1-inicializar-un-repositorio" title="Permanent link">¶</a></h3>
-<p><strong>Pregunta 1:</strong><br>
-¿Qué comando se usa para iniciar un nuevo repositorio de Git en un proyecto local?  </p>
-<p><strong>Respuesta:</strong><br>
-</p><pre class="highlight"><code class="language-bash">// pasado el tiempo de entrega se pubicara la solucion de la practica aqui
-git init</code></pre><p></p>
-<hr>
-<h3 id="2-clonar-un-repositorio">2. Clonar un repositorio<a class="headerlink" href="#2-clonar-un-repositorio" title="Permanent link">¶</a></h3>
-<p><strong>Pregunta 2:</strong><br>
-¿Cómo clonarías un repositorio remoto desde GitHub si tuvieras la siguiente URL? (Ejemplo: <code>https://github.com/user/repo.git</code>).  </p>
-<p><strong>Respuesta:</strong><br>
-</p><pre class="highlight"><code class="language-bash">// pasado el tiempo de entrega se pubicara la solucion de la practica aqui
-git clone &lt;url_del_repositorio&gt;</code></pre><p></p>
-<hr>
-<h3 id="3-hacer-commit">3. Hacer commit<a class="headerlink" href="#3-hacer-commit" title="Permanent link">¶</a></h3>
-<p><strong>Pregunta 3:</strong><br>
-Explica los pasos para hacer un commit de los cambios en un archivo <code>index.js</code>.  </p>
-<p><strong>Respuesta:</strong><br>
-</p><pre class="highlight"><code class="language-bash">// pasado el tiempo de entrega se pubicara la solucion de la practica aqui
-
-git add index.js
-git commit -m "Descripción del commit"
-git push origin main</code></pre><p></p>
-<hr>
-<h3 id="4-ramas-branches">4. Ramas (branches)<a class="headerlink" href="#4-ramas-branches" title="Permanent link">¶</a></h3>
-<p><strong>Pregunta 4:</strong><br>
-¿Qué comando se usa para inicializar un repositorio local con una rama llamada <code>feature-login</code> ?<br>
-<strong>Respuesta:</strong><br>
-</p><pre class="highlight"><code class="language-bash">// pasado el tiempo de entrega se pubicara la solucion de la practica aqui
-git init --initial-branch=feature-login</code></pre><p></p>
-<hr>
-<h3 id="5-subir-cambios-a-github">5. Subir cambios a GitHub<a class="headerlink" href="#5-subir-cambios-a-github" title="Permanent link">¶</a></h3>
-<p><strong>Pregunta 5:</strong><br>
-¿Qué comando envía los commits locales a la rama <code>main</code> del repositorio remoto?  </p>
-<p><strong>Respuesta:</strong><br>
-</p><pre class="highlight"><code class="language-bash">// pasado el tiempo de entrega se pubicara la solucion de la practica aqui
-git push origin main</code></pre><p></p></div>
+<h3 id="parte-ii-practica-50"><strong>Parte II – Práctica (50%)</strong><a class="headerlink" href="#parte-ii-practica-50" title="Permanent link">¶</a></h3>
+<ol>
+<li>
+<p><strong>Crea un repositorio en GitHub (20 pts):</strong></p>
+</li>
+<li>
+<p>Llama al repositorio <code>tarea-git-github</code>.</p>
+</li>
+<li>Agrega un <code>README.md</code> con tu nombre y una breve descripción (ejemplo: "Este es mi primer repositorio en GitHub").</li>
+<li>
+<p>Agrega el archivo (<code>investigacion.md</code>) con las respuestas a las preguntas</p>
+</li>
+<li>
+<p><strong>Trabajo local con Git (20 pts):</strong></p>
+</li>
+<li>
+<p>Clona tu repositorio en tu computadora.</p>
+</li>
+<li>Crea un archivo llamado <code>aprendizaje.txt</code> donde escribas 3 cosas que aprendiste sobre Git y GitHub.</li>
+<li>Haz al menos <strong>1 commit</strong> y súbelo a GitHub.</li>
+<li>
+<p>Tu repositorio debe tener los siguientes archivos:</p>
+<ul>
+<li><code>README.md</code></li>
+<li><code>investigacion.md</code></li>
+<li><code>aprendizaje.txt</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Entrega del enlace (10 pts):</strong></p>
+</li>
+<li>
+<p>Comparte el enlace a tu repositorio en GitHub como parte de la entrega en clasroom.</p>
+</li>
+</ol></div>
             </div>
         </div>
 
@@ -328,6 +323,8 @@ git push origin main</code></pre><p></p></div>
         <script src="../../javascripts/katex.js"></script>
         <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
         <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+        <script src="../../javascripts/tablesort.js"></script>
 
         <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
     <div class="modal-dialog">

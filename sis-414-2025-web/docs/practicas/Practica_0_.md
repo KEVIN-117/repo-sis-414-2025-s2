@@ -1,7 +1,7 @@
 
 ---
 
-# 📘 Evaluación Diagnóstica – Desarrollo Web y Java (solucionado)
+<!-- # 📘 Evaluación Diagnóstica – Desarrollo Web y Java (solucionado)
 
 **Duración:** 2 horas  
 **Distribución:**
@@ -461,6 +461,144 @@ git remote add origin <url> # la url lo encuentra en la web de GitHub en el luga
 git commit -m "parctica 0 <su nombre>"
 git push -u origin main
 ```
+
+Estos son todo los pasos de para entregar su tarea.
+
+---
+!!! warning "🤖 Tomen en cuenta"
+    - La practica solo se revisara de las personas que tenga asistencia en la fecha en la que se dio esta prueba
+    - Es obligatorio que este en GitHub. -->
+
+
+# 📘 Evaluación Diagnóstica – Desarrollo Web y Java (Miercoles)
+
+**Duración:** 2 horas
+**Distribución:**
+
+* Parte Teórica: 20% (20 puntos)
+* Parte Práctica: 80% (80 puntos)
+* Puntuación Total: 100 puntos
+
+---
+
+## **Parte Teórica (20 puntos, \~30 min)**
+
+### **Sección A: Desarrollo Web (10 puntos)**
+
+1. (1 pts) ¿Qué es una etiqueta semántica en HTML y por qué es importante?
+2. (1 pts) Menciona 5 etiquetas de formulario (`form`) y explica la utilidad de 2 de ellas.
+3. (2 pts) ¿Cuál es la diferencia entre etiquetas en bloque (*block*) y en línea (*inline*) en HTML? Da un ejemplo de cada una.
+4. (2 pts) ¿Qué diferencia existe entre `inline-style`, `<style>` interno y un archivo `.css` externo?
+5. (2 pts) Explica la diferencia entre id y class en CSS y en qué caso usarías cada uno.
+6. (2 pts) ¿Qué diferencia existe entre HTML, CSS y JavaScript en una página web?
+
+---
+
+### **Sección B: Java (10 puntos)**
+
+1. (1 pts) ¿Qué es una clase en Java y qué elementos puede contener?
+2. (1 pts) ¿Qué es un constructor y cómo se diferencia de un método normal?
+3. (2 pts) Explica con tus palabras qué significa herencia en Java.
+4. (2 pts) ¿Qué es un `ArrayList` y en qué se diferencia de un arreglo (`array`) normal en Java?
+5. (2 pts) Explica qué es una expresión *lambda* en Java y escribe un ejemplo corto.
+6. (2 pts) ¿Para qué sirven los **genéricos** en Java? Da un ejemplo de colección genérica.
+
+---
+
+## **Parte Práctica (80 puntos, \~90 min)**
+
+### **Sección A: Desarrollo Web (40 puntos)**
+
+**Ejercicio 1 (15 pts): Página con estructura básica**
+Crea una página que contenga:
+
+* Un encabezado (`<header>`) con el título "Mi Página Personal".
+* Una sección (`<section>`) con un párrafo de presentación y una imagen cualquiera.
+* Una lista no ordenada con tres metas personales.
+* Un pie de página (`<footer>`) con tu correo electrónico.
+
+Dale estilo con CSS:
+
+* Fondo claro.
+* Encabezado con texto centrado y color de fondo distinto.
+* Párrafo con interlineado de 1.5.
+* Lista con viñetas circulares.
+
+---
+
+**Ejercicio 2 (25 pts): Formulario con estilos**
+Agrega un formulario con:
+
+* Un campo de texto para el nombre.
+* Un campo de contraseña.
+* Una casilla de verificación para aceptar términos y condiciones.
+* Un botón para enviar.
+
+Con CSS:
+
+* Botón con color de fondo azul y texto blanco.
+* Campos con borde redondeado.
+* Que al pasar el mouse sobre el botón cambie a color verde.
+
+---
+
+### **Sección B: Java (40 puntos)**
+
+**Ejercicio 1 (10 pts): Condicionales y bucles**
+Escribe un programa que:
+
+* Pida un número al usuario.
+* Imprima todos los números pares desde 0 hasta ese número.
+
+---
+
+**Ejercicio 2 (10 pts): Clases y objetos**
+Crea una clase `Libro` con atributos:
+
+* `titulo` (String)
+* `autor` (String)
+* `anio` (int)
+
+La clase debe tener:
+
+* Un constructor para inicializar.
+* Un método `mostrarInfo()` que imprima los datos del libro.
+
+En la clase principal (`Main`), crea al menos 2 libros y muestra su información.
+
+---
+
+**Ejercicio 3 (20 pts): POO + Funcional + Genéricos**
+
+1. Crea una clase `Alumno` con atributos: `nombre` y `nota`.
+2. Crea una lista de alumnos en `Main`.
+3. Con una **expresión lambda y Streams**, filtra e imprime solo los alumnos con nota mayor o igual a 60.
+4. Implementa una clase genérica `Contenedor<T>` que pueda guardar cualquier tipo de objeto.
+
+   * Debe tener métodos `guardar(T objeto)` y `obtener()`.
+   * En `Main`, guarda un `Alumno` en un `Contenedor` y luego recupéralo.
+
+---
+
+## 📦 Entregable
+
+* Teoría: en un archivo `.txt`
+* Desarrollo Web: en archivos `.html` y `.css`
+* Java: en archivos `.java`
+
+Entrega en GitHub siguiendo los mismos pasos:
+
+```bash
+git init --initial-branch=main
+git add .
+git remote add origin <url-del-repo>
+git commit -m "diagnostico <tu-nombre>"
+git push -u origin main
+```
+
+---
+
+¿Quieres que también prepare una **rúbrica simplificada con puntajes por subapartado** (para que corrijas más rápido), o lo dejamos en este formato de preguntas y ejercicios?
 
 Estos son todo los pasos de para entregar su tarea.
 
