@@ -148,7 +148,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#evaluacion-diagnostica-desarrollo-web-y-java-solucionado" class="nav-link">📘 Evaluación Diagnóstica – Desarrollo Web y Java (solucionado)</a>
+            <li class="nav-item" data-bs-level="1"><a href="#evaluacion-diagnostica-desarrollo-web-y-java-miercoles" class="nav-link">📘 Evaluación Diagnóstica – Desarrollo Web y Java (Miercoles)</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-bs-level="2"><a href="#parte-teorica-20-puntos-30-min" class="nav-link">Parte Teórica (20 puntos, ~30 min)</a>
               <ul class="nav flex-column">
@@ -158,11 +158,7 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#boxproduct-box-new-box-product-product1-new-productmilk-125-boxsaveproduct1-product-product2-boxget-systemoutprintlnproduct2" class="nav-link">Box&lt;Product&gt; box = new Box&lt;&gt;(); Product product1 = new Product("Milk", 12.5); box.save(product1); Product product2 = box.get(); System.out.println(product2);</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#entregable" class="nav-link">Entregable</a>
+            <li class="nav-item" data-bs-level="2"><a href="#entregable" class="nav-link">📦 Entregable</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -174,146 +170,130 @@
                     <div class="col-md-9" role="main">
 
 <hr>
-<h1 id="evaluacion-diagnostica-desarrollo-web-y-java-solucionado">📘 Evaluación Diagnóstica – Desarrollo Web y Java (solucionado)<a class="headerlink" href="#evaluacion-diagnostica-desarrollo-web-y-java-solucionado" title="Permanent link">¶</a></h1>
-<p><strong>Duración:</strong> 2 horas<br>
-<strong>Distribución:</strong></p>
-<ul>
-<li>
-<p>Parte Teórica: 20% (20 puntos)</p>
-</li>
-<li>
-<p>Parte Práctica: 80% (80 puntos)</p>
-</li>
-<li>
-<p>Puntuación Total: 100 puntos</p>
-</li>
-</ul>
-<hr>
-<h2 id="parte-teorica-20-puntos-30-min"><strong>Parte Teórica (20 puntos, ~30 min)</strong><a class="headerlink" href="#parte-teorica-20-puntos-30-min" title="Permanent link">¶</a></h2>
-<h3 id="seccion-a-desarrollo-web-10-puntos"><strong>Sección A: Desarrollo Web (10 puntos)</strong><a class="headerlink" href="#seccion-a-desarrollo-web-10-puntos" title="Permanent link">¶</a></h3>
-<ol>
-<li>
-<p>(1 pts) ¿Qué diferencia existe entre HTML, CSS y JavaScript en una página web?</p>
-<p>Este es el <code>stack</code> de tecnologías que se usa en el desarrollo web es la base
-- <code>HTML</code>: nos permite hacer la maquetación de la página (el esqueleto)
-- <code>CSS</code>: se usa para que la página web tenga estilos, es decir la parte visual
-- <code>JS</code>: se encarga de la funcionalidad de la página web.</p>
-</li>
-<li>
-<p>(1 pts) Menciona todas las etiquetas HTML que conoce y de una descripción de al menos 3 de ellas:</p>
-<ul>
-<li><code>div</code></li>
-<li><code>section</code></li>
-<li><code>aside</code></li>
-<li><code>h1-h6</code></li>
-<li><code>span</code></li>
-<li><code>article</code></li>
-<li><code>script</code></li>
-</ul>
-</li>
-<li>
-<p>(2 pts) ¿Qué es un "atributo" en HTML? Da un ejemplo.</p>
-<p>Un atributo es aquella que se le pasa a una etiqueta <code>html</code> en la apertura de la misma ej: <code>&lt;div class=""&gt;&lt;/div&gt;</code></p>
-</li>
-<li>
-<p>(2 pts) ¿Qué diferencia hay entre <code>id</code> y <code>class</code> en etiquetas HTML y como se usan en CSS?</p>
-<ul>
-<li><code>id</code>: se usa para asignar un identificador único a etiquetas HTML</li>
-<li><code>class</code>: permite agrupar muchas etiquetas HTML con una sola palabra</li>
-</ul>
-</li>
-<li>
-<p>(2 pts) ¿Qué es un archivo externo <code>.css</code> y por qué es recomendable usarlo?</p>
-<p>Es un archivo de estilos, usado para poder trabajar de una manera ordenada, es el lugar donde definimos todos los estilos de nuestra página web para luego enlazarlo a un archivo <code>.html</code></p>
-</li>
-</ol>
-<h3 id="seccion-b-java-10-puntos"><strong>Sección B: Java (10 puntos)</strong><a class="headerlink" href="#seccion-b-java-10-puntos" title="Permanent link">¶</a></h3>
-<ol>
-<li>
-<p>(1 pts) ¿Qué significa que Java es un lenguaje "orientado a objetos"?</p>
-<p>Indica que nos soporta el paradigma POO, lo cual se enfoca en trabajar u organizar los datos y comportamientos en estructuras que se conocen como objetos, al seguir este enfoque se garantiza que el software que se desarrolla es modular, escalable y mantenible.</p>
-</li>
-<li>
-<p>(1 pts) Explica qué es la JVM (Java Virtual Machine).</p>
-<p>Java funcion bajo el concepto <code>WORA</code> lo cual dignifica <code>Write once, run anywhere</code> (Escribe una vez, corre en cualquier lugar), una vez que nuestro codigo es compilado a <code>bytecode</code> con la JVM  que es la maquina virtual de java, podemos ejecutar nuestros programas en cualquier sistema.</p>
-</li>
-<li>
-<p>(2 pts) Nombra los cuatro modificadores de acceso en Java y su alcance.</p>
-<ul>
-<li>public: Accesible desde cualquier clase, sin importar el paquete.</li>
-<li>protected: Accesible desde el mismo paquete y desde subclases, incluso en otros paquetes.</li>
-<li>default: Accesible solo dentro del mismo paquete. También se llama package-private.</li>
-<li>private: Accesible solo dentro de la misma clase donde se declara.</li>
-</ul>
-</li>
-<li>
-<p>(1 pts) ¿Qué es una variable y cómo se declara en Java?</p>
-<p>Una variable es donde nosotros almacenamos datos (una cajita), estos datos se guardan de manera temporal <code>&lt;tipo de dato&gt; &lt;nombre variable&gt; = &lt;valor&gt;;</code> ej `int num = 16;</p>
-</li>
-<li>
-<p>(1 pts) ¿Cuál es la diferencia entre <code>==</code> y <code>.equals()</code> en Java?</p>
-<ul>
-<li><code>==</code>: nos permite compara valores con tipos de datos primitivos</li>
-<li><code>.equals()</code>: para comparar objetos</li>
-</ul>
-</li>
-<li>
-<p>(2 pts) ¿Qué es una <strong>interfaz funcional</strong> en Java? Da un ejemplo conocido.</p>
-<p>las interfaces funcionales con aquellas interfaces en java que solo definen un metodo abstracto tambien conocidos como <code>SAM</code> en su cuerpo. Para buenas practicas se les suele dar el decorador <code>@FunctionalInterface</code>
-Ejemplo:
-</p><pre class="highlight"><code class="language-java">@FunctionalInterface
+<!-- # 📘 Evaluación Diagnóstica – Desarrollo Web y Java (solucionado)
+
+**Duración:** 2 horas  
+**Distribución:**
+
+- Parte Teórica: 20% (20 puntos)
+
+- Parte Práctica: 80% (80 puntos)
+
+- Puntuación Total: 100 puntos
+
+
+---
+
+## **Parte Teórica (20 puntos, ~30 min)**
+
+### **Sección A: Desarrollo Web (10 puntos)**
+
+1. (1 pts) ¿Qué diferencia existe entre HTML, CSS y JavaScript en una página web?
+
+    Este es el `stack` de tecnologías que se usa en el desarrollo web es la base
+    - `HTML`: nos permite hacer la maquetación de la página (el esqueleto)
+    - `CSS`: se usa para que la página web tenga estilos, es decir la parte visual
+    - `JS`: se encarga de la funcionalidad de la página web.
+
+2. (1 pts) Menciona todas las etiquetas HTML que conoce y de una descripción de al menos 3 de ellas:
+
+    - `div`
+    - `section`
+    - `aside`
+    - `h1-h6`
+    - `span`
+    - `article`
+    - `script`
+
+3. (2 pts) ¿Qué es un "atributo" en HTML? Da un ejemplo.
+
+    Un atributo es aquella que se le pasa a una etiqueta `html` en la apertura de la misma ej: `<div class=""></div>`
+
+4. (2 pts) ¿Qué diferencia hay entre `id` y `class` en etiquetas HTML y como se usan en CSS?
+
+    - `id`: se usa para asignar un identificador único a etiquetas HTML
+    - `class`: permite agrupar muchas etiquetas HTML con una sola palabra
+
+5. (2 pts) ¿Qué es un archivo externo `.css` y por qué es recomendable usarlo?
+
+    Es un archivo de estilos, usado para poder trabajar de una manera ordenada, es el lugar donde definimos todos los estilos de nuestra página web para luego enlazarlo a un archivo `.html`
+
+
+
+### **Sección B: Java (10 puntos)**
+
+1. (1 pts) ¿Qué significa que Java es un lenguaje "orientado a objetos"?
+
+    Indica que nos soporta el paradigma POO, lo cual se enfoca en trabajar u organizar los datos y comportamientos en estructuras que se conocen como objetos, al seguir este enfoque se garantiza que el software que se desarrolla es modular, escalable y mantenible.
+
+2. (1 pts) Explica qué es la JVM (Java Virtual Machine).
+
+    Java funcion bajo el concepto `WORA` lo cual dignifica `Write once, run anywhere` (Escribe una vez, corre en cualquier lugar), una vez que nuestro codigo es compilado a `bytecode` con la JVM  que es la maquina virtual de java, podemos ejecutar nuestros programas en cualquier sistema.
+
+3. (2 pts) Nombra los cuatro modificadores de acceso en Java y su alcance.
+
+    - public: Accesible desde cualquier clase, sin importar el paquete.
+    - protected: Accesible desde el mismo paquete y desde subclases, incluso en otros paquetes.
+    - default: Accesible solo dentro del mismo paquete. También se llama package-private.
+    - private: Accesible solo dentro de la misma clase donde se declara.
+
+
+4. (1 pts) ¿Qué es una variable y cómo se declara en Java?
+
+    Una variable es donde nosotros almacenamos datos (una cajita), estos datos se guardan de manera temporal `<tipo de dato> <nombre variable> = <valor>;` ej `int num = 16;
+
+5. (1 pts) ¿Cuál es la diferencia entre `==` y `.equals()` en Java?
+
+    - `==`: nos permite compara valores con tipos de datos primitivos
+    - `.equals()`: para comparar objetos
+
+6. (2 pts) ¿Qué es una **interfaz funcional** en Java? Da un ejemplo conocido.
+
+    las interfaces funcionales con aquellas interfaces en java que solo definen un metodo abstracto tambien conocidos como `SAM` en su cuerpo. Para buenas practicas se les suele dar el decorador `@FunctionalInterface`
+    Ejemplo:
+    <pre class="highlight"><code class="language-java">@FunctionalInterface
 public interface Runnable{
     void run();
-}</code></pre><p></p>
-</li>
-<li>
-<p>(2 pts) ¿Para qué sirven las <strong>expresiones lambda</strong> (funciones anónimas) en Java?
-    Son funciones anonimas que no necesitan un nombre para ser declarados</p>
-</li>
-<li>
-<p>(2 pts) ¿Qué ventaja ofrecen los <strong>genéricos</strong> (<code>Generics</code>) en Java al momento de programar?</p>
-<p>Los genericos es una parigma en donde nos se nos permite declarar claes y funciones con tipos de datos parametrizados</p>
-</li>
-</ol>
-<hr>
-<h2 id="parte-practica-80-puntos-90-min"><strong>Parte Práctica (80 puntos, ~90 min)</strong><a class="headerlink" href="#parte-practica-80-puntos-90-min" title="Permanent link">¶</a></h2>
-<h3 id="seccion-a-desarrollo-web-40-puntos"><strong>Sección A: Desarrollo Web (40 puntos)</strong><a class="headerlink" href="#seccion-a-desarrollo-web-40-puntos" title="Permanent link">¶</a></h3>
-<p><strong>Ejercicio 1 (15 pts): HTML y CSS básicos</strong><br>
-Crea una página sencilla que contenga:</p>
-<ul>
-<li>
-<p>Un título principal con tu nombre.</p>
-</li>
-<li>
-<p>Un párrafo con una breve presentación.</p>
-</li>
-<li>
-<p>Una lista con 3 de tus hobbies.</p>
-</li>
-<li>
-<p>Un enlace a tu sitio favorito.</p>
-</li>
-<li>
-<p>Una tabla de 2 columnas y 3 filas con datos ficticios.</p>
-</li>
-<li>
-<p>Dale estilo con CSS:</p>
-<ul>
-<li>
-<p>Fondo de color.</p>
-</li>
-<li>
-<p>Títulos en otro color y centrados.</p>
-</li>
-<li>
-<p>Lista con viñetas cuadradas.</p>
-</li>
-</ul>
-</li>
-<li>
-<p>Solucionado</p>
-</li>
-</ul>
+}</code></pre>
+
+7. (2 pts) ¿Para qué sirven las **expresiones lambda** (funciones anónimas) en Java?
+    Son funciones anonimas que no necesitan un nombre para ser declarados
+
+8. (2 pts) ¿Qué ventaja ofrecen los **genéricos** (`Generics`) en Java al momento de programar?
+
+    Los genericos es una parigma en donde nos se nos permite declarar claes y funciones con tipos de datos parametrizados
+
+
+
+---
+
+## **Parte Práctica (80 puntos, ~90 min)**
+
+### **Sección A: Desarrollo Web (40 puntos)**
+
+**Ejercicio 1 (15 pts): HTML y CSS básicos**  
+Crea una página sencilla que contenga:
+
+- Un título principal con tu nombre.
+
+- Un párrafo con una breve presentación.
+
+- Una lista con 3 de tus hobbies.
+
+- Un enlace a tu sitio favorito.
+
+-  Una tabla de 2 columnas y 3 filas con datos ficticios.
+
+- Dale estilo con CSS:
+
+    - Fondo de color.
+
+    - Títulos en otro color y centrados.
+
+    - Lista con viñetas cuadradas.
+
+- Solucionado
+
 <pre class="highlight"><code class="language-html">&lt;h1&gt;YOUR NAME&lt;/h1&gt;
     &lt;P&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident autem libero illum porro culpa, necessitatibus
         nostrum consequuntur exercitationem quidem sit enim minus itaque minima eligendi labore facilis consequatur sint
@@ -363,6 +343,7 @@ Crea una página sencilla que contenga:</p>
             &lt;/tr&gt;
         &lt;/tbody&gt;
     &lt;/table&gt;</code></pre>
+
 <pre class="highlight"><code class="language-css">&lt;style&gt;
 
         body {
@@ -432,32 +413,26 @@ Crea una página sencilla que contenga:</p>
             background-color: #ddd;
         }
     &lt;/style&gt;</code></pre>
-<ul>
-<li>Resultado</li>
-</ul>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../image.png" data-desc-position="bottom"><img alt="alt text" src="../image.png"></a></p>
-<p><strong>Ejercicio 2 (25 pts): Página con formulario</strong><br>
-Agrega a la página un <strong>formulario sencillo</strong> con:</p>
-<ul>
-<li>
-<p>Un campo de texto para el nombre.</p>
-</li>
-<li>
-<p>Un campo de correo electrónico.</p>
-</li>
-<li>
-<p>Una lista desplegable con tres opciones de carrera universitaria.</p>
-</li>
-<li>
-<p>Un botón para enviar.</p>
-<blockquote>
-<p>No es necesario que funcione el envío, solo la estructura y el estilo.</p>
-</blockquote>
-</li>
-<li>
-<p>Solucionado</p>
-</li>
-</ul>
+
+- Resultado
+
+![alt text](image.png)
+
+**Ejercicio 2 (25 pts): Página con formulario**  
+Agrega a la página un **formulario sencillo** con:
+
+- Un campo de texto para el nombre.
+
+- Un campo de correo electrónico.
+
+- Una lista desplegable con tres opciones de carrera universitaria.
+
+- Un botón para enviar.
+
+    > No es necesario que funcione el envío, solo la estructura y el estilo.
+
+- Solucionado
+
 <pre class="highlight"><code class="language-html">&lt;form action=""&gt;
         &lt;label for="name"&gt;Name:&lt;/label&gt;
         &lt;input type="text" id="name" name="name" required&gt;
@@ -475,77 +450,74 @@ Agrega a la página un <strong>formulario sencillo</strong> con:</p>
         &lt;br&gt;&lt;br&gt;
         &lt;button type="submit"&gt;Submit&lt;/button&gt;
     &lt;/form&gt;</code></pre>
-<hr>
-<h3 id="seccion-b-java-40-puntos"><strong>Sección B: Java (40 puntos)</strong><a class="headerlink" href="#seccion-b-java-40-puntos" title="Permanent link">¶</a></h3>
-<p><strong>Ejercicio 1 (10 pts): Variables y condicionales</strong><br>
-Escribe un programa en Java que:</p>
-<ul>
-<li>
-<p>Pida la edad de un usuario.
-    </p><pre class="highlight"><code class="language-java">Scanner sc = new Scanner(System.in);
-int age = sc.nextInt();</code></pre><p></p>
-</li>
-<li>
-<p>Si es menor de 18, imprima: <em>"Eres menor de edad"</em>.
-    </p><pre class="highlight"><code class="language-java">if(age &lt; 18){
+
+---
+
+### **Sección B: Java (40 puntos)**
+
+**Ejercicio 1 (10 pts): Variables y condicionales**  
+Escribe un programa en Java que:
+
+- Pida la edad de un usuario.
+    <pre class="highlight"><code class="language-java">Scanner sc = new Scanner(System.in);
+int age = sc.nextInt();</code></pre>
+
+- Si es menor de 18, imprima: _"Eres menor de edad"_.
+    <pre class="highlight"><code class="language-java">if(age &lt; 18){
     System.out.println("Eres menor de edad");
-}</code></pre><p></p>
-</li>
-<li>
-<p>Si es 18 o más, imprima: <em>"Eres mayor de edad"</em>.
-    </p><pre class="highlight"><code class="language-java">else {
+}</code></pre>
+
+- Si es 18 o más, imprima: _"Eres mayor de edad"_.
+    <pre class="highlight"><code class="language-java">else {
     System.out.println("Eres mayor de edad");
-}</code></pre><p></p>
-</li>
-</ul>
-<p><strong>Ejercicio 2 (10 pts): Clases y métodos</strong><br>
-Crea una clase <code>Estudiante</code> con los siguientes atributos:</p>
-<ul>
-<li>
-<p><code>nombre</code> (String)</p>
-</li>
-<li>
-<p><code>edad</code> (int)</p>
-</li>
-<li>
-<p><code>carrera</code> (String)</p>
-<pre class="highlight"><code class="language-java">public class Estudent{
+}</code></pre>
+
+
+**Ejercicio 2 (10 pts): Clases y métodos**  
+Crea una clase `Estudiante` con los siguientes atributos:
+
+- `nombre` (String)
+
+- `edad` (int)
+
+- `carrera` (String)
+
+    <pre class="highlight"><code class="language-java">public class Estudent{
     private String name;
     private Integer age;
     private String degree;
 }</code></pre>
-</li>
-</ul>
-<p>La clase debe tener:</p>
-<ul>
-<li>
-<p>Un constructor para inicializar los valores.
-    </p><pre class="highlight"><code class="language-java">public Estudent(String name, Integer age, String degree){
+
+La clase debe tener:
+
+- Un constructor para inicializar los valores.
+    <pre class="highlight"><code class="language-java">public Estudent(String name, Integer age, String degree){
     this.name = name;
     this.age = age;
     this.degree = degree;
-}</code></pre><p></p>
-</li>
-<li>
-<p>Un método <code>presentarse()</code> que imprima:</p>
-<blockquote>
-<p>"Hola, me llamo [nombre], tengo [edad] años y estudio [carrera]."</p>
-</blockquote>
-<pre class="highlight"><code class="language-java">public void take(){
+}</code></pre>
+
+- Un método `presentarse()` que imprima:
+
+    > "Hola, me llamo [nombre], tengo [edad] años y estudio [carrera]."
+
+    <pre class="highlight"><code class="language-java">public void take(){
     System.out.println("Hola, me llamo" + this.name +" tengo "+ this.edad + " años y estudio " + this.degree);
 }</code></pre>
-<p>En la clase principal (<code>Main</code>), crea dos estudiantes y haz que se presenten.</p>
-<pre class="highlight"><code class="language-java">Estudent est1 =  new Estudent("alguien", 23, "Ciencias de la computacion");
+
+    En la clase principal (`Main`), crea dos estudiantes y haz que se presenten.
+
+    <pre class="highlight"><code class="language-java">Estudent est1 =  new Estudent("alguien", 23, "Ciencias de la computacion");
 Estudent est2 =  new Estudent("alguien", 23, "Desarrollo de software");
 
 est1.take();
 est2.take();</code></pre>
-</li>
-</ul>
-<p><strong>Ejercicio 3 (20 pts): Programación orientada a objetos, funcional y genérica</strong></p>
-<ol>
-<li>Crea una clase <code>Producto</code> con atributos: <code>nombre</code> (String) y <code>precio</code> (double).</li>
-</ol>
+
+
+**Ejercicio 3 (20 pts): Programación orientada a objetos, funcional y genérica**
+
+1. Crea una clase `Producto` con atributos: `nombre` (String) y `precio` (double).
+
 <pre class="highlight"><code class="language-java">public class Product{
     private String name;
     private Double price;
@@ -557,23 +529,23 @@ est2.take();</code></pre>
 
     // getters y setters
 }</code></pre>
-<ol>
-<li>Crea una lista de varios productos en la clase principal (<code>Main</code>).</li>
-</ol>
+
+2. Crea una lista de varios productos en la clase principal (`Main`).
+
 <pre class="highlight"><code class="language-java">List&lt;Product&gt; products = new ArrayList&lt;&gt;();</code></pre>
-<ol>
-<li>Utiliza una <strong>expresión lambda</strong> para filtrar e imprimir solo los productos cuyo precio sea mayor a 50.</li>
-</ol>
-<p></p><pre class="highlight"><code class="language-java">products.Stream.filter(product -&gt; {
+
+3. Utiliza una **expresión lambda** para filtrar e imprimir solo los productos cuyo precio sea mayor a 50.
+
+<pre class="highlight"><code class="language-java">products.Stream.filter(product -&gt; {
     if(product.getPrice() &gt; 50){
         return product
     }
 });</code></pre>
-4. Crea una clase genérica <code>Caja&lt;T&gt;</code> que permita guardar un objeto de cualquier tipo.<p></p>
-<ul>
-<li>
-<p>Debe tener un método <code>guardar(T objeto)</code> y <code>obtener()</code> que devuelva el objeto.</p>
-<pre class="highlight"><code class="language-java">public class Box&lt;T&gt;{
+4. Crea una clase genérica `Caja<T>` que permita guardar un objeto de cualquier tipo.
+
+- Debe tener un método `guardar(T objeto)` y `obtener()` que devuelva el objeto.
+
+    <pre class="highlight"><code class="language-java">public class Box&lt;T&gt;{
     private T obj
     public void save(T obj){
         this.obj = obj;
@@ -584,45 +556,167 @@ est2.take();</code></pre>
         return this.obj;
     }
 }</code></pre>
-<ul>
-<li>En <code>Main</code>, guarda un objeto <code>Producto</code> en una <code>Caja</code> y luego recupéralo para mostrarlo en consola.</li>
-</ul>
-<h2 id="boxproduct-box-new-box-product-product1-new-productmilk-125-boxsaveproduct1-product-product2-boxget-systemoutprintlnproduct2"><pre class="highlight"><code class="language-java">Box&lt;Product&gt; box =  new Box&lt;&gt;();
+
+
+    - En `Main`, guarda un objeto `Producto` en una `Caja` y luego recupéralo para mostrarlo en consola.
+
+    <pre class="highlight"><code class="language-java">Box&lt;Product&gt; box =  new Box&lt;&gt;();
 Product product1 = new Product("Milk", 12.5);
 box.save(product1);
 Product product2 = box.get();
 
-System.out.println(product2);</code></pre><a class="headerlink" href="#boxproduct-box-new-box-product-product1-new-productmilk-125-boxsaveproduct1-product-product2-boxget-systemoutprintlnproduct2" title="Permanent link">¶</a></h2>
-</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">✅ Con esta evaluación</p>
-<p>Nos permitirá ver desde donde debemos iniciar:</p>
-<ul>
-<li>En <strong>web</strong>, validas si saben estructurar y dar estilo, sin necesidad de entrar en lógica compleja de JS.</li>
-<li>En <strong>Java</strong>, verificas si entienden lo básico (POO), y también si han escuchado o trabajado algo de <strong>funcional</strong> (lambdas) y <strong>genérico</strong> (clases genéricas).</li>
-</ul>
-</div>
-<h2 id="entregable">Entregable<a class="headerlink" href="#entregable" title="Permanent link">¶</a></h2>
-<p>Debera generar archivos con la extencion correspondiente:</p>
-<ul>
-<li>para las preguntas teoricas en un archivo <code>.txt</code></li>
-<li>para las preguntas practicas<ul>
-<li>web: <code>.html</code> y <code>.css</code></li>
-<li>java: <code>.java</code></li>
-</ul>
-</li>
-</ul>
-<p>Para la entrega de la misma debera seguir los siguientes pasos</p>
-<ol>
-<li>Debe crear un reposirotrio en github en su cuenta</li>
-<li>Ejecute los siguientes comando en la terminal de su preferencia:
+System.out.println(product2);</code></pre>
+---
+
+
+
+!!! note "✅ Con esta evaluación"
+    Nos permitirá ver desde donde debemos iniciar:
+
+    - En **web**, validas si saben estructurar y dar estilo, sin necesidad de entrar en lógica compleja de JS.
+    - En **Java**, verificas si entienden lo básico (POO), y también si han escuchado o trabajado algo de **funcional** (lambdas) y **genérico** (clases genéricas).
+
+
+
+## Entregable
+
+Debera generar archivos con la extencion correspondiente:
+
+- para las preguntas teoricas en un archivo `.txt`
+- para las preguntas practicas
+    - web: `.html` y `.css`
+    - java: `.java`
+
+Para la entrega de la misma debera seguir los siguientes pasos
+
+1. Debe crear un reposirotrio en github en su cuenta
+2. Ejecute los siguientes comando en la terminal de su preferencia:
 <pre class="highlight"><code>git init --initial-branch=main # inicializamos la rama
 git add .
 git remote add origin &lt;url&gt; # la url lo encuentra en la web de GitHub en el lugar donde llego a crear su repo
 git commit -m "parctica 0 &lt;su nombre&gt;"
-git push -u origin main</code></pre></li>
+git push -u origin main</code></pre>
+
+Estos son todo los pasos de para entregar su tarea.
+
+---
+!!! warning "🤖 Tomen en cuenta"
+    - La practica solo se revisara de las personas que tenga asistencia en la fecha en la que se dio esta prueba
+    - Es obligatorio que este en GitHub. -->
+
+<h1 id="evaluacion-diagnostica-desarrollo-web-y-java-miercoles">📘 Evaluación Diagnóstica – Desarrollo Web y Java (Miercoles)<a class="headerlink" href="#evaluacion-diagnostica-desarrollo-web-y-java-miercoles" title="Permanent link">¶</a></h1>
+<p><strong>Duración:</strong> 2 horas
+<strong>Distribución:</strong></p>
+<ul>
+<li>Parte Teórica: 20% (20 puntos)</li>
+<li>Parte Práctica: 80% (80 puntos)</li>
+<li>Puntuación Total: 100 puntos</li>
+</ul>
+<hr>
+<h2 id="parte-teorica-20-puntos-30-min"><strong>Parte Teórica (20 puntos, ~30 min)</strong><a class="headerlink" href="#parte-teorica-20-puntos-30-min" title="Permanent link">¶</a></h2>
+<h3 id="seccion-a-desarrollo-web-10-puntos"><strong>Sección A: Desarrollo Web (10 puntos)</strong><a class="headerlink" href="#seccion-a-desarrollo-web-10-puntos" title="Permanent link">¶</a></h3>
+<ol>
+<li>(1 pts) ¿Qué es una etiqueta semántica en HTML y por qué es importante?</li>
+<li>(1 pts) Menciona 5 etiquetas de formulario (<code>form</code>) y explica la utilidad de 2 de ellas.</li>
+<li>(2 pts) ¿Cuál es la diferencia entre etiquetas en bloque (<em>block</em>) y en línea (<em>inline</em>) en HTML? Da un ejemplo de cada una.</li>
+<li>(2 pts) ¿Qué diferencia existe entre <code>inline-style</code>, <code>&lt;style&gt;</code> interno y un archivo <code>.css</code> externo?</li>
+<li>(2 pts) Explica la diferencia entre id y class en CSS y en qué caso usarías cada uno.</li>
+<li>(2 pts) ¿Qué diferencia existe entre HTML, CSS y JavaScript en una página web?</li>
 </ol>
+<hr>
+<h3 id="seccion-b-java-10-puntos"><strong>Sección B: Java (10 puntos)</strong><a class="headerlink" href="#seccion-b-java-10-puntos" title="Permanent link">¶</a></h3>
+<ol>
+<li>(1 pts) ¿Qué es una clase en Java y qué elementos puede contener?</li>
+<li>(1 pts) ¿Qué es un constructor y cómo se diferencia de un método normal?</li>
+<li>(2 pts) Explica con tus palabras qué significa herencia en Java.</li>
+<li>(2 pts) ¿Qué es un <code>ArrayList</code> y en qué se diferencia de un arreglo (<code>array</code>) normal en Java?</li>
+<li>(2 pts) Explica qué es una expresión <em>lambda</em> en Java y escribe un ejemplo corto.</li>
+<li>(2 pts) ¿Para qué sirven los <strong>genéricos</strong> en Java? Da un ejemplo de colección genérica.</li>
+</ol>
+<hr>
+<h2 id="parte-practica-80-puntos-90-min"><strong>Parte Práctica (80 puntos, ~90 min)</strong><a class="headerlink" href="#parte-practica-80-puntos-90-min" title="Permanent link">¶</a></h2>
+<h3 id="seccion-a-desarrollo-web-40-puntos"><strong>Sección A: Desarrollo Web (40 puntos)</strong><a class="headerlink" href="#seccion-a-desarrollo-web-40-puntos" title="Permanent link">¶</a></h3>
+<p><strong>Ejercicio 1 (15 pts): Página con estructura básica</strong>
+Crea una página que contenga:</p>
+<ul>
+<li>Un encabezado (<code>&lt;header&gt;</code>) con el título "Mi Página Personal".</li>
+<li>Una sección (<code>&lt;section&gt;</code>) con un párrafo de presentación y una imagen cualquiera.</li>
+<li>Una lista no ordenada con tres metas personales.</li>
+<li>Un pie de página (<code>&lt;footer&gt;</code>) con tu correo electrónico.</li>
+</ul>
+<p>Dale estilo con CSS:</p>
+<ul>
+<li>Fondo claro.</li>
+<li>Encabezado con texto centrado y color de fondo distinto.</li>
+<li>Párrafo con interlineado de 1.5.</li>
+<li>Lista con viñetas circulares.</li>
+</ul>
+<hr>
+<p><strong>Ejercicio 2 (25 pts): Formulario con estilos</strong>
+Agrega un formulario con:</p>
+<ul>
+<li>Un campo de texto para el nombre.</li>
+<li>Un campo de contraseña.</li>
+<li>Una casilla de verificación para aceptar términos y condiciones.</li>
+<li>Un botón para enviar.</li>
+</ul>
+<p>Con CSS:</p>
+<ul>
+<li>Botón con color de fondo azul y texto blanco.</li>
+<li>Campos con borde redondeado.</li>
+<li>Que al pasar el mouse sobre el botón cambie a color verde.</li>
+</ul>
+<hr>
+<h3 id="seccion-b-java-40-puntos"><strong>Sección B: Java (40 puntos)</strong><a class="headerlink" href="#seccion-b-java-40-puntos" title="Permanent link">¶</a></h3>
+<p><strong>Ejercicio 1 (10 pts): Condicionales y bucles</strong>
+Escribe un programa que:</p>
+<ul>
+<li>Pida un número al usuario.</li>
+<li>Imprima todos los números pares desde 0 hasta ese número.</li>
+</ul>
+<hr>
+<p><strong>Ejercicio 2 (10 pts): Clases y objetos</strong>
+Crea una clase <code>Libro</code> con atributos:</p>
+<ul>
+<li><code>titulo</code> (String)</li>
+<li><code>autor</code> (String)</li>
+<li><code>anio</code> (int)</li>
+</ul>
+<p>La clase debe tener:</p>
+<ul>
+<li>Un constructor para inicializar.</li>
+<li>Un método <code>mostrarInfo()</code> que imprima los datos del libro.</li>
+</ul>
+<p>En la clase principal (<code>Main</code>), crea al menos 2 libros y muestra su información.</p>
+<hr>
+<p><strong>Ejercicio 3 (20 pts): POO + Funcional + Genéricos</strong></p>
+<ol>
+<li>Crea una clase <code>Alumno</code> con atributos: <code>nombre</code> y <code>nota</code>.</li>
+<li>Crea una lista de alumnos en <code>Main</code>.</li>
+<li>Con una <strong>expresión lambda y Streams</strong>, filtra e imprime solo los alumnos con nota mayor o igual a 60.</li>
+<li>
+<p>Implementa una clase genérica <code>Contenedor&lt;T&gt;</code> que pueda guardar cualquier tipo de objeto.</p>
+</li>
+<li>
+<p>Debe tener métodos <code>guardar(T objeto)</code> y <code>obtener()</code>.</p>
+</li>
+<li>En <code>Main</code>, guarda un <code>Alumno</code> en un <code>Contenedor</code> y luego recupéralo.</li>
+</ol>
+<hr>
+<h2 id="entregable">📦 Entregable<a class="headerlink" href="#entregable" title="Permanent link">¶</a></h2>
+<ul>
+<li>Teoría: en un archivo <code>.txt</code></li>
+<li>Desarrollo Web: en archivos <code>.html</code> y <code>.css</code></li>
+<li>Java: en archivos <code>.java</code></li>
+</ul>
+<p>Entrega en GitHub siguiendo los mismos pasos:</p>
+<pre class="highlight"><code class="language-bash">git init --initial-branch=main
+git add .
+git remote add origin &lt;url-del-repo&gt;
+git commit -m "diagnostico &lt;tu-nombre&gt;"
+git push -u origin main</code></pre>
+<hr>
+<p>¿Quieres que también prepare una <strong>rúbrica simplificada con puntajes por subapartado</strong> (para que corrijas más rápido), o lo dejamos en este formato de preguntas y ejercicios?</p>
 <p>Estos son todo los pasos de para entregar su tarea.</p>
 <hr>
 <div class="admonition warning">
