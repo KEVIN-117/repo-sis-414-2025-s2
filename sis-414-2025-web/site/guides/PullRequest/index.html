@@ -6,7 +6,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Laboratorio 2 - SIS-414 G-2</title>
+        <title>PullRequest - SIS-414 G-2</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/fontawesome.min.css" rel="stylesheet">
         <link href="../../css/brands.min.css" rel="stylesheet">
@@ -80,24 +80,24 @@
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Guides</a>
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown" aria-expanded="false">Guides</a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../guides/PullRequest/" class="dropdown-item">PullRequest</a>
+    <a href="./" class="dropdown-item active" aria-current="page">PullRequest</a>
 </li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown" aria-expanded="false">Laboratorios</a>
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Laboratorios</a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../Laboratorio%201/" class="dropdown-item">LABORATORIO 1 SIS-414</a>
+    <a href="../../laboratorios/Laboratorio%201/" class="dropdown-item">LABORATORIO 1 SIS-414</a>
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active" aria-current="page">Laboratorio 2</a>
+    <a href="../../laboratorios/Laboratorio%202/" class="dropdown-item">Laboratorio 2</a>
 </li>
                                 </ul>
                             </li>
@@ -122,12 +122,12 @@
 
                     <ul class="nav navbar-nav ms-md-auto">
                             <li class="nav-item">
-                                <a rel="prev" href="../Laboratorio%201/" class="nav-link">
+                                <a rel="prev" href="../../apuntes/js/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../../practicas/Practica%200%20-%20Prueba%20de%20Conocimiento/" class="nav-link">
+                                <a rel="next" href="../../laboratorios/Laboratorio%201/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -149,53 +149,52 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="2"><a href="#laboratorio-mini-sistema-de-gestion-de-eventos" class="nav-link">🧪 Laboratorio: Mini sistema de gestión de eventos</a>
+            <li class="nav-item" data-bs-level="1"><a href="#guia-crear-un-pull-request-en-tu-propio-repositorio" class="nav-link">📘 Guía: Crear un Pull Request en tu propio repositorio</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#0-crear-el-repositorio-en-github" class="nav-link">0) Crear el repositorio en GitHub</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            
-            <li class="nav-item" data-bs-level="2"><a href="#objetivo" class="nav-link">🌟 Objetivo</a>
+            <li class="nav-item" data-bs-level="2"><a href="#1-clonar-el-repositorio-a-tu-computadora" class="nav-link">1) Clonar el repositorio a tu computadora</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            
-            <li class="nav-item" data-bs-level="2"><a href="#tecnologias" class="nav-link">⚙️ Tecnologías</a>
+            <li class="nav-item" data-bs-level="2"><a href="#2-crear-una-nueva-rama-para-tu-cambio" class="nav-link">2) Crear una nueva rama para tu cambio</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            
-            <li class="nav-item" data-bs-level="2"><a href="#alcance-funcional" class="nav-link">🔨 Alcance funcional</a>
+            <li class="nav-item" data-bs-level="2"><a href="#3-realizar-un-cambio-sencillo" class="nav-link">3) Realizar un cambio sencillo</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            
-            <li class="nav-item" data-bs-level="2"><a href="#endpoints-disponibles" class="nav-link">Endpoints Disponibles</a>
+            <li class="nav-item" data-bs-level="2"><a href="#4-agregar-y-hacer-commit-de-los-cambios" class="nav-link">4) Agregar y hacer commit de los cambios</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            
-            <li class="nav-item" data-bs-level="2"><a href="#conceptos-que-se-pondran-en-practica" class="nav-link">🧐 Conceptos que se pondrán en práctica</a>
+            <li class="nav-item" data-bs-level="2"><a href="#5-subir-tu-rama-a-github" class="nav-link">5) Subir tu rama a GitHub</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            
-            <li class="nav-item" data-bs-level="2"><a href="#cronograma-sugerido-2-horas" class="nav-link">⏱️ Cronograma sugerido (2 horas)</a>
+            <li class="nav-item" data-bs-level="2"><a href="#6-crear-el-pull-request-pr-en-github" class="nav-link">6) Crear el Pull Request (PR) en GitHub</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            
-            <li class="nav-item" data-bs-level="2"><a href="#estructura-esperada" class="nav-link">📂 Estructura esperada</a>
+            <li class="nav-item" data-bs-level="2"><a href="#7-si-aparece-un-conflicto" class="nav-link">7) Si aparece un conflicto</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            
-            <li class="nav-item" data-bs-level="2"><a href="#extras-opcionales" class="nav-link">🔀 Extras opcionales</a>
+            <li class="nav-item" data-bs-level="2"><a href="#8-checklist-de-entrega" class="nav-link">8) Checklist de entrega</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            
-            <li class="nav-item" data-bs-level="2"><a href="#entregables" class="nav-link">📄 Entregables</a>
+            <li class="nav-item" data-bs-level="2"><a href="#9-errores-comunes-y-soluciones" class="nav-link">9) Errores comunes y soluciones</a>
               <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#rubrica-sugerida-20-pts" class="nav-link">Rubrica sugerida (20 pts)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -203,209 +202,136 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h2 id="laboratorio-mini-sistema-de-gestion-de-eventos">🧪 Laboratorio: Mini sistema de gestión de eventos<a class="headerlink" href="#laboratorio-mini-sistema-de-gestion-de-eventos" title="Permanent link">¶</a></h2>
-<h2 id="objetivo">🌟 Objetivo<a class="headerlink" href="#objetivo" title="Permanent link">¶</a></h2>
-<p>Construir una aplicación web funcional donde los estudiantes puedan:</p>
+<hr>
+<h1 id="guia-crear-un-pull-request-en-tu-propio-repositorio">📘 Guía: Crear un Pull Request en tu propio repositorio<a class="headerlink" href="#guia-crear-un-pull-request-en-tu-propio-repositorio" title="Permanent link">¶</a></h1>
+<p><strong>Objetivo:</strong> Crear un repositorio en GitHub, hacer un cambio en una rama y abrir un Pull Request dentro de tu propio repo (de una rama hacia <code>main</code>).</p>
+<p><strong>Requisitos previos:</strong> cuenta en GitHub, Git instalado (o GitHub Desktop), conocimientos básicos de terminal.</p>
+<hr>
+<h2 id="0-crear-el-repositorio-en-github">0) Crear el repositorio en GitHub<a class="headerlink" href="#0-crear-el-repositorio-en-github" title="Permanent link">¶</a></h2>
 <ol>
-<li>Registrar usuarios.</li>
-<li>Crear eventos asociados a un usuario.</li>
-<li>Listar los eventos de un usuario en particular.</li>
+<li>Entra a <a href="https://github.com">GitHub</a>.</li>
+<li>Haz clic en <strong>New repository</strong>.</li>
+<li>Ponle un nombre, por ejemplo: <code>repo-practica</code>.</li>
+<li>Marca la opción <strong>Add a README file</strong> (opcional).</li>
+<li>Haz clic en <strong>Create repository</strong>.</li>
 </ol>
-<p>Este laboratorio está diseñado para realizarse en un máximo de 2 horas.</p>
+<p>Ahora tienes <code>github.com/tu-usuario/repo-practica</code>.</p>
 <hr>
-<h2 id="tecnologias">⚙️ Tecnologías<a class="headerlink" href="#tecnologias" title="Permanent link">¶</a></h2>
-<ul>
-<li><strong>Backend</strong>: Java 21+, Spring Boot (Spring Web).</li>
-<li><strong>Frontend</strong>: React 19 con Next.js 15.</li>
-<li><strong>Comunicación</strong>: JSON vía fetch/Axios.</li>
-</ul>
+<h2 id="1-clonar-el-repositorio-a-tu-computadora">1) Clonar el repositorio a tu computadora<a class="headerlink" href="#1-clonar-el-repositorio-a-tu-computadora" title="Permanent link">¶</a></h2>
+<p>En tu terminal:</p>
+<pre class="highlight"><code class="language-bash"># clona tu repositorio
+git clone https://github.com/tu-usuario/repo-practica.git
+cd repo-practica
+
+# verifica los remotos
+git remote -v
+# origin -&gt; tu repositorio en GitHub</code></pre>
 <hr>
-<h2 id="alcance-funcional">🔨 Alcance funcional<a class="headerlink" href="#alcance-funcional" title="Permanent link">¶</a></h2>
-<h3 id="backend-spring-boot">Backend - Spring Boot<a class="headerlink" href="#backend-spring-boot" title="Permanent link">¶</a></h3>
-<table>
-<thead>
-<tr>
-<th>Método</th>
-<th>Ruta</th>
-<th>Descripción</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>POST</td>
-<td><code>/users</code></td>
-<td>Crear nuevo usuario</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><code>/users/{id}/events</code></td>
-<td>Obtener eventos del usuario</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><code>/users/{id}/events</code></td>
-<td>Crear evento para un usuario específico</td>
-</tr>
-</tbody>
-</table>
-<h3 id="modelo-user">Modelo <code>User</code><a class="headerlink" href="#modelo-user" title="Permanent link">¶</a></h3>
+<h2 id="2-crear-una-nueva-rama-para-tu-cambio">2) Crear una nueva rama para tu cambio<a class="headerlink" href="#2-crear-una-nueva-rama-para-tu-cambio" title="Permanent link">¶</a></h2>
+<p>Nunca trabajes directo en <code>main</code>. Crea una rama con un nombre claro:</p>
+<pre class="highlight"><code class="language-bash">git checkout -b feat/agregar-mi-nombre</code></pre>
+<p>Ejemplos de prefijos:</p>
 <ul>
-<li><code>id</code>: Long</li>
-<li><code>name</code>: String</li>
-</ul>
-<h3 id="modelo-event">Modelo <code>Event</code><a class="headerlink" href="#modelo-event" title="Permanent link">¶</a></h3>
-<ul>
-<li><code>id</code>: Long</li>
-<li><code>title</code>: String</li>
-<li><code>description</code>: String</li>
-<li><code>userId</code>: Long (referencia al usuario)</li>
-</ul>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../diagram.png" data-desc-position="bottom"><img alt="image.png" src="../diagram.png"></a></p>
-<hr>
-<h2 id="endpoints-disponibles"><strong>Endpoints Disponibles</strong><a class="headerlink" href="#endpoints-disponibles" title="Permanent link">¶</a></h2>
-<h3 id="usuarios"><strong>Usuarios</strong><a class="headerlink" href="#usuarios" title="Permanent link">¶</a></h3>
-<ul>
-<li><strong><code>POST /api/users</code></strong>&nbsp;- Crear un nuevo usuario</li>
-<li><strong><code>GET /api/users</code></strong>&nbsp;- Obtener todos los usuarios</li>
-<li><strong><code>GET /api/users/{id}</code></strong>&nbsp;- Obtener un usuario por ID</li>
-<li><strong><code>PUT /api/users/{id}</code></strong>&nbsp;- Actualizar un usuario</li>
-<li><strong><code>DELETE /api/users/{id}</code></strong>&nbsp;- Eliminar un usuario</li>
-</ul>
-<h3 id="eventos"><strong>Eventos</strong><a class="headerlink" href="#eventos" title="Permanent link">¶</a></h3>
-<ul>
-<li><strong><code>POST /api/users/{userId}/events</code></strong>&nbsp;- Crear un nuevo evento para un usuario</li>
-<li><strong><code>GET /api/users/{userId}/events</code></strong>&nbsp;- Obtener todos los eventos de un usuario</li>
-<li><strong><code>GET /api/users/{userId}/events/{eventId}</code></strong>&nbsp;- Obtener un evento por ID</li>
-<li><strong><code>PUT /api/users/{userId}/events/{eventId}</code></strong>&nbsp;- Actualizar un evento</li>
-<li><strong><code>DELETE /api/users/{userId}/events/{eventId}</code></strong>&nbsp;- Eliminar un evento</li>
+<li><code>feat/</code> para nueva funcionalidad.</li>
+<li><code>fix/</code> para corrección de errores.</li>
+<li><code>docs/</code> para cambios en documentación.</li>
 </ul>
 <hr>
-<h3 id="frontend-nextjs">Frontend - Next.js<a class="headerlink" href="#frontend-nextjs" title="Permanent link">¶</a></h3>
-<h3 id="funcionalidades">Funcionalidades<a class="headerlink" href="#funcionalidades" title="Permanent link">¶</a></h3>
+<h2 id="3-realizar-un-cambio-sencillo">3) Realizar un cambio sencillo<a class="headerlink" href="#3-realizar-un-cambio-sencillo" title="Permanent link">¶</a></h2>
+<ul>
+<li>Abre <code>README.md</code> o crea un archivo nuevo, por ejemplo <code>colaboradores.txt</code>.</li>
+<li>Agrega tu nombre y guarda el archivo.</li>
+</ul>
+<p>Ejemplo de contenido en <code>colaboradores.txt</code>:</p>
+<pre class="highlight"><code>Juan Pérez - Ingeniería de Software</code></pre>
+<hr>
+<h2 id="4-agregar-y-hacer-commit-de-los-cambios">4) Agregar y hacer commit de los cambios<a class="headerlink" href="#4-agregar-y-hacer-commit-de-los-cambios" title="Permanent link">¶</a></h2>
+<pre class="highlight"><code class="language-bash">git add colaboradores.txt
+git commit -m "docs: agregar nombre de Juan Pérez a colaboradores.txt"</code></pre>
+<p>Consejo: el mensaje debe empezar con tipo (<code>feat</code>, <code>fix</code>, <code>docs</code>) y una descripción breve.</p>
+<hr>
+<h2 id="5-subir-tu-rama-a-github">5) Subir tu rama a GitHub<a class="headerlink" href="#5-subir-tu-rama-a-github" title="Permanent link">¶</a></h2>
+<pre class="highlight"><code class="language-bash">git push -u origin feat/agregar-mi-nombre</code></pre>
+<hr>
+<h2 id="6-crear-el-pull-request-pr-en-github">6) Crear el Pull Request (PR) en GitHub<a class="headerlink" href="#6-crear-el-pull-request-pr-en-github" title="Permanent link">¶</a></h2>
 <ol>
-<li><strong>Página principal</strong> (<code>/users</code>):<ul>
-<li>Lista de usuarios.</li>
-<li>Formulario para registrar nuevo usuario.</li>
-</ul>
+<li>Ve a tu repositorio en GitHub (<code>github.com/tu-usuario/repo-practica</code>).</li>
+<li>
+<p>Verás el botón <strong>Compare &amp; pull request</strong> → haz clic.</p>
 </li>
-<li><strong>Página de usuario</strong> (<code>/users/[id]</code>):<ul>
-<li>Lista de eventos del usuario.</li>
-<li>Formulario para crear nuevo evento.</li>
-</ul>
+<li>
+<p><em>Si no aparece:</em> ve a la pestaña <strong>Pull requests</strong> → <strong>New pull request</strong>.</p>
 </li>
+<li>Elige como <strong>base branch</strong>: <code>main</code>.</li>
+<li>Elige como <strong>compare branch</strong>: <code>feat/agregar-mi-nombre</code>.</li>
+<li>Completa el título y descripción.</li>
 </ol>
-<blockquote>
-<p>Utilizar fetch o axios para conectarse al backend. Se recomienda usar el enrutamiento dinámico de Next.js para /users/[id].
-</p>
-</blockquote>
-<hr>
-<h2 id="conceptos-que-se-pondran-en-practica">🧐 Conceptos que se pondrán en práctica<a class="headerlink" href="#conceptos-que-se-pondran-en-practica" title="Permanent link">¶</a></h2>
-<table>
-<thead>
-<tr>
-<th>Backend</th>
-<th>Frontend</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Rutas RESTful con parámetros</td>
-<td>Páginas dinámicas con rutas (<code>[id].tsx</code>)</td>
-</tr>
-<tr>
-<td>Validación básica (campos vacíos)</td>
-<td>Manejo de estado local con hooks</td>
-</tr>
-<tr>
-<td>Relaciones (usuario-evento)</td>
-<td>Forms controlados y envío de datos</td>
-</tr>
-<tr>
-<td>DTOs / separación de modelos</td>
-<td>Navegación entre vistas usando Next.js</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="cronograma-sugerido-2-horas">⏱️ Cronograma sugerido (2 horas)<a class="headerlink" href="#cronograma-sugerido-2-horas" title="Permanent link">¶</a></h2>
-<table>
-<thead>
-<tr>
-<th>Tiempo</th>
-<th>Actividad</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0-15m</td>
-<td>Crear entidades y endpoints en Spring Boot</td>
-</tr>
-<tr>
-<td>15-30m</td>
-<td>Implementar lógica de negocio</td>
-</tr>
-<tr>
-<td>30-40m</td>
-<td>Probar API con Postman o curl</td>
-</tr>
-<tr>
-<td>40-60m</td>
-<td>Crear frontend base con Next.js</td>
-</tr>
-<tr>
-<td>60-90m</td>
-<td>Implementar vista de usuarios y eventos</td>
-</tr>
-<tr>
-<td>90-120m</td>
-<td>Pruebas, mejoras, entrega de evidencias</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="estructura-esperada">📂 Estructura esperada<a class="headerlink" href="#estructura-esperada" title="Permanent link">¶</a></h2>
-<h3 id="backend">Backend:<a class="headerlink" href="#backend" title="Permanent link">¶</a></h3>
-<pre class="highlight"><code>src/
-├─ controller/
-│  ├─ UserController.java
-│  └─ EventController.java
-├─ model/
-│  ├─ User.java
-│  └─ Event.java
-└─ service/
-   └─ EventService.java
-</code></pre>
-<h3 id="frontend-nextjs_1">Frontend (Next.js):<a class="headerlink" href="#frontend-nextjs_1" title="Permanent link">¶</a></h3>
-<pre class="highlight"><code>pages/
-├─ users/
-│  └─ [id].tsx       &lt;- Vista de eventos del usuario
-├─ index.tsx         &lt;- Vista de usuarios
-components/
-├─ UserForm.tsx
-├─ EventForm.tsx
-</code></pre>
-<hr>
-<h2 id="extras-opcionales">🔀 Extras opcionales<a class="headerlink" href="#extras-opcionales" title="Permanent link">¶</a></h2>
-<ul>
-<li>Filtro por nombre de evento.</li>
-<li>Validaciones en el frontend.</li>
-<li>Indicadores de carga (spinners).</li>
-<li>Alerta de éxito/error tras enviar formularios.</li>
-</ul>
-<hr>
-<h2 id="entregables">📄 Entregables<a class="headerlink" href="#entregables" title="Permanent link">¶</a></h2>
-<ul>
-<li>Código fuente del backend y frontend (repositorio Git).</li>
-<li>Captura de pantalla con:<ul>
-<li>Lista de usuarios.</li>
-<li>Lista de eventos de un usuario.</li>
-</ul>
-</li>
-<li>Respuestas a estas preguntas:<ol>
-<li>¿Cómo se comunican React y Spring Boot?</li>
-<li>¿Qué retos enfrentaste al hacer la integración?</li>
+<p>Ejemplo:</p>
+<p><strong>Título:</strong></p>
+<pre class="highlight"><code>docs: agregar nombre de Juan Pérez a colaboradores.txt</code></pre>
+<p><strong>Descripción:</strong></p>
+<pre class="highlight"><code>Agrego mi nombre al archivo colaboradores.txt
+
+- Archivo modificado: colaboradores.txt
+- Cambio: añadí "Juan Pérez - Ingeniería de Software"
+- ¿Cómo probar?: revisar el archivo en la pestaña "Files changed"</code></pre>
+<ol>
+<li>Haz clic en <strong>Create pull request</strong>. 🎉</li>
 </ol>
+<hr>
+<h2 id="7-si-aparece-un-conflicto">7) Si aparece un conflicto<a class="headerlink" href="#7-si-aparece-un-conflicto" title="Permanent link">¶</a></h2>
+<p>Si GitHub muestra “This branch has conflicts”, significa que tu rama está desactualizada respecto a <code>main</code>.</p>
+<p>Pasos:</p>
+<pre class="highlight"><code class="language-bash"># estando en tu repo local
+git checkout main
+git pull origin main
+
+# regresar a tu rama
+git checkout feat/agregar-mi-nombre
+git merge main</code></pre>
+<ul>
+<li>Si hay conflictos, Git los marcará en los archivos.</li>
+<li>Resuélvelos en tu editor, guarda y luego:</li>
+</ul>
+<pre class="highlight"><code class="language-bash">git add &lt;archivo-resuelto&gt;
+git commit -m "chore: resolver conflictos con main"
+git push origin feat/agregar-mi-nombre</code></pre>
+<p>El PR se actualizará automáticamente.</p>
+<hr>
+<h2 id="8-checklist-de-entrega">8) Checklist de entrega<a class="headerlink" href="#8-checklist-de-entrega" title="Permanent link">¶</a></h2>
+<ul>
+<li>Enlace a tu <strong>Pull Request</strong> en GitHub.</li>
+<li>(Opcional) captura de pantalla mostrando el archivo modificado.</li>
+<li>
+<p>Verifica que tu PR tenga:</p>
 </li>
+<li>
+<p>título claro,</p>
+</li>
+<li>descripción breve,</li>
+<li>al menos un commit.</li>
+</ul>
+<hr>
+<h2 id="9-errores-comunes-y-soluciones">9) Errores comunes y soluciones<a class="headerlink" href="#9-errores-comunes-y-soluciones" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Olvidé crear una rama y trabajé en <code>main</code>:</strong></li>
+</ul>
+<pre class="highlight"><code class="language-bash">git checkout -b feat/mi-cambio
+git push -u origin feat/mi-cambio</code></pre>
+<p>Luego abre el PR con esa rama.</p>
+<ul>
+<li><strong>Mi push no aparece en el PR:</strong>
+  Asegúrate de haber hecho <code>push</code> a la <strong>misma rama</strong> que usaste en el PR.</li>
+</ul>
+<hr>
+<h2 id="rubrica-sugerida-20-pts">Rubrica sugerida (20 pts)<a class="headerlink" href="#rubrica-sugerida-20-pts" title="Permanent link">¶</a></h2>
+<ul>
+<li>Repo creado y clonado — <strong>3 pts</strong></li>
+<li>Rama creada con nombre apropiado — <strong>3 pts</strong></li>
+<li>Commit(s) con mensaje claro — <strong>4 pts</strong></li>
+<li>Rama subida y PR creado — <strong>6 pts</strong></li>
+<li>Enlace al PR entregado y PR con descripción adecuada — <strong>2 pts</strong></li>
+<li>Manejo básico de conflictos (si aplica) — <strong>2 pts</strong></li>
 </ul></div>
             </div>
         </div>

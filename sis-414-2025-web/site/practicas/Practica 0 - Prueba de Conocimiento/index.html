@@ -1,0 +1,998 @@
+<!DOCTYPE html><html lang="en" data-bs-theme="light"><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Practica 0   Prueba de Conocimiento - SIS-414 G-2</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="https://unpkg.com/katex@0/dist/katex.min.css" rel="stylesheet">
+        <link href="../../styles/admonitions.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">SIS-414 G-2</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Apuntes</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../apuntes/ASINCRONIA/" class="dropdown-item">Asincronismo con JavaScript</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/DOM/" class="dropdown-item">DOM (Document Object Model)</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/FUNDAMENTOS_REACT/" class="dropdown-item">React</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/GitGitHub/" class="dropdown-item">Introducción a Git: Guía para Principiantes</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/Java%2021%20%2B%20Spring%20Boot%20Backend%20Developer%201e0db4fab681802aadd4d6c9c44a254d/" class="dropdown-item">Java 21 + Spring Boot Backend Developer</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/MODULOS_ES/" class="dropdown-item">Modulos en ES6</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/PETICIONES/" class="dropdown-item">Peticiones HTTP</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/js/" class="dropdown-item">JAVASCRIPT</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Guides</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../guides/PullRequest/" class="dropdown-item">PullRequest</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Laboratorios</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../laboratorios/Laboratorio%201/" class="dropdown-item">LABORATORIO 1 SIS-414</a>
+</li>
+                                    
+<li>
+    <a href="../../laboratorios/Laboratorio%202/" class="dropdown-item">Laboratorio 2</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown" aria-expanded="false">Practicas</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Practica 0   Prueba de Conocimiento</a>
+</li>
+                                    
+<li>
+    <a href="../Practica%201%20-%20Git%20%2B%20GitHub/" class="dropdown-item">Practica 1   Git + GitHub</a>
+</li>
+                                    
+<li>
+    <a href="../Practica%202%20-%20Git%20%2B%20GitHub/" class="dropdown-item">Practica 2   Git + GitHub</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                            <li class="nav-item">
+                                <a rel="prev" href="../../laboratorios/Laboratorio%202/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Practica%201%20-%20Git%20%2B%20GitHub/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#evaluacion-diagnostica-desarrollo-web-y-java-solucionado" class="nav-link">📘 Evaluación Diagnóstica – Desarrollo Web y Java (solucionado)</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#parte-teorica-20-puntos-30-min" class="nav-link">Parte Teórica (20 puntos, ~30 min)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#parte-practica-80-puntos-90-min" class="nav-link">Parte Práctica (80 puntos, ~90 min)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#boxproduct-box-new-box-product-product1-new-productmilk-125-boxsaveproduct1-product-product2-boxget-systemoutprintlnproduct2" class="nav-link">Box&lt;Product&gt; box = new Box&lt;&gt;(); Product product1 = new Product("Milk", 12.5); box.save(product1); Product product2 = box.get(); System.out.println(product2);</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#entregable" class="nav-link">Entregable</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#evaluacion-diagnostica-desarrollo-web-y-java-miercoles" class="nav-link">📘 Evaluación Diagnóstica – Desarrollo Web y Java (Miercoles)</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#parte-teorica-20-puntos-30-min_1" class="nav-link">Parte Teórica (20 puntos, ~30 min)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#parte-practica-80-puntos-90-min_1" class="nav-link">Parte Práctica (80 puntos, ~90 min)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#entregable_1" class="nav-link">📦 Entregable</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<hr>
+<h1 id="evaluacion-diagnostica-desarrollo-web-y-java-solucionado">📘 Evaluación Diagnóstica – Desarrollo Web y Java (solucionado)<a class="headerlink" href="#evaluacion-diagnostica-desarrollo-web-y-java-solucionado" title="Permanent link">¶</a></h1>
+<p><strong>Duración:</strong> 2 horas<br>
+<strong>Distribución:</strong></p>
+<ul>
+<li>
+<p>Parte Teórica: 20% (20 puntos)</p>
+</li>
+<li>
+<p>Parte Práctica: 80% (80 puntos)</p>
+</li>
+<li>
+<p>Puntuación Total: 100 puntos</p>
+</li>
+</ul>
+<hr>
+<h2 id="parte-teorica-20-puntos-30-min"><strong>Parte Teórica (20 puntos, ~30 min)</strong><a class="headerlink" href="#parte-teorica-20-puntos-30-min" title="Permanent link">¶</a></h2>
+<h3 id="seccion-a-desarrollo-web-10-puntos"><strong>Sección A: Desarrollo Web (10 puntos)</strong><a class="headerlink" href="#seccion-a-desarrollo-web-10-puntos" title="Permanent link">¶</a></h3>
+<ol>
+<li>
+<p>(1 pts) ¿Qué diferencia existe entre HTML, CSS y JavaScript en una página web?</p>
+<p>Este es el <code>stack</code> de tecnologías que se usa en el desarrollo web es la base
+- <code>HTML</code>: nos permite hacer la maquetación de la página (el esqueleto)
+- <code>CSS</code>: se usa para que la página web tenga estilos, es decir la parte visual
+- <code>JS</code>: se encarga de la funcionalidad de la página web.</p>
+</li>
+<li>
+<p>(1 pts) Menciona todas las etiquetas HTML que conoce y de una descripción de al menos 3 de ellas:</p>
+<ul>
+<li><code>div</code></li>
+<li><code>section</code></li>
+<li><code>aside</code></li>
+<li><code>h1-h6</code></li>
+<li><code>span</code></li>
+<li><code>article</code></li>
+<li><code>script</code></li>
+</ul>
+</li>
+<li>
+<p>(2 pts) ¿Qué es un "atributo" en HTML? Da un ejemplo.</p>
+<p>Un atributo es aquella que se le pasa a una etiqueta <code>html</code> en la apertura de la misma ej: <code>&lt;div class=""&gt;&lt;/div&gt;</code></p>
+</li>
+<li>
+<p>(2 pts) ¿Qué diferencia hay entre <code>id</code> y <code>class</code> en etiquetas HTML y como se usan en CSS?</p>
+<ul>
+<li><code>id</code>: se usa para asignar un identificador único a etiquetas HTML</li>
+<li><code>class</code>: permite agrupar muchas etiquetas HTML con una sola palabra</li>
+</ul>
+</li>
+<li>
+<p>(2 pts) ¿Qué es un archivo externo <code>.css</code> y por qué es recomendable usarlo?</p>
+<p>Es un archivo de estilos, usado para poder trabajar de una manera ordenada, es el lugar donde definimos todos los estilos de nuestra página web para luego enlazarlo a un archivo <code>.html</code></p>
+</li>
+</ol>
+<h3 id="seccion-b-java-10-puntos"><strong>Sección B: Java (10 puntos)</strong><a class="headerlink" href="#seccion-b-java-10-puntos" title="Permanent link">¶</a></h3>
+<ol>
+<li>
+<p>(1 pts) ¿Qué significa que Java es un lenguaje "orientado a objetos"?</p>
+<p>Indica que nos soporta el paradigma POO, lo cual se enfoca en trabajar u organizar los datos y comportamientos en estructuras que se conocen como objetos, al seguir este enfoque se garantiza que el software que se desarrolla es modular, escalable y mantenible.</p>
+</li>
+<li>
+<p>(1 pts) Explica qué es la JVM (Java Virtual Machine).</p>
+<p>Java funcion bajo el concepto <code>WORA</code> lo cual dignifica <code>Write once, run anywhere</code> (Escribe una vez, corre en cualquier lugar), una vez que nuestro codigo es compilado a <code>bytecode</code> con la JVM  que es la maquina virtual de java, podemos ejecutar nuestros programas en cualquier sistema.</p>
+</li>
+<li>
+<p>(2 pts) Nombra los cuatro modificadores de acceso en Java y su alcance.</p>
+<ul>
+<li>public: Accesible desde cualquier clase, sin importar el paquete.</li>
+<li>protected: Accesible desde el mismo paquete y desde subclases, incluso en otros paquetes.</li>
+<li>default: Accesible solo dentro del mismo paquete. También se llama package-private.</li>
+<li>private: Accesible solo dentro de la misma clase donde se declara.</li>
+</ul>
+</li>
+<li>
+<p>(1 pts) ¿Qué es una variable y cómo se declara en Java?</p>
+<p>Una variable es donde nosotros almacenamos datos (una cajita), estos datos se guardan de manera temporal <code>&lt;tipo de dato&gt; &lt;nombre variable&gt; = &lt;valor&gt;;</code> ej `int num = 16;</p>
+</li>
+<li>
+<p>(1 pts) ¿Cuál es la diferencia entre <code>==</code> y <code>.equals()</code> en Java?</p>
+<ul>
+<li><code>==</code>: nos permite compara valores con tipos de datos primitivos</li>
+<li><code>.equals()</code>: para comparar objetos</li>
+</ul>
+</li>
+<li>
+<p>(2 pts) ¿Qué es una <strong>interfaz funcional</strong> en Java? Da un ejemplo conocido.</p>
+<p>las interfaces funcionales con aquellas interfaces en java que solo definen un metodo abstracto tambien conocidos como <code>SAM</code> en su cuerpo. Para buenas practicas se les suele dar el decorador <code>@FunctionalInterface</code>
+Ejemplo:
+</p><pre class="highlight"><code class="language-java">@FunctionalInterface
+public interface Runnable{
+    void run();
+}</code></pre><p></p>
+</li>
+<li>
+<p>(2 pts) ¿Para qué sirven las <strong>expresiones lambda</strong> (funciones anónimas) en Java?
+    Son funciones anonimas que no necesitan un nombre para ser declarados</p>
+</li>
+<li>
+<p>(2 pts) ¿Qué ventaja ofrecen los <strong>genéricos</strong> (<code>Generics</code>) en Java al momento de programar?</p>
+<p>Los genericos es una parigma en donde nos se nos permite declarar claes y funciones con tipos de datos parametrizados</p>
+</li>
+</ol>
+<hr>
+<h2 id="parte-practica-80-puntos-90-min"><strong>Parte Práctica (80 puntos, ~90 min)</strong><a class="headerlink" href="#parte-practica-80-puntos-90-min" title="Permanent link">¶</a></h2>
+<h3 id="seccion-a-desarrollo-web-40-puntos"><strong>Sección A: Desarrollo Web (40 puntos)</strong><a class="headerlink" href="#seccion-a-desarrollo-web-40-puntos" title="Permanent link">¶</a></h3>
+<p><strong>Ejercicio 1 (15 pts): HTML y CSS básicos</strong><br>
+Crea una página sencilla que contenga:</p>
+<ul>
+<li>
+<p>Un título principal con tu nombre.</p>
+</li>
+<li>
+<p>Un párrafo con una breve presentación.</p>
+</li>
+<li>
+<p>Una lista con 3 de tus hobbies.</p>
+</li>
+<li>
+<p>Un enlace a tu sitio favorito.</p>
+</li>
+<li>
+<p>Una tabla de 2 columnas y 3 filas con datos ficticios.</p>
+</li>
+<li>
+<p>Dale estilo con CSS:</p>
+<ul>
+<li>
+<p>Fondo de color.</p>
+</li>
+<li>
+<p>Títulos en otro color y centrados.</p>
+</li>
+<li>
+<p>Lista con viñetas cuadradas.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Solucionado</p>
+</li>
+</ul>
+<pre class="highlight"><code class="language-html">&lt;h1&gt;YOUR NAME&lt;/h1&gt;
+    &lt;P&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident autem libero illum porro culpa, necessitatibus
+        nostrum consequuntur exercitationem quidem sit enim minus itaque minima eligendi labore facilis consequatur sint
+        recusandae.
+        Sit, laudantium libero dignissimos officiis quisquam ut aut mollitia veritatis obcaecati illo illum ratione
+        porro asperiores delectus, beatae saepe at temporibus, minus inventore adipisci sapiente consectetur
+        praesentium! Fugiat, amet nulla?
+        Doloremque assumenda nisi eaque, amet, voluptatibus voluptatem molestiae quasi recusandae nesciunt quidem
+        ducimus nobis qui officiis veritatis neque iusto dolore ex dolores totam ut quisquam rem! A, dolorum? Neque, ad!
+        Exercitationem libero voluptates incidunt, perferendis illum voluptatem saepe est? Deserunt, nulla. Perferendis
+        aperiam consequuntur delectus labore maxime deleniti voluptatum odio quas voluptate. Mollitia eum quasi quam ad
+        velit eos nam.&lt;/P&gt;
+
+    &lt;ol&gt;
+        &lt;li&gt;Hobby 1&lt;/li&gt;
+        &lt;li&gt;Hobby 2&lt;/li&gt;
+        &lt;li&gt;Hobby 3&lt;/li&gt;
+    &lt;/ol&gt;
+
+    &lt;a href="https://github.com/KEVIN-117"&gt;
+        &lt;button&gt;My GitHub&lt;/button&gt;
+    &lt;/a&gt;
+
+    &lt;table&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Firstname&lt;/th&gt;
+                &lt;th&gt;Lastname&lt;/th&gt;
+                &lt;th&gt;Age&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;John&lt;/td&gt;
+                &lt;td&gt;Doe&lt;/td&gt;
+                &lt;td&gt;25&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Mary&lt;/td&gt;
+                &lt;td&gt;Moe&lt;/td&gt;
+                &lt;td&gt;50&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;July&lt;/td&gt;
+                &lt;td&gt;Dooley&lt;/td&gt;
+                &lt;td&gt;40&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;</code></pre>
+<pre class="highlight"><code class="language-css">&lt;style&gt;
+
+        body {
+            background-color: lightgray;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        h1 {
+            color: blue;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            font-size: 36px;
+        }
+
+        p {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        ol {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+    &lt;/style&gt;</code></pre>
+<ul>
+<li>Resultado</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../image.png" data-desc-position="bottom"><img alt="alt text" src="../image.png"></a></p>
+<p><strong>Ejercicio 2 (25 pts): Página con formulario</strong><br>
+Agrega a la página un <strong>formulario sencillo</strong> con:</p>
+<ul>
+<li>
+<p>Un campo de texto para el nombre.</p>
+</li>
+<li>
+<p>Un campo de correo electrónico.</p>
+</li>
+<li>
+<p>Una lista desplegable con tres opciones de carrera universitaria.</p>
+</li>
+<li>
+<p>Un botón para enviar.</p>
+<blockquote>
+<p>No es necesario que funcione el envío, solo la estructura y el estilo.</p>
+</blockquote>
+</li>
+<li>
+<p>Solucionado</p>
+</li>
+</ul>
+<pre class="highlight"><code class="language-html">&lt;form action=""&gt;
+        &lt;label for="name"&gt;Name:&lt;/label&gt;
+        &lt;input type="text" id="name" name="name" required&gt;
+        &lt;br&gt;&lt;br&gt;
+        &lt;label for="email"&gt;Email:&lt;/label&gt;
+        &lt;input type="email" id="email" name="email" required&gt;
+        &lt;br&gt;&lt;br&gt;
+        &lt;label for="degree"&gt;Degree:&lt;/label&gt;
+        &lt;select id="degree" name="degree" required&gt;
+            &lt;option value=""&gt;Select your degree&lt;/option&gt;
+            &lt;option value="bachelors"&gt;Bachelor's&lt;/option&gt;
+            &lt;option value="masters"&gt;Master's&lt;/option&gt;
+            &lt;option value="phd"&gt;PhD&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;br&gt;&lt;br&gt;
+        &lt;button type="submit"&gt;Submit&lt;/button&gt;
+    &lt;/form&gt;</code></pre>
+<hr>
+<h3 id="seccion-b-java-40-puntos"><strong>Sección B: Java (40 puntos)</strong><a class="headerlink" href="#seccion-b-java-40-puntos" title="Permanent link">¶</a></h3>
+<p><strong>Ejercicio 1 (10 pts): Variables y condicionales</strong><br>
+Escribe un programa en Java que:</p>
+<ul>
+<li>
+<p>Pida la edad de un usuario.
+    </p><pre class="highlight"><code class="language-java">Scanner sc = new Scanner(System.in);
+int age = sc.nextInt();</code></pre><p></p>
+</li>
+<li>
+<p>Si es menor de 18, imprima: <em>"Eres menor de edad"</em>.
+    </p><pre class="highlight"><code class="language-java">if(age &lt; 18){
+    System.out.println("Eres menor de edad");
+}</code></pre><p></p>
+</li>
+<li>
+<p>Si es 18 o más, imprima: <em>"Eres mayor de edad"</em>.
+    </p><pre class="highlight"><code class="language-java">else {
+    System.out.println("Eres mayor de edad");
+}</code></pre><p></p>
+</li>
+</ul>
+<p><strong>Ejercicio 2 (10 pts): Clases y métodos</strong><br>
+Crea una clase <code>Estudiante</code> con los siguientes atributos:</p>
+<ul>
+<li>
+<p><code>nombre</code> (String)</p>
+</li>
+<li>
+<p><code>edad</code> (int)</p>
+</li>
+<li>
+<p><code>carrera</code> (String)</p>
+<pre class="highlight"><code class="language-java">public class Estudent{
+    private String name;
+    private Integer age;
+    private String degree;
+}</code></pre>
+</li>
+</ul>
+<p>La clase debe tener:</p>
+<ul>
+<li>
+<p>Un constructor para inicializar los valores.
+    </p><pre class="highlight"><code class="language-java">public Estudent(String name, Integer age, String degree){
+    this.name = name;
+    this.age = age;
+    this.degree = degree;
+}</code></pre><p></p>
+</li>
+<li>
+<p>Un método <code>presentarse()</code> que imprima:</p>
+<blockquote>
+<p>"Hola, me llamo [nombre], tengo [edad] años y estudio [carrera]."</p>
+</blockquote>
+<pre class="highlight"><code class="language-java">public void take(){
+    System.out.println("Hola, me llamo" + this.name +" tengo "+ this.edad + " años y estudio " + this.degree);
+}</code></pre>
+<p>En la clase principal (<code>Main</code>), crea dos estudiantes y haz que se presenten.</p>
+<pre class="highlight"><code class="language-java">Estudent est1 =  new Estudent("alguien", 23, "Ciencias de la computacion");
+Estudent est2 =  new Estudent("alguien", 23, "Desarrollo de software");
+
+est1.take();
+est2.take();</code></pre>
+</li>
+</ul>
+<p><strong>Ejercicio 3 (20 pts): Programación orientada a objetos, funcional y genérica</strong></p>
+<ol>
+<li>Crea una clase <code>Producto</code> con atributos: <code>nombre</code> (String) y <code>precio</code> (double).</li>
+</ol>
+<pre class="highlight"><code class="language-java">public class Product{
+    private String name;
+    private Double price;
+
+    public Product(String name, Double price){
+        this.name = name; 
+        this.price = price; 
+    }
+
+    // getters y setters
+}</code></pre>
+<ol>
+<li>Crea una lista de varios productos en la clase principal (<code>Main</code>).</li>
+</ol>
+<pre class="highlight"><code class="language-java">List&lt;Product&gt; products = new ArrayList&lt;&gt;();</code></pre>
+<ol>
+<li>Utiliza una <strong>expresión lambda</strong> para filtrar e imprimir solo los productos cuyo precio sea mayor a 50.</li>
+</ol>
+<p></p><pre class="highlight"><code class="language-java">products.Stream.filter(product -&gt; {
+    if(product.getPrice() &gt; 50){
+        return product
+    }
+});</code></pre>
+4. Crea una clase genérica <code>Caja&lt;T&gt;</code> que permita guardar un objeto de cualquier tipo.<p></p>
+<ul>
+<li>
+<p>Debe tener un método <code>guardar(T objeto)</code> y <code>obtener()</code> que devuelva el objeto.</p>
+<pre class="highlight"><code class="language-java">public class Box&lt;T&gt;{
+    private T obj
+    public void save(T obj){
+        this.obj = obj;
+
+    }
+
+    public T get(){
+        return this.obj;
+    }
+}</code></pre>
+<ul>
+<li>En <code>Main</code>, guarda un objeto <code>Producto</code> en una <code>Caja</code> y luego recupéralo para mostrarlo en consola.</li>
+</ul>
+<h2 id="boxproduct-box-new-box-product-product1-new-productmilk-125-boxsaveproduct1-product-product2-boxget-systemoutprintlnproduct2"><pre class="highlight"><code class="language-java">Box&lt;Product&gt; box =  new Box&lt;&gt;();
+Product product1 = new Product("Milk", 12.5);
+box.save(product1);
+Product product2 = box.get();
+
+System.out.println(product2);</code></pre><a class="headerlink" href="#boxproduct-box-new-box-product-product1-new-productmilk-125-boxsaveproduct1-product-product2-boxget-systemoutprintlnproduct2" title="Permanent link">¶</a></h2>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">✅ Con esta evaluación</p>
+<p>Nos permitirá ver desde donde debemos iniciar:</p>
+<ul>
+<li>En <strong>web</strong>, validas si saben estructurar y dar estilo, sin necesidad de entrar en lógica compleja de JS.</li>
+<li>En <strong>Java</strong>, verificas si entienden lo básico (POO), y también si han escuchado o trabajado algo de <strong>funcional</strong> (lambdas) y <strong>genérico</strong> (clases genéricas).</li>
+</ul>
+</div>
+<h2 id="entregable">Entregable<a class="headerlink" href="#entregable" title="Permanent link">¶</a></h2>
+<p>Debera generar archivos con la extencion correspondiente:</p>
+<ul>
+<li>para las preguntas teoricas en un archivo <code>.txt</code></li>
+<li>para las preguntas practicas<ul>
+<li>web: <code>.html</code> y <code>.css</code></li>
+<li>java: <code>.java</code></li>
+</ul>
+</li>
+</ul>
+<p>Para la entrega de la misma debera seguir los siguientes pasos</p>
+<ol>
+<li>Debe crear un reposirotrio en github en su cuenta</li>
+<li>Ejecute los siguientes comando en la terminal de su preferencia:
+<pre class="highlight"><code>git init --initial-branch=main # inicializamos la rama
+git add .
+git remote add origin &lt;url&gt; # la url lo encuentra en la web de GitHub en el lugar donde llego a crear su repo
+git commit -m "parctica 0 &lt;su nombre&gt;"
+git push -u origin main</code></pre></li>
+</ol>
+<p>Estos son todo los pasos de para entregar su tarea.</p>
+<hr>
+<div class="admonition warning">
+<p class="admonition-title">🤖 Tomen en cuenta</p>
+<ul>
+<li>La practica solo se revisara de las personas que tenga asistencia en la fecha en la que se dio esta prueba</li>
+<li>Es obligatorio que este en GitHub.</li>
+</ul>
+</div>
+<h1 id="evaluacion-diagnostica-desarrollo-web-y-java-miercoles">📘 Evaluación Diagnóstica – Desarrollo Web y Java (Miercoles)<a class="headerlink" href="#evaluacion-diagnostica-desarrollo-web-y-java-miercoles" title="Permanent link">¶</a></h1>
+<p><strong>Duración:</strong> 2 horas
+<strong>Distribución:</strong></p>
+<ul>
+<li>Parte Teórica: 20% (20 puntos)</li>
+<li>Parte Práctica: 80% (80 puntos)</li>
+<li>Puntuación Total: 100 puntos</li>
+</ul>
+<hr>
+<h2 id="parte-teorica-20-puntos-30-min_1"><strong>Parte Teórica (20 puntos, ~30 min)</strong><a class="headerlink" href="#parte-teorica-20-puntos-30-min_1" title="Permanent link">¶</a></h2>
+<h3 id="seccion-a-desarrollo-web-10-puntos_1"><strong>Sección A: Desarrollo Web (10 puntos)</strong><a class="headerlink" href="#seccion-a-desarrollo-web-10-puntos_1" title="Permanent link">¶</a></h3>
+<ol>
+<li>(1 pts) ¿Qué es una etiqueta semántica en HTML y por qué es importante?</li>
+<li>(1 pts) Menciona 5 etiquetas de formulario (<code>form</code>) y explica la utilidad de 2 de ellas.<ul>
+<li>input:</li>
+<li>label:</li>
+<li>button:</li>
+<li></li>
+</ul>
+</li>
+<li>(2 pts) ¿Cuál es la diferencia entre etiquetas en bloque (<em>block</em>) y en línea (<em>inline</em>) en HTML? Da un ejemplo de cada una.
+    La diferencia se da en comom estas etiquetas se pocicionan, en el caso de las <em>inline</em> estas se acomodan una al lado de otro, mientras que las de <em>block</em> se apilan una debajo de otra </li>
+<li>(2 pts) ¿Qué diferencia existe entre <code>inline-style</code>, <code>&lt;style&gt;</code> interno y un archivo <code>.css</code> externo?
+    La diferencia es clara:<ul>
+<li>las <code>inline-style</code> se especifican directamente en la etiqueta, justo en la de apertura se utiliza el atributo <code>style</code></li>
+<li>las <code>&lt;style&gt;</code> se situan en la seccion de los metadatos del archivo <code>.html</code></li>
+<li>el <code>.css</code> esterno es un archivo independiente con extencion <code>.css</code>, posteriormente esta es enlazada al archivo html</li>
+</ul>
+</li>
+<li>(2 pts) Explica la diferencia entre id y class en CSS y en qué caso usarías cada uno.<ul>
+<li>Id: un solo identofocadora para una etiqueta</li>
+<li>class: para poder generalizar y agrupar a muchos elementos</li>
+</ul>
+</li>
+<li>(2 pts) ¿Qué diferencia existe entre HTML, CSS y JavaScript en una página web?<ul>
+<li>HTML: define la estructura de la pagina web</li>
+<li>CSS: son los estilos de la pagina web, permite trabajar en lo visual, es decir el aspecto</li>
+<li>js: es la fincionalidad de la pagina web</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="seccion-b-java-10-puntos_1"><strong>Sección B: Java (10 puntos)</strong><a class="headerlink" href="#seccion-b-java-10-puntos_1" title="Permanent link">¶</a></h3>
+<ol>
+<li>
+<p>(1 pts) ¿Qué es una clase en Java y qué elementos puede contener?</p>
+<ul>
+<li>podriamos definirlo como una plantilla que nos permite crear objetos, estas pueden contener atributos (especificaciones) y metodos (acciones)</li>
+</ul>
+</li>
+<li>
+<p>(1 pts) ¿Qué es un constructor y cómo se diferencia de un método normal?</p>
+<ul>
+<li>Un constructor es una metodo especial que tiene una clase, se usa para poder inicializar los tributos de la clase al momento de instanciar o crear un nuevo objeto</li>
+</ul>
+</li>
+<li>
+<p>(2 pts) Explica con tus palabras qué significa herencia en Java.</p>
+<p>Herencia nos permite simular una estructura tipo jerarquica, es decir nos permite generalizar clases de esta manera poder trabajara con Super clase y sub clases</p>
+</li>
+<li>
+<p>(2 pts) ¿Qué es un <code>ArrayList</code> y en qué se diferencia de un arreglo (<code>array</code>) normal en Java?</p>
+<ul>
+<li>Un <code>ArrayList</code> es es una lista dinamica es una implementacion de <code>java.util</code>, su diferencia con un <code>array</code> normal es que esta una vez creada no se puede modificar en tamaño, entonces la diferencia es <code>ArrayList</code> es dinamico, <code>array</code> es estatico.</li>
+</ul>
+</li>
+<li>
+<p>(2 pts) Explica qué es una expresión <em>lambda</em> en Java y escribe un ejemplo corto.</p>
+<ul>
+<li>Son funciones anonimas que no necesitan un nombre para ser declarados</li>
+</ul>
+</li>
+<li>
+<p>(2 pts) ¿Para qué sirven los <strong>genéricos</strong> en Java? Da un ejemplo de colección genérica.</p>
+<ul>
+<li>Los genericos es una parigma en donde nos se nos permite declarar claes y funciones con tipos de datos parametrizados</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="parte-practica-80-puntos-90-min_1"><strong>Parte Práctica (80 puntos, ~90 min)</strong><a class="headerlink" href="#parte-practica-80-puntos-90-min_1" title="Permanent link">¶</a></h2>
+<h3 id="seccion-a-desarrollo-web-40-puntos_1"><strong>Sección A: Desarrollo Web (40 puntos)</strong><a class="headerlink" href="#seccion-a-desarrollo-web-40-puntos_1" title="Permanent link">¶</a></h3>
+<p><strong>Ejercicio 1 (15 pts): Página con estructura básica</strong>
+Crea una página que contenga:</p>
+<ul>
+<li>Un encabezado (<code>&lt;header&gt;</code>) con el título "Mi Página Personal".</li>
+<li>Una sección (<code>&lt;section&gt;</code>) con un párrafo de presentación y una imagen cualquiera.</li>
+<li>Una lista no ordenada con tres metas personales.</li>
+<li>Un pie de página (<code>&lt;footer&gt;</code>) con tu correo electrónico.</li>
+</ul>
+<p>Dale estilo con CSS:</p>
+<ul>
+<li>Fondo claro.</li>
+<li>Encabezado con texto centrado y color de fondo distinto.</li>
+<li>Párrafo con interlineado de 1.5.</li>
+<li>Lista con viñetas circulares.</li>
+</ul>
+<pre class="highlight"><code class="language-html">&lt;header&gt;
+    &lt;h1&gt;Mi pagina Personal&lt;/h1&gt;
+&lt;/header&gt;
+
+&lt;section&gt;
+    &lt;p&gt;
+        esta es mi presentacion, debe ser un texto largo pero no tengo nada que decir &lt;b&gt;sin comentarios&lt;b/&gt;
+    &lt;/p&gt;
+    &lt;img src="url de mi imagen" /&gt;
+
+    &lt;ul&gt;
+        &lt;li&gt;meta 1&lt;/li&gt;
+        &lt;li&gt;meta 2&lt;/li&gt;
+        &lt;li&gt;meta 3&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/section&gt;
+
+&lt;footer&gt;
+    &lt;span&gt;alguien@example.com&lt;/span&gt;
+&lt;/footer&gt;</code></pre>
+<pre class="highlight"><code class="language-css">body{
+    background-color: white;
+}
+
+header{
+    max-width: 90%;
+    display: flex;
+    justify-content: center;
+    aling-items: center;
+    background-color: rgba(10, 20, 100, 0.5);
+}</code></pre>
+<hr>
+<p><strong>Ejercicio 2 (25 pts): Formulario con estilos</strong>
+Agrega un formulario con:</p>
+<ul>
+<li>Un campo de texto para el nombre.</li>
+<li>Un campo de contraseña.</li>
+<li>Una casilla de verificación para aceptar términos y condiciones.</li>
+<li>Un botón para enviar.</li>
+</ul>
+<p>Con CSS:</p>
+<ul>
+<li>Botón con color de fondo azul y texto blanco.</li>
+<li>Campos con borde redondeado.</li>
+<li>Que al pasar el mouse sobre el botón cambie a color verde.</li>
+</ul>
+<hr>
+<h3 id="seccion-b-java-40-puntos_1"><strong>Sección B: Java (40 puntos)</strong><a class="headerlink" href="#seccion-b-java-40-puntos_1" title="Permanent link">¶</a></h3>
+<p><strong>Ejercicio 1 (10 pts): Condicionales y bucles</strong>
+Escribe un programa que:</p>
+<ul>
+<li>Pida un número al usuario.</li>
+<li>Imprima todos los números pares desde 0 hasta ese número.</li>
+</ul>
+<pre class="highlight"><code class="language-java">class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int number = sc.nextInt();
+
+        int count = 0;
+        while(count++ &lt;= number){
+            if(count % 2 == 0)
+                System.out.println(count);
+        }
+    }
+}</code></pre>
+<hr>
+<p><strong>Ejercicio 2 (10 pts): Clases y objetos</strong>
+Crea una clase <code>Libro</code> con atributos:</p>
+<ul>
+<li><code>titulo</code> (String)</li>
+<li><code>autor</code> (String)</li>
+<li><code>anio</code> (int)</li>
+</ul>
+<p>La clase debe tener:</p>
+<ul>
+<li>Un constructor para inicializar.</li>
+<li>Un método <code>mostrarInfo()</code> que imprima los datos del libro.</li>
+</ul>
+<p>En la clase principal (<code>Main</code>), crea al menos 2 libros y muestra su información.</p>
+<pre class="highlight"><code class="language-java">class Book{
+    private String title;
+    private String author;
+    private Integer age;
+
+    public Book(String title, String author, Integer age){
+        this.title = title;
+        this.author = author;
+        this.age = age;
+    }
+
+    public void getData(){
+        System.out.println("Datos del libro")
+        System.out.println("Titulo: " + this.title)
+        System.out.println("Autor: " + this.author)
+        System.out.println("Anio de publicacion: " + this.age)
+    } 
+
+    public static vois main(String[] args){
+        Book book1 = new Book("Libro 1", "alguien 1", "2000");
+        Book book2 = new Book("Libro 2", "alguien 2", "2001");
+        book1.getData();
+        book2.getData();
+    }
+}
+</code></pre>
+<hr>
+<p><strong>Ejercicio 3 (20 pts): POO + Funcional + Genéricos</strong></p>
+<ol>
+<li>Crea una clase <code>Alumno</code> con atributos: <code>nombre</code> y <code>nota</code>.</li>
+<li>Crea una lista de alumnos en <code>Main</code>.</li>
+<li>Con una <strong>expresión lambda y Streams</strong>, filtra e imprime solo los alumnos con nota mayor o igual a 60.</li>
+<li>
+<p>Implementa una clase genérica <code>Contenedor&lt;T&gt;</code> que pueda guardar cualquier tipo de objeto.</p>
+</li>
+<li>
+<p>Debe tener métodos <code>guardar(T objeto)</code> y <code>obtener()</code>.</p>
+</li>
+<li>En <code>Main</code>, guarda un <code>Alumno</code> en un <code>Contenedor</code> y luego recupéralo.</li>
+</ol>
+<pre class="highlight"><code class="language-java">class Student {
+    private String name;
+    private Double grade;
+
+    public Student(String name, Double grade){
+        this.name = name;
+        this.grade = grade;
+    }
+
+    // getters and setters
+
+}
+
+public class Box&lt;T&gt;{
+
+    private T obj;
+
+    public Box(){}
+
+    public void save(T obj){
+        this.obj = obj;
+    }
+
+    public T get(){
+        return this.obj;
+    }
+} 
+
+public class Main{
+    public static void main(String[] args){
+        List&lt;Student&gt; students = new ArrayList&lt;&gt;();
+        students.stream.filter(std -&gt; std.getGrade() &gt; 60).map(System.out::println);
+
+        Box&lt;Student&gt; box1 = new Box&lt;&gt;();
+        box1.save(new Student("Alguien", 100));
+
+        System.out.println(box1.get());
+    }
+}</code></pre>
+<hr>
+<h2 id="entregable_1">📦 Entregable<a class="headerlink" href="#entregable_1" title="Permanent link">¶</a></h2>
+<ul>
+<li>Teoría: en un archivo <code>.txt</code></li>
+<li>Desarrollo Web: en archivos <code>.html</code> y <code>.css</code></li>
+<li>Java: en archivos <code>.java</code></li>
+</ul>
+<p>Entrega en GitHub siguiendo los mismos pasos:</p>
+<pre class="highlight"><code class="language-bash">git init --initial-branch=main
+git add .
+git remote add origin &lt;url-del-repo&gt;
+git commit -m "diagnostico &lt;tu-nombre&gt;"
+git push -u origin main</code></pre>
+<hr>
+<p>Estos son todo los pasos de para entregar su tarea.</p>
+<hr>
+<div class="admonition warning">
+<p class="admonition-title">🤖 Tomen en cuenta</p>
+<ul>
+<li>La practica solo se revisara de las personas que tenga asistencia en la fecha en la que se dio esta prueba</li>
+<li>Es obligatorio que este en GitHub.</li>
+</ul>
+</div></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright © 2025 by K3V1N 117</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../javascripts/katex.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+        <script src="../../javascripts/tablesort.js"></script>
+
+        <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body></html>

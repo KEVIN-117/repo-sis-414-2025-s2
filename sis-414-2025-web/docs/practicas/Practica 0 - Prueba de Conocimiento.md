@@ -1,7 +1,7 @@
 
 ---
 
-<!-- # 📘 Evaluación Diagnóstica – Desarrollo Web y Java (solucionado)
+# 📘 Evaluación Diagnóstica – Desarrollo Web y Java (solucionado)
 
 **Duración:** 2 horas  
 **Distribución:**
@@ -467,7 +467,7 @@ Estos son todo los pasos de para entregar su tarea.
 ---
 !!! warning "🤖 Tomen en cuenta"
     - La practica solo se revisara de las personas que tenga asistencia en la fecha en la que se dio esta prueba
-    - Es obligatorio que este en GitHub. -->
+    - Es obligatorio que este en GitHub.
 
 
 # 📘 Evaluación Diagnóstica – Desarrollo Web y Java (Miercoles)
@@ -487,21 +487,52 @@ Estos son todo los pasos de para entregar su tarea.
 
 1. (1 pts) ¿Qué es una etiqueta semántica en HTML y por qué es importante?
 2. (1 pts) Menciona 5 etiquetas de formulario (`form`) y explica la utilidad de 2 de ellas.
+    - input:
+    - label:
+    - button:
+    - 
 3. (2 pts) ¿Cuál es la diferencia entre etiquetas en bloque (*block*) y en línea (*inline*) en HTML? Da un ejemplo de cada una.
+    La diferencia se da en comom estas etiquetas se pocicionan, en el caso de las *inline* estas se acomodan una al lado de otro, mientras que las de *block* se apilan una debajo de otra 
 4. (2 pts) ¿Qué diferencia existe entre `inline-style`, `<style>` interno y un archivo `.css` externo?
+    La diferencia es clara:
+    - las `inline-style` se especifican directamente en la etiqueta, justo en la de apertura se utiliza el atributo `style`
+    - las `<style>` se situan en la seccion de los metadatos del archivo `.html`
+    - el `.css` esterno es un archivo independiente con extencion `.css`, posteriormente esta es enlazada al archivo html
 5. (2 pts) Explica la diferencia entre id y class en CSS y en qué caso usarías cada uno.
+    - Id: un solo identofocadora para una etiqueta
+    - class: para poder generalizar y agrupar a muchos elementos
 6. (2 pts) ¿Qué diferencia existe entre HTML, CSS y JavaScript en una página web?
+    - HTML: define la estructura de la pagina web
+    - CSS: son los estilos de la pagina web, permite trabajar en lo visual, es decir el aspecto
+    - js: es la fincionalidad de la pagina web
 
 ---
 
 ### **Sección B: Java (10 puntos)**
 
 1. (1 pts) ¿Qué es una clase en Java y qué elementos puede contener?
+
+    - podriamos definirlo como una plantilla que nos permite crear objetos, estas pueden contener atributos (especificaciones) y metodos (acciones)
+
 2. (1 pts) ¿Qué es un constructor y cómo se diferencia de un método normal?
+
+    - Un constructor es una metodo especial que tiene una clase, se usa para poder inicializar los tributos de la clase al momento de instanciar o crear un nuevo objeto
+
 3. (2 pts) Explica con tus palabras qué significa herencia en Java.
+
+    Herencia nos permite simular una estructura tipo jerarquica, es decir nos permite generalizar clases de esta manera poder trabajara con Super clase y sub clases
+
 4. (2 pts) ¿Qué es un `ArrayList` y en qué se diferencia de un arreglo (`array`) normal en Java?
+
+    - Un `ArrayList` es es una lista dinamica es una implementacion de `java.util`, su diferencia con un `array` normal es que esta una vez creada no se puede modificar en tamaño, entonces la diferencia es `ArrayList` es dinamico, `array` es estatico.
+
 5. (2 pts) Explica qué es una expresión *lambda* en Java y escribe un ejemplo corto.
+
+    - Son funciones anonimas que no necesitan un nombre para ser declarados
+
 6. (2 pts) ¿Para qué sirven los **genéricos** en Java? Da un ejemplo de colección genérica.
+
+    - Los genericos es una parigma en donde nos se nos permite declarar claes y funciones con tipos de datos parametrizados
 
 ---
 
@@ -523,6 +554,43 @@ Dale estilo con CSS:
 * Encabezado con texto centrado y color de fondo distinto.
 * Párrafo con interlineado de 1.5.
 * Lista con viñetas circulares.
+
+```html
+<header>
+    <h1>Mi pagina Personal</h1>
+</header>
+
+<section>
+    <p>
+        esta es mi presentacion, debe ser un texto largo pero no tengo nada que decir <b>sin comentarios<b/>
+    </p>
+    <img src="url de mi imagen" />
+
+    <ul>
+        <li>meta 1</li>
+        <li>meta 2</li>
+        <li>meta 3</li>
+    </ul>
+</section>
+
+<footer>
+    <span>alguien@example.com</span>
+</footer>
+```
+
+```css
+body{
+    background-color: white;
+}
+
+header{
+    max-width: 90%;
+    display: flex;
+    justify-content: center;
+    aling-items: center;
+    background-color: rgba(10, 20, 100, 0.5);
+}
+```
 
 ---
 
@@ -550,6 +618,21 @@ Escribe un programa que:
 * Pida un número al usuario.
 * Imprima todos los números pares desde 0 hasta ese número.
 
+```java
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int number = sc.nextInt();
+
+        int count = 0;
+        while(count++ <= number){
+            if(count % 2 == 0)
+                System.out.println(count);
+        }
+    }
+}
+```
+
 ---
 
 **Ejercicio 2 (10 pts): Clases y objetos**
@@ -566,6 +649,35 @@ La clase debe tener:
 
 En la clase principal (`Main`), crea al menos 2 libros y muestra su información.
 
+```java
+class Book{
+    private String title;
+    private String author;
+    private Integer age;
+
+    public Book(String title, String author, Integer age){
+        this.title = title;
+        this.author = author;
+        this.age = age;
+    }
+
+    public void getData(){
+        System.out.println("Datos del libro")
+        System.out.println("Titulo: " + this.title)
+        System.out.println("Autor: " + this.author)
+        System.out.println("Anio de publicacion: " + this.age)
+    } 
+
+    public static vois main(String[] args){
+        Book book1 = new Book("Libro 1", "alguien 1", "2000");
+        Book book2 = new Book("Libro 2", "alguien 2", "2001");
+        book1.getData();
+        book2.getData();
+    }
+}
+
+```
+
 ---
 
 **Ejercicio 3 (20 pts): POO + Funcional + Genéricos**
@@ -577,6 +689,48 @@ En la clase principal (`Main`), crea al menos 2 libros y muestra su información
 
    * Debe tener métodos `guardar(T objeto)` y `obtener()`.
    * En `Main`, guarda un `Alumno` en un `Contenedor` y luego recupéralo.
+
+```java
+class Student {
+    private String name;
+    private Double grade;
+
+    public Student(String name, Double grade){
+        this.name = name;
+        this.grade = grade;
+    }
+
+    // getters and setters
+    
+}
+
+public class Box<T>{
+
+    private T obj;
+
+    public Box(){}
+
+    public void save(T obj){
+        this.obj = obj;
+    }
+
+    public T get(){
+        return this.obj;
+    }
+} 
+
+public class Main{
+    public static void main(String[] args){
+        List<Student> students = new ArrayList<>();
+        students.stream.filter(std -> std.getGrade() > 60).map(System.out::println);
+
+        Box<Student> box1 = new Box<>();
+        box1.save(new Student("Alguien", 100));
+
+        System.out.println(box1.get());
+    }
+}
+```
 
 ---
 
@@ -597,8 +751,6 @@ git push -u origin main
 ```
 
 ---
-
-¿Quieres que también prepare una **rúbrica simplificada con puntajes por subapartado** (para que corrijas más rápido), o lo dejamos en este formato de preguntas y ejercicios?
 
 Estos son todo los pasos de para entregar su tarea.
 
