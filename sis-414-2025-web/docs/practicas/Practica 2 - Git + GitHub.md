@@ -35,6 +35,7 @@ Profundizar en el uso de Git y GitHub comprendiendo conceptos como ramas, fusion
     - [Git Tutorial](https://www.w3schools.com/git/default.asp)
     - [Git Guide GitHub](https://github.com/git-guides)
     - [GIT CHEAT SHEET](https://education.github.com/git-cheat-sheet-education.pdf)
+    - [Guia para Crear un Pull Request (PR)](https://kevin-117.github.io/repo-sis-414-2025-s2/guides/PullRequest/)
 
 ---
 
