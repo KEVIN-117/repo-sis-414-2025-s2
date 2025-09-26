@@ -1,0 +1,494 @@
+<!DOCTYPE html><html lang="en" data-bs-theme="light"><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>BACKEND - SIS-414 G-2</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="https://unpkg.com/katex@0/dist/katex.min.css" rel="stylesheet">
+        <link href="../../styles/admonitions.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">SIS-414 G-2</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown" aria-expanded="false">Apuntes</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../ASINCRONIA/" class="dropdown-item">Asincronismo con JavaScript</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">BACKEND</a>
+</li>
+                                    
+<li>
+    <a href="../DOM/" class="dropdown-item">DOM (Document Object Model)</a>
+</li>
+                                    
+<li>
+    <a href="../FUNDAMENTOS_REACT/" class="dropdown-item">React</a>
+</li>
+                                    
+<li>
+    <a href="../GitGitHub/" class="dropdown-item">Introducción a Git: Guía para Principiantes</a>
+</li>
+                                    
+<li>
+    <a href="../Java%2021%20%2B%20Spring%20Boot%20Backend%20Developer%201e0db4fab681802aadd4d6c9c44a254d/" class="dropdown-item">Java 21 + Spring Boot Backend Developer</a>
+</li>
+                                    
+<li>
+    <a href="../MODULOS_ES/" class="dropdown-item">Modulos en ES6</a>
+</li>
+                                    
+<li>
+    <a href="../PETICIONES/" class="dropdown-item">Peticiones HTTP</a>
+</li>
+                                    
+<li>
+    <a href="../js/" class="dropdown-item">JAVASCRIPT</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Guides</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../guides/PullRequest/" class="dropdown-item">PullRequest</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Laboratorios</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../laboratorios/Laboratorio%201/" class="dropdown-item">LABORATORIO 1 SIS-414</a>
+</li>
+                                    
+<li>
+    <a href="../../laboratorios/Laboratorio%202/" class="dropdown-item">Laboratorio 2</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Practicas</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../practicas/Practica%200%20-%20Prueba%20de%20Conocimiento/" class="dropdown-item">Practica 0   Prueba de Conocimiento</a>
+</li>
+                                    
+<li>
+    <a href="../../practicas/Practica%201%20-%20Git%20%2B%20GitHub/" class="dropdown-item">Practica 1   Git + GitHub</a>
+</li>
+                                    
+<li>
+    <a href="../../practicas/Practica%202%20-%20Git%20%2B%20GitHub/" class="dropdown-item">Practica 2   Git + GitHub</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                            <li class="nav-item">
+                                <a rel="prev" href="../ASINCRONIA/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../DOM/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#backend" class="nav-link">BACKEND</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#introduccion" class="nav-link">Introduccion</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<hr>
+<h1 id="backend">BACKEND<a class="headerlink" href="#backend" title="Permanent link">¶</a></h1>
+<h1 id="introduccion">Introduccion<a class="headerlink" href="#introduccion" title="Permanent link">¶</a></h1>
+<h3 id="roles-del-desarrollo-backend">Roles del desarrollo backend<a class="headerlink" href="#roles-del-desarrollo-backend" title="Permanent link">¶</a></h3>
+<ol>
+<li><strong>Programador</strong>: Un rol principal es el de programador en el que se dedican a escribir código, código que es el núcleo de la aplicación y este se encarga del procesamiento de datos, define la lógica del negocio, interacción con la base de datos, y la comunicación con el frontend, que se pondrá en un servidor y se expondrá a millones de usuarios mediante la web. Los programadores backend utilizan lenguajes de programacion tales como java, python, Nodejs y trabajan en la implementacion de funcionalidades y servicios que reponderan a las solicitudes del cliente</li>
+<li><strong>DB admin (administrador de base de datod)</strong>: es un rol especializado en administración de bases de datos. Se encarga de diseñar, implementar y mantener la estructura de la base de datos que respalda la aplicación. Esto incluye definir las tablas, índices, relaciones y reglas de integridad necesarias para almacenar y organizar los datos de manera eficiente y segura. También se preocupa por la seguridad de los datos y establece los permisos adecuados para garantizar que solo usuarios autorizados tengan acceso a la información sensible.</li>
+<li><strong>Server Admin (Administrador de servidor)</strong>: es responsable de administrar y mantener el servidor en el que se aloja la aplicación. Esto implica tareas como la configuración del servidor, la instalación de software, la gestión de recursos del servidor, el monitoreo del rendimiento, la implementación de medidas de seguridad y la solución de problemas relacionados con el servidor. El objetivo es asegurarse de que el servidor esté funcionando de manera eficiente, segura y disponible para atender las solicitudes de los usuarios de la aplicación.</li>
+</ol>
+<h3 id="frontend-clientes"><strong>Frontend (Clientes)</strong>:<a class="headerlink" href="#frontend-clientes" title="Permanent link">¶</a></h3>
+<p>El frontend es la parte de una aplicación o sitio web donde los usuarios interactúan directamente. Los elementos con los que los usuarios pueden interactuar incluyen navegadores web, dispositivos móviles (como teléfonos y tabletas) y dispositivos IoT (Internet of Things).</p>
+<p>Dentro del frontend, se utilizan varias tecnologías para crear la interfaz de usuario y permitir la interacción:</p>
+<ol>
+<li>Navegadores: Los navegadores web son aplicaciones que interpretan y muestran contenido web. Utilizan tres tecnologías principales:<ul>
+<li>HTML (HyperText Markup Language): Se utiliza para estructurar el contenido de la página web, como texto, imágenes, formularios, etc.</li>
+<li>CSS (Cascading Style Sheets): Se encarga de aplicar estilos visuales al contenido HTML, como diseño, colores, fuentes, etc. Se mencionan algunas librerías CSS como <code>Tailwind</code>, <code>Bootstrap</code> y <code>Foundation</code> que facilitan el proceso de diseño.</li>
+<li>JavaScript: Es un lenguaje de programación que permite agregar interactividad y dinamismo a las páginas web. Se mencionan algunos frameworks populares como <code>Angular</code>, <code>React</code> y <code>Vue</code>, que facilitan el desarrollo de aplicaciones web complejas.</li>
+</ul>
+</li>
+<li>Móvil: En el contexto móvil, hay tres ecosistemas principales:<ul>
+<li>iOS: Para crear aplicaciones para dispositivos Apple (iPhone, iPad), se utilizan principalmente los lenguajes de programación <code>Swift</code> y <code>Objective-C</code>.</li>
+<li>Android: Para crear aplicaciones para dispositivos Android, los lenguajes de programación más comunes son <code>Kotlin</code> y <code>Java</code>.</li>
+<li>Cross-platform (plataformas cruzadas): En este enfoque, se desarrolla una base de código única que se puede utilizar para crear aplicaciones para múltiples plataformas, como iOS y Android. Algunas tecnologías populares para esto son <code>React Native</code>, <code>Flutter</code> y <code>.NET MAUI</code>.</li>
+</ul>
+</li>
+</ol>
+<h3 id="backend-servidor"><strong>Backend (Servidor)</strong>:<a class="headerlink" href="#backend-servidor" title="Permanent link">¶</a></h3>
+<p>El backend es la parte de una aplicación que se encarga de la lógica y el procesamiento de datos. Contiene la lógica de negocio, la interacción con la base de datos y se encarga de proporcionar datos y funcionalidades al frontend. Algunas tecnologías comunes utilizadas para el desarrollo del backend incluyen:</p>
+<ol>
+<li>Python:<ul>
+<li>Django: Es un framework web de alto nivel y de propósito general que utiliza Python. Es conocido por su enfoque en la simplicidad y la rapidez de desarrollo.</li>
+<li>Flask: Es un microframework ligero que facilita la creación rápida de aplicaciones web con Python.</li>
+<li>FastAPI: Es un framework moderno y de alto rendimiento para construir APIs con Python, conocido por su velocidad y facilidad de uso.</li>
+</ul>
+</li>
+<li>JavaScript/TypeScript:<ul>
+<li>Express: Es un framework de JavaScript que se utiliza para construir aplicaciones web y APIs. Es simple y flexible, lo que permite a los desarrolladores tener más control sobre su código.</li>
+<li>NestJS: Es un framework de TypeScript para la creación de aplicaciones escalables y eficientes, basado en los principios de Angular.</li>
+</ul>
+</li>
+<li>Ruby:<ul>
+<li>Ruby on Rails: Es un framework web escrito en Ruby que sigue la convención sobre configuración. Es conocido por su enfoque en la productividad y la facilidad de uso.</li>
+</ul>
+</li>
+<li>PHP:<ul>
+<li>Laravel: Es un framework web de código abierto escrito en PHP que sigue el patrón de diseño MVC (Modelo-Vista-Controlador). Es conocido por su elegancia y su gran comunidad.</li>
+<li>Symfony: Es otro framework PHP de alto rendimiento que se centra en la modularidad y la reutilización de componentes.</li>
+</ul>
+</li>
+<li>Java:<ul>
+<li>Spring: Es un framework de Java ampliamente utilizado que proporciona una amplia gama de funcionalidades y herramientas para el desarrollo web.</li>
+</ul>
+</li>
+<li>Go:<ul>
+<li>Gin: Es un framework web escrito en Go que se destaca por su velocidad y eficiencia.</li>
+</ul>
+</li>
+<li>C#:<ul>
+<li>.NET Core: Es un framework de código abierto desarrollado por Microsoft que se puede utilizar con C# para crear aplicaciones web y servicios.</li>
+</ul>
+</li>
+</ol>
+<p>La conexión entre el frontend y el backend se realiza a través de APIs (Application Programming Interfaces) que utilizan el protocolo HTTP para comunicarse. El frontend realiza solicitudes a estas APIs para obtener datos o realizar acciones, y el backend procesa esas solicitudes y proporciona las respuestas adecuadas.</p>
+<h3 id="como-se-construye-el-backend-para-ejemplificar-tomaremos-como-referencia-un-restaurante"><strong>Como se construye el backend</strong>: para ejemplificar tomaremos como referencia un restaurante<a class="headerlink" href="#como-se-construye-el-backend-para-ejemplificar-tomaremos-como-referencia-un-restaurante" title="Permanent link">¶</a></h3>
+<ul>
+<li>Los <code>Clientes</code> representan a los usuarios de la aplicación que interactúan con el frontend. Envían solicitudes y órdenes al restaurante (backend) a través del frontend.</li>
+<li>El <code>Mesero</code> actúa como una API que recibe las solicitudes de los clientes (mediante el frontend) y toma las órdenes. El mesero representa los puntos de acceso (endpoints/APIs) en el backend que reciben las peticiones del cliente.</li>
+<li>La <code>Cocina</code> es donde se prepara la comida, es decir, donde ocurre la lógica del backend. Aquí se encuentran los <code>Chefs</code> que son los desarrolladores que construyen la lógica para procesar las solicitudes y generar respuestas. Los <code>Implementos</code> son las librerías y herramientas que los desarrolladores utilizan para facilitar el desarrollo (por ejemplo, bases de datos, herramientas de manejo de archivos, etc.). Y las <code>Recetas</code> son los frameworks que proporcionan patrones de trabajo y soluciones predefinidas para ciertos problemas comunes en el desarrollo backend.</li>
+</ul>
+<h3 id="http"><strong>HTTP</strong>:<a class="headerlink" href="#http" title="Permanent link">¶</a></h3>
+<ul>
+<li>El protocolo HTTP (Hypertext Transfer Protocol) es un protocolo de aplicación utilizado para la transferencia de datos entre un cliente (como un navegador web) y un servidor web.</li>
+<li>El protocolo HTTPS (HTTP Secure) es una versión segura del protocolo HTTP que utiliza cifrado SSL/TLS para proteger los datos en tránsito.</li>
+<li>Codigos de estado: El protocolo HTTP (Hypertext Transfer Protocol) utiliza códigos de estado de tres dígitos para indicar el resultado de una solicitud realizada por un cliente al servidor web. Estos códigos de estado se incluyen en la respuesta del servidor y proporcionan información sobre si la solicitud se ha realizado correctamente o si ha ocurrido algún error. A continuación, se definen los principales códigos de estado del protocolo HTTP junto con sus descripciones:</li>
+<li><strong>1XX (Informacional)</strong>: Indica que la solicitud fue recibida y está siendo procesada.<ul>
+<li>100: Continuar</li>
+<li>102: Procesando</li>
+</ul>
+</li>
+<li><strong>2XX (Éxito)</strong>: Indica que la solicitud fue recibida, entendida y aceptada correctamente.<ul>
+<li>200: OK</li>
+<li>201: Creado</li>
+<li>204: Sin contenido (la solicitud fue exitosa, pero no hay contenido para devolver)</li>
+</ul>
+</li>
+<li><strong>3XX (Redirecciones)</strong>: Indica que se requiere una acción adicional para completar la solicitud.<ul>
+<li>300: Múltiples opciones</li>
+<li>301: Movido permanentemente</li>
+<li>307: Redirección temporal</li>
+<li>308: Redirección permanente</li>
+</ul>
+</li>
+<li><strong>4XX (Errores del cliente)</strong>: Indica que la solicitud contiene errores y no puede ser procesada.<ul>
+<li>400: Solicitud incorrecta</li>
+<li>401: No autorizado (se requiere autenticación)</li>
+<li>404: No encontrado (el recurso solicitado no existe)</li>
+<li>409: Conflicto (la solicitud entra en conflicto con el estado actual del servidor)</li>
+</ul>
+</li>
+<li><strong>5XX (Errores del servidor)</strong>: Indica que el servidor no pudo procesar la solicitud debido a un error interno del servidor.<ul>
+<li>500: Error interno del servidor</li>
+<li>502: Bad Gateway (la puerta de enlace o servidor intermedio recibió una respuesta inválida del servidor final)</li>
+<li>504: Gateway Timeout (el servidor final no respondió a tiempo)</li>
+</ul>
+</li>
+</ul>
+<p>Es importante mencionar que existen muchos más códigos de estado en HTTP que cubren diferentes situaciones y escenarios, pero estos son algunos ejemplos clave. Los códigos de estado permiten que el cliente y el servidor se comuniquen y entiendan el resultado de una solicitud, lo que ayuda a diagnosticar y solucionar problemas durante las interacciones entre el cliente y el servidor web.</p>
+<ul>
+<li>Esto no son todos los codigos de estado puedes revisar la pagina para poder entender los codigos de estado de una manera muy divertida y la pagina es: <a href="https://www.notion.so/http.cat">HTTP Cats</a></li>
+</ul>
+<h3 id="aprendiendo-el-concepto-de-apis">Aprendiendo el concepto de <strong>APIs</strong>:<a class="headerlink" href="#aprendiendo-el-concepto-de-apis" title="Permanent link">¶</a></h3>
+<p>Las APIs (Interfaces de Programación de Aplicaciones) son conjuntos de reglas y protocolos que permiten que diferentes componentes de software se comuniquen entre sí. Actúan como puntos de acceso que permiten que una aplicación o sistema interactúe con otro para acceder a sus servicios, funcionalidades y datos.</p>
+<p>El funcionamiento de las APIs implica dos roles principales:</p>
+<ol>
+<li><strong>Clientes</strong>: Son las aplicaciones o sistemas que envían solicitudes a través de la API para acceder a los servicios o datos proporcionados por otro sistema o servidor.</li>
+<li><strong>Servidores</strong>: Son los sistemas o aplicaciones que reciben las solicitudes realizadas por los clientes a través de la API y responden proporcionando los datos o ejecutando las operaciones solicitadas.</li>
+</ol>
+<p>Las <code>APIs</code> exponen puntos de acceso conocidos como <code>endpoints</code> o rutas, que definen qué operaciones y recursos están disponibles para ser utilizados por los clientes. Cada <code>endpoint</code> corresponde a una funcionalidad específica que se puede solicitar a través de la API. Por ejemplo, en una API de un servicio de usuarios, podrían existir <code>endpoints</code> como <code>/users</code> para obtener la lista de usuarios, <code>/users/create</code> para crear un nuevo usuario y <code>/users/:id</code> para obtener la información de un usuario específico, donde <code>:id</code> representa el identificador único del usuario a esto se le conoce como <code>endpoint</code>  dinámico.</p>
+<p>Para intercambiar datos entre los clientes y los servidores a través de la API, es común utilizar formatos de empaquetado como <code>JSON</code> o <code>XML</code>. Estos formatos permiten estructurar y codificar la información para que pueda ser enviada y recibida correctamente.</p>
+<p>Un tipo de API muy conocido y ampliamente utilizado es <code>REST API</code> (<code>Representational State Transfer</code>), una arquitectura que se basa en el protocolo HTTP y que utiliza verbos HTTP (GET, POST, PUT, DELETE, etc.) para realizar operaciones en los recursos expuestos mediante los <code>endpoints</code>.</p>
+<h3 id="rest-api"><strong><code>Rest API</code></strong>:<a class="headerlink" href="#rest-api" title="Permanent link">¶</a></h3>
+<ul>
+<li>Correcto, el concepto de API REST (<code>Representational State Transfer</code>) está estrechamente relacionado con el concepto CRUD (<span class="arithmatex">\(Create\)</span>, <span class="arithmatex">\(Read\)</span>, <span class="arithmatex">\(Update\)</span>, <span class="arithmatex">\(Delete\)</span>). A continuación, se explica el significado y relación entre ambos:</li>
+</ul>
+<p><strong>CRUD</strong> es un acrónimo que representa las operaciones básicas que se pueden realizar en cualquier sistema de gestión de bases de datos o servicio web:</p>
+<ul>
+<li><strong>C</strong>: <code>Create</code> (Crear) - Representa la operación de crear nuevos datos o recursos en el sistema.</li>
+<li><strong>R</strong>: <code>Read</code> (Leer) - Representa la operación de leer o recuperar datos o recursos existentes del sistema.</li>
+<li><strong>U</strong>: <code>Update</code> (Actualizar) - Representa la operación de actualizar o modificar datos o recursos existentes en el sistema.</li>
+<li><strong>D</strong>: <code>Delete</code> (Eliminar) - Representa la operación de eliminar datos o recursos existentes en el sistema.</li>
+</ul>
+<p>Estas operaciones CRUD son las funciones fundamentales que se realizan en una base de datos o en una API para administrar los datos. Cada una de ellas corresponde a un verbo o método HTTP específico:</p>
+<ul>
+<li><strong>CREATE</strong> se corresponde con el verbo HTTP <code>POST</code>. Se utiliza para enviar datos nuevos al servidor para que sean almacenados.</li>
+<li><strong>READ</strong> se corresponde con el verbo HTTP <code>GET</code>. Se utiliza para obtener datos del servidor, ya sea una lista de recursos o un recurso individual.</li>
+<li><strong>UPDATE</strong> se corresponde con los verbos HTTP <code>PUT</code> o <code>PATCH</code>. Se utilizan para actualizar los datos de un recurso existente en el servidor.</li>
+<li><strong>DELETE</strong> se corresponde con el verbo HTTP <code>DELETE</code>. Se utiliza para eliminar un recurso existente en el servidor.</li>
+</ul>
+<p><strong>API REST</strong> es un estilo de arquitectura para sistemas distribuidos que utiliza el protocolo HTTP para definir cómo se deben acceder y manipular los recursos. En una API REST, los <code>endpoints</code> representan los recursos y las operaciones CRUD se realizan utilizando los verbos HTTP correspondientes:</p>
+<ul>
+<li>Para crear un nuevo recurso, se realiza una solicitud <code>POST</code> al <code>endpoint</code> correspondiente.</li>
+<li>Para leer un recurso, se realiza una solicitud <code>GET</code> al <code>endpoint</code> específico del recurso.</li>
+<li>Para actualizar un recurso, se realiza una solicitud <code>PUT</code> o <code>PATCH</code> al <code>endpoint</code> del recurso que se quiere actualizar.</li>
+<li>Para eliminar un recurso, se realiza una solicitud <code>DELETE</code> al <code>endpoint</code> específico del recurso que se quiere eliminar.</li>
+</ul>
+<h3 id="la-nube">La nube<a class="headerlink" href="#la-nube" title="Permanent link">¶</a></h3>
+<ul>
+<li>La nube es un entorno informático remoto donde se alojan y entregan servicios y código a través de Internet. Es un conjunto de servidores y recursos ubicados en centros de datos en diferentes ubicaciones geográficas. Los servicios en la nube permiten a los clientes acceder a recursos informáticos de manera flexible y escalable, sin necesidad de gestionar infraestructura localmente. Algunos de los proveedores de servicios en la nube más conocidos son AWS (<code>Amazon Web Services</code>), Azure (Microsoft Azure) y Google Cloud, que ofrecen una amplia gama de servicios y soluciones para diversas necesidades empresariales.</li>
+</ul>
+<h3 id="devops">Devops<a class="headerlink" href="#devops" title="Permanent link">¶</a></h3>
+<ul>
+<li>busca la <code>integración</code> y <code>colaboración</code> entre los equipos de desarrollo de software y los equipos de operaciones, con el objetivo de <code>mejorar</code> la <code>entrega</code>, <code>calidad</code> y <code>eficiencia del software</code>. Se basa en la automatización, la integración continua, la entrega continua y la cultura ágil, promoviendo una colaboración cercana entre los desarrolladores y los administradores de sistemas. El enfoque de DevOps abarca desde la concepción de la idea hasta la entrega y operación en producción, y busca una mejora continua en todo el ciclo de vida del desarrollo de software.</li>
+</ul>
+<h3 id="servidores">Servidores<a class="headerlink" href="#servidores" title="Permanent link">¶</a></h3>
+<ul>
+<li>Un servidor se compone de algunos elementos básicos, como la <code>CPU</code>, <code>RAM</code>, <code>SSD</code> (dispositivo de almacenamiento) y otros componentes que permiten su funcionamiento. Los servidores, o granjas de servidores, son utilizados para alojar aplicaciones y servicios, y pueden estar organizados bajo diferentes arquitecturas.</li>
+</ul>
+<p>En la nube, existen tres tipos principales de arquitecturas de servicios:</p>
+<ol>
+<li>
+<p><code>IaaS</code> (Infraestructura como Servicio): Proporciona recursos de infraestructura, como máquinas virtuales, redes y almacenamiento, que los usuarios pueden configurar y gestionar según sus necesidades. Es decir, ofrece una infraestructura completa y flexible en la que los usuarios pueden implementar y ejecutar sus aplicaciones.</p>
+<p>Slack → SaaS</p>
+<p>Digital Ocean → IaaS </p>
+</li>
+<li>
+<p><code>PaaS</code> (Plataforma como Servicio): Ofrece una plataforma completa para el desarrollo, pruebas y despliegue de aplicaciones. Los desarrolladores pueden concentrarse en el desarrollo de la aplicación, mientras que la plataforma se encarga de la infraestructura subyacente y de proporcionar herramientas para facilitar el proceso de desarrollo.</p>
+<p>Firebase → PaaS</p>
+</li>
+<li>
+<p><code>SaaS</code> (Software como Servicio): Proporciona aplicaciones de software listas para usar que se entregan a los usuarios a través de Internet. Los usuarios pueden acceder a estas aplicaciones mediante un navegador web sin necesidad de instalar o mantener software en sus dispositivos.</p>
+</li>
+</ol>
+<p>Estas arquitecturas permiten a las organizaciones y desarrolladores aprovechar los servicios en la nube de manera flexible y escalable, liberándolos de la responsabilidad de administrar y mantener infraestructura física.</p>
+<h3 id="cookies-y-sesiones">Cookies y sesiones<a class="headerlink" href="#cookies-y-sesiones" title="Permanent link">¶</a></h3>
+<p><strong>Cookies</strong>:
+Las cookies son pequeños archivos de texto que se almacenan en el navegador del usuario cuando esta visita un sitio web. Estos archivos contienen información específica que el servidor puede utilizar para identificar al usuario o realizar un seguimiento de ciertas acciones y preferencias. Las cookies son útiles para mantener el inicio de sesión del usuario en una aplicación o sitio web, ya que pueden almacenar información de autenticación y sesión. Además, las cookies pueden tener una fecha de expiración, lo que les permite persistir en el navegador del usuario durante un período de tiempo específico, incluso después de que el usuario cierre el navegador. Adicional a eso cabe recalcar que las cookies solo están disponibles en el navegador y no para el ecosistema móvil y como alternativa a ello se presenta la tecnología <code>JWT</code> que esta está disponible en ambos ecosistemas</p>
+<p><strong>Sesiones</strong>:
+Las sesiones son una forma de mantener el estado de la aplicación para un usuario específico durante su interacción con el sitio web o aplicación. A diferencia de las cookies que se almacenan en el navegador del usuario, las sesiones se mantienen en el servidor. Cuando un usuario inicia sesión o interactúa con la aplicación, se crea una sesión en el servidor que se asocia con un identificador único (como un ID de sesión o un token). Este identificador se envía al cliente (generalmente en forma de cookie) y se utiliza para identificar al usuario en cada solicitud posterior. La información relevante sobre el usuario se almacena en el servidor y se asocia con la sesión activa, lo que permite que la aplicación recuerde el estado del usuario entre diferentes páginas o solicitudes.</p>
+<p><strong>JWT (JSON Web Token)</strong>:
+Los JSON Web Tokens (JWT) son una alternativa a las cookies para mantener la autenticación y el estado del usuario en una aplicación. Un JWT es un token compacto y seguro que se emite por el servidor y se envía al cliente (navegador o aplicación móvil) como una cadena de caracteres. Los JWT contienen información codificada en formato JSON, como el ID del usuario y los roles, y están firmados digitalmente para garantizar su autenticidad. Al estar basados en JSON, los JWT son legibles y fáciles de transmitir entre diferentes plataformas, incluidos navegadores y aplicaciones móviles. Al igual que las cookies, los JWT pueden tener una fecha de expiración, lo que les permite ser utilizados para mantener el inicio de sesión y la autorización durante un período específico.</p>
+<h3 id="bases-de-datos">Bases de datos<a class="headerlink" href="#bases-de-datos" title="Permanent link">¶</a></h3>
+<ul>
+<li>Una base de datos es un servicio que permite persistir y gestionar información de una aplicación o sistema. Existen bases de datos relacionales y no relacionales, cada una adecuada para diferentes necesidades. El ORM es una herramienta que permite abstraer las consultas SQL y trabajar con los datos de la base de datos utilizando objetos en el lenguaje de programación utilizado.</li>
+</ul>
+<p><strong>Base de Datos</strong>:
+Una base de datos es un servicio que se ejecuta en un servidor y tiene la capacidad de almacenar y persistir información de una aplicación o sistema. Funciona como un repositorio centralizado donde se almacenan y organizan datos de manera estructurada y segura. Las bases de datos permiten que los datos sean almacenados de forma permanente y accesible para su posterior consulta y manipulación.</p>
+<p>Existen dos tipos principales de bases de datos:</p>
+<ol>
+<li><strong>Bases de Datos Relacionales</strong>: En esta categoría se encuentran sistemas de gestión de bases de datos como MySQL, PostgreSQL y Oracle, entre otros. Estos sistemas están basados en el modelo relacional y utilizan el lenguaje SQL (Structured Query Language) para interactuar con los datos. Los datos se organizan en tablas con filas y columnas, y las relaciones entre las tablas se definen mediante claves primarias y claves foráneas. Las bases de datos relacionales son ideales para aplicaciones donde la integridad de los datos y las relaciones entre ellos son críticas.</li>
+<li><strong>Bases de Datos No Relacionales (NoSQL)</strong>: En esta categoría se encuentran sistemas de bases de datos como MongoDB y Cassandra. Estos sistemas utilizan modelos de datos diferentes al modelo relacional, y no requieren el uso de SQL para interactuar con los datos. Algunas bases de datos NoSQL son orientadas a documentos, columnas, clave-valor o grafos, lo que les permite adaptarse a diferentes tipos de datos y escenarios de aplicación. Las bases de datos NoSQL son especialmente útiles cuando se necesita una escalabilidad y flexibilidad alta, y cuando la estructura de los datos es variable o no se ajusta bien a un esquema fijo.</li>
+</ol>
+<p><strong>ORM (Mapeo Objeto-Relacional)</strong>:
+El ORM es una tecnología que permite abstraer las consultas que se realizan a la base de datos utilizando el paradigma orientado a objetos. Con un ORM, los objetos de la aplicación se mapean directamente a las tablas de la base de datos, lo que facilita el trabajo con los datos sin tener que escribir directamente consultas SQL. Esto mejora la productividad del desarrollo y permite una mayor portabilidad entre diferentes sistemas de bases de datos. Los ORM son comúnmente utilizados en aplicaciones que utilizan bases de datos relacionales, ya que facilitan la interacción con los datos de una manera más natural para los programadores que trabajan con objetos en el lenguaje de programación que utilizan.</p>
+<h3 id="escalamiento">Escalamiento<a class="headerlink" href="#escalamiento" title="Permanent link">¶</a></h3>
+<ul>
+<li>El escalado (escalamiento) es una estrategia que se utiliza en el ámbito de la computación y la infraestructura para manejar el crecimiento y la demanda creciente de recursos y servicios. Existen dos enfoques principales de escalado:</li>
+<li><code>Escalado vertical</code>: Este enfoque implica aumentar los recursos de una máquina o servidor existente para satisfacer una mayor carga de trabajo. Esto podría implicar, por ejemplo, agregar más CPU, RAM o disco a la misma máquina. El escalado vertical puede ser útil cuando se necesita aumentar rápidamente la capacidad de una máquina en particular, pero tiene limitaciones en términos de costo y capacidad de expansión. Además, puede generar períodos de inactividad al detener y reiniciar la máquina con los nuevos recursos.</li>
+<li><code>Escalado horizontal</code>: En este enfoque, en lugar de aumentar los recursos de una única máquina, se agregan más máquinas a la infraestructura para distribuir la carga de trabajo. Es decir, se crea un conjunto de servidores (Cluster) idénticos que trabajan juntos para atender las solicitudes y compartir la carga. Esto permite una mayor escalabilidad y flexibilidad, ya que se pueden agregar o eliminar servidores según las necesidades sin detener el servicio. El escalado horizontal es especialmente útil cuando la demanda de recursos es impredecible o cuando se espera un crecimiento continuo de usuarios o tráfico.</li>
+</ul>
+<p>Para asegurar que la carga se distribuya de manera equitativa entre los servidores en el escalado horizontal, se utiliza un balanceador de carga (Load Balancer). El balanceador de carga monitorea el tráfico entrante y distribuye las solicitudes a los diferentes servidores del conjunto (Cluster) en función de ciertos algoritmos de balanceo de carga. Esto garantiza que ningún servidor esté sobrecargado y que la carga se distribuya de manera eficiente para lograr una mayor disponibilidad y rendimiento del servicio.</p>
+<p>En resumen, el escalado vertical implica aumentar los recursos de una máquina existente, mientras que el escalado horizontal agrega más máquinas para distribuir la carga. El balanceador de carga asegura que las solicitudes se distribuyan de manera equitativa entre los servidores para mejorar el rendimiento y la disponibilidad del servicio. La elección entre el escalado vertical y horizontal dependerá de los requisitos específicos y las necesidades de escalabilidad de la aplicación o servicio.</p>
+<h3 id="replicacion"><strong>Replicación</strong>:<a class="headerlink" href="#replicacion" title="Permanent link">¶</a></h3>
+<p>La replicación es un proceso en el cual los datos almacenados en una base de datos se copian y sincronizan en múltiples servidores o nodos, de modo que los mismos datos estén disponibles y actualizados en todos ellos. El objetivo principal de la replicación es mejorar la disponibilidad, la redundancia y la escalabilidad del sistema de base de datos.</p>
+<p>Cuando se realiza la replicación, uno de los servidores se designa como el servidor maestro o primario, y los demás servidores se denominan servidores esclavos o secundarios. Cualquier cambio en los datos realizados en el servidor maestro se replica automáticamente en los servidores esclavos, lo que garantiza que todos los nodos tengan la misma información actualizada en tiempo real.</p>
+<p>La replicación puede brindar varios beneficios:</p>
+<ol>
+<li><strong>Mejora de la disponibilidad</strong>: Si uno de los servidores experimenta un fallo, los demás servidores aún pueden atender las solicitudes y proporcionar acceso a los datos.</li>
+<li><strong>Mayor rendimiento</strong>: Los servidores esclavos pueden utilizarse para distribuir la carga de lectura y consultar datos, lo que mejora el rendimiento global del sistema.</li>
+<li><strong>Mayor redundancia</strong>: Al tener múltiples copias de los datos, se aumenta la redundancia y se reduce el riesgo de pérdida de datos.</li>
+<li><strong>Escalabilidad</strong>: La replicación permite agregar más servidores para manejar un mayor número de usuarios y una carga de trabajo creciente.</li>
+</ol>
+<p>Es importante tener en cuenta que, aunque la replicación mejora la disponibilidad y la redundancia, no es una solución completa para la recuperación ante desastres o errores catastróficos. Para una recuperación completa y confiable, se pueden implementar estrategias adicionales, como la copia de seguridad y la recuperación ante desastres (DR, por sus siglas en inglés).</p>
+<h3 id="cache"><strong>Cache</strong>:<a class="headerlink" href="#cache" title="Permanent link">¶</a></h3>
+<p>La caché en el backend es una técnica que consiste en almacenar temporalmente datos o resultados de operaciones costosas en memoria o en un almacenamiento rápido, con el propósito de acelerar el acceso y mejorar el rendimiento de una aplicación web o servicio. Cuando una tarea o solicitud es realizada, el resultado se guarda en la caché, y si la misma tarea o solicitud es solicitada nuevamente, se puede servir directamente desde la caché en lugar de realizar nuevamente el cálculo o consulta. Es decir la caché es una técnica valiosa para mejorar el rendimiento y la eficiencia de una aplicación web al almacenar temporalmente datos o resultados en memoria. Sin embargo, su implementación debe ser cuidadosamente diseñada para adaptarse a las características y requisitos específicos de cada aplicación.</p>
+<p>Algunos puntos importantes a considerar sobre la caché en el backend:</p>
+<ol>
+<li><strong>Mejora del rendimiento</strong>: Al almacenar resultados previamente calculados, la aplicación puede responder más rápido a las solicitudes posteriores, reduciendo el tiempo de procesamiento y mejorando la experiencia del usuario.</li>
+<li><strong>Ejemplos de uso</strong>: La caché es especialmente útil en aplicaciones donde los datos cambian con poca frecuencia, como sitios de comercio electrónico, blogs, sitios de noticias y otros contenidos estáticos. No es tan adecuada para aplicaciones en tiempo real, donde la información cambia constantemente y debe ser actualizada en cada solicitud.</li>
+<li><strong>Evitar carga innecesaria</strong>: Al evitar la repetición de tareas costosas o consultas a la base de datos, la caché puede reducir la carga del servidor y mejorar la escalabilidad del sistema.</li>
+<li><strong>Consideraciones</strong>: Es importante diseñar la estrategia de caché de acuerdo a las necesidades específicas de la aplicación. Se deben tener en cuenta el tiempo de expiración de los datos en la caché, las políticas de invalidación para asegurar la coherencia de los datos, y el tamaño de la caché para evitar el consumo excesivo de memoria.</li>
+<li><strong>Seguridad</strong>: La caché también puede ser utilizada para mitigar ataques de denegación de servicio (DDoS) al almacenar temporalmente copias de las páginas web y servir a los usuarios desde la caché, en lugar de generar nuevas páginas cada vez.</li>
+</ol>
+<h3 id="colas-de-tareas"><strong>Colas de tareas</strong>:<a class="headerlink" href="#colas-de-tareas" title="Permanent link">¶</a></h3>
+<ul>
+<li>Las colas de tareas en el backend son una técnica común utilizada para gestionar tareas asíncronas y procesamiento en segundo plano. Consisten en encolar tareas o trabajos en una estructura de datos, como una cola, para que puedan ser procesadas de manera ordenada y controlada por uno o más trabajadores o consumidores. Es decir las colas de tareas en el backend son una herramienta valiosa para mejorar la eficiencia y escalabilidad de una aplicación al permitir la ejecución asíncrona y en segundo plano de tareas costosas, liberando recursos y mejorando la experiencia del usuario.</li>
+</ul>
+<p>En el contexto del backend, las colas de tareas son particularmente útiles para tareas que requieren tiempo y recursos significativos, como procesamiento de datos, generación de informes, envío de correos electrónicos, notificaciones o cualquier operación que pueda ralentizar la respuesta inmediata del servidor a una solicitud.</p>
+<p>El flujo típico de trabajo con colas de tareas en el backend es el siguiente:</p>
+<ol>
+<li><strong>Productor de Tareas</strong>: Un componente del backend, como una API, recibe una solicitud para realizar una tarea que puede llevar tiempo o ser costosa en recursos. En lugar de procesar la tarea de inmediato, el backend encola la tarea en la cola de tareas.</li>
+<li><strong>Cola de Tareas</strong>: La cola de tareas es una estructura de datos donde las tareas se almacenan en orden de llegada. Puede implementarse utilizando sistemas de colas como RabbitMQ, Redis, Kafka o servicios de colas administradas en la nube como AWS SQS o Google Cloud Pub/Sub.</li>
+<li><strong>Trabajadores o Consumidores</strong>: En el backend, uno o varios trabajadores o consumidores están constantemente escuchando la cola de tareas en busca de nuevas tareas encoladas. Cuando un trabajador obtiene una tarea de la cola, la procesa en segundo plano, liberando al productor y permitiendo que responda rápidamente a otras solicitudes.</li>
+<li><strong>Procesamiento en Segundo Plano</strong>: El trabajador puede realizar la tarea en segundo plano sin bloquear el hilo principal del servidor. Una vez que ha completado la tarea, puede actualizar la base de datos, enviar notificaciones o realizar cualquier acción requerida por la tarea.</li>
+</ol>
+<p>Las colas de tareas en el backend ofrecen varias ventajas:</p>
+<ul>
+<li><strong>Mejora de la Escalabilidad</strong>: Permite manejar grandes volúmenes de tareas sin sobrecargar el servidor principal.</li>
+<li><strong>Tiempo de Respuesta Rápido</strong>: Permite que el servidor responda rápidamente a las solicitudes del cliente, ya que la tarea en segundo plano se procesa después.</li>
+<li><strong>Tolerancia a Fallos</strong>: Si un trabajador falla durante la ejecución de una tarea, la tarea permanece en la cola y puede ser recogida por otro trabajador para procesarla.</li>
+<li><strong>Priorización de Tareas</strong>: Las colas de tareas pueden priorizar tareas para garantizar que las tareas importantes se procesen antes.</li>
+<li><strong>Reducción de Bloqueos</strong>: Ayuda a evitar bloqueos en el servidor al liberar al hilo principal de tareas costosas.</li>
+</ul>
+<h3 id="server-side-rendering"><strong>Server Side Rendering</strong>:<a class="headerlink" href="#server-side-rendering" title="Permanent link">¶</a></h3>
+<p>El Server Side Rendering es una técnica utilizada en desarrollo web donde el contenido HTML de una página web se genera en el servidor y luego se envía al cliente para su visualización. En contraste con el tradicional Client Side Rendering (CSR), donde el contenido HTML se genera en el navegador del cliente utilizando JavaScript, el SSR realiza el renderizado directamente en el servidor antes de entregar la página al navegador. Es decir el <code>Server Side Rendering</code> (SSR) es una técnica que genera el contenido HTML de una página en el servidor antes de enviarlo al cliente. Tiene ventajas como una carga inicial más rápida y una mejor indexación por parte de los motores de búsqueda. Sin embargo, el  <code>Client Side Rendering</code> (CSR) brinda una mayor interactividad y una experiencia de usuario más dinámica. La combinación de ambas técnicas en el <code>renderizado híbrido</code> (SSR + CSR) ofrece una experiencia óptima y equilibrada para el usuario.</p>
+<p><strong>Beneficios desde el lado del servidor (SSR)</strong>:</p>
+<ul>
+<li><strong>Rapidez</strong>: Al generar el contenido en el servidor, la página se carga más rápidamente en el navegador, lo que mejora la experiencia del usuario, especialmente en conexiones de internet lentas o en dispositivos con recursos limitados.</li>
+<li><strong>SEO (Search Engine Optimization)</strong>: Los motores de búsqueda pueden rastrear y entender mejor el contenido de la página, lo que puede mejorar el posicionamiento y visibilidad en los resultados de búsqueda.</li>
+<li><strong>Representación inicial más completa</strong>: El contenido de la página está disponible desde el primer momento, lo que permite una mejor representación inicial y evita el efecto de "flash" o "blink" que ocurre a menudo en CSR mientras se espera a que se cargue y renderice el contenido.</li>
+</ul>
+<p><strong>Beneficios desde el lado del cliente (CSR)</strong>:</p>
+<ul>
+<li><strong>Interactividad</strong>: El SSR inicial puede ser estático y no interactivo, mientras que el CSR permite que la aplicación se vuelva altamente interactiva, ya que JavaScript se encarga de manejar las interacciones en el navegador sin necesidad de recargar la página completa.</li>
+<li><strong>Mejora de la experiencia de usuario</strong>: La interactividad proporcionada por el CSR crea una experiencia de usuario más fluida y dinámica, ya que las actualizaciones de la interfaz se realizan de manera instantánea, sin la necesidad de cargar nuevas páginas.</li>
+<li><strong>Menor carga inicial</strong>: En el CSR, solo se carga el "skeleton" o estructura básica de la página en HTML desde el servidor, y luego el cliente solicita los datos y componentes adicionales a medida que los necesita, lo que puede reducir la carga inicial.</li>
+</ul>
+<p><strong>Renderizado Híbrido (SSR + CSR)</strong>:
+Al combinar el SSR y el CSR, se puede lograr una experiencia aún mejor. Esto se conoce como renderizado híbrido o universal. En esta técnica, el SSR se utiliza para generar la representación inicial de la página, y luego el cliente asume el control y se encarga de la interacción y actualizaciones posteriores. Esto combina los beneficios de ambas técnicas, permitiendo una carga inicial rápida, una mejor experiencia de usuario y una mayor interactividad.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright © 2025 by K3V1N 117</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../javascripts/katex.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+        <script src="../../javascripts/tablesort.js"></script>
+
+        <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body></html>
