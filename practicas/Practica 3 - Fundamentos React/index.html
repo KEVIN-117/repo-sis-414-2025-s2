@@ -335,7 +335,7 @@ git push -u origin main                     # Subir los cambios al repositorio r
 </ul>
 <pre class="highlight"><code class="language-bash">git checkout -b chapter-1</code></pre>
 <ul>
-<li>Al finalizar cada capítulo, hacer commit y push de los cambios:</li>
+<li>Al finalizar cada capítulo, hacer commit y push de los cambios, debe seguir el siguiente formato para el commit de manera obligatoria de lo contrario se le restara puntos:</li>
 </ul>
 <pre class="highlight"><code class="language-bash">git add .
 git commit -m "Add chapter X content: &lt;descripción breve&gt;"
@@ -344,10 +344,12 @@ git push -u origin chapter-X</code></pre>
 <li>Repetir el proceso para los capítulos 2, 3, hasta el capítulo n. pero en en cada capítulo debe partir desde la rama anterior, por ejemplo para el capítulo 2:</li>
 </ul>
 <pre class="highlight"><code class="language-bash">git branch</code></pre>
-<p>!!! danger "⚡ Tome en cuenta" - El comando <code>git branch</code> muestra todas las ramas locales en el repositorio actual. - Ejmplo de salida:
+<p>!!! danger "⚡ Tome en cuenta" - El comando <code>git branch</code> muestra todas las ramas locales en el repositorio actual. 
+    - Ejmplo de salida:
     </p><pre class="highlight"><code class="language-plaintext">* chapter-1
   main</code></pre>
-    - El asterisco (*) indica la rama en la que te encuentras actualmente. - En tu caso debes estar en la rama <code>chapter-1</code> para crear la rama <code>chapter-2</code> desde ahí y para el capítulo 3 debes estar en la rama <code>chapter-2</code> y así sucesivamente hasta el capítulo n.<p></p>
+    - El asterisco (*) indica la rama en la que te encuentras actualmente. 
+    - En tu caso debes estar en la rama <code>chapter-1</code> para crear la rama <code>chapter-2</code> desde ahí y para el capítulo 3 debes estar en la rama <code>chapter-2</code> y así sucesivamente hasta el capítulo n.<p></p>
 <h2 id="recursos-adicionales">Recursos adicionales<a class="headerlink" href="#recursos-adicionales" title="Permanent link">¶</a></h2>
 <p>En caso de dudas preguntar en el grupo de la materia
 En caso de interés en profundizar, se recomienda participar en la comunidad de <strong>Discord de Next.js</strong>, donde se pueden plantear preguntas y compartir experiencias.</p>
