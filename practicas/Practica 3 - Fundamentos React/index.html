@@ -1,0 +1,421 @@
+<!DOCTYPE html><html lang="en" data-bs-theme="light"><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Práctica 3 - Fundamentos React - SIS-414 G-2</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="https://unpkg.com/katex@0/dist/katex.min.css" rel="stylesheet">
+        <link href="../../styles/admonitions.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">SIS-414 G-2</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Apuntes</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../apuntes/ASINCRONIA/" class="dropdown-item">Asincronismo con JavaScript</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/BACKEND/" class="dropdown-item">BACKEND</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/DOM/" class="dropdown-item">DOM (Document Object Model)</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/FUNDAMENTOS_REACT/" class="dropdown-item">React</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/GitGitHub/" class="dropdown-item">Introducción a Git: Guía para Principiantes</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/Java%2021%20%2B%20Spring%20Boot%20Backend%20Developer%201e0db4fab681802aadd4d6c9c44a254d/" class="dropdown-item">Java 21 + Spring Boot Backend Developer</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/MODULOS_ES/" class="dropdown-item">Modulos en ES6</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/PETICIONES/" class="dropdown-item">Peticiones HTTP</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/js/" class="dropdown-item">JAVASCRIPT</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Guides</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../guides/PullRequest/" class="dropdown-item">PullRequest</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Laboratorios</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../laboratorios/Laboratorio%201/" class="dropdown-item">LABORATORIO 1 SIS-414</a>
+</li>
+                                    
+<li>
+    <a href="../../laboratorios/Laboratorio%202/" class="dropdown-item">Laboratorio 2</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown" aria-expanded="false">Practicas</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Practica%200%20-%20Prueba%20de%20Conocimiento/" class="dropdown-item">Practica 0   Prueba de Conocimiento</a>
+</li>
+                                    
+<li>
+    <a href="../Practica%201%20-%20Git%20%2B%20GitHub/" class="dropdown-item">Practica 1   Git + GitHub</a>
+</li>
+                                    
+<li>
+    <a href="../Practica%202%20-%20Git%20%2B%20GitHub/" class="dropdown-item">Practica 2   Git + GitHub</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Práctica 3 - Fundamentos React</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                            <li class="nav-item">
+                                <a rel="prev" href="../Practica%202%20-%20Git%20%2B%20GitHub/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#fundamentos-de-react-para-nextjs" class="nav-link">Fundamentos de React para Next.js</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#objetivos-especificos" class="nav-link">Objetivos específicos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#requisitos-previos" class="nav-link">Requisitos previos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#dinamica-de-la-practica" class="nav-link">Dinámica de la práctica</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#entregables" class="nav-link">Entregables</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#criterios-de-evaluacion" class="nav-link">Criterios de evaluación</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#notas-adicionales" class="nav-link">🔑 Notas adicionales</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#recursos-recomendados" class="nav-link">Recursos recomendados</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#recursos-para-la-elaboracion-de-la-practica" class="nav-link">Recursos para la elaboración de la práctica</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejemplo-de-estructura-de-ramas-en-git" class="nav-link">Ejemplo de estructura de ramas en Git</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#recursos-adicionales" class="nav-link">Recursos adicionales</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="fundamentos-de-react-para-nextjs"><strong>Fundamentos de React para Next.js</strong><a class="headerlink" href="#fundamentos-de-react-para-nextjs" title="Permanent link">¶</a></h1>
+<p>El presente ejercicio tiene como objetivo introducir al estudiante en los <strong>fundamentos esenciales de React</strong>, conocimientos indispensables para abordar con éxito el framework <strong>Next.js</strong>. A través de un enfoque progresivo y basado en ejemplos, se desarrollará un proyecto sencillo que iniciará como una aplicación en <strong>JavaScript puro</strong>, para luego ser migrado a <strong>React</strong> y finalmente a <strong>Next.js</strong>.</p>
+<p>La práctica está diseñada para ser <strong>accesible a principiantes</strong>, asumiendo que el estudiante ya domina <strong>HTML, CSS y JavaScript</strong>, pero no necesariamente tiene experiencia previa en React. Cada sección se construye sobre la anterior, permitiendo avanzar de manera gradual y estructurada.</p>
+<h2 id="objetivos-especificos">Objetivos específicos<a class="headerlink" href="#objetivos-especificos" title="Permanent link">¶</a></h2>
+<ul>
+<li>Comprender los conceptos básicos de React como librería de construcción de interfaces.</li>
+<li>Migrar una aplicación en JavaScript hacia un entorno React.</li>
+<li>Introducir el flujo de trabajo con Next.js como evolución natural de React.</li>
+<li>Familiarizarse con las herramientas necesarias para el desarrollo moderno en la web.</li>
+</ul>
+<h2 id="requisitos-previos">Requisitos previos<a class="headerlink" href="#requisitos-previos" title="Permanent link">¶</a></h2>
+<ul>
+<li>Conocimientos básicos de <strong>HTML, CSS y JavaScript</strong>.</li>
+<li>Instalación de <strong>Node.js 20.12.0 o superior</strong> y <strong>npm</strong> versiones LTS.</li>
+<li>Instalación de <strong>Git</strong> para control de versiones.</li>
+<li>Sistema operativo: <strong>macOS, Windows (incluyendo WSL) o Linux</strong> (se recomienda WSL para usuarios de Windows).</li>
+<li>Editor de texto recomendado: <strong>Visual Studio Code (VSCode)</strong> con extensiones para JavaScript y React.</li>
+<li>Navegador web actualizado (Google Chrome, Firefox, etc.).</li>
+</ul>
+<h2 id="dinamica-de-la-practica">Dinámica de la práctica<a class="headerlink" href="#dinamica-de-la-practica" title="Permanent link">¶</a></h2>
+<ol>
+<li>Construcción de una aplicación básica en JavaScript.</li>
+<li>Migración de la aplicación a React, aplicando componentes y estados.</li>
+<li>Adaptación del proyecto a Next.js, explorando sus ventajas en enrutamiento y renderizado.</li>
+</ol>
+<h2 id="entregables">Entregables<a class="headerlink" href="#entregables" title="Permanent link">¶</a></h2>
+<ul>
+<li>Código fuente del proyecto en un repositorio de GitHub.</li>
+<li>Documentación en formato Markdown explicando los pasos seguidos y los conceptos aprendidos todo esto en un archivo <code>README.md</code>.</li>
+<li>Capturas de pantalla o GIFs que ilustren el funcionamiento de la aplicación en cada etapa.</li>
+<li>Realizar la defensa de la práctica en clase, explicando los conceptos y conocimientos adquiridos.</li>
+<li>El enlace será entregado en Classroom.</li>
+</ul>
+<hr>
+<h2 id="criterios-de-evaluacion">Criterios de evaluación<a class="headerlink" href="#criterios-de-evaluacion" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Puntos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Comprensión de conceptos</td>
+<td>20</td>
+</tr>
+<tr>
+<td>Implementación en código</td>
+<td>25</td>
+</tr>
+<tr>
+<td>Migración progresiva con ramas en Git</td>
+<td>20</td>
+</tr>
+<tr>
+<td>Interactividad y manejo de estado</td>
+<td>15</td>
+</tr>
+<tr>
+<td>Buenas prácticas y herramientas</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Participación y documentación</td>
+<td>10</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>100</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="notas-adicionales">🔑 Notas adicionales<a class="headerlink" href="#notas-adicionales" title="Permanent link">¶</a></h2>
+<ul>
+<li>Se valorará la claridad en la documentación y la organización del código.</li>
+<li>Se recomienda seguir buenas prácticas de desarrollo y control de versiones.</li>
+<li>Utilizar ramas en Git para cada etapa del proyecto donde cada etapa es un capítulo de la que se proporciona</li>
+<li>En cada rama debe hacer un readme.md explicando los conceptos aprendidos en esa etapa.</li>
+<li>Se sugiere usar commits descriptivos en cada capítulo.</li>
+<li>La práctica debe ser realizada de manera individual.</li>
+<li>La práctica debe ser entregada en la fecha establecida, cualquier retraso afectará la calificación final.</li>
+<li>Se fomentará la participación activa durante la defensa en clase, donde se evaluará la capacidad de explicar los conceptos aprendidos.</li>
+<li>Se sugiere revisar recursos adicionales y tutoriales para profundizar en los temas tratados.</li>
+</ul>
+<h2 id="recursos-recomendados">Recursos recomendados<a class="headerlink" href="#recursos-recomendados" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="https://react.dev/">Documentación oficial de React</a></li>
+<li><a href="https://nextjs.org/docs">Documentación oficial de Next.js</a></li>
+<li><a href="https://www.freecodecamp.org/news/learn-react-by-building-a-simple-app-e8b3b47edb39/">Curso gratuito de React - freeCodeCamp</a></li>
+<li><a href="https://www.w3schools.com/react/">Tutorial de React - W3Schools</a></li>
+</ul>
+<h2 id="recursos-para-la-elaboracion-de-la-practica">Recursos para la elaboración de la práctica<a class="headerlink" href="#recursos-para-la-elaboracion-de-la-practica" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="https://nextjs.org/learn/react-foundations">Next.js - Learn React Foundations</a></li>
+</ul>
+<h2 id="ejemplo-de-estructura-de-ramas-en-git">Ejemplo de estructura de ramas en Git<a class="headerlink" href="#ejemplo-de-estructura-de-ramas-en-git" title="Permanent link">¶</a></h2>
+<pre class="highlight"><code class="language-plaintext">main
+├── chapter-1
+│   └── README.md
+├── chapter-2
+│   └── README.md
+└── chapter-3
+    └── README.md</code></pre>
+<h3 id="ejemplo-de-commits-descriptivos">Ejemplo de commits descriptivos<a class="headerlink" href="#ejemplo-de-commits-descriptivos" title="Permanent link">¶</a></h3>
+<pre class="highlight"><code class="language-plaintext">feat: add initial HTML structure
+feat: implement basic JavaScript functionality
+feat: migrate to React components
+feat: add state management with useState
+feat: integrate Next.js routing</code></pre>
+<p>!!! danger "⚡ Tome en cuenta" - Los commits deben ser claros y descriptivos. - los commits deben estar relacionados con los cambios realizados. - La documentación en cada capítulo debe ser detallada y explicar los conceptos aprendidos. - Debido a que las ramas son versiones independientes, entonces se sugiere que el readme.md de cada capítulo sea independiente y no dependa de otro capítulo, es decir puede reutilizar el <code>README.md</code> del capítulo anterior pero debe explicar los conceptos aprendidos en ese capítulo.</p>
+<hr>
+<h3 id="comando-para-la-elaboracion-de-la-practica">Comando para la elaboracion de la práctica<a class="headerlink" href="#comando-para-la-elaboracion-de-la-practica" title="Permanent link">¶</a></h3>
+<ul>
+<li>antes de iniciar la práctica debe configurar un repositorio local y remoto en GitHub</li>
+<li>Ejecutar los siguientes comandos en la terminal para configurar, conectar y subir el proyecto a GitHub:</li>
+</ul>
+<pre class="highlight"><code class="language-bash">mkdir practica-react                        # Crear el directorio del proyecto
+cd practica-react                           # Navegar al directorio del proyecto
+git init --initial-branch=main              # Inicializar un repositorio Git con la rama principal llamada 'main'
+git remote add origin &lt;url-del-repositorio&gt; # Conectar con el repositorio remoto
+git add .                                   # Agregar todos los archivos al área de preparación
+git commit -m "Initial commit"              # Realizar el primer commit
+git push -u origin main                     # Subir los cambios al repositorio remoto</code></pre>
+<ul>
+<li>Crear una nueva rama para cada capítulo, inialmente de la rama <code>main</code>, por ejemplo para el capítulo 1:</li>
+</ul>
+<pre class="highlight"><code class="language-bash">git checkout -b chapter-1</code></pre>
+<ul>
+<li>Al finalizar cada capítulo, hacer commit y push de los cambios:</li>
+</ul>
+<pre class="highlight"><code class="language-bash">git add .
+git commit -m "Add chapter X content: &lt;descripción breve&gt;"
+git push -u origin chapter-X</code></pre>
+<ul>
+<li>Repetir el proceso para los capítulos 2, 3, hasta el capítulo n. pero en en cada capítulo debe partir desde la rama anterior, por ejemplo para el capítulo 2:</li>
+</ul>
+<pre class="highlight"><code class="language-bash">git branch</code></pre>
+<p>!!! danger "⚡ Tome en cuenta" - El comando <code>git branch</code> muestra todas las ramas locales en el repositorio actual. - Ejmplo de salida:
+<code>plaintext
+    * chapter-1
+      main</code> - El asterisco (*) indica la rama en la que te encuentras actualmente. - En tu caso debes estar en la rama <code>chapter-1</code> para crear la rama <code>chapter-2</code> desde ahí y para el capítulo 3 debes estar en la rama <code>chapter-2</code> y así sucesivamente hasta el capítulo n.</p>
+<h2 id="recursos-adicionales">Recursos adicionales<a class="headerlink" href="#recursos-adicionales" title="Permanent link">¶</a></h2>
+<p>En caso de dudas preguntar en el grupo de la materia
+En caso de interés en profundizar, se recomienda participar en la comunidad de <strong>Discord de Next.js</strong>, donde se pueden plantear preguntas y compartir experiencias.</p>
+<hr></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright © 2025 by K3V1N 117</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../javascripts/katex.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+        <script src="../../javascripts/tablesort.js"></script>
+
+        <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body></html>
