@@ -1,0 +1,953 @@
+<!DOCTYPE html><html lang="en" data-bs-theme="light"><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Práctica 4 - Fundamentos de Spring Boot - SIS-414 G-2</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="https://unpkg.com/katex@0/dist/katex.min.css" rel="stylesheet">
+        <link href="../../styles/admonitions.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">SIS-414 G-2</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Apuntes</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../apuntes/ASINCRONIA/" class="dropdown-item">Asincronismo con JavaScript</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/BACKEND/" class="dropdown-item">BACKEND</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/DOM/" class="dropdown-item">DOM (Document Object Model)</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/FUNDAMENTOS_REACT/" class="dropdown-item">React</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/GitGitHub/" class="dropdown-item">Introducción a Git: Guía para Principiantes</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/Java%2021%20%2B%20Spring%20Boot%20Backend%20Developer%201e0db4fab681802aadd4d6c9c44a254d/" class="dropdown-item">Java 21 + Spring Boot Backend Developer</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/MODULOS_ES/" class="dropdown-item">Modulos en ES6</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/PETICIONES/" class="dropdown-item">Peticiones HTTP</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/js/" class="dropdown-item">JAVASCRIPT</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Guides</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../guides/PullRequest/" class="dropdown-item">PullRequest</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Laboratorios</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../laboratorios/Laboratorio%201/" class="dropdown-item">LABORATORIO 1 SIS-414</a>
+</li>
+                                    
+<li>
+    <a href="../../laboratorios/Laboratorio%202/" class="dropdown-item">Laboratorio 2</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown" aria-expanded="false">Practicas</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Practica%200%20-%20Prueba%20de%20Conocimiento/" class="dropdown-item">Practica 0   Prueba de Conocimiento</a>
+</li>
+                                    
+<li>
+    <a href="../Practica%201%20-%20Git%20%2B%20GitHub/" class="dropdown-item">Practica 1   Git + GitHub</a>
+</li>
+                                    
+<li>
+    <a href="../Practica%202%20-%20Git%20%2B%20GitHub/" class="dropdown-item">Practica 2   Git + GitHub</a>
+</li>
+                                    
+<li>
+    <a href="../Practica%203%20-%20Fundamentos%20React/" class="dropdown-item">Práctica 3 - Fundamentos React</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Práctica 4 - Fundamentos de Spring Boot</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                            <li class="nav-item">
+                                <a rel="prev" href="../Practica%203%20-%20Fundamentos%20React/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#fundamentos-de-spring-boot" class="nav-link">Fundamentos de Spring Boot</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#objetivos-especificos" class="nav-link">Objetivos específicos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#recursos-para-la-elaboracion-de-la-practica" class="nav-link">Recursos para la elaboración de la práctica</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#requisitos-previos" class="nav-link">Requisitos previos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#dinamica-de-la-practica" class="nav-link">Dinámica de la práctica</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#entregables" class="nav-link">Entregables</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#criterios-de-evaluacion" class="nav-link">Criterios de evaluación</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejercicios" class="nav-link">Ejercicios</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#ejercicio-1-miniorm-en-java" class="nav-link">Ejercicio 1: 🧭 Mini‑ORM en Java</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#guia-de-laboratorio-orientada-a-arquitectura" class="nav-link">Guía de laboratorio orientada a arquitectura</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#revisemos-los-conceptos-clave" class="nav-link">Revisemos los conceptos clave</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#resumen-del-enfoque-arquitectonico" class="nav-link">Resumen del enfoque arquitectónico</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#paso-0-organizacion-de-archivos-proyecto-sistema-de-archivos" class="nav-link">Paso 0: Organización de archivos / proyecto (sistema de archivos)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#implementacion-paso-a-paso" class="nav-link">Implementación paso a paso</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#paso-1-crear-proyecto-maven" class="nav-link">Paso 1: Crear proyecto Maven</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#paso-2-definir-anotaciones-personalizadas" class="nav-link">Paso 2: Definir anotaciones personalizadas</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#paso-3-definamos-las-entidades-del-dominio-modelos" class="nav-link">Paso 3: Definamos las entidades del dominio (modelos)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#paso-4-creamos-el-repositorio-base-generico" class="nav-link">Paso 4: Creamos el repositorio base genérico</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#5-implementamos-el-repositorio-in-memory" class="nav-link">5: Implementamos el repositorio In-Memory</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#6-implementamos-el-entitymanager-capa-de-orquestacion" class="nav-link">6: Implementamos el EntityManager (capa de orquestación)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#7-implementamos-la-capa-de-servicio-logica-de-negocio" class="nav-link">7: Implementamos la capa de servicio (lógica de negocio)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#8-implementamos-la-capa-de-presentacion-cli-demo" class="nav-link">8: Implementamos la capa de presentación (CLI demo)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#10-evaluacion-final" class="nav-link">10: Evaluación final</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#ejercicio-2-miniorm-con-spring-boot" class="nav-link">Ejercicio 2: 🧭 Mini‑ORM con Spring Boot</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#conclusion" class="nav-link">Conclusión</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="fundamentos-de-spring-boot"><strong>Fundamentos de Spring Boot</strong><a class="headerlink" href="#fundamentos-de-spring-boot" title="Permanent link">¶</a></h1>
+<hr>
+<h2 id="objetivos-especificos">Objetivos específicos<a class="headerlink" href="#objetivos-especificos" title="Permanent link">¶</a></h2>
+<ul>
+<li>Comprender los conceptos básicos de Spring Boot como framework para aplicaciones Java.</li>
+<li>Configurar un entorno de desarrollo para proyectos Spring Boot.</li>
+<li>Desarrollar una aplicación sencilla utilizando las características principales de Spring Boot.</li>
+<li>Familiarizarse con las herramientas necesarias para el desarrollo moderno en Java.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">💁‍♂️ Uno de los principales objetivos es:</p>
+<ul>
+<li>Fomentar la practica del aprendisaje autonomo y el uso de recursos en línea es decir <code>aprender</code> a <code>aprender</code> siguiendo el concepto de aprendizaje <code>autodidacta</code>.</li>
+</ul>
+</div>
+<hr>
+<h2 id="recursos-para-la-elaboracion-de-la-practica">Recursos para la elaboración de la práctica<a class="headerlink" href="#recursos-para-la-elaboracion-de-la-practica" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="https://spring.io/projects/spring-boot">Documentación oficial de Spring Boot</a></li>
+<li><a href="https://spring.io/guides/gs/spring-boot/">Guía de inicio rápido de Spring Boot</a></li>
+<li><a href="https://www.baeldung.com/spring-boot">Tutoriales de Spring Boot en Baeldung</a></li>
+<li><a href="https://www.youtube.com/results?search_query=spring+boot">Videos de Spring Boot en YouTube</a></li>
+</ul>
+<h2 id="requisitos-previos">Requisitos previos<a class="headerlink" href="#requisitos-previos" title="Permanent link">¶</a></h2>
+<ul>
+<li>Conocimientos básicos de Java y programación orientada a objetos.</li>
+<li>Instalación de Java Development Kit (JDK) de java 21 o superior.</li>
+<li>Instalación de un IDE compatible con Java (Eclipse, IntelliJ IDEA, VSCode).</li>
+<li>Instalación de Maven o Gradle para la gestión de dependencias.</li>
+<li>Instalación de Git para control de versiones.</li>
+<li>Sistema operativo: macOS, Windows (incluyendo WSL) o Linux (se recomienda WSL para usuarios de Windows).</li>
+</ul>
+<h2 id="dinamica-de-la-practica">Dinámica de la práctica<a class="headerlink" href="#dinamica-de-la-practica" title="Permanent link">¶</a></h2>
+<ol>
+<li>Configuración del entorno de desarrollo para Spring Boot.</li>
+<li>Creación de un proyecto Spring Boot utilizando Spring Initializr.</li>
+<li>Desarrollo de una aplicación sencilla que incluya controladores, servicios y repositorios.</li>
+</ol>
+<h2 id="entregables">Entregables<a class="headerlink" href="#entregables" title="Permanent link">¶</a></h2>
+<ul>
+<li>Esta tarea debe ser realizada de forma individual.</li>
+<li>La práctica debe ser entregada en un repositorio de GitHub.</li>
+<li>La practica consta de dos ejercicios:</li>
+<li>Ejercicio 1: Mini-ORM en Java (sin Spring Boot)</li>
+<li>Ejercicio 2: Mini-ORM con Spring Boot</li>
+<li>Código fuente del proyecto en un repositorio de GitHub, para ello se recomienda trabajar en 2 ramas diferentes, una para cada parte de la practica.</li>
+<li>Rama <code>main</code> para es donde debe ir un README.md indicando como le parecio la practica y los conceptos aprendidos.</li>
+<li>Rama <code>ejercicio-1</code> para el Ejercicio 1: Mini-ORM en Java (sin Spring Boot) es decir la primera parte de la practica.</li>
+<li>Rama <code>ejercicio-2</code> para el Ejercicio 2: Mini-ORM con Spring Boot es decir la segunda parte de la practica.</li>
+</ul>
+<h2 id="criterios-de-evaluacion">Criterios de evaluación<a class="headerlink" href="#criterios-de-evaluacion" title="Permanent link">¶</a></h2>
+<ul>
+<li>Primer ejercicio (Mini-ORM en Java sin Spring Boot): 60%</li>
+<li>Estructura del proyecto: 5%</li>
+<li>Implementación de las anotaciones personalizadas: 5%</li>
+<li>Toda la implementación: 10%</li>
+<li>Evaluación primera parte del servicio: 40% </li>
+<li>Segundo ejercicio (Mini-ORM con Spring Boot): 40%</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">💁‍♂️ Tome en cuneta lo siguiente:</p>
+<p>POR CADA VEZ QUE NO CUPLE LAS INTRUCCIONES DE LA PRACTICA, SE LE RESTARAN PUNTOS EXACTAMENTE 5 PUNTOS.</p>
+</div>
+<h2 id="ejercicios">Ejercicios<a class="headerlink" href="#ejercicios" title="Permanent link">¶</a></h2>
+<p>Para esta practica, iniciaremos desde los conceptos basicos es decir un antes de Spring Boot y luego avanzaremos a Spring Boot.
+Para ello estaremos creando una seria de aplicaciones sencillas que nos permitiran entender los conceptos basicos de Spring Boot.</p>
+<h3 id="parte-1-aplicacion-java-simple">Parte 1: Aplicación Java Simple<a class="headerlink" href="#parte-1-aplicacion-java-simple" title="Permanent link">¶</a></h3>
+<p>En esta seccion crearemos una aplicacion Java simple en la cual estaremos revisando los siguientes conceptos:</p>
+<ul>
+<li>Estructura de un proyecto Java</li>
+<li>Clases y objetos</li>
+<li>Métodos y atributos</li>
+<li>Manejo de excepciones</li>
+<li>Programacion orientada a objetos</li>
+<li>Programacion funcional en Java</li>
+<li>Uso de librerias externas: <code>Lombok</code></li>
+<li>Uso de <code>Maven</code> para la gestion de dependencias</li>
+</ul>
+<hr>
+<h1 id="ejercicio-1-miniorm-en-java">Ejercicio 1: 🧭 Mini‑ORM en Java<a class="headerlink" href="#ejercicio-1-miniorm-en-java" title="Permanent link">¶</a></h1>
+<h2 id="guia-de-laboratorio-orientada-a-arquitectura">Guía de laboratorio orientada a arquitectura<a class="headerlink" href="#guia-de-laboratorio-orientada-a-arquitectura" title="Permanent link">¶</a></h2>
+<p><strong>Objetivo:</strong> Construir un <em>mini‑ORM</em> en Java siguiendo una arquitectura en capas que favorezca orden, testabilidad y evite código espagueti. El proyecto usa Maven, Lombok y reflección para mapear entidades con anotaciones.</p>
+<p><strong>Duración sugerida:</strong> 4–6 horas (puede dividirse en 2 sesiones)</p>
+<h2 id="revisemos-los-conceptos-clave">Revisemos los conceptos clave<a class="headerlink" href="#revisemos-los-conceptos-clave" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>ORM (Object-Relational Mapping):</strong> Técnica para mapear objetos en código a tablas en bases de datos relacionales, son usados para abstraer la interacción con una base de datos.</li>
+<li><strong>Arquitectura en capas:</strong> Esta arquitetura separa responsabilidades en capas distintas (por ejemplo, presentación, negocio, datos) para mejorar la organización y mantenibilidad del código.</li>
+<li><strong>Maven:</strong> Herramienta de gestión y construcción de proyectos Java que maneja dependencias y ciclos de vida del proyecto.</li>
+<li><strong>Lombok:</strong> Biblioteca que reduce el código boilerplate (constructores, getters/setters) mediante anotaciones.</li>
+<li><strong>Reflección:</strong> Capacidad de un programa para inspeccionar y modificar su propia estructura en tiempo de ejecución.</li>
+</ul>
+<h2 id="resumen-del-enfoque-arquitectonico">Resumen del enfoque arquitectónico<a class="headerlink" href="#resumen-del-enfoque-arquitectonico" title="Permanent link">¶</a></h2>
+<p>Usaremos una <strong>arquitectura en capas</strong> (similar a la típica en backend):</p>
+<ul>
+<li><code>model</code> (entidades anotadas) — responsabilidad: representar datos.</li>
+<li><code>repository</code> (repositorios genéricos) — responsabilidad: abstracción de persistencia (In‑Memory en este laboratorio).</li>
+<li><code>service</code> (lógica de negocio) — responsabilidad: orquestar operaciones y reglas.</li>
+<li><code>core</code> / <code>orm</code> (EntityManager / mapeador) — responsabilidad: coordinar mapeo entre objetos y repositorios.</li>
+<li><code>app</code> (interfaz CLI / demostración) — responsabilidad: punto de entrada, interacción con el usuario.</li>
+</ul>
+<p>Principios aplicados: <strong>Separación de responsabilidades (SRP)</strong>, <strong>Inversión de dependencias (usar interfaces)</strong>, <strong>pequeñas clases/métodos</strong>, evitar estado global mutable.</p>
+<p>Definamos algunnos conceptos clave, se menciono de los principios aplicados, estos principios son parte de aquellos principios SOLID, los cuales son:</p>
+<ul>
+<li><strong>S</strong> de Principio de responsabilidad única (Single Responsibility Principle): una clase debe tener una, y solo una, razón para cambiar esto es <strong>separación de responsabilidades (SRP)</strong>.</li>
+<li><strong>O</strong> de Principio de abierto/cerrado (Open/Closed Principle): las entidades deben estar abiertas para la extensión, pero cerradas para la modificación esto es <strong>Inversión de dependencias (usar interfaces)</strong>.</li>
+<li><strong>L</strong> de Principio de sustitución de Liskov (Liskov Substitution Principle): los objetos de una clase derivada deben poder reemplazar a los objetos de la clase base sin alterar el comportamiento del programa esto es <strong>pequeñas clases/métodos</strong>.</li>
+<li><strong>I</strong> de Principio de segregación de interfaces (Interface Segregation Principle): es mejor tener muchas interfaces específicas en lugar de una interfaz única y general esto es <strong>evitar estado global mutable</strong>.</li>
+<li><strong>D</strong> de Principio de inversión de dependencias (Dependency Inversion Principle): las dependencias deben ser abstraídas, y no depender de implementaciones concretas.</li>
+</ul>
+<h2 id="paso-0-organizacion-de-archivos-proyecto-sistema-de-archivos">Paso 0: Organización de archivos / proyecto (sistema de archivos)<a class="headerlink" href="#paso-0-organizacion-de-archivos-proyecto-sistema-de-archivos" title="Permanent link">¶</a></h2>
+<p>Crearemos la siguiente estructura de carpetas y archivos:</p>
+<pre class="highlight"><code class="language-plaintext">mini-orm/
+├─ pom.xml
+├─ README.md
+└─ src/
+   └─ main/
+      └─ java/
+         └─ com/miniorm/
+            ├─ annotations/      # @Entity, @Column, @Id
+            ├─ exceptions/       # Excepciones custom
+            ├─ models/           # Clases de dominio (User, Product...) + Lombok
+            ├─ repository/       # Interfaces y repositorios InMemory
+            ├─ core/             # EntityManager, util reflection
+            ├─ service/          # Servicios que usan repositorios
+            └─ app/              # Main / CLI demo
+   └─ test/
+      └─ java/
+         └─ com/miniorm/
+            └─ ... (tests unitarios)</code></pre>
+<blockquote>
+<p>Nota: usar paquete raíz <code>com.miniorm</code> como convención del laboratorio.</p>
+</blockquote>
+<h1 id="implementacion-paso-a-paso">Implementación paso a paso<a class="headerlink" href="#implementacion-paso-a-paso" title="Permanent link">¶</a></h1>
+<h2 id="paso-1-crear-proyecto-maven">Paso 1: Crear proyecto Maven<a class="headerlink" href="#paso-1-crear-proyecto-maven" title="Permanent link">¶</a></h2>
+<ul>
+<li>Inicie <strong>IntelliJ IDEA</strong> (o su IDE favorito).</li>
+<li>Cree un nuevo proyecto seleccionando <strong>Maven</strong>.</li>
+<li>Configure el <code>GroupId</code> como <code>com.miniorm</code> y el <code>ArtifactId</code> como <code>mini-orm</code>.</li>
+<li>Haga clic en <strong>Finish</strong> para crear el proyecto.</li>
+<li>Abra el archivo <code>pom.xml</code> y agregue las siguientes dependencias:</li>
+</ul>
+<pre class="highlight"><code class="language-xml">
+&lt;dependencies&gt;
+    &lt;!-- https://mvnrepository.com/artifact/org.projectlombok/lombok --&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;
+        &lt;artifactId&gt;lombok&lt;/artifactId&gt;
+        &lt;version&gt;1.18.36&lt;/version&gt;
+    &lt;/dependency&gt;
+&lt;/dependencies&gt;</code></pre>
+<ul>
+<li>Debe crear la estructura de carpetas mencionada en el paso 0 dentro de <code>src/main/java/com/miniorm/</code>.</li>
+</ul>
+<hr>
+<h2 id="paso-2-definir-anotaciones-personalizadas">Paso 2: Definir anotaciones personalizadas<a class="headerlink" href="#paso-2-definir-anotaciones-personalizadas" title="Permanent link">¶</a></h2>
+<p>Que son las anotaciones?
+Es una forma de agregar metadatos a nuestro código, que luego pueden ser procesados en tiempo de compilación o en tiempo de ejecución. En este caso, usaremos anotaciones para marcar nuestras clases y campos con información relevante para el mapeo ORM.</p>
+<p>En esta seccion estaremos creando las anotaciones personalizadas que usaremos para mapear nuestras entidades.
+- Cree la carpeta <code>annotations</code> dentro de <code>com.miniorm</code> si no existe.
+- Dentro de <code>annotations</code>, cree los siguientes archivos:</p>
+<ol>
+<li>
+<p><code>Entity.java</code>
+</p><pre class="highlight"><code class="language-java">package com.miniorm.annotations;
+
+import java.lang.annotation.*;
+
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.TYPE)
+public @interface Entity {
+    String tableName();
+}</code></pre><p></p>
+<p>Donde:</p>
+<ul>
+<li><code>@Retention(RetentionPolicy.RUNTIME)</code>: Indica que la anotación estará disponible en tiempo de ejecución mediante reflexión.</li>
+<li><code>@Target(ElementType.TYPE)</code>: Especifica que esta anotación se puede aplicar a clases, interfaces o enumeraciones.</li>
+<li><code>public @interface Entity</code>: Define una nueva anotación llamada <code>Entity</code>.</li>
+<li><code>String tableName()</code>: Declara un elemento obligatorio <code>tableName</code> que debe proporcionarse al usar la anotación.</li>
+</ul>
+</li>
+<li>
+<p><code>Column.java</code>
+</p><pre class="highlight"><code class="language-java">package com.miniorm.annotations;
+
+import java.lang.annotation.*;
+
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.FIELD) // Indica que esta anotación se aplica a campos (atributos)
+public @interface Column {
+    String name();
+}</code></pre><p></p>
+</li>
+<li>
+<p><code>Id.java</code></p>
+<p>Ahora es tu turno, crea el archivo <code>Id.java</code> dentro de la carpeta <code>annotations</code> siguiendo el mismo formato que las anteriores. Recuerda que esta anotación se aplicará a campos (atributos) y no a clases.</p>
+</li>
+<li>
+<p><code>GeneratedValue.java</code>
+</p><pre class="highlight"><code class="language-java">package com.miniorm.annotations;
+
+import com.miniorm.enums.GenerationType;
+
+import  java.lang.annotation.*;
+
+@Retention(RetentionPolicy.RUNTIME)
+@Target({ElementType.FIELD, ElementType.METHOD})
+public @interface GeneratedValue {
+    GenerationType strategy() default GenerationType.AUTO_INCREMENT;
+}
+</code></pre><p></p>
+<p>Crea la carpeta <code>enums</code> dentro de <code>com.miniorm</code> si no existe.
+Dentro de <code>enums</code>, cree el siguiente archivo:</p>
+</li>
+<li>
+<p><code>GenerationType.java</code>
+</p><pre class="highlight"><code class="language-java">package com.miniorm.enums;
+
+public enum GenerationType {
+    TABLE,
+    SEQUENCE,
+    IDENTITY,
+    UUID,
+    AUTO_INCREMENT
+}</code></pre><p></p>
+</li>
+</ol>
+<hr>
+<h2 id="paso-3-definamos-las-entidades-del-dominio-modelos">Paso 3: Definamos las entidades del dominio (modelos)<a class="headerlink" href="#paso-3-definamos-las-entidades-del-dominio-modelos" title="Permanent link">¶</a></h2>
+<p>Que son las entidades del dominio (modelos)?
+Son las clases que representan los datos que manejaremos en nuestra aplicación. Cada entidad corresponde a una tabla en la base de datos y sus atributos corresponden a las columnas de esa tabla.</p>
+<p>En esta seccion estaremos creando las entidades del dominio que usaremos en nuestra aplicacion.
+- Cree la carpeta <code>models</code> dentro de <code>com.miniorm</code> si no existe.
+- Dentro de <code>models</code>, cree los siguientes archivos:
+1. <code>User.java</code>
+</p><pre class="highlight"><code class="language-java">package com.miniorm.models;
+
+import com.miniorm.annotations.*;
+import com.miniorm.enums.GenerationType;
+import lombok.*;
+import java.time.LocalDateTime;
+import java.util.UUID;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@Entity(tableName = "users")
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
+    @Column(name = "id")
+    public UUID id;
+    @Column(name = "name")
+    private String name;
+    @Column(name = "email")
+    private String email;
+    @Column(name = "password")
+    private String password;
+    @Column(name = "created_at")
+    private LocalDateTime createdAt;
+    @Column(name = "updated_at")
+    private LocalDateTime updatedAt;
+
+    @Override
+    public String toString() {
+        return
+                """
+                User {
+                    id='%s',
+                    name='%s',
+                    email='%s',
+                    password='%s',
+                    createdAt='%s',
+                    updatedAt='%s'
+                }""".formatted(id, name, email, password, createdAt, updatedAt);
+    }
+}
+</code></pre><p></p>
+<div class="admonition warning">
+<p class="admonition-title">⚠️ Investigue como funcionan las relaciones entre entidades en JPA y como se implementan en Spring Data JPA</p>
+<ul>
+<li>Trata de implementar una relación entre dos entidades, por ejemplo, un <code>Estudiante</code> puede estar inscrito en muchos <code>Course</code> y un <code>Course</code> puede tener muchos <code>Estudiante</code> (relación muchos a muchos).</li>
+<li>Investiga las anotaciones <code>@OneToMany</code>, <code>@ManyToOne</code>, <code>@ManyToMany</code> y <code>@OneToOne</code> y trata de replicarlas e implementarlas en el proyecto.</li>
+</ul>
+</div>
+<p>Me gustaria que investiguee acerca de como funciona esta clase, para ello le dejo las siguientes preguntas que le ayudaran a entender el codigo:</p>
+<ol>
+<li>¿Qué hace la anotación <code>@Entity</code> y qué significa el atributo <code>tableName</code>?</li>
+<li>¿Cuál es el propósito de la anotación <code>@Id</code> y cómo se usa en esta clase?</li>
+<li>¿Qué hace la anotación <code>@GeneratedValue</code> y qué significa el atributo <code>strategy</code>?</li>
+<li>¿Cómo se usan las anotaciones <code>@Column</code> y qué información proporcionan?</li>
+<li>¿Qué papel juegan las anotaciones de Lombok (<code>@NoArgsConstructor</code>, <code>@AllArgsConstructor</code>, <code>@Getter</code>, <code>@Setter</code>) en esta clase?</li>
+<li>¿Qué tipo de datos se utilizan para los atributos <code>id</code>, <code>createdAt</code> y <code>updatedAt</code>, y por qué son apropiados para esos campos?</li>
+<li>¿Cómo funciona el método <code>toString</code> y qué información devuelve sobre la instancia de <code>User</code>, y qué ventajas tiene usar <code>String.format</code> en este contexto?</li>
+</ol>
+<h2 id="paso-4-creamos-el-repositorio-base-generico">Paso 4: Creamos el repositorio base genérico<a class="headerlink" href="#paso-4-creamos-el-repositorio-base-generico" title="Permanent link">¶</a></h2>
+<p>Que es un repositorio?</p>
+<p>Es una capa de abstracción que maneja la persistencia de datos. Proporciona métodos para realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) sobre las entidades sin exponer los detalles de cómo se almacenan los datos.</p>
+<p>Que es un generico (generic)?</p>
+<p>Es una característica de Java que permite definir clases, interfaces y métodos con tipos de datos parametrizados. Esto permite crear código más flexible y reutilizable, ya que se puede trabajar con diferentes tipos de datos sin necesidad de duplicar código.</p>
+<p>En esta seccion estaremos creando el repositorio base generico que usaremos en nuestra aplicacion.</p>
+<pre class="highlight"><code>- Cree la carpeta `repository` dentro de `com.miniorm` si no existe.
+- Dentro de `repository`, cree los siguientes archivos:</code></pre>
+<ol>
+<li><code>GenericRepository.java</code>
+<pre class="highlight"><code class="language-java">package com.miniorm.core;
+
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+
+public interface GenericRepository&lt;ID, T&gt; {
+    T save(ID id, T entity);
+    Optional&lt;T&gt; findById(ID id, Object o);
+    T update(ID id, T entity);
+    Boolean delete(ID id, T entity);
+    List&lt;Map&lt;ID, T&gt;&gt; findAll();
+}</code></pre></li>
+</ol>
+<p>Que esta haciendo este codigo?</p>
+<ul>
+<li><code>public interface GenericRepository&lt;T, ID&gt;</code>: Define una interfaz genérica llamada <code>GenericRepository</code> con dos parámetros de tipo: <code>T</code> (tipo de entidad) e <code>ID</code> (tipo de identificador).</li>
+<li><code>T save(T entity)</code>: Declara un método para guardar una entidad del tipo <code>T</code>.</li>
+<li><code>Optional&lt;T&gt; findById(ID id)</code>: Declara un método para buscar una entidad por su identificador del tipo <code>ID</code>, devolviendo un <code>Optional</code> que puede contener la entidad o estar vacío si no se encuentra.</li>
+<li><code>T update(T entity)</code>: Declara un método para actualizar una entidad del tipo <code>T</code>.</li>
+<li><code>Boolean delete(T entity)</code>: Declara un método para eliminar una entidad del tipo <code>T</code>, devolviendo un booleano que indica si la eliminación fue exitosa.</li>
+<li><code>List&lt;T&gt; findAll()</code>: Declara un método para obtener una lista de todas las entidades del tipo <code>T</code>.</li>
+</ul>
+<p>Este repositorio es una interfaz genérica que define operaciones CRUD básicas para cualquier tipo de entidad y su identificador, permitiendo la reutilización del código para diferentes entidades en la aplicación.</p>
+<h2 id="5-implementamos-el-repositorio-in-memory">5: Implementamos el repositorio In-Memory<a class="headerlink" href="#5-implementamos-el-repositorio-in-memory" title="Permanent link">¶</a></h2>
+<p>Que es un repositorio In-Memory?
+Es una implementación de un repositorio que almacena los datos en la memoria del programa en lugar de una base de datos persistente. Esto es útil para pruebas, desarrollo rápido o aplicaciones simples donde no se requiere almacenamiento a largo plazo. Es decir, esta clase servira como una base de datos en memoria para almacenar nuestras entidades.</p>
+<p>En esta seccion estaremos creando el repositorio In-Memory que usaremos en nuestra aplicacion.
+- Dentro de la carpeta <code>core</code>, cree el siguiente archivo:
+1. <code>InMemoryRepository.java</code> y copie el siguiente codigo:
+</p><pre class="highlight"><code class="language-java">package com.miniorm.core;
+
+import com.miniorm.annotations.Id;
+import java.lang.reflect.Field;
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.AtomicInteger;
+
+public class InMemoryRepository &lt;ID, T&gt; implements GenericRepository&lt;ID, T&gt; {
+
+    private final Class&lt;T&gt; entityClass;
+    private final Map&lt;Object, List&lt;Map&lt;ID, T&gt;&gt;&gt; storage = new ConcurrentHashMap&lt;&gt;(); // Thread-safe map for in-memory storage
+    private final AtomicInteger sequence = new AtomicInteger(1); // For generating unique IDs if needed
+    private Field idField;
+
+    public InMemoryRepository(Class&lt;T&gt; entityClass) {
+        this.entityClass = entityClass;
+        for (Field field : this.entityClass.getDeclaredFields()) {
+            if (field.isAnnotationPresent(Id.class)) {
+                field.setAccessible(true);
+                this.idField = field;
+                break;
+            }
+        }
+        if (this.idField == null) {
+            throw new IllegalArgumentException("No @Id field found in class " + entityClass.getName());
+        }
+    }
+
+    private Object getId(T entity) {
+        try {
+            return idField.get(entity);
+        } catch (IllegalAccessException e) {
+            throw new RuntimeException("Failed to access ID field", e);
+        }
+    }
+
+    private void setIdValue(T entity, Object id) {
+        try {
+            idField.set(entity, id);
+        } catch (IllegalAccessException e) {
+            throw new RuntimeException("Failed to set ID field", e);
+        }
+    }
+
+    @Override
+    public T save(ID id,T entity) {
+        Object entityClassId = getId(entity);
+        if (id == null || (id instanceof Integer &amp;&amp; ((Integer) id) == 0)) {
+            setIdValue(entity, sequence.getAndIncrement());
+        }
+        if (!storage.containsKey(entityClassId)) {
+            storage.put(entityClassId, new ArrayList&lt;&gt;());
+        }
+        assert id != null;
+        storage.get(entityClassId).add(Map.of(id, entity));
+        return entity;
+    }
+
+    @Override
+    public Optional&lt;T&gt; findById(ID id, Object o) {
+        return storage.get(o).stream()
+                .map(m -&gt; m.get(id))
+                .filter(Objects::nonNull)
+                .findFirst();
+    }
+
+    @Override
+    public List&lt;Map&lt;ID, T&gt;&gt; findAll() {
+        List&lt;Map&lt;ID, T&gt;&gt; all = new ArrayList&lt;&gt;();
+        for (List&lt;Map&lt;ID, T&gt;&gt; maps : storage.values()) {
+            all.addAll(maps);
+        }
+        return all;
+    }
+
+    @Override
+    public Boolean delete(ID id, T entity) {
+        return storage.remove(entity) != null;
+    }
+
+    @Override
+    public T update(ID id, T entity) {
+        return storage.put(getId(entity), List.of(Map.of(id, entity))) != null ? entity : null;
+    }
+}</code></pre><p></p>
+<p><strong>Notas importantes:</strong></p>
+<ul>
+<li>
+<p>Aquí usamos reflexión para encontrar el campo anotado con <code>@Id</code> y asignar ids automáticos (secuencia simple).</p>
+</li>
+<li>
+<p><code>ConcurrentHashMap</code> ofrece seguridad básica en concurrencia.</p>
+</li>
+</ul>
+<p><strong>Preguntas para entender el código:</strong></p>
+<p>Ahora tu tarea es entender que es lo que hace este codigo, para ello te dejo una una serie de preguntas que te ayudaran a entender el codigo:</p>
+<ol>
+<li>¿Qué hace la clase <code>InMemoryRepository</code> y qué interfaces implementa?</li>
+<li>¿Cuál es el propósito del mapa <code>storage</code> y cómo se utiliza?</li>
+<li>¿Cómo se genera un ID único para las entidades si no se proporciona uno?</li>
+<li>¿Qué hace el método <code>getId</code> y cómo accede al campo ID de una entidad?</li>
+<li>¿Cómo funciona el método <code>save</code> y qué hace si el ID es nulo o cero?</li>
+<li>¿Qué hace el método <code>findById</code> y cómo busca una entidad por su ID?</li>
+<li>¿Cómo funciona el método <code>findAll</code> y qué devuelve?</li>
+<li>¿Qué hace el método <code>delete</code> y cómo elimina una entidad del almacenamiento?</li>
+<li>¿Cómo funciona el método <code>update</code> y qué hace si la entidad no existe en el almacenamiento?</li>
+</ol>
+<h2 id="6-implementamos-el-entitymanager-capa-de-orquestacion">6: Implementamos el <code>EntityManager</code> (capa de orquestación)<a class="headerlink" href="#6-implementamos-el-entitymanager-capa-de-orquestacion" title="Permanent link">¶</a></h2>
+<p>Dentro del paquete <code>com.miniorm.core</code> es decir dentro de la carpeta <code>core</code>, cree el siguiente archivo:
+1. <code>EntityManager.java</code> y copie el siguiente codigo:
+</p><pre class="highlight"><code class="language-java">package com.miniorm.core;
+
+public class EntityManager {
+    public &lt;ID, T&gt; GenericRepository&lt;ID, T&gt; getRepository(Class&lt;T&gt; clazz) {
+        return new InMemoryRepository&lt;&gt;(clazz);
+    }
+}</code></pre><p></p>
+<p><strong>Responsabilidad:</strong> ofrecer repositorios a la capa de servicio; punto único para cambiar la estrategia de persistencia.</p>
+<p><strong>Preguntas para entender el código:</strong></p>
+<ol>
+<li>¿Qué hace el método <code>getRepository</code> y qué parámetros recibe?</li>
+<li>¿Qué tipo de repositorio devuelve y cómo se instancia?</li>
+<li>¿Cómo se utiliza el <code>EntityManager</code> en la arquitectura general del proyecto?</li>
+<li>¿Qué ventajas ofrece tener un <code>EntityManager</code> en lugar de instanciar repositorios directamente en los servicios?</li>
+</ol>
+<h2 id="7-implementamos-la-capa-de-servicio-logica-de-negocio">7: Implementamos la capa de servicio (lógica de negocio)<a class="headerlink" href="#7-implementamos-la-capa-de-servicio-logica-de-negocio" title="Permanent link">¶</a></h2>
+<p>Dentro de la carpeta <code>service</code>, cree el siguiente archivo:
+1. <code>UserService.java</code> y copie el siguiente codigo:
+</p><pre class="highlight"><code class="language-java">package com.miniorm.service;
+
+import com.miniorm.core.GenericRepository;
+import com.miniorm.dto.RegisterUserDto;
+import com.miniorm.models.User;
+
+import java.sql.Timestamp;
+import java.util.UUID;
+
+public class UserService {
+    private final GenericRepository&lt;UUID, User&gt; userRepository;
+
+    public UserService(GenericRepository&lt;UUID, User&gt; userRepository) {
+        this.userRepository = userRepository;
+    }
+
+    public User createUser(RegisterUserDto userDto) {
+        User user = new User();
+        user.setName(userDto.name());
+        user.setEmail(userDto.email());
+        user.setPassword(userDto.password());
+
+        UUID uuid = UUID.randomUUID();
+        user.setId(uuid);
+        user.setCreatedAt(new Timestamp(System.currentTimeMillis()).toLocalDateTime());
+        user.setUpdatedAt(new Timestamp(System.currentTimeMillis()).toLocalDateTime());
+        return userRepository.save(uuid, user);
+    }
+
+    public User getUserById(UUID id) {
+        return userRepository.findById(id, null).orElse(null);
+    }
+
+    public User updateUser(UUID id, User user) {
+        return userRepository.update(id, user);
+    }
+
+    public Boolean deleteUser(UUID id, User user) {
+        return userRepository.delete(id, user);
+    }
+
+    public void listAllUsers() {
+        userRepository.findAll().forEach(System.out::println);
+    }
+}</code></pre><p></p>
+<p><strong>Por qué esta separación:</strong> la <code>service</code> no conoce la implementación concreta del repositorio — se inyecta mediante el constructor (Dependency Injection manual).</p>
+<p><strong>Preguntas para entender el código:</strong></p>
+<ol>
+<li>¿Cuál es la responsabilidad principal de la clase <code>UserService</code>?</li>
+<li>¿Cómo se inyecta el repositorio en el servicio y por qué es importante?</li>
+<li>¿Qué hace el método <code>createUser</code> y cómo utiliza el DTO <code>RegisterUserDto</code>?</li>
+<li>¿Cómo funcionan los métodos <code>getUserById</code>, <code>updateUser</code>, <code>deleteUser</code> y <code>listAllUsers</code>?</li>
+<li>¿Qué ventajas ofrece tener una capa de servicio separada de la capa de repositorio?</li>
+<li>¿Cómo maneja el servicio la creación de IDs y las marcas de tiempo para los usuarios?</li>
+<li>¿Qué tipo de objeto devuelve el método <code>getUserById</code> si no encuentra un usuario con el ID proporcionado?</li>
+<li>¿Cómo se asegura el servicio de que los datos del usuario estén completos antes de guardarlos en el repositorio?</li>
+<li>¿Qué patrón de diseño se está utilizando al inyectar el repositorio en el servicio a través del constructor?</li>
+</ol>
+<p>Bien hasta este punto de seguro tendra algunos errores que, en especidifco en la funcion <code>createUser</code>, esto se debe a que estamos usando un DTO que aun no hemos creado, para ello cree la carpeta <code>dto</code> dentro de <code>com.miniorm</code> si no existe.</p>
+<p>Pero ahora que demonios, que es un DTO?</p>
+<p>DTO significa "Data Transfer Object" (Objeto de Transferencia de Datos). Es un patrón de diseño utilizado para transferir datos entre diferentes capas o componentes de una aplicación, especialmente en aplicaciones distribuidas o basadas en servicios.</p>
+<p>Entonces cree el siguiente archivo dentro de la carpeta <code>dto</code>:
+1. <code>RegisterUserDto.java</code> y copie el siguiente codigo:
+</p><pre class="highlight"><code class="language-java">package com.miniorm.dto;
+
+public record RegisterUserDto(String name, String email, String password) {}</code></pre><p></p>
+<ul>
+<li>Aquí usamos un <code>record</code> de Java (disponible desde Java 14) para definir un DTO inmutable y conciso.</li>
+<li>Un <code>record</code> es una clase especial en Java que está diseñada para ser una simple portadora de datos. Proporciona automáticamente implementaciones para métodos comunes como <code>equals()</code>, <code>hashCode()</code>, y <code>toString()</code>, así como constructores y getters para sus componentes.</li>
+<li><code>public record RegisterUserDto(String name, String email, String password) {}</code>: Define un <code>record</code> llamado <code>RegisterUserDto</code> con tres componentes: <code>name</code>, <code>email</code> y <code>password</code>. Estos componentes son inmutables y se inicializan a través del constructor generado automáticamente.</li>
+</ul>
+<h2 id="8-implementamos-la-capa-de-presentacion-cli-demo">8: Implementamos la capa de presentación (CLI demo)<a class="headerlink" href="#8-implementamos-la-capa-de-presentacion-cli-demo" title="Permanent link">¶</a></h2>
+<p>Dentro de la carpeta <code>app</code>, cree el siguiente archivo:
+1. <code>Main.java</code> y copie el siguiente codigo:
+</p><pre class="highlight"><code class="language-java">package com.miniorm.app;
+
+import com.miniorm.core.EntityManager;
+import com.miniorm.dto.RegisterUserDto;
+import com.miniorm.models.Product;
+import com.miniorm.models.User;
+import com.miniorm.service.ProductService;
+import com.miniorm.service.UserService;
+
+public class Main {
+    public static void main(String[] args) {
+        EntityManager entityManager = new EntityManager();
+        UserService userService = new UserService(entityManager.getRepository(User.class));
+
+        userService.createUser(new RegisterUserDto("John Doe", "john.doe@example.com", "password123"));
+        userService.createUser(new RegisterUserDto("Jane Smith", "jane.smith@gmail.com", "securepass"));
+
+        userService.listAllUsers();
+        System.out.println("--- Products ---");
+
+    }
+}</code></pre><p></p>
+<p>Al ejecutar este código, debería ver en la consola la lista de usuarios creados, similar a la siguiente salida:
+</p><pre class="highlight"><code class="language-java">ID: c40b46d2-3436-407b-baa7-c0b25d61e3fb,
+User: User {
+    id='c40b46d2-3436-407b-baa7-c0b25d61e3fb',
+    name='Jane Smith',
+    email='jane.smith@gmail.com',
+    password='securepass',
+    createdAt='2025-10-06T23:52:40.112',
+    updatedAt='2025-10-06T23:52:40.112'
+}
+ID: d94a73fb-1048-4270-a31c-ee2b19e72ec7,
+User: User {
+    id='d94a73fb-1048-4270-a31c-ee2b19e72ec7',
+    name='John Doe',
+    email='john.doe@example.com',
+    password='password123',
+    createdAt='2025-10-06T23:52:40.100',
+    updatedAt='2025-10-06T23:52:40.109'
+}
+--- Products ---</code></pre><p></p>
+<ul>
+<li>Aquí usamos el <code>EntityManager</code> para obtener un repositorio de <code>User</code> y lo inyectamos en el <code>UserService</code>.</li>
+<li>Luego, creamos algunos usuarios y listamos todos los usuarios almacenados.</li>
+<li>Puede expandir esta demo agregando más funcionalidades, como actualizar o eliminar usuarios, o creando y gestionando productos usando un <code>ProductService</code> similar.</li>
+</ul>
+<h2 id="10-evaluacion-final">10: Evaluación final<a class="headerlink" href="#10-evaluacion-final" title="Permanent link">¶</a></h2>
+<p>En esta sección usted deberá hacer lo siguiente:</p>
+<ol>
+<li>Extender el proyecto para soportar otra entidad, por ejemplo, <code>Product</code> con atributos como <code>id</code>, <code>name</code>, <code>price</code>, <code>createdAt</code>, <code>updatedAt</code>.</li>
+<li>Implementar un <code>ProductService</code> similar a <code>UserService</code> para manejar operaciones CRUD sobre productos.</li>
+<li>Crear un DTO para registrar productos, similar a <code>RegisterUserDto</code>.</li>
+<li>Modificar la clase <code>Main</code> para demostrar la creación, actualización, eliminación y listado de productos además de usuarios, se recomienda que lo hagas debajo de la línea <code>System.out.println("--- Products ---");</code>.</li>
+<li>Documentar el proyecto en el archivo <code>README.md</code>, explicando la arquitectura, cómo ejecutar la aplicación y cualquier otro detalle relevante.</li>
+</ol>
+<h1 id="ejercicio-2-miniorm-con-spring-boot">Ejercicio 2: 🧭 Mini‑ORM con Spring Boot<a class="headerlink" href="#ejercicio-2-miniorm-con-spring-boot" title="Permanent link">¶</a></h1>
+<p>En este ejercicio usted debera replicar el ejercicio anterior pero usando Spring Boot, para ello le dejo los siguientes pasos a seguir:</p>
+<ol>
+<li>Cree un nuevo proyecto Spring Boot usando Spring Initializr (https://start.spring.io/) con las siguientes dependencias:</li>
+<li>Spring Web</li>
+<li>Spring Data JPA</li>
+<li>Simule una base de datos en memoria usando (Map, List, etc.) segun su criterio</li>
+<li>
+<p>Lombok</p>
+</li>
+<li>
+<p>Replicar la estructura de carpetas y archivos del ejercicio anterior.</p>
+</li>
+<li>Implementar las mismas funcionalidades (entidades, repositorios, servicios, controladores)</li>
+<li>Probar la aplicación usando Postman o cualquier otra herramienta para hacer peticiones HTTP.</li>
+<li>Documentar el proyecto en el archivo <code>README.md</code>, explicando la arquitectura, cómo ejecutar la aplicación y cualquier otro detalle relevante.</li>
+<li>Subir el proyecto a un repositorio de GitHub y compartir el enlace en classroom.</li>
+</ol>
+<h1 id="conclusion">Conclusión<a class="headerlink" href="#conclusion" title="Permanent link">¶</a></h1>
+<p>En esta práctica, hemos explorado los fundamentos de Spring Boot y cómo construir una aplicación sencilla utilizando sus características principales. Hemos aprendido a configurar un entorno de desarrollo, crear un proyecto Spring Boot, y desarrollar una aplicación que incluye controladores, servicios y repositorios. Además, hemos visto cómo utilizar herramientas modernas como Lombok y Maven para mejorar nuestra productividad y gestionar dependencias de manera eficiente.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright © 2025 by K3V1N 117</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../javascripts/katex.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+        <script src="../../javascripts/tablesort.js"></script>
+
+        <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body></html>
