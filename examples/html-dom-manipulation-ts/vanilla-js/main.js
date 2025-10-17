@@ -1,30 +1,20 @@
-const users = [];
+const nameInput = document.getElementById("nameInput"); // de donde obtengo el valor (nombre)
+const addUserButton = document.getElementById("addUserButton"); // cuando se obtiene el valor de nameInput
+const usersList = document.getElementById("usersList"); // donde se va a mostrar el valor obtenido
 
-const button = document.getElementById("addUserButton");
-const nameInput = document.getElementById("nameInput"); // value
-const usersList = document.getElementById("usersList"); // ul
+usersList.style.backgroundColor = "#f0f0f0";
+usersList.style.padding = "10px";
+usersList.style.borderRadius = "5px";
+usersList.style.listStyleType = "round";
+usersList.style.fontFamily = "Arial, sans-serif";
+usersList.style.fontSize = "16px";
 
-button.addEventListener("click", () => {
+addUserButton.addEventListener("click", () => {
   const name = nameInput.value;
-  users.push(name);
-  let li = document.createElement("li");
-  li.textContent = name;
-  usersList.appendChild(li);
-  button.style.backgroundColor = getRandomColor();
-});
-
-const box = document.getElementById("colorBox");
-
-box.style.display = "flex";
-box.style.width = "300px";
-box.style.height = "300px";
-box.style.backgroundColor = "lightgray";
-box.style.justifyContent = "center";
-box.style.alignItems = "center";
-box.style.margin = "20px";
-
-box.addEventListener("click", () => {
-  box.style.backgroundColor = getRandomColor();
+  const li = document.createElement("li"); // <li></li>
+  li.textContent = name; // <li>valor de name</li>
+  usersList.appendChild(li); // <ul> <li>valor de name</li> </ul>
+  nameInput.value = ""; // limpiar el input
 });
 
 function getRandomColor() {
@@ -36,18 +26,11 @@ function getRandomColor() {
   return color;
 }
 
-/*
-- crear un  contenedor para (div)
-    - estilos css
-       - width: 300px
-       - height: 300px
-       - background-color: lightgray
+const box = document.getElementById("colorBox");
+box.style.width = "200px";
+box.style.height = "200px";
+box.style.border = "2px solid #000";
 
-- Boton (button)
-    - estilos css
-       - padding: 10px 20px
-       - background-color: blue
-
-Event Listener (click)
-    - cambiar el color del contenedor (div) a rojo
-       */
+box.addEventListener("click", () => {
+  box.style.background = getRandomColor();
+})
