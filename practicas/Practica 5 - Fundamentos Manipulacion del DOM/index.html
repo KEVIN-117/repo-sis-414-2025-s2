@@ -1,0 +1,478 @@
+<!DOCTYPE html><html lang="en" data-bs-theme="light"><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Práctica 5 - Fundamentos Manipulación del DOM - SIS-414 G-2</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="https://unpkg.com/katex@0/dist/katex.min.css" rel="stylesheet">
+        <link href="../../styles/admonitions.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">SIS-414 G-2</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Apuntes</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../apuntes/ASINCRONIA/" class="dropdown-item">Asincronismo con JavaScript</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/BACKEND/" class="dropdown-item">BACKEND</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/DOM/" class="dropdown-item">DOM (Document Object Model)</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/FUNDAMENTOS_REACT/" class="dropdown-item">React</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/GitGitHub/" class="dropdown-item">Introducción a Git: Guía para Principiantes</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/Java%2021%20%2B%20Spring%20Boot%20Backend%20Developer%201e0db4fab681802aadd4d6c9c44a254d/" class="dropdown-item">Java 21 + Spring Boot Backend Developer</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/MODULOS_ES/" class="dropdown-item">Modulos en ES6</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/PETICIONES/" class="dropdown-item">Peticiones HTTP</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/js/" class="dropdown-item">JAVASCRIPT</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Guides</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../guides/PullRequest/" class="dropdown-item">PullRequest</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Laboratorios</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../laboratorios/Laboratorio%201/" class="dropdown-item">LABORATORIO 1 SIS-414</a>
+</li>
+                                    
+<li>
+    <a href="../../laboratorios/Laboratorio%202/" class="dropdown-item">Laboratorio 2</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown" aria-expanded="false">Practicas</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Practica%200%20-%20Prueba%20de%20Conocimiento/" class="dropdown-item">Practica 0   Prueba de Conocimiento</a>
+</li>
+                                    
+<li>
+    <a href="../Practica%201%20-%20Git%20%2B%20GitHub/" class="dropdown-item">Practica 1   Git + GitHub</a>
+</li>
+                                    
+<li>
+    <a href="../Practica%202%20-%20Git%20%2B%20GitHub/" class="dropdown-item">Practica 2   Git + GitHub</a>
+</li>
+                                    
+<li>
+    <a href="../Practica%203%20-%20Fundamentos%20React/" class="dropdown-item">Práctica 3 - Fundamentos React</a>
+</li>
+                                    
+<li>
+    <a href="../Practica%204%20-%20Fundamentos%20de%20Spring%20Boot/" class="dropdown-item">Práctica 4 - Fundamentos de Spring Boot</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Práctica 5 - Fundamentos Manipulación del DOM</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                            <li class="nav-item">
+                                <a rel="prev" href="../Practica%204%20-%20Fundamentos%20de%20Spring%20Boot/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#practica-5-fundamentos-de-manipulacion-del-dom" class="nav-link">🧩 Práctica 5 - Fundamentos de Manipulación del DOM</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#objetivos-especificos" class="nav-link">🎯 Objetivos específicos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#conceptos-clave-previos" class="nav-link">🧠 Conceptos clave previos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#herramientas-y-tecnologias" class="nav-link">🧰 Herramientas y tecnologías</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#paso-1-crear-el-entorno-de-trabajo" class="nav-link">🪄 Paso 1: Crear el entorno de trabajo</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#paso-2-manipulacion-basica-del-dom" class="nav-link">🧩 Paso 2: Manipulación básica del DOM</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#paso-3-creacion-dinamica-de-elementos" class="nav-link">🧱 Paso 3: Creación dinámica de elementos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#paso-4-manejo-de-eventos" class="nav-link">🧭 Paso 4: Manejo de eventos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#paso-5-consumiendo-datos-con-fetch-api" class="nav-link">🌍 Paso 5: Consumiendo datos con Fetch API</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#paso-6-estilos-dinamicos" class="nav-link">🎨 Paso 6: Estilos dinámicos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#paso-7-reto-final-mini-pokedex-interactiva" class="nav-link">🧪 Paso 7: Reto final — Mini Pokédex interactiva</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#recursos-recomendados" class="nav-link">📘 Recursos recomendados</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#evaluacion-sugerida" class="nav-link">✅ Evaluación sugerida</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="practica-5-fundamentos-de-manipulacion-del-dom">🧩 Práctica 5 - Fundamentos de Manipulación del DOM<a class="headerlink" href="#practica-5-fundamentos-de-manipulacion-del-dom" title="Permanent link">¶</a></h1>
+<h2 id="objetivos-especificos">🎯 Objetivos específicos<a class="headerlink" href="#objetivos-especificos" title="Permanent link">¶</a></h2>
+<ol>
+<li>Comprender la estructura del DOM y cómo interactuar con ella mediante JavaScript.</li>
+<li>Aprender a seleccionar elementos del DOM utilizando diferentes métodos.</li>
+<li>Practicar la creación, modificación y eliminación de elementos del DOM.</li>
+<li>Implementar eventos para hacer la página web más interactiva.</li>
+<li>Desarrollar una pequeña aplicación web que utilice la manipulación del DOM para mejorar la experiencia del usuario.</li>
+<li>Hacer uso de la API Fetch para obtener datos de un servidor y mostrarlos en la página web.</li>
+<li>Aplicar estilos dinámicos a los elementos del DOM mediante JavaScript.</li>
+</ol>
+<p>!!! TIP "💁‍♂️ Uno de los principales objetivos es:" - Fomentar la práctica del aprendizaje autónomo y el uso de recursos en línea, es decir <code>aprender</code> a <code>aprender</code>, siguiendo el concepto de aprendizaje <code>autodidacta</code>.</p>
+<hr>
+<h2 id="conceptos-clave-previos">🧠 Conceptos clave previos<a class="headerlink" href="#conceptos-clave-previos" title="Permanent link">¶</a></h2>
+<p>Antes de comenzar asegúrate de comprender los siguientes conceptos:</p>
+<ul>
+<li>¿Qué es el DOM y cómo lo representa el navegador?</li>
+<li>Diferencia entre <code>innerHTML</code>, <code>textContent</code> y <code>value</code>.</li>
+<li>Métodos de selección: <code>getElementById</code>, <code>querySelector</code>, <code>querySelectorAll</code>.</li>
+<li>Eventos comunes: <code>click</code>, <code>input</code>, <code>submit</code>.</li>
+<li>Promesas y uso básico de <code>fetch</code>.</li>
+</ul>
+<hr>
+<h2 id="herramientas-y-tecnologias">🧰 Herramientas y tecnologías<a class="headerlink" href="#herramientas-y-tecnologias" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>HTML5</strong> para la estructura base.</li>
+<li><strong>TypeScript</strong> (compilado con <strong>Vite</strong>) para mayor control y tipado.</li>
+<li><strong>Fetch API</strong> para comunicación con el servidor.</li>
+<li><strong>PokéAPI</strong>: <a href="https://pokeapi.co/">https://pokeapi.co/</a></li>
+<li><strong>CSS básico</strong> o inline styles (opcional para estilos dinámicos).</li>
+</ul>
+<hr>
+<h2 id="paso-1-crear-el-entorno-de-trabajo">🪄 Paso 1: Crear el entorno de trabajo<a class="headerlink" href="#paso-1-crear-el-entorno-de-trabajo" title="Permanent link">¶</a></h2>
+<ol>
+<li>
+<p>Crea un nuevo proyecto con Vite:
+   </p><pre class="highlight"><code class="language-bash">npm create vite@latest practica-dom -- --template vanilla-ts
+cd practica-dom
+npm install
+npm run dev</code></pre><p></p>
+</li>
+<li>
+<p>Abre el proyecto en tu editor y verifica que funcione correctamente.</p>
+</li>
+<li>
+<p>Dentro del archivo <code>index.html</code>, limpia el contenido inicial y deja esta estructura base:</p>
+</li>
+</ol>
+<pre class="highlight"><code class="language-html">&lt;body&gt;
+  &lt;h1&gt;Pokédex DOM&lt;/h1&gt;
+  &lt;input type="text" id="pokemonName" placeholder="Escribe un nombre de Pokémon..." /&gt;
+  &lt;button id="buscarBtn"&gt;Buscar&lt;/button&gt;
+  &lt;div id="resultado"&gt;&lt;/div&gt;
+  &lt;script type="module" src="/src/main.ts"&gt;&lt;/script&gt;
+&lt;/body&gt;</code></pre>
+<hr>
+<h2 id="paso-2-manipulacion-basica-del-dom">🧩 Paso 2: Manipulación básica del DOM<a class="headerlink" href="#paso-2-manipulacion-basica-del-dom" title="Permanent link">¶</a></h2>
+<ol>
+<li>En <code>main.ts</code>, selecciona los elementos del DOM:</li>
+</ol>
+<pre class="highlight"><code class="language-ts">const input = document.querySelector&lt;HTMLInputElement&gt;("#pokemonName")!;
+const boton = document.querySelector&lt;HTMLButtonElement&gt;("#buscarBtn")!;
+const resultado = document.querySelector&lt;HTMLDivElement&gt;("#resultado")!;</code></pre>
+<ol>
+<li>Prueba cambiar dinámicamente el contenido:</li>
+</ol>
+<pre class="highlight"><code class="language-ts">boton.addEventListener("click", () =&gt; {
+  resultado.textContent = `Buscando a ${input.value}...`;
+});</code></pre>
+<p>📍 <em>Objetivo:</em> comprender cómo acceder a los elementos y modificarlos desde TypeScript.</p>
+<hr>
+<h2 id="paso-3-creacion-dinamica-de-elementos">🧱 Paso 3: Creación dinámica de elementos<a class="headerlink" href="#paso-3-creacion-dinamica-de-elementos" title="Permanent link">¶</a></h2>
+<p>Agreguemos un pequeño mensaje dinámico:</p>
+<pre class="highlight"><code class="language-ts">const mensaje = document.createElement("p");
+mensaje.textContent = "Bienvenido a la Pokédex DOM";
+mensaje.style.color = "purple";
+document.body.appendChild(mensaje);</code></pre>
+<p>🧠 <em>Observa:</em> hemos creado un nuevo nodo, definido su texto y lo agregamos al DOM.</p>
+<hr>
+<h2 id="paso-4-manejo-de-eventos">🧭 Paso 4: Manejo de eventos<a class="headerlink" href="#paso-4-manejo-de-eventos" title="Permanent link">¶</a></h2>
+<p>Agreguemos interactividad con eventos:</p>
+<pre class="highlight"><code class="language-ts">input.addEventListener("focus", () =&gt; {
+  input.style.borderColor = "skyblue";
+});
+
+input.addEventListener("blur", () =&gt; {
+  input.style.borderColor = "";
+});</code></pre>
+<p>💡 <em>Tip:</em> Prueba otros eventos como <code>keydown</code>, <code>mouseover</code> o <code>submit</code>.</p>
+<hr>
+<h2 id="paso-5-consumiendo-datos-con-fetch-api">🌍 Paso 5: Consumiendo datos con Fetch API<a class="headerlink" href="#paso-5-consumiendo-datos-con-fetch-api" title="Permanent link">¶</a></h2>
+<p>Ahora usaremos la <strong>PokéAPI</strong> para obtener información real de un Pokémon.</p>
+<pre class="highlight"><code class="language-ts">async function buscarPokemon(nombre: string) {
+  try {
+    const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${nombre.toLowerCase()}`);
+    if (!res.ok) throw new Error("Pokémon no encontrado");
+
+    const data = await res.json();
+
+    resultado.innerHTML = `
+      &lt;h2&gt;${data.name.toUpperCase()}&lt;/h2&gt;
+      &lt;img src="${data.sprites.front_default}" alt="${data.name}"&gt;
+      &lt;p&gt;Altura: ${data.height}&lt;/p&gt;
+      &lt;p&gt;Peso: ${data.weight}&lt;/p&gt;
+    `;
+  } catch (error) {
+    resultado.innerHTML = `&lt;p style="color:red;"&gt;❌ No se encontró el Pokémon&lt;/p&gt;`;
+  }
+}
+
+boton.addEventListener("click", () =&gt; {
+  if (input.value.trim() !== "") buscarPokemon(input.value);
+});</code></pre>
+<p>🎯 <em>Objetivo:</em> comprender cómo trabajar con promesas y actualizar el DOM con datos externos.</p>
+<hr>
+<h2 id="paso-6-estilos-dinamicos">🎨 Paso 6: Estilos dinámicos<a class="headerlink" href="#paso-6-estilos-dinamicos" title="Permanent link">¶</a></h2>
+<p>Podemos añadir efectos visuales en tiempo real:</p>
+<pre class="highlight"><code class="language-ts">resultado.addEventListener("mouseover", () =&gt; {
+  resultado.style.backgroundColor = "#f0f0f0";
+});
+resultado.addEventListener("mouseout", () =&gt; {
+  resultado.style.backgroundColor = "transparent";
+});</code></pre>
+<hr>
+<h2 id="paso-7-reto-final-mini-pokedex-interactiva">🧪 Paso 7: Reto final — Mini Pokédex interactiva<a class="headerlink" href="#paso-7-reto-final-mini-pokedex-interactiva" title="Permanent link">¶</a></h2>
+<p>🧩 <strong>Reto:</strong>
+Agrega las siguientes características a tu Pokédex:</p>
+<ol>
+<li>Un botón para limpiar los resultados (<code>Limpiar</code>).</li>
+<li>Mostrar un mensaje de carga mientras se busca el Pokémon.</li>
+<li>Aplicar estilos dinámicos según el tipo del Pokémon (por ejemplo: <code>fire</code>, <code>water</code>, <code>grass</code>).</li>
+<li>Bonus: Permitir buscar varios Pokémon seguidos y listarlos en tarjetas.</li>
+</ol>
+<p>💡 <em>Consejo:</em> Usa <code>createElement</code> y <code>appendChild</code> en lugar de <code>innerHTML</code> para practicar creación de nodos.</p>
+<hr>
+<h2 id="recursos-recomendados">📘 Recursos recomendados<a class="headerlink" href="#recursos-recomendados" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model">Documentación de MDN sobre el DOM</a></li>
+<li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide">Guía de JavaScript en MDN</a></li>
+<li><a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/">Curso de JavaScript en freeCodeCamp</a></li>
+<li><a href="https://www.w3schools.com/js/js_htmldom.asp">Tutorial de Manipulación del DOM en W3Schools</a></li>
+<li><a href="https://www.javascript.info/dom-nodes">Ejemplos de Manipulación del DOM en JavaScript</a></li>
+<li><a href="https://developer.mozilla.org/es/docs/Web/API/Fetch_API">Documentación de Fetch API en MDN</a></li>
+<li><a href="https://www.w3schools.com/js/js_events.asp">Tutorial de Eventos en JavaScript en W3Schools</a></li>
+<li><a href="https://developer.mozilla.org/es/docs/Web/Events">Documentación de Eventos en MDN</a></li>
+<li><a href="https://www.w3schools.com/jsref/prop_style_background.asp">Tutorial de Estilos en JavaScript en W3Schools</a></li>
+</ul>
+<hr>
+<h2 id="evaluacion-sugerida">✅ Evaluación sugerida<a class="headerlink" href="#evaluacion-sugerida" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Descripción</th>
+<th>Puntos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Interacción con el DOM</td>
+<td>Selección y manipulación correcta de elementos</td>
+<td>20 pts</td>
+</tr>
+<tr>
+<td>Uso de eventos</td>
+<td>Implementa eventos y reacciones dinámicas</td>
+<td>20 pts</td>
+</tr>
+<tr>
+<td>Uso de Fetch API</td>
+<td>Consume y muestra datos correctamente</td>
+<td>30 pts</td>
+</tr>
+<tr>
+<td>Estilos dinámicos</td>
+<td>Aplicación de estilos según eventos o datos</td>
+<td>15 pts</td>
+</tr>
+<tr>
+<td>Creatividad y mejora propia</td>
+<td>Incluye detalles adicionales o mejoras visuales</td>
+<td>15 pts</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total: 100 pts</strong></p>
+<hr></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright © 2025 by K3V1N 117</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../javascripts/katex.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+        <script src="../../javascripts/tablesort.js"></script>
+
+        <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body></html>
