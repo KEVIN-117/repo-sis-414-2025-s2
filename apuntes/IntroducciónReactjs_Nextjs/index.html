@@ -1,0 +1,523 @@
+<!DOCTYPE html><html lang="en" data-bs-theme="light"><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>IntroducciónReactjs Nextjs - SIS-414 G-2</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="https://unpkg.com/katex@0/dist/katex.min.css" rel="stylesheet">
+        <link href="../../styles/admonitions.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">SIS-414 G-2</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown" aria-expanded="false">Apuntes</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../ASINCRONIA/" class="dropdown-item">Asincronismo con JavaScript</a>
+</li>
+                                    
+<li>
+    <a href="../BACKEND/" class="dropdown-item">BACKEND</a>
+</li>
+                                    
+<li>
+    <a href="../DOM/" class="dropdown-item">DOM (Document Object Model)</a>
+</li>
+                                    
+<li>
+    <a href="../FUNDAMENTOS_REACT/" class="dropdown-item">React</a>
+</li>
+                                    
+<li>
+    <a href="../GitGitHub/" class="dropdown-item">Introducción a Git: Guía para Principiantes</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">IntroducciónReactjs Nextjs</a>
+</li>
+                                    
+<li>
+    <a href="../Java%2021%20%2B%20Spring%20Boot%20Backend%20Developer%201e0db4fab681802aadd4d6c9c44a254d/" class="dropdown-item">Java 21 + Spring Boot Backend Developer</a>
+</li>
+                                    
+<li>
+    <a href="../MODULOS_ES/" class="dropdown-item">Modulos en ES6</a>
+</li>
+                                    
+<li>
+    <a href="../PETICIONES/" class="dropdown-item">Peticiones HTTP</a>
+</li>
+                                    
+<li>
+    <a href="../js/" class="dropdown-item">JAVASCRIPT</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Guides</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../guides/PullRequest/" class="dropdown-item">PullRequest</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Laboratorios</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../laboratorios/Laboratorio%201/" class="dropdown-item">LABORATORIO 1 SIS-414</a>
+</li>
+                                    
+<li>
+    <a href="../../laboratorios/Laboratorio%202/" class="dropdown-item">Laboratorio 2</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Practicas</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../practicas/Practica%200%20-%20Prueba%20de%20Conocimiento/" class="dropdown-item">Practica 0   Prueba de Conocimiento</a>
+</li>
+                                    
+<li>
+    <a href="../../practicas/Practica%201%20-%20Git%20%2B%20GitHub/" class="dropdown-item">Practica 1   Git + GitHub</a>
+</li>
+                                    
+<li>
+    <a href="../../practicas/Practica%202%20-%20Git%20%2B%20GitHub/" class="dropdown-item">Practica 2   Git + GitHub</a>
+</li>
+                                    
+<li>
+    <a href="../../practicas/Practica%203%20-%20Fundamentos%20React/" class="dropdown-item">Práctica 3 - Fundamentos React</a>
+</li>
+                                    
+<li>
+    <a href="../../practicas/Practica%204%20-%20Fundamentos%20de%20Spring%20Boot/" class="dropdown-item">Práctica 4 - Fundamentos de Spring Boot</a>
+</li>
+                                    
+<li>
+    <a href="../../practicas/Practica%205%20-%20Fundamentos%20Manipulacion%20del%20DOM/" class="dropdown-item">Práctica 5 - Fundamentos Manipulación del DOM</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                            <li class="nav-item">
+                                <a rel="prev" href="../GitGitHub/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Java%2021%20%2B%20Spring%20Boot%20Backend%20Developer%201e0db4fab681802aadd4d6c9c44a254d/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="2"><a href="#objetivo-general" class="nav-link">🎯 Objetivo general</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#comprender-los-fundamentos-de-reactjs-como-biblioteca-para-construir-interfaces-de-usuario-basadas-en-componentes-e-introducir-los-conceptos-iniciales-de-nextjs-como-framework-que-extiende-react-con-funcionalidades-de-enrutamiento-renderizado-del-lado-del-servidor-y-optimizacion" class="nav-link">Comprender los fundamentos de React.js como biblioteca para construir interfaces de usuario basadas en componentes, e introducir los conceptos iniciales de Next.js como framework que extiende React con funcionalidades de enrutamiento, renderizado del lado del servidor y optimización.</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#1-introduccion-por-que-react" class="nav-link">🧠 1. Introducción: ¿Por qué React?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#2-conceptos-fundamentales" class="nav-link">⚙️ 2. Conceptos fundamentales</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#mini-practica-1-15-min" class="nav-link">🧪 Mini práctica 1 (15 min)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#3-introduccion-a-nextjs" class="nav-link">🚀 3. Introducción a Next.js</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#mini-practica-2-25-min" class="nav-link">🧪 Mini práctica 2 (25 min)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#4-conceptos-clave-a-reforzar" class="nav-link">💡 4. Conceptos clave a reforzar</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#5-cierre-y-preguntas-para-reflexionar" class="nav-link">🧩 5. Cierre y preguntas para reflexionar</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#ejemplo-final-mini-contador-de-visitas-con-nextjs" class="nav-link">📘 Ejemplo final: Mini “Contador de visitas” con Next.js</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#recursos-adicionales" class="nav-link">📚 Recursos adicionales</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<hr>
+<h2 id="objetivo-general">🎯 <strong>Objetivo general</strong><a class="headerlink" href="#objetivo-general" title="Permanent link">¶</a></h2>
+<h2 id="comprender-los-fundamentos-de-reactjs-como-biblioteca-para-construir-interfaces-de-usuario-basadas-en-componentes-e-introducir-los-conceptos-iniciales-de-nextjs-como-framework-que-extiende-react-con-funcionalidades-de-enrutamiento-renderizado-del-lado-del-servidor-y-optimizacion">Comprender los fundamentos de React.js como biblioteca para construir interfaces de usuario basadas en componentes, e introducir los conceptos iniciales de Next.js como framework que extiende React con funcionalidades de enrutamiento, renderizado del lado del servidor y optimización.<a class="headerlink" href="#comprender-los-fundamentos-de-reactjs-como-biblioteca-para-construir-interfaces-de-usuario-basadas-en-componentes-e-introducir-los-conceptos-iniciales-de-nextjs-como-framework-que-extiende-react-con-funcionalidades-de-enrutamiento-renderizado-del-lado-del-servidor-y-optimizacion" title="Permanent link">¶</a></h2>
+<h2 id="1-introduccion-por-que-react">🧠 <strong>1. Introducción: ¿Por qué React?</strong><a class="headerlink" href="#1-introduccion-por-que-react" title="Permanent link">¶</a></h2>
+<p>React fue creado por <strong>Facebook (Meta)</strong> para resolver el problema de manejar interfaces dinámicas en la web.<br>
+Es una <strong>biblioteca declarativa y basada en componentes</strong>.</p>
+<h3 id="ventajas-principales">🟦 Ventajas principales<a class="headerlink" href="#ventajas-principales" title="Permanent link">¶</a></h3>
+<ul>
+<li>Componentes reutilizables.</li>
+<li>Actualizaciones eficientes mediante el <strong>Virtual DOM</strong>.</li>
+<li>Ecosistema enorme y moderno.</li>
+<li>Compatible con frameworks como <strong>Next.js</strong>.</li>
+</ul>
+<hr>
+<h2 id="2-conceptos-fundamentales">⚙️ <strong>2. Conceptos fundamentales</strong><a class="headerlink" href="#2-conceptos-fundamentales" title="Permanent link">¶</a></h2>
+<h3 id="a-componentes">🧩 a) Componentes<a class="headerlink" href="#a-componentes" title="Permanent link">¶</a></h3>
+<p>Un <strong>componente</strong> es una función o clase que devuelve una parte de la interfaz (HTML representado con JSX).</p>
+<pre class="highlight"><code class="language-jsx">function Saludo() {
+  return &lt;h1&gt;¡Hola, mundo!&lt;/h1&gt;;
+}</code></pre>
+<blockquote>
+<p><strong>JSX</strong> = extensión de JavaScript que permite escribir HTML dentro del código JS.<br>
+Se compila a <code>React.createElement(...)</code>.</p>
+</blockquote>
+<hr>
+<h3 id="b-props-propiedades">🧮 b) Props (propiedades)<a class="headerlink" href="#b-props-propiedades" title="Permanent link">¶</a></h3>
+<p>Sirven para <strong>pasar datos</strong> de un componente padre a uno hijo.</p>
+<pre class="highlight"><code class="language-jsx">function Saludo({ nombre }) {
+  return &lt;h2&gt;Hola, {nombre} 👋&lt;/h2&gt;;
+}
+
+// Uso:
+&lt;Saludo nombre="Kevin" /&gt;;</code></pre>
+<hr>
+<h3 id="c-estado-usestate">⚡ c) Estado (<code>useState</code>)<a class="headerlink" href="#c-estado-usestate" title="Permanent link">¶</a></h3>
+<p>El <strong>estado</strong> permite manejar datos que cambian con el tiempo dentro de un componente.</p>
+<pre class="highlight"><code class="language-jsx">import { useState } from "react";
+
+function Contador() {
+  const [count, setCount] = useState(0);
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;Has hecho clic {count} veces&lt;/p&gt;
+      &lt;button onClick={() =&gt; setCount(count + 1)}&gt;Incrementar&lt;/button&gt;
+    &lt;/div&gt;
+  );
+}</code></pre>
+<hr>
+<h3 id="d-eventos">🔁 d) Eventos<a class="headerlink" href="#d-eventos" title="Permanent link">¶</a></h3>
+<p>React maneja los eventos como en JS, pero con sintaxis camelCase:</p>
+<pre class="highlight"><code class="language-jsx">&lt;button onClick={handleClick}&gt;Haz clic&lt;/button&gt;</code></pre>
+<hr>
+<h3 id="e-estructura-de-un-proyecto-con-vite">🌎 e) Estructura de un proyecto (con Vite)<a class="headerlink" href="#e-estructura-de-un-proyecto-con-vite" title="Permanent link">¶</a></h3>
+<pre class="highlight"><code>mi-app/
+├── src/
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── components/
+│       └── Saludo.jsx
+├── index.html
+├── package.json</code></pre>
+<p><strong>Ejecutar el entorno:</strong></p>
+<pre class="highlight"><code class="language-bash">npm create vite@latest mi-app -- --template react
+cd mi-app
+npm install
+npm run dev</code></pre>
+<hr>
+<h2 id="mini-practica-1-15-min">🧪 <strong>Mini práctica 1 (15 min)</strong><a class="headerlink" href="#mini-practica-1-15-min" title="Permanent link">¶</a></h2>
+<p>🧩 <strong>Objetivo:</strong> Crear una pequeña aplicación React que muestre una lista de tareas (sin backend).</p>
+<p><strong>Instrucciones:</strong></p>
+<ol>
+<li>Crea un componente <code>Tarea</code> que reciba una prop <code>texto</code>.</li>
+<li>Crea un componente <code>ListaTareas</code> que muestre varias tareas.</li>
+<li>Agrega un input y un botón para añadir nuevas tareas usando <code>useState</code>.</li>
+</ol>
+<blockquote>
+<p>💡 <em>Tip:</em> Usa <code>map()</code> para renderizar listas.</p>
+</blockquote>
+<hr>
+<h2 id="3-introduccion-a-nextjs">🚀 <strong>3. Introducción a Next.js</strong><a class="headerlink" href="#3-introduccion-a-nextjs" title="Permanent link">¶</a></h2>
+<h3 id="que-es-nextjs">🧭 ¿Qué es Next.js?<a class="headerlink" href="#que-es-nextjs" title="Permanent link">¶</a></h3>
+<p>Next.js es un <strong>framework basado en React</strong> que agrega herramientas para:</p>
+<ul>
+<li>Enrutamiento automático por carpetas.</li>
+<li>Renderizado del lado del servidor (SSR).</li>
+<li>Generación estática (SSG).</li>
+<li>API Routes (endpoints con Node.js).</li>
+<li>Optimizaciones de imágenes y fuentes.</li>
+</ul>
+<hr>
+<h3 id="instalacion">📦 <strong>Instalación</strong><a class="headerlink" href="#instalacion" title="Permanent link">¶</a></h3>
+<pre class="highlight"><code class="language-bash">npx create-next-app@latest mi-next
+cd mi-next
+npm run dev</code></pre>
+<p>Abre en <a href="http://localhost:3000/">http://localhost:3000</a></p>
+<hr>
+<h3 id="estructura-de-proyecto">📁 <strong>Estructura de proyecto</strong><a class="headerlink" href="#estructura-de-proyecto" title="Permanent link">¶</a></h3>
+<pre class="highlight"><code>mi-next/
+├── app/
+│   ├── page.jsx
+│   ├── layout.jsx
+│   └── about/
+│       └── page.jsx
+├── public/
+├── package.json</code></pre>
+<hr>
+<h3 id="rutas-automaticas">🧭 <strong>Rutas automáticas</strong><a class="headerlink" href="#rutas-automaticas" title="Permanent link">¶</a></h3>
+<p>Cada carpeta dentro de <code>app/</code> representa una ruta.</p>
+<table>
+<thead>
+<tr>
+<th>Archivo</th>
+<th>URL resultante</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>app/page.jsx</code></td>
+<td><code>/</code></td>
+</tr>
+<tr>
+<td><code>app/about/page.jsx</code></td>
+<td><code>/about</code></td>
+</tr>
+</tbody>
+</table>
+<p>Ejemplo:</p>
+<pre class="highlight"><code class="language-jsx">export default function About() {
+  return &lt;h1&gt;Acerca de nosotros&lt;/h1&gt;;
+}</code></pre>
+<hr>
+<h3 id="uso-de-componentes-y-props">🧠 <strong>Uso de componentes y props</strong><a class="headerlink" href="#uso-de-componentes-y-props" title="Permanent link">¶</a></h3>
+<pre class="highlight"><code class="language-jsx">function Card({ titulo, descripcion }) {
+  return (
+    &lt;div&gt;
+      &lt;h2&gt;{titulo}&lt;/h2&gt;
+      &lt;p&gt;{descripcion}&lt;/p&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default function Home() {
+  return (
+    &lt;div&gt;
+      &lt;Card titulo="React" descripcion="Biblioteca para interfaces" /&gt;
+      &lt;Card titulo="Next.js" descripcion="Framework para producción" /&gt;
+    &lt;/div&gt;
+  );
+}</code></pre>
+<hr>
+<h2 id="mini-practica-2-25-min">🧪 <strong>Mini práctica 2 (25 min)</strong><a class="headerlink" href="#mini-practica-2-25-min" title="Permanent link">¶</a></h2>
+<p>🧩 <strong>Objetivo:</strong> Crear una página simple con Next.js con dos rutas:</p>
+<ul>
+<li><code>/</code> → muestra tu nombre y un contador con <code>useState</code>.</li>
+<li><code>/about</code> → muestra una breve descripción de ti y un botón para regresar al inicio.</li>
+</ul>
+<hr>
+<h2 id="4-conceptos-clave-a-reforzar">💡 <strong>4. Conceptos clave a reforzar</strong><a class="headerlink" href="#4-conceptos-clave-a-reforzar" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Concepto</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>JSX</strong></td>
+<td>Sintaxis que mezcla HTML con JS.</td>
+</tr>
+<tr>
+<td><strong>Componente</strong></td>
+<td>Unidad reutilizable de interfaz.</td>
+</tr>
+<tr>
+<td><strong>Props</strong></td>
+<td>Parámetros de entrada para los componentes.</td>
+</tr>
+<tr>
+<td><strong>Estado (useState)</strong></td>
+<td>Datos internos que cambian.</td>
+</tr>
+<tr>
+<td><strong>Virtual DOM</strong></td>
+<td>Copia en memoria que mejora el rendimiento.</td>
+</tr>
+<tr>
+<td><strong>Next.js</strong></td>
+<td>Framework basado en React con renderizado del lado del servidor.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="5-cierre-y-preguntas-para-reflexionar">🧩 <strong>5. Cierre y preguntas para reflexionar</strong><a class="headerlink" href="#5-cierre-y-preguntas-para-reflexionar" title="Permanent link">¶</a></h2>
+<ul>
+<li>¿Por qué React usa componentes en lugar de plantillas HTML?</li>
+<li>¿Qué diferencia hay entre React y Next.js?</li>
+<li>¿Cómo ayuda el estado (<code>useState</code>) a manejar interactividad?</li>
+</ul>
+<hr>
+<h2 id="ejemplo-final-mini-contador-de-visitas-con-nextjs">📘 <strong>Ejemplo final: Mini “Contador de visitas” con Next.js</strong><a class="headerlink" href="#ejemplo-final-mini-contador-de-visitas-con-nextjs" title="Permanent link">¶</a></h2>
+<p>📄 <code>app/page.jsx</code></p>
+<pre class="highlight"><code class="language-jsx">"use client";
+import { useState } from "react";
+
+export default function Home() {
+  const [count, setCount] = useState(0);
+
+  return (
+    &lt;main style={{ textAlign: "center", marginTop: "50px" }}&gt;
+      &lt;h1&gt;Contador de visitas 🧮&lt;/h1&gt;
+      &lt;p&gt;Visitas: {count}&lt;/p&gt;
+      &lt;button onClick={() =&gt; setCount(count + 1)}&gt;Aumentar&lt;/button&gt;
+      &lt;button onClick={() =&gt; setCount(0)}&gt;Reiniciar&lt;/button&gt;
+    &lt;/main&gt;
+  );
+}</code></pre>
+<hr>
+<h2 id="recursos-adicionales">📚 <strong>Recursos adicionales</strong><a class="headerlink" href="#recursos-adicionales" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="https://es.reactjs.org/docs/getting-started.html">Documentación oficial de React</a></li>
+<li><a href="https://nextjs.org/docs">Documentación oficial de Next.js</a></li>
+<li><a href="https://platzi.com/cursos/react/">Curso de React en Platzi</a></li>
+<li><a href="https://platzi.com/cursos/nextjs/">Curso de Next.js en Platzi</a></li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright © 2025 by K3V1N 117</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../javascripts/katex.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+        <script src="../../javascripts/tablesort.js"></script>
+
+        <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body></html>
