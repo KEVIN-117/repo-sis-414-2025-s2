@@ -1,4 +1,13 @@
-# 🧪 Laboratorio — Formulario + Fetch + Spring Boot + Neon (PostgreSQL)
+---
+title: "Práctica 6 - Manipulación de Formularios"
+slug: "practica-6-manipulacion-de-formularios"
+date: 2023-10-01
+tags: ["practicas", "javascript", "dom"]
+description: "En esta práctica, exploraremos la manipulación de formularios utilizando JavaScript. Aprenderemos a capturar eventos, validar datos y enviar formularios de manera efectiva."
+categories: ["practicas"]
+---
+
+# 🧪 Práctica 6 — Formulario + Fetch + Spring Boot + Neon (PostgreSQL)
 
 **Tema:** Manipulación del DOM con envío de formularios, Fetch API y backend con Spring Boot (Java) + Neon Serverless PostgreSQL.
 **Dificultad:** Principiante-intermedio
