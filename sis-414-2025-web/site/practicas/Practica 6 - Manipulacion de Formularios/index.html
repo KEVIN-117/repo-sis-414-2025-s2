@@ -1,0 +1,1399 @@
+<!DOCTYPE html><html lang="en" data-bs-theme="light"><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>🧪 Laboratorio — Formulario + Fetch + Spring Boot + Neon (PostgreSQL) - SIS-414 G-2</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="https://unpkg.com/katex@0/dist/katex.min.css" rel="stylesheet">
+        <link href="../../styles/admonitions.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">SIS-414 G-2</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Apuntes</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../apuntes/ASINCRONIA/" class="dropdown-item">Asincronismo con JavaScript</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/BACKEND/" class="dropdown-item">BACKEND</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/DOM/" class="dropdown-item">DOM (Document Object Model)</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/FUNDAMENTOS_REACT/" class="dropdown-item">React</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/GitGitHub/" class="dropdown-item">Introducción a Git: Guía para Principiantes</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/Introducci%C3%B3nReactjs_Nextjs/" class="dropdown-item">🧑‍🏫 Introducción a React.js y Next.js</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/Java%2021%20%2B%20Spring%20Boot%20Backend%20Developer%201e0db4fab681802aadd4d6c9c44a254d/" class="dropdown-item">Java 21 + Spring Boot Backend Developer</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/MODULOS_ES/" class="dropdown-item">Modulos en ES6</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/PETICIONES/" class="dropdown-item">Peticiones HTTP</a>
+</li>
+                                    
+<li>
+    <a href="../../apuntes/js/" class="dropdown-item">JAVASCRIPT</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Guides</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../guides/PullRequest/" class="dropdown-item">PullRequest</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Laboratorios</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../laboratorios/Laboratorio%201/" class="dropdown-item">LABORATORIO 1 SIS-414</a>
+</li>
+                                    
+<li>
+    <a href="../../laboratorios/Laboratorio%202/" class="dropdown-item">Laboratorio 2</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown" aria-expanded="false">Practicas</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Practica%200%20-%20Prueba%20de%20Conocimiento/" class="dropdown-item">Practica 0   Prueba de Conocimiento</a>
+</li>
+                                    
+<li>
+    <a href="../Practica%201%20-%20Git%20%2B%20GitHub/" class="dropdown-item">Practica 1   Git + GitHub</a>
+</li>
+                                    
+<li>
+    <a href="../Practica%202%20-%20Git%20%2B%20GitHub/" class="dropdown-item">Practica 2   Git + GitHub</a>
+</li>
+                                    
+<li>
+    <a href="../Practica%203%20-%20Fundamentos%20React/" class="dropdown-item">Práctica 3 - Fundamentos React</a>
+</li>
+                                    
+<li>
+    <a href="../Practica%204%20-%20Fundamentos%20de%20Spring%20Boot/" class="dropdown-item">Práctica 4 - Fundamentos de Spring Boot</a>
+</li>
+                                    
+<li>
+    <a href="../Practica%205%20-%20Fundamentos%20Manipulacion%20del%20DOM%20copy/" class="dropdown-item">Práctica 5 - Fundamentos Manipulación del DOM</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">🧪 Laboratorio — Formulario + Fetch + Spring Boot + Neon (PostgreSQL)</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                            <li class="nav-item">
+                                <a rel="prev" href="../Practica%205%20-%20Fundamentos%20Manipulacion%20del%20DOM%20copy/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#laboratorio-formulario-fetch-spring-boot-neon-postgresql" class="nav-link">🧪 Laboratorio — Formulario + Fetch + Spring Boot + Neon (PostgreSQL)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#1-objetivos-especificos" class="nav-link">1. Objetivos específicos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#2-recursos-previos" class="nav-link">2. Recursos previos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#3-contexto-de-la-practica" class="nav-link">3. Contexto de la práctica</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#4-desarrollo-paso-a-paso" class="nav-link">4. Desarrollo paso a paso</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#paso-0-verificaciones-y-estructura-del-proyecto" class="nav-link">Paso 0: Verificaciones y estructura del proyecto</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#paso-1-crear-la-base-de-datos-en-neon" class="nav-link">Paso 1: Crear la base de datos en Neon</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#paso-2-crear-el-backend-con-spring-boot" class="nav-link">Paso 2: Crear el backend con Spring Boot</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#detalle-y-ejemplos-de-cada-capa" class="nav-link">Detalle y ejemplos de cada capa</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#paso-3-implementar-la-logica-del-backend-capa-por-capa" class="nav-link">Paso 3: Implementar la lógica del backend capa por capa</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#5-ejecutar-backend" class="nav-link">5. Ejecutar backend</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#6-evaluacion-backend" class="nav-link">6. Evaluación Backend:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#7-crear-el-frontend-con-vite" class="nav-link">7. Crear el frontend con Vite</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#estructura-de-carpetas" class="nav-link">Estructura de carpetas</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#desarrollo-de-modulos" class="nav-link">Desarrollo de modulos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#integracion" class="nav-link">Integración</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#evaluacion-frontend" class="nav-link">Evaluación frontend</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#8-retos-de-la-tarea-opcionales" class="nav-link">8. Retos de la tarea (opcionales)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#9-seccion-de-investigacion-para-entregar" class="nav-link">9. Sección de investigación (para entregar)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#10-evaluacion-sugerida" class="nav-link">10. Evaluación sugerida</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#fin-de-la-practica" class="nav-link">Fin de la práctica</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="laboratorio-formulario-fetch-spring-boot-neon-postgresql">🧪 Laboratorio — Formulario + Fetch + Spring Boot + Neon (PostgreSQL)<a class="headerlink" href="#laboratorio-formulario-fetch-spring-boot-neon-postgresql" title="Permanent link">¶</a></h1>
+<p><strong>Tema:</strong> Manipulación del DOM con envío de formularios, Fetch API y backend con Spring Boot (Java) + Neon Serverless PostgreSQL.
+<strong>Dificultad:</strong> Principiante-intermedio
+<strong>Objetivo general:</strong>
+Aplicar los conceptos de manipulación del DOM, envío de formularios y asincronismo con <code>fetch</code>, integrando un backend real hecho en <strong>Spring Boot (Java)</strong> conectado a una base de datos <strong>PostgreSQL serverless en Neon</strong>.</p>
+<hr>
+<h1 id="1-objetivos-especificos">1. Objetivos específicos<a class="headerlink" href="#1-objetivos-especificos" title="Permanent link">¶</a></h1>
+<ol>
+<li>Comprender la comunicación cliente-servidor mediante peticiones HTTP.</li>
+<li>Manipular el DOM para capturar y validar datos de formularios.</li>
+<li>Usar <code>fetch()</code> para enviar y recibir datos entre frontend y backend.</li>
+<li>Implementar un backend REST con Spring Boot y conectarlo a Neon (Postgres).</li>
+<li>Probar operaciones CRUD básicas.</li>
+<li>Desarrollar pensamiento lógico y fomentar la autonomía en la búsqueda de soluciones.</li>
+</ol>
+<blockquote>
+<p>💡 Al finalizar, los estudiantes habrán creado una aplicación web completa que permite registrar y listar clientes, integrando frontend y backend con una base de datos real.</p>
+</blockquote>
+<p>Algo que me gustaria aclarar es que esta guia es el paso a paso de como debemos de contruir cada uno de los componentes de nuestra aplicacion, englobando conocimentos basicos de frontend y backend, no se necesita ningun conocimiento previo avanzado ya que tratremos de explicar cada uno de los pasos de manera sencilla y clara para que puedan hacer de manera exitosa esta practica.</p>
+<hr>
+<h1 id="2-recursos-previos">2. Recursos previos<a class="headerlink" href="#2-recursos-previos" title="Permanent link">¶</a></h1>
+<ul>
+<li>Java 21 o superior</li>
+<li>Spring Boot CLI o Spring Initializer</li>
+<li>PostgreSQL (Neon account)</li>
+<li>IDE: IntelliJ IDEA, VS Code o Eclipse</li>
+<li>Node.js + npm (para el frontend con Vite)</li>
+</ul>
+<hr>
+<h1 id="3-contexto-de-la-practica">3. Contexto de la práctica<a class="headerlink" href="#3-contexto-de-la-practica" title="Permanent link">¶</a></h1>
+<p>Desarrollaremos un <strong>mini sistema de gestión de clientes</strong>, donde los usuarios podrán:</p>
+<ul>
+<li>Registrar clientes mediante un formulario en el frontend.</li>
+<li>Consultar la lista de clientes registrados.</li>
+<li>Guardar la información en una base de datos PostgreSQL (Neon).</li>
+</ul>
+<p>Arquitectura general:</p>
+<pre class="highlight"><code>[Frontend Vite + JS]  ⇄  [Backend Spring Boot REST API]  ⇄  [PostgreSQL Neon]</code></pre>
+<h1 id="4-desarrollo-paso-a-paso">4. Desarrollo paso a paso<a class="headerlink" href="#4-desarrollo-paso-a-paso" title="Permanent link">¶</a></h1>
+<h2 id="paso-0-verificaciones-y-estructura-del-proyecto">Paso 0: Verificaciones y estructura del proyecto<a class="headerlink" href="#paso-0-verificaciones-y-estructura-del-proyecto" title="Permanent link">¶</a></h2>
+<ul>
+<li>Asegúrate de tener Java, Maven, Node.js y npm instalados.</li>
+<li>Crea una carpeta raíz para el proyecto, por ejemplo <code>lab-clients</code>.</li>
+<li>Dentro de <code>lab-clients</code>, crea dos subcarpetas: <code>backend</code> y <code>frontend</code>.</li>
+<li>Estructura del proyecto: usaremos <code>🧅 Arquitectura en Capas (Onion Architecture)</code></li>
+</ul>
+<h3 id="la-estructura-de-carpetas-deberia-verse-asi">La estructura de carpetas debería verse así:<a class="headerlink" href="#la-estructura-de-carpetas-deberia-verse-asi" title="Permanent link">¶</a></h3>
+<pre class="highlight"><code>lab-clients/
+├── backend/   (aquí irá el proyecto Spring Boot)
+│   │   .gitattributes
+│   │    .gitignore
+│   │    mvnw
+│   │    mvnw.cmd
+│   │    pom.xml
+│   │───src
+│       ├───main
+│       │   ├───java
+│       │   │   └───com
+│       │   │       └───example
+│       │   │           └───labclients
+│       │   │               └───lab_clients
+│       │   │                   │   BackendApplication.java
+│       │   │                   │
+│       │   │                   ├───application
+│       │   │                   │   ├───dto
+│       │   │                   │   │       ClientDTO.java
+│       │   │                   │   │
+│       │   │                   │   ├───mapper
+│       │   │                   │   │       ClientMapper.java
+│       │   │                   │   │
+│       │   │                   │   └───service
+│       │   │                   │           ClientService.java
+│       │   │                   │
+│       │   │                   ├───domain
+│       │   │                   │   ├───exception
+│       │   │                   │   │       ClientNotFoundException.java
+│       │   │                   │   │
+│       │   │                   │   ├───model
+│       │   │                   │   │       Client.java
+│       │   │                   │   │
+│       │   │                   │   └───repository
+│       │   │                   │           ClientRepository.java
+│       │   │                   │
+│       │   │                   └───infrastructure
+│       │   │                       ├───config
+│       │   │                       │       BeanConfig.java
+│       │   │                       │
+│       │   │                       ├───persistence
+│       │   │                       │   ├───adapter
+│       │   │                       │   │       ClientRepositoryAdapter.java
+│       │   │                       │   │
+│       │   │                       │   ├───entity
+│       │   │                       │   │       ClientEntity.java
+│       │   │                       │   │
+│       │   │                       │   └───jpa
+│       │   │                       │           SpringDataClientRepository.java
+│       │   │                       │
+│       │   │                       └───rest
+│       │   │                               ClientController.java
+│       │   │
+│       │   └───resources
+│       │           application.yaml
+│
+└── frontend/  (aquí irá el proyecto Vite)
+    ├── index.html
+    ├── package.json
+    ├── src/
+    │   └── main.js
+    └── vite.config.js</code></pre>
+<p>Ahora si vamos a reflexionar un poco, pongámonos a pensar, ¿por qué es importante tener una estructura de carpetas bien definida en un proyecto de software?</p>
+<p>Tener una estructura de carpetas bien definida en un proyecto de software es crucial por varias razones:</p>
+<ol>
+<li><strong>Organización:</strong> Una estructura clara ayuda a mantener el código organizado, facilitando la localización de archivos y componentes específicos.</li>
+<li><strong>Mantenibilidad:</strong> Facilita la actualización y el mantenimiento del código, ya que los desarrolladores pueden entender rápidamente dónde se encuentran las diferentes partes del proyecto.</li>
+<li><strong>Colaboración:</strong> En proyectos con múltiples desarrolladores, una estructura coherente asegura que todos sigan las mismas convenciones, lo que reduce la confusión y mejora la eficiencia del equipo.</li>
+<li><strong>Escalabilidad:</strong> A medida que el proyecto crece, una buena estructura permite agregar nuevas funcionalidades sin desordenar el código existente.</li>
+<li><strong>Buenas prácticas:</strong> Seguir una estructura estándar (como la arquitectura en capas) promueve buenas prácticas de desarrollo, lo que puede conducir a un código más limpio y robusto.</li>
+</ol>
+<p>Ahora si hablemos de cada capa de la arquitectura en capas que usaremos en este proyecto:</p>
+<ol>
+<li>
+<p><strong><code>domain/</code></strong></p>
+</li>
+<li>
+<p>Es el núcleo de la aplicación, donde viven las entidades, interfaces y reglas de negocio puras.</p>
+</li>
+<li>model/: clases que representan el dominio (por ejemplo, Client).</li>
+<li>repository/: interfaces abstractas que definen las operaciones (por ejemplo, ClientRepository).</li>
+<li>exception/: excepciones personalizadas del dominio.</li>
+</ol>
+<blockquote>
+<p>💡 Esta capa no depende de nada externo. Es pura lógica de negocio.</p>
+</blockquote>
+<ol>
+<li>
+<p><strong><code>application/</code></strong></p>
+</li>
+<li>
+<p>Contiene la lógica de aplicación: cómo los casos de uso interactúan con el dominio.</p>
+</li>
+<li>
+<p>dto/: objetos que transportan datos entre capas.</p>
+</li>
+<li>
+<p>service/: implementa los casos de uso del negocio.</p>
+</li>
+<li>
+<p>mapper/: convierte entre entidades, DTOs y modelos.</p>
+</li>
+</ol>
+<p>📦 Aquí vive el “qué hace” tu sistema, pero no “cómo se guarda o muestra”.</p>
+<ol>
+<li><strong><code>infrastructure/</code></strong></li>
+</ol>
+<p>Es la capa más externa. Aquí interactúas con el mundo real:</p>
+<ul>
+<li>
+<p>persistence/: implementación concreta de los repositorios (por ejemplo, JPA o JDBC).</p>
+</li>
+<li>
+<p>adapter/: adapta las interfaces del dominio a tecnologías concretas.</p>
+</li>
+<li>
+<p>rest/: controladores que exponen los endpoints HTTP.</p>
+</li>
+<li>
+<p>config/: configuración de Spring Boot, beans, seguridad, etc.</p>
+</li>
+</ul>
+<blockquote>
+<p>⚙️ Esta capa depende de las otras, pero nunca al revés.</p>
+</blockquote>
+<ol>
+<li>
+<p>ClientManagerApplication.java</p>
+</li>
+<li>
+<p>El punto de entrada (@SpringBootApplication), donde se levanta todo el contexto de Spring.</p>
+</li>
+</ol>
+<h3 id="verificaciones-de-entorno">Verificaciones de entorno<a class="headerlink" href="#verificaciones-de-entorno" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Java:</strong> <code>java -version</code> (debe ser 21 o superior)
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../image-2.png" data-desc-position="bottom"><img alt="Java Version" src="../image-2.png"></a></li>
+<li><strong>Maven:</strong> <code>mvn -v</code>
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../image-3.png" data-desc-position="bottom"><img alt="Maven Version" src="../image-3.png"></a></li>
+<li><strong>Node.js:</strong> <code>node -v</code> (debe ser 16 o superior)</li>
+<li><strong>npm:</strong> <code>npm -v</code></li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../image-4.png" data-desc-position="bottom"><img alt="All Versions" src="../image-4.png"></a></p>
+<p>En mi caso yo tengo instalado estas versiones, que se observa en las imagenes de arriba</p>
+<h2 id="paso-1-crear-la-base-de-datos-en-neon">Paso 1: Crear la base de datos en Neon<a class="headerlink" href="#paso-1-crear-la-base-de-datos-en-neon" title="Permanent link">¶</a></h2>
+<p>Antes de iniciar a trabajar con neon, es necesario saber que es neon, neon es una base de datos postgresql serverless, lo que significa que no necesitamos preocuparnos por la infraestructura o el mantenimiento del servidor, ya que neon se encarga de eso por nosotros, permitiéndonos enfocarnos en el desarrollo de nuestras aplicaciones.
+Neon es una de estas plataformas que se conoce como IaaS (Infrastructure as a Service) que nos permite crear y gestionar bases de datos en la nube de manera sencilla y eficiente.</p>
+<p>AL decir serverless, nos referimos a que no tenemos que gestionar servidores físicos o virtuales, neon se encarga de escalar automáticamente los recursos según la demanda de nuestra aplicación, lo que nos permite pagar solo por lo que usamos y optimizar costos.</p>
+<blockquote>
+<p>Ahora si, vamos a crear nuestra base de datos en neon con toda la emoción del mundo 😊.
+Pero si no existe ninguna emoción, pues igual hagámoslo, pues no te queda de otra porque es parte de la práctica 😅 y el aux te reprueba 💁‍♂️ (no tienes opciones).</p>
+</blockquote>
+<ol>
+<li>
+<p>Entra a <a href="https://neon.tech">https://neon.tech</a> y regístrate.</p>
+</li>
+<li>
+<p>Deberia ver lo siguienete pantalla:
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../image-5.png" data-desc-position="bottom"><img alt="Neon Home" src="../image-5.png"></a></p>
+</li>
+<li>
+<p>Ahora da clicl en "Sign Up" y llena el formulario con tus datos o puedes usar tu cuenta de GitHub o Google para registrarte (eso es lo que yo hice 😒).
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../image-6.png" data-desc-position="bottom"><img alt="Registration Neon Form" src="../image-6.png"></a></p>
+</li>
+<li>
+<p>Listo yo ya tengo mi cuenta creada, ahora voy a iniciar sesión, ya solo faltas tú 😜.
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../image-7.png" data-desc-position="bottom"><img alt="Home Dashboard" src="../image-7.png"></a></p>
+</li>
+<li>
+<p>Crea un <strong>nuevo proyecto</strong> → “Create Project”.</p>
+</li>
+</ol>
+<blockquote>
+<p>Al parecer un proyecto en neon es como un contenedor para tus bases de datos, te permite organizar y gestionar múltiples bases de datos bajo un mismo proyecto.
+En este caso ya nos da un proyecto por defecto llamado "sample_db", entoces trabajaremos sobre es proyecto, pero si quieres puedes crear uno nuevo (ya es tu decisión 😒).</p>
+</blockquote>
+<ol>
+<li>Copia la <strong>connection string</strong> (por ejemplo):</li>
+</ol>
+<p>Dale clic en "Connect" → "Connection String" y copia la URL que aparece (la necesitarás para conectar tu backend).</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../image-8.png" data-desc-position="bottom"><img alt="Connection String" src="../image-8.png"></a></p>
+<p>La connection string se ve algo así:</p>
+<pre class="highlight"><code>postgres://user:password@ep-soft-cloud-12345.us-east-1.aws.neon.tech/dbname</code></pre>
+<ol>
+<li>En el panel de <code>SQL Editor</code>, ejecuta:</li>
+</ol>
+<pre class="highlight"><code class="language-sql">CREATE TABLE clients (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(30) NOT NULL,
+  email VARCHAR(30) NOT NULL UNIQUE,
+  phone VARCHAR(20),
+  created_at TIMESTAMP DEFAULT now()
+);</code></pre>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../image-9.png" data-desc-position="bottom"><img alt="Query Execution" src="../image-9.png"></a></p>
+<blockquote>
+<p>no te olvide de ejecutar el query para crear la tabla clients, ya que esta tabla sera la que usaremos para guardar los datos de nuestros clientes.</p>
+</blockquote>
+<hr>
+<h2 id="paso-2-crear-el-backend-con-spring-boot">Paso 2: Crear el backend con Spring Boot<a class="headerlink" href="#paso-2-crear-el-backend-con-spring-boot" title="Permanent link">¶</a></h2>
+<h3 id="a-crear-el-proyecto">a) Crear el proyecto<a class="headerlink" href="#a-crear-el-proyecto" title="Permanent link">¶</a></h3>
+<p>Ve a <a href="https://start.spring.io">https://start.spring.io</a>:</p>
+<ul>
+<li><strong>Project:</strong> Maven</li>
+<li><strong>Language:</strong> Java</li>
+<li><strong>Spring Boot:</strong> 3.x</li>
+<li>
+<p><strong>Dependencies:</strong></p>
+</li>
+<li>
+<p>Spring Web</p>
+</li>
+<li>Spring Data JPA</li>
+<li>PostgreSQL Driver</li>
+<li>Lombok</li>
+</ul>
+<p>Genera el proyecto, descomprímelo y ábrelo en tu IDE.</p>
+<p>Pero en mi caso yo usare la terminal para crear el proyecto (por que me gusta más 😎), asi que abro mi terminal y me dirijo a la carpeta backend que cree anteriormente y ejecuto el siguiente comando:</p>
+<pre class="highlight"><code class="language-bash">mvn archetype:generate -DgroupId=com.example.labclients -DartifactId=lab-clients -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false</code></pre>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../image-10.png" data-desc-position="bottom"><img alt="Non Created" src="../image-10.png"></a></p>
+<p>Lamentablemente este comando no crea el proyecto con las dependencias de spring boot, asi que lo que haremos sera lo siguiente, yo creare el proyecto con spring initializer y luego lo abrire en mi IDE, pero si tu quieres puedes agregar las dependencias manualmente en el archivo <code>pom.xml</code>, pero eso ya es mucho trabajo para una practica tan sencilla 😅.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../image-12.png" data-desc-position="bottom"><img alt="Creacion de Proyecto" src="../image-12.png"></a></p>
+<p>No te olvide de agregar las dependencias que se observan en la imagen de arriba.</p>
+<p>Hasta este punto tu proyecto debe de quedar algo asi:</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../image-13.png" data-desc-position="bottom"><img alt="Project Preview" src="../image-13.png"></a></p>
+<blockquote>
+<p>Lo quieres mas facil, clona este repositorio que ya tiene todo listo: <a href="https://github.com/hazelemma703/lab-clients.git">https://github.com/hazelemma703/lab-clients</a></p>
+</blockquote>
+<hr>
+<h3 id="b-configurar-conexion-a-la-base-de-datos-neon">b) Configurar conexión a la base de datos (Neon)<a class="headerlink" href="#b-configurar-conexion-a-la-base-de-datos-neon" title="Permanent link">¶</a></h3>
+<p>Edita el archivo <code>src/main/resources/application.yml</code>:</p>
+<blockquote>
+<ul>
+<li>Lo correcto seria manejarlo con variables de entorno, pero para simplicidad de la practica lo haremos directamente en el archivo.</li>
+<li>Pero aqui te dejo un reto extra, investiga como manejar variables de entorno en Spring Boot y aplica eso en lugar de poner los datos directamente en el archivo.</li>
+<li>Obviamente no es obligatorio, pero si quieres un reto extra para aprender mas cosas nuevas y adema de ello tener un extra en tu calificacion final 😜 (ya sabes, para subir tu promedio, no se piensalo yo solo te lo digo).</li>
+</ul>
+</blockquote>
+<pre class="highlight"><code class="language-yaml">spring:
+  application:
+    name: backend
+  datasource:
+    url: "jdbc:postgresql://ep-soft-frost-a5jrxwwz-pooler.us-east-2.aws.neon.tech/weather_db?sslmode=require&amp;channel_binding=require"
+    username: your_username
+    password: your_password
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect</code></pre>
+<p>En el archiv o de configuración anterior, tratemos de explicar cada una de las propiedades que hemos configurado:</p>
+<ul>
+<li><code>spring.datasource.url</code>: Es la URL de conexión a la base de datos PostgreSQL en Neon. Incluye el host, el nombre de la base de datos y parámetros adicionales como <code>sslmode</code> para asegurar la conexión.</li>
+<li><code>spring.datasource.username</code>: El nombre de usuario para autenticar la conexión a la base de datos.</li>
+<li><code>spring.datasource.password</code>: La contraseña correspondiente al usuario de la base de datos.</li>
+<li><code>spring.datasource.driver-class-name</code>: Especifica el controlador JDBC que se utilizará para conectarse a la base de datos PostgreSQL.</li>
+<li><code>spring.jpa.hibernate.ddl-auto</code>: Configura cómo Hibernate maneja el esquema de la base de datos. El valor <code>update</code> indica que Hibernate actualizará el esquema según las entidades definidas en el código.</li>
+<li><code>spring.jpa.show-sql</code>: Habilita la impresión de las consultas SQL generadas por Hibernate en la consola, lo que es útil para depuración.</li>
+<li><code>spring.jpa.properties.hibernate.format_sql</code>: Formatea las consultas SQL impresas para que sean más legibles.</li>
+<li><code>spring.jpa.properties.hibernate.dialect</code>: Especifica el dialecto de Hibernate que se utilizará para PostgreSQL, lo que ayuda a Hibernate a generar SQL compatible con esta base de datos.</li>
+</ul>
+<blockquote>
+<p>⚠️ Usa los datos reales de tu conexión Neon (puedes copiarlos desde el panel).</p>
+</blockquote>
+<p>En mi caso quedo de esta manera:</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../image-14.png" data-desc-position="bottom"><img alt="YML Final View" src="../image-14.png"></a></p>
+<p>Ahora ya podemos ejecutar la aplicación para verificar que la conexión a la base de datos funciona correctamente.</p>
+<pre class="highlight"><code class="language-bash">./mvnw spring-boot:run</code></pre>
+<p>O si usas tu IDE, simplemente ejecuta la clase principal <code>LabClientsApplication.java</code>.</p>
+<p>Si todo está bien, verás en la consola:</p>
+<pre class="highlight"><code>Tomcat started on port(s): 8080</code></pre>
+<p>En especifico algo como esto:</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../image-15.png" data-desc-position="bottom"><img alt="Running Log" src="../image-15.png"></a></p>
+<p>y en el navegador veremos algo como esto:</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../image-16.png" data-desc-position="bottom"><img alt="Web View" src="../image-16.png"></a></p>
+<blockquote>
+<p>Bien, ahora si vamos a crear las clases necesarias para manejar los clientes.
+Recrearemos la estructura de la arquitectura en capas que mencionamos anteriormente <a href="#paso-0-verificaciones-y-estructura-del-proyecto">Estructura de proyecto</a></p>
+</blockquote>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../image-17.png" data-desc-position="bottom"><img alt="Create Estructure" src="../image-17.png"></a></p>
+<p>Deberia de tener esta estructura de carpetas:</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../image-18.png" data-desc-position="bottom"><img alt="All View" src="../image-18.png"></a></p>
+<hr>
+<h1 id="detalle-y-ejemplos-de-cada-capa">Detalle y ejemplos de cada capa<a class="headerlink" href="#detalle-y-ejemplos-de-cada-capa" title="Permanent link">¶</a></h1>
+<blockquote>
+<p>Antes de iniciar a crear las clases, hablemos un poco de los conceptos que usaremos en cada capa y el uso de librerías como Lombok.</p>
+</blockquote>
+<ul>
+<li>
+<p><strong>Lombok:</strong> Es una librería que nos ayuda a reducir el código boilerplate en Java. Con anotaciones como <code>@Data</code>, <code>@Builder</code>, <code>@AllArgsConstructor</code>, y <code>@NoArgsConstructor</code>, Lombok genera automáticamente getters, setters, constructores y otros métodos comunes, haciendo nuestro código más limpio y fácil de mantener.</p>
+</li>
+<li>
+<p>Expliquemos cada una de las anotaciones que usaremos:</p>
+<ul>
+<li><code>@Data</code>: Genera getters, setters, <code>toString()</code>, <code>equals()</code>, y <code>hashCode()</code> para todos los campos de la clase.</li>
+<li><code>@Builder</code>: Proporciona un <strong><code>patrón de diseño Builder</code></strong> para crear instancias de la clase de manera más legible.</li>
+<li><code>@AllArgsConstructor</code>: Genera un constructor con un parámetro para cada campo en la clase.</li>
+<li><code>@NoArgsConstructor</code>: Genera un constructor sin parámetros.</li>
+</ul>
+</li>
+<li>
+<p>Ahora en el punto anterior se mensiono a los patrones de diseño, pero ¿qué es un patrón de diseño?</p>
+</li>
+<li>
+<p>Un patrón de diseño es una solución reutilizable a un problema común en el diseño de software. Son como plantillas que puedes seguir para resolver problemas específicos en tu código, mejorando la calidad y mantenibilidad del mismo.</p>
+</li>
+<li>
+<p>Algunos ejemplos comunes de patrones de diseño incluyen:</p>
+<ul>
+<li><strong>Singleton:</strong> Asegura que una clase tenga solo una instancia y proporciona un punto global de acceso a ella.</li>
+<li><strong>Factory Method:</strong> Define una interfaz para crear un objeto, pero permite que las subclases decidan qué clase instanciar.</li>
+<li><strong>Observer:</strong> Permite que un objeto notifique a otros objetos sobre cambios en su estado.</li>
+<li><strong>Builder:</strong> Separa la construcción de un objeto complejo de su representación, permitiendo crear diferentes representaciones del mismo objeto.</li>
+</ul>
+</li>
+<li>
+<p>En nuestro caso, usaremos el patrón Builder para facilitar la creación de objetos <code>Client</code> y <code>ClientDTO</code>, al usar la anotación <code>@Builder</code> de Lombok la clase generará automáticamente un constructor con un patrón de diseño Builder, lo que nos permitirá crear instancias de estas clases de manera más legible y flexible, revisa esta pagina para mas informacion: <a href="https://refactoring.guru/es/design-patterns/builder">Patrón Builder</a>.</p>
+</li>
+<li>
+<p>Ahora si, vamos a crear las clases necesarias para manejar los clientes.</p>
+</li>
+</ul>
+<h2 id="paso-3-implementar-la-logica-del-backend-capa-por-capa">Paso 3: Implementar la lógica del backend capa por capa<a class="headerlink" href="#paso-3-implementar-la-logica-del-backend-capa-por-capa" title="Permanent link">¶</a></h2>
+<h3 id="1-dominio-domain">🧠 1. Dominio (domain/)<a class="headerlink" href="#1-dominio-domain" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong><code>Client.java</code></strong></li>
+</ul>
+<pre class="highlight"><code class="language-java">package com.example.labclients.lab_clients.domain.model;
+
+import lombok.*;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+public class Client {
+    private Long id;
+
+    private String name;
+    private String email;
+    private String phone;
+}</code></pre>
+<blockquote>
+<p>En esta clase definimos el modelo de dominio <code>Client</code>, que representa a un cliente en nuestro sistema. Usamos las anotaciones de Lombok para generar automáticamente los métodos comunes como getters, setters, constructores y el patrón Builder. Pero en ninguna parte de esta clase usa anotaciones de Spring, ya que esta capa es independiente del framework, es decir esta capa solo contiene la lógica de negocio pura.</p>
+</blockquote>
+<ul>
+<li><strong><code>ClientRepository.java</code></strong></li>
+</ul>
+<pre class="highlight"><code class="language-java">package com.example.labclients.lab_clients.domain.repository;
+
+import com.example.labclients.lab_clients.domain.model.Client;
+
+import java.util.List;
+import java.util.Optional;
+
+public interface ClientRepository {
+    Client save(Client client);
+    Optional&lt;Client&gt; findById(Long id);
+    List&lt;Client&gt; findAll();
+
+    boolean existsByEmail(String email);
+}</code></pre>
+<blockquote>
+<p>En esta interfaz (contrato) definimos las operaciones que podemos realizar sobre los clientes en el sistema. Esta interfaz es independiente de cualquier tecnología específica de almacenamiento, lo que nos permite implementar diferentes adaptadores de persistencia en la capa de infraestructura sin afectar el dominio.</p>
+</blockquote>
+<ul>
+<li><strong><code>ClientNotFoundException.java</code></strong></li>
+</ul>
+<pre class="highlight"><code class="language-java">package com.example.labclients.lab_clients.domain.exception;
+
+
+public class ClientNotFoundException extends Exception{
+    public ClientNotFoundException(Long id, String message) {
+        super("Client with id " + id + " not found." + message);
+    }
+}
+</code></pre>
+<blockquote>
+<p>En esta clase definimos una excepción personalizada <code>ClientNotFoundException</code> que se lanzará cuando un cliente no sea encontrado en el sistema. Esta excepción extiende de la clase base <code>Exception</code> y proporciona un mensaje detallado que incluye el ID del cliente que no se encontró.</p>
+</blockquote>
+<h3 id="2-aplicacion-application">⚙️ 2. Aplicación (application/)<a class="headerlink" href="#2-aplicacion-application" title="Permanent link">¶</a></h3>
+<p>Define los casos de uso del sistema.
+Depende solo del dominio, y trabaja con DTOs y Mappers.</p>
+<hr>
+<ul>
+<li><strong><code>ClientDTO.java</code></strong></li>
+</ul>
+<pre class="highlight"><code class="language-java">package com.example.labclients.lab_clients.application.dto;
+
+import lombok.*;
+
+@Data
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+public class ClientDTO {
+    String name;
+    String email;
+    String phone;
+}
+</code></pre>
+<blockquote>
+<p>A esto se le conoce como DTO (Data Transfer Object), y su función principal es transportar datos entre diferentes capas o componentes de una aplicación, en este caso entre el frontend y el backend. Los DTOs son útiles para encapsular los datos que se van a transferir, permitiendo una comunicación más eficiente y segura.</p>
+</blockquote>
+<ul>
+<li><strong><code>ClientMapper.java</code></strong></li>
+</ul>
+<pre class="highlight"><code class="language-java">package com.example.labclients.lab_clients.application.mapper;
+
+import com.example.labclients.lab_clients.application.dto.ClientDTO;
+import com.example.labclients.lab_clients.domain.model.Client;
+
+public class ClientMapper {
+    public static ClientDTO toDto(Client client){
+        return ClientDTO.builder()
+                .name(client.getName())
+                .email(client.getEmail())
+                .phone(client.getPhone())
+                .build();
+    }
+
+
+    public static Client toModel(ClientDTO clientDTO){
+        return Client.builder()
+                .name(clientDTO.getName())
+                .email(clientDTO.getEmail())
+                .phone(clientDTO.getPhone())
+                .build();
+    }
+}
+</code></pre>
+<blockquote>
+<p>En esta clase definimos un mapeador <code>ClientMapper</code> que se encarga de convertir entre el modelo de dominio <code>Client</code> y el DTO <code>ClientDTO</code>. Esto es útil para separar la lógica de negocio del formato de los datos que se envían o reciben a través de la API, facilitando la comunicación entre diferentes capas de la aplicación.</p>
+</blockquote>
+<ul>
+<li><strong><code>ClientService.java</code></strong></li>
+</ul>
+<pre class="highlight"><code class="language-java">package com.example.labclients.lab_clients.application.service;
+
+import com.example.labclients.lab_clients.application.dto.ClientDTO;
+import com.example.labclients.lab_clients.application.mapper.ClientMapper;
+import com.example.labclients.lab_clients.domain.model.Client;
+import com.example.labclients.lab_clients.domain.repository.ClientRepository;
+
+import java.util.List;
+import java.util.UUID;
+import java.util.stream.Collectors;
+
+public class ClientService {
+    private final ClientRepository clientRepository;
+
+    public ClientService(ClientRepository clientRepository) {
+        this.clientRepository = clientRepository;
+    }
+
+    public ClientDTO save(ClientDTO client){
+        if (this.clientRepository.existsByEmail(client.getEmail())){
+            throw new RuntimeException("Email already exists");
+        }
+        Client clientModel = ClientMapper.toModel(client);
+        return ClientMapper.toDto(this.clientRepository.save(clientModel));
+    }
+
+
+    public List&lt;ClientDTO&gt; findAll(){
+        return this.clientRepository
+                .findAll()
+                .stream()
+                .map(ClientMapper::toDto)
+                .collect(Collectors.toList());
+    }
+
+    public ClientDTO getClientById(Long id){
+        return this.clientRepository.findById(id)
+                .map(ClientMapper::toDto)
+                .orElseThrow(() -&gt; new RuntimeException("Client not found"));
+    }
+}
+</code></pre>
+<blockquote>
+<p>En esta clase definimos el servicio <code>ClientService</code> que contiene la lógica de negocio relacionada con los clientes. Este servicio interactúa con el repositorio de clientes para realizar operaciones como guardar un nuevo cliente y obtener la lista de todos los clientes. Utiliza el <code>ClientMapper</code> para convertir entre el modelo de dominio <code>Client</code> y el DTO <code>ClientDTO</code>, facilitando la comunicación entre las capas de la aplicación.</p>
+<p>🧩 Nota: Esta capa no usa anotaciones de Spring. Es completamente independiente del framework.</p>
+</blockquote>
+<h3 id="3-infraestructura-infrastructure">🏗️ 3. Infraestructura (infrastructure/)<a class="headerlink" href="#3-infraestructura-infrastructure" title="Permanent link">¶</a></h3>
+<p>En esta capa hablaremos de la implementación concreta de los repositorios, controladores REST y configuración de Spring Boot, pero definamos algunos conceptos primero con respecto a la arquitectura en la que se basa spring boot.</p>
+<p>Spring inicia en el nivel de infraestructura, donde se configuran los beans y componentes necesarios para que la aplicación funcione. Desde allí, Spring Boot gestiona el ciclo de vida de los beans y permite la inyección de dependencias en las capas superiores (aplicación y dominio).</p>
+<ul>
+<li>
+<p>Pero qie son los beans?</p>
+</li>
+<li>
+<p>En Spring, un bean es un objeto que es instanciado, ensamblado y gestionado por el contenedor de Spring. Los beans son los componentes fundamentales de una aplicación Spring y representan los objetos que componen la lógica de negocio, servicios, controladores, repositorios, etc.</p>
+</li>
+<li>
+<p>Los beans se definen en la configuración de Spring (ya sea mediante anotaciones o archivos XML) y pueden ser inyectados en otras clases mediante la inyección de dependencias. Esto permite una mayor modularidad y facilita la gestión del ciclo de vida de los objetos en la aplicación.</p>
+</li>
+<li>
+<p>En resumen, los beans son los bloques de construcción de una aplicación Spring, y el contenedor de Spring se encarga de crear, configurar y gestionar estos objetos para que puedan ser utilizados en toda la aplicación.</p>
+</li>
+</ul>
+<p>El siguiente paso en el flujo es la capa de los controladores REST, que exponen los endpoints HTTP para que los clientes puedan interactuar con la aplicación. Los controladores reciben las solicitudes HTTP, delegan la lógica de negocio a los servicios de la capa de aplicación y devuelven las respuestas adecuadas. Son considerados como el cerebro de la comunicación entre el cliente y el servidor.</p>
+<p>Los controladores REST en Spring Boot se implementan como clases anotadas con <code>@RestController</code>, que combinan la funcionalidad de <code>@Controller</code> y <code>@ResponseBody</code>. Esto significa que los métodos de los controladores pueden manejar solicitudes HTTP y devolver respuestas directamente en el cuerpo de la respuesta.</p>
+<p>Luego tenemos la capa de los serivicios, que contiene la lógica de negocio de la aplicación. Los servicios son responsables de procesar las solicitudes recibidas por los controladores, interactuar con los repositorios para acceder a los datos y aplicar las reglas de negocio necesarias. Los servicios actúan como intermediarios entre los controladores y los repositorios, asegurando que la lógica de negocio esté separada de la capa de presentación y la capa de persistencia.</p>
+<p>Finalmente, llegamos a la capa de persistencia, que se encarga de interactuar con la base de datos para almacenar y recuperar los datos de la aplicación. En esta capa, se implementan los repositorios que definen las operaciones CRUD (Crear, Leer, Actualizar, Eliminar) para las entidades del dominio. Los repositorios utilizan tecnologías específicas de persistencia, como JPA (Java Persistence API) o JDBC (Java Database Connectivity), para realizar las operaciones en la base de datos.</p>
+<p>Implementa detalles técnicos y depende de las otras capas.</p>
+<ul>
+<li><strong><code>ClientEntity.java</code></strong></li>
+</ul>
+<pre class="highlight"><code class="language-java">package com.example.labclients.lab_clients.infrastructure.persistence.entity;
+
+import jakarta.persistence.*;
+import lombok.*;
+
+
+@Entity
+@Table(name = "clients")
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
+@Builder
+public class ClientEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String name;
+    private String email;
+    private String phone;
+}
+</code></pre>
+<blockquote>
+<p>En esta clase definimos la entidad <code>ClientEntity</code> que representa la tabla <code>clients</code> en la base de datos. Usamos anotaciones de JPA para mapear los campos de la clase a las columnas de la tabla, y las anotaciones de Lombok para generar automáticamente los métodos comunes como getters, setters, constructores y el patrón Builder.</p>
+</blockquote>
+<ul>
+<li><strong><code>SpringDataClientRepository.java</code></strong></li>
+</ul>
+<pre class="highlight"><code class="language-java">package com.example.labclients.lab_clients.infrastructure.persistence.jpa;
+
+import com.example.labclients.lab_clients.infrastructure.persistence.entity.ClientEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+import java.util.UUID;
+
+public interface SpringDataClientRepository extends JpaRepository&lt;ClientEntity, Long&gt; {
+    Boolean existsByEmail(String email);
+}</code></pre>
+<blockquote>
+<p>En esta interfaz definimos el repositorio JPA <code>SpringDataClientRepository</code> que extiende de <code>JpaRepository</code>, proporcionando métodos CRUD predefinidos para la entidad <code>ClientEntity</code>. También definimos un método personalizado <code>existsByEmail</code> para verificar si un cliente con un correo electrónico específico ya existe en la base de datos.</p>
+</blockquote>
+<p>Existen dos formas de poder definir consultas personalizadas en Spring Data JPA:</p>
+<ol>
+<li><strong>Query Methods:</strong> Puedes definir métodos en la interfaz del repositorio siguiendo una convención de nomenclatura específica. Spring Data JPA generará automáticamente la consulta basada en el nombre del método. Por ejemplo, <code>findByEmail(String email)</code> generará una consulta para buscar un cliente por su correo electrónico, esya internamemente se traduce a una consulta SQL como <code>SELECT * FROM clients WHERE email = ?</code>.</li>
+<li><strong>JPQL (Java Persistence Query Language):</strong> Puedes usar la anotación <code>@Query</code> para definir consultas JPQL personalizadas directamente en la interfaz del repositorio. JPQL es un lenguaje de consulta orientado a objetos que se basa en las entidades del dominio en lugar de las tablas de la base de datos. Por ejemplo:</li>
+</ol>
+<pre class="highlight"><code class="language-java">@Query("SELECT c FROM ClientEntity c WHERE c.email = :email")
+Optional&lt;ClientEntity&gt; findByEmail(@Param("email") String email);</code></pre>
+<blockquote>
+<p>que te parece la forma en como spring boot maneja las consultas a la base de datos, no es genial? 😎</p>
+</blockquote>
+<ul>
+<li><strong><code>ClientRepositoryAdapter.java</code></strong></li>
+</ul>
+<pre class="highlight"><code class="language-java">package com.example.labclients.lab_clients.infrastructure.persistence.adapter;
+
+import com.example.labclients.lab_clients.domain.model.Client;
+import com.example.labclients.lab_clients.domain.repository.ClientRepository;
+import com.example.labclients.lab_clients.infrastructure.persistence.entity.ClientEntity;
+import com.example.labclients.lab_clients.infrastructure.persistence.jpa.SpringDataClientRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
+
+@Repository
+public class ClientRepositoryAdapter implements ClientRepository {
+
+    private final SpringDataClientRepository jpaRepository;
+    public ClientRepositoryAdapter(SpringDataClientRepository jpaRepository) {
+        this.jpaRepository = jpaRepository;
+    }
+
+    @Override
+    public Client save(Client client) {
+        ClientEntity clientEntity = ClientEntity.builder()
+                .name(client.getName())
+                .email(client.getEmail())
+                .phone(client.getPhone())
+                .build();
+        ClientEntity savedEntity = jpaRepository.save(clientEntity);
+        return Client.builder()
+                .id(savedEntity.getId())
+                .name(savedEntity.getName())
+                .email(savedEntity.getEmail())
+                .phone(savedEntity.getPhone())
+                .build();
+    }
+
+    @Override
+    public Optional&lt;Client&gt; findById(Long id) {
+        return this.jpaRepository.findById(id).map(e -&gt; Client.builder()
+                .id(e.getId())
+                .name(e.getName())
+                .email(e.getEmail())
+                .phone(e.getPhone())
+                .build());
+    }
+
+    @Override
+    public List&lt;Client&gt; findAll() {
+        return this.jpaRepository.findAll().stream().map(e -&gt; Client.builder()
+                .id(e.getId())
+                .name(e.getName())
+                .email(e.getEmail())
+                .phone(e.getPhone())
+                .build()).toList();
+    }
+
+    @Override
+    public boolean existsByEmail(String email) {
+        return this.jpaRepository.existsByEmail(email);
+    }
+}
+</code></pre>
+<blockquote>
+<p>En esta clase definimos el adaptador <code>ClientRepositoryAdapter</code> que implementa la interfaz <code>ClientRepository</code> del dominio. Este adaptador utiliza el repositorio JPA <code>SpringDataClientRepository</code> para interactuar con la base de datos y realizar las operaciones CRUD para los clientes. El adaptador convierte entre el modelo de dominio <code>Client</code> y la entidad de persistencia <code>ClientEntity</code>, facilitando la comunicación entre la capa de dominio y la capa de infraestructura.</p>
+</blockquote>
+<ul>
+<li><strong><code>BeanConfig.java</code></strong></li>
+</ul>
+<pre class="highlight"><code class="language-java">package com.example.labclients.lab_clients.infrastructure.config;
+
+
+import com.example.labclients.lab_clients.application.service.ClientService;
+import com.example.labclients.lab_clients.domain.repository.ClientRepository;
+import com.example.labclients.lab_clients.infrastructure.persistence.jpa.SpringDataClientRepository;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class BeanConfig {
+
+    @Bean
+    public ClientService clientService(ClientRepository clientRepository){
+        return new ClientService(clientRepository);
+    }
+}
+</code></pre>
+<blockquote>
+<p>En esta clase definimos la configuración de beans de Spring Boot. Aquí declaramos un bean para el servicio <code>ClientService</code>, que depende del repositorio <code>ClientRepository</code>. Spring Boot se encargará de inyectar automáticamente la implementación adecuada del repositorio cuando se cree el bean del servicio.</p>
+</blockquote>
+<ul>
+<li><strong><code>ClientController.java</code></strong></li>
+</ul>
+<pre class="highlight"><code class="language-java">package com.example.clientmanager.infrastructure.rest;
+
+import com.example.clientmanager.application.dto.ClientDTO;
+import com.example.clientmanager.application.service.ClientService;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/api/clients")
+public class ClientController {
+
+    private final ClientService clientService;
+
+    public ClientController(ClientService clientService) {
+        this.clientService = clientService;
+    }
+
+    @GetMapping
+    public List&lt;ClientDTO&gt; getAll() {
+        return clientService.getAllClients();
+    }
+
+    @PostMapping
+    public ClientDTO create(@RequestBody ClientDTO client) {
+        return clientService.createClient(client);
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id) {
+        clientService.deleteClient(id);
+    }
+}
+</code></pre>
+<blockquote>
+<p>Finalmente, en esta clase definimos el controlador REST <code>ClientController</code> que expone los endpoints HTTP para manejar las operaciones relacionadas con los clientes. El controlador utiliza el servicio <code>ClientService</code> para procesar las solicitudes y devolver las respuestas adecuadas. Los endpoints definidos incluyen:</p>
+</blockquote>
+<hr>
+<h1 id="5-ejecutar-backend">5. Ejecutar backend<a class="headerlink" href="#5-ejecutar-backend" title="Permanent link">¶</a></h1>
+<p>Ejecuta la aplicación (desde el IDE o en consola):</p>
+<pre class="highlight"><code class="language-bash">./mvnw spring-boot:run</code></pre>
+<p>Si todo está bien, verás:</p>
+<pre class="highlight"><code>Tomcat started on port(s): 8080</code></pre>
+<p>Prueba la API en el navegador o con <code>curl</code>:</p>
+<pre class="highlight"><code class="language-bash">curl http://localhost:8080/api/clients</code></pre>
+<p>Deberías obtener una respuesta vacía <code>[]</code> (aún no hay clientes).</p>
+<ul>
+<li>Trata de hacer un POST con <code>curl</code>:</li>
+</ul>
+<pre class="highlight"><code class="language-bash">curl -X POST http://localhost:8080/api/clients -H "Content-Type: application/json" -d '{"name":"Juan Perez","email":"juan.perez@example.com","phone":"123456789"}'</code></pre>
+<p>Deberías obtener la respuesta con el cliente creado:</p>
+<pre class="highlight"><code class="language-json">{
+  "name": "Juan Perez",
+  "email": "juan.perez@example.com",
+  "phone": "123456789"
+}</code></pre>
+<ul>
+<li>Ahora prueba el GET nuevamente:</li>
+</ul>
+<pre class="highlight"><code class="language-bash">curl http://localhost:8080/api/clients</code></pre>
+<p>Deberías ver el cliente que acabas de crear:</p>
+<pre class="highlight"><code class="language-json">[
+  {
+    "name": "Juan Perez",
+    "email": "juan.perez@example.com",
+    "phone": "123456789"
+  }
+]</code></pre>
+<h1 id="6-evaluacion-backend">6. Evaluación Backend:<a class="headerlink" href="#6-evaluacion-backend" title="Permanent link">¶</a></h1>
+<p>Hasta este punto ya deberia de ser capaz de comprender como funciona el backend con spring boot y neon, como funcionan los endpoints y como se comunican con la base de datos, y el porque de cada capa en la arquitectura en capas.</p>
+<ul>
+<li>Crea una rama nueva en tu repositorio llamada <code>feature/products</code>.</li>
+<li>Implementa la funcionalidad para manejar productos (Product) similar a como se hizo con clientes (Client).</li>
+<li>Replica todo lo aprndido y trata de implementar la misma logica pero en este caso para manejar productos en lugar de clientes, crea los endpoints necesarios para crear, listar y eliminar productos.</li>
+<li>Usa la misma estructura de carpetas y las mismas clases, pero adaptalas para manejar productos (Product.java, ProductDTO.java, ProductService.java, etc).</li>
+<li>Al finalizar, deberias de tener un backend funcional que maneje productos y clientes.</li>
+</ul>
+<hr>
+<h1 id="7-crear-el-frontend-con-vite">7. Crear el frontend con Vite<a class="headerlink" href="#7-crear-el-frontend-con-vite" title="Permanent link">¶</a></h1>
+<pre class="highlight"><code class="language-bash">npm create vite@latest frontend -- --template vanilla
+cd frontend
+npm install
+npm run dev</code></pre>
+<hr>
+<h2 id="estructura-de-carpetas">Estructura de carpetas<a class="headerlink" href="#estructura-de-carpetas" title="Permanent link">¶</a></h2>
+<pre class="highlight"><code class="language-bash">client:
+│   .gitignore
+│   index.html
+│   package-lock.json
+│   package.json
+│   tsconfig.json
+│
+├───node_modules
+├───public
+│       vite.svg
+│
+└───src
+    │   main.ts
+    │   style.css
+    │   typescript.svg
+    │
+    ├───modules
+    │   └───clients
+    │           Clients.ts
+    │           types.ts
+    │
+    └───utils
+            HttpClient.ts
+</code></pre>
+<hr>
+<ul>
+<li><strong><code>index.html</code></strong></li>
+</ul>
+<p>Modifícalo el html existente para que quede así:</p>
+<pre class="highlight"><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;title&gt;Gestión de Clientes&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Registro de Clientes&lt;/h1&gt;
+    &lt;form id="form"&gt;
+      &lt;input id="name" placeholder="Nombre" required /&gt;
+      &lt;input id="email" type="email" placeholder="Correo" required /&gt;
+      &lt;input id="phone" placeholder="Teléfono" /&gt;
+      &lt;button type="submit"&gt;Guardar&lt;/button&gt;
+    &lt;/form&gt;
+
+    &lt;h2&gt;Clientes registrados&lt;/h2&gt;
+    &lt;div id="list"&gt;&lt;/div&gt;
+
+    &lt;script type="module" src="/src/main.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<hr>
+<ul>
+<li>Crea el cliente HTTP con Fetch en:</li>
+</ul>
+<p><strong><code>src/utils/HttpClient.ts</code></strong></p>
+<pre class="highlight"><code class="language-ts">export interface HttpClient {
+  get&lt;T&gt;(url: string): Promise&lt;T&gt;;
+  post&lt;T, U&gt;(url: string, data: U): Promise&lt;T&gt;;
+}
+
+export class FetchHttpClient implements HttpClient {
+  private readonly baseUrl: string;
+  constructor(baseUrl: string = "http://localhost:8080/api") {
+    this.baseUrl = baseUrl;
+  }
+  async get&lt;T&gt;(url: string): Promise&lt;T&gt; {
+    const response = await fetch(this.baseUrl + url);
+    return response.json();
+  }
+  async post&lt;T, U&gt;(url: string, data: U): Promise&lt;T&gt; {
+    const response = await fetch(this.baseUrl + url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+    return response.json();
+  }
+}</code></pre>
+<blockquote>
+<p>Pero ahora antes de explicarte el codigo, nos asombraremos un poco con el codigo 😲, mira que clase tan bonita y bien estructurada, parece que la hizo un profesional 😎, pero no te preocupes, fui yo quien la hizo, asi que no te asustes 😅, solo soy alguien tratando de demotrar sus conocimientos.</p>
+<p>Ahora si, hablemos un poco del codigo, en este archivo definimos una interfaz <code>HttpClient</code> que especifica los métodos <code>get</code> y <code>post</code> para realizar solicitudes HTTP. Luego, implementamos esta interfaz en la clase <code>FetchHttpClient</code>, que utiliza la API Fetch de JavaScript para realizar las solicitudes. La clase acepta una URL base en el constructor, lo que permite configurar fácilmente la URL del backend.</p>
+<p>Notaras los parametros genericos <code>&lt;T&gt;</code> y <code>&lt;U&gt;</code>, estos permiten que los métodos <code>get</code> y <code>post</code> sean flexibles en cuanto a los tipos de datos que manejan. El parámetro <code>&lt;T&gt;</code> representa el tipo de dato que se espera recibir en la respuesta, mientras que <code>&lt;U&gt;</code> representa el tipo de dato que se envía en la solicitud POST. Esto permite que la clase <code>FetchHttpClient</code> pueda trabajar con diferentes tipos de datos sin necesidad de definir métodos específicos para cada tipo, a lo que se le conoce como programación genérica.</p>
+</blockquote>
+<h2 id="desarrollo-de-modulos">Desarrollo de modulos<a class="headerlink" href="#desarrollo-de-modulos" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong><code>src/modules/clients/types.ts</code></strong></li>
+</ul>
+<pre class="highlight"><code class="language-ts">export interface Client {
+  id?: number;
+  name: string;
+  email: string;
+  phone: string;
+}
+
+export type PostClientType = Omit&lt;Client, "id"&gt;;</code></pre>
+<blockquote>
+<p>En este archivo definimos las interfaces <code>Client</code> y <code>PostClientType</code> que representan la estructura de los datos de un cliente. La interfaz <code>Client</code> incluye todos los campos, mientras que <code>PostClientType</code> omite el campo <code>id</code>, ya que este no es necesario al crear un nuevo cliente, es un dato que sera generado por el backend.</p>
+</blockquote>
+<ul>
+<li><strong><code>src/modules/clients/clients.ts</code></strong></li>
+</ul>
+<pre class="highlight"><code class="language-ts">import type { Client, PostClientType } from "./types";
+import type { HttpClient } from "../../utils/HttpClient";
+
+export class Clients {
+  private httpClient: HttpClient;
+
+  constructor(httpClient: HttpClient) {
+    this.httpClient = httpClient;
+  }
+
+  async getClients() {
+    return this.httpClient.get&lt;Client[]&gt;("/clients");
+  }
+  async saveClient(client: PostClientType) {
+    return this.httpClient.post&lt;Client, PostClientType&gt;("/clients", client);
+  }
+}</code></pre>
+<blockquote>
+<p>En este archivo definimos la clase <code>Clients</code> que actúa como un módulo para manejar las operaciones relacionadas con los clientes. La clase utiliza una instancia de <code>HttpClient</code> para realizar las solicitudes HTTP al backend. Proporciona dos métodos: <code>getClients</code>, que obtiene la lista de clientes, y <code>saveClient</code>, que guarda un nuevo cliente. Ambos métodos utilizan los tipos definidos en <code>types.ts</code> para asegurar que los datos manejados sean del tipo correcto.</p>
+<p>Notaras que en el contructor de la clase <code>Clients</code> estamos inyectando una instancia de <code>HttpClient</code>, esto es un ejemplo de inyección de dependencias, que nos permite desacoplar la clase <code>Clients</code> de una implementación específica de <code>HttpClient</code>, facilitando la prueba y el mantenimiento del código.</p>
+<p>Ahora si, vamos a usar todo lo que hemos creado en el archivo principal.</p>
+</blockquote>
+<h2 id="integracion">Integración<a class="headerlink" href="#integracion" title="Permanent link">¶</a></h2>
+<p><strong><code>src/main.js</code></strong></p>
+<pre class="highlight"><code class="language-js">import "./style.css";
+import { FetchHttpClient } from "./utils/HttpClient";
+import { Clients } from "./modules/clients/Clients";
+const httpClient = new FetchHttpClient();
+
+const clientsModule = new Clients(httpClient);
+
+async function getAllClients() {
+  const clients = await clientsModule.getClients();
+  list.innerHTML = clients
+    .map(
+      (c) =&gt; `
+    &lt;div&gt;
+      &lt;b&gt;${c.name}&lt;/b&gt; (${c.email}) - ${c.phone || ""}
+    &lt;/div&gt;
+  `
+    )
+    .join("");
+}
+getAllClients();
+
+const form = document.getElementById("form") as HTMLFormElement;
+const list = document.getElementById("list") as HTMLDivElement;
+
+form.addEventListener("submit", async (e) =&gt; {
+  e.preventDefault();
+  if (!e.target) return;
+  const target = e.target as typeof e.target &amp; {
+    name: { value: string };
+    email: { value: string };
+    phone: { value: string };
+  };
+  const newClient = {
+    name: target.name!.value as string,
+    email: target.email!.value as string,
+    phone: target.phone!.value as string,
+  };
+  console.log(newClient);
+
+  await clientsModule.saveClient(newClient);
+  form.reset();
+  getAllClients();
+});
+</code></pre>
+<blockquote>
+<p>En este archivo principal, integramos todos los componentes que hemos creado para manejar la interfaz de usuario y la interacción con el backend. Primero, importamos los estilos y las clases necesarias. Luego, creamos una instancia de <code>FetchHttpClient</code> y la usamos para instanciar el módulo <code>Clients</code>.
+Definimos la función <code>getAllClients</code>, que obtiene la lista de clientes desde el backend y actualiza el contenido del elemento <code>list</code> en el DOM para mostrar los clientes registrados. Esta función se llama inicialmente para cargar los clientes al iniciar la aplicación.
+También configuramos un manejador de eventos para el formulario de registro de clientes. Cuando se envía el formulario, evitamos el comportamiento predeterminado, extraemos los valores ingresados por el usuario, creamos un nuevo objeto cliente y lo enviamos al backend utilizando el método <code>saveClient</code> del módulo <code>Clients</code>. Después de guardar el cliente, reseteamos el formulario y volvemos a cargar la lista de clientes para reflejar los cambios.</p>
+</blockquote>
+<hr>
+<h2 id="evaluacion-frontend">Evaluación frontend<a class="headerlink" href="#evaluacion-frontend" title="Permanent link">¶</a></h2>
+<p>Ahora que tienes el frontend y el backend funcionando y considerando que conoces como esta funciona todo, realiza una evaluación similar a la del backend, pero en este caso enfocado en el frontend.</p>
+<ul>
+<li>Crea una rama nueva en tu repositorio llamada <code>feature/frontend-eval</code>.</li>
+<li>Implementa todo lo necesario para que el frontend pueda manejar productos (Product) similar a como se hizo con clientes (Client), respeta la estructura de carpetas y crea los archivos necesarios (Products.ts, types.ts, etc).</li>
+<li>Agrega un formulario para registrar productos con los campos necearios, toma como referencia el modelos de producto que usaste en el backend.</li>
+<li>Muestra la lista de productos registrados en la misma página.</li>
+<li>Al finalizar, deberias de tener un frontend funcional que maneje productos y clientes.</li>
+</ul>
+<h1 id="8-retos-de-la-tarea-opcionales">8. Retos de la tarea (opcionales)<a class="headerlink" href="#8-retos-de-la-tarea-opcionales" title="Permanent link">¶</a></h1>
+<blockquote>
+<p>Como bien sabes son opcionales, pero te recomiendo que los intentes hacer para reforzar tus conocimientos, tu ya sabes por que 😎. Existen recompensas, ahora te dire una de ellas lo cual es que se garantizan puntos extra en la evaluación pero la cantidad de los puntos extra se revelara al finalizar el tiempo de entrega de la tarea. (existen recompensas)</p>
+</blockquote>
+<ol>
+<li>Validar que los campos “nombre” y “email” no estén vacíos antes de enviar.</li>
+<li>Agregar un botón “Eliminar cliente” (requiere crear endpoint DELETE en backend).</li>
+<li>Mostrar mensajes de error y éxito directamente en la página (no con <code>alert</code>).</li>
+<li>Agregar un campo “edad” y actualizar la tabla en la base de datos.</li>
+<li>Investigar: ¿qué diferencia hay entre <code>fetch</code> y <code>axios</code>?</li>
+</ol>
+<hr>
+<h1 id="9-seccion-de-investigacion-para-entregar">9. Sección de investigación (para entregar)<a class="headerlink" href="#9-seccion-de-investigacion-para-entregar" title="Permanent link">¶</a></h1>
+<blockquote>
+<p>Dentro del README.md de tu proyecto, crea una sección llamada “Investigación” y responde brevemente las siguientes preguntas:</p>
+<p>porfavor no uses respuestas muy largas, solo un par de lineas por cada pregunta, no seas una maquina que escribe ensayos 😅 o que copia y pega, se tu mismo repondiendo.</p>
+</blockquote>
+<ul>
+<li>¿Qué es Spring Boot y por qué simplifica el desarrollo web con Java?</li>
+<li>¿Qué diferencia hay entre <code>@RestController</code> y <code>@Controller</code>?</li>
+<li>¿Qué es JPA y cómo ayuda a mapear objetos en una base de datos relacional?</li>
+<li>¿Por qué Neon se considera una base “serverless”?</li>
+<li>¿Cómo funciona el CORS y por qué fue necesario configurarlo?</li>
+</ul>
+<hr>
+<h1 id="10-evaluacion-sugerida">10. Evaluación sugerida<a class="headerlink" href="#10-evaluacion-sugerida" title="Permanent link">¶</a></h1>
+<table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th style="text-align: right;">Puntaje</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Configuración de Neon y conexión funcional</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr>
+<td>Backend Spring Boot con endpoints REST</td>
+<td style="text-align: right;">25</td>
+</tr>
+<tr>
+<td>Backend Evaluación</td>
+<td style="text-align: right;">50</td>
+</tr>
+<tr>
+<td>Frontend con formulario y Fetch</td>
+<td style="text-align: right;">25</td>
+</tr>
+<tr>
+<td>Correcta manipulación del DOM</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr>
+<td>Retos e investigación</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr>
+<td>Evaluacion Frontend</td>
+<td style="text-align: right;">40</td>
+</tr>
+<tr>
+<td>Estilos y presentación</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr>
+<td>Documentación en el README.md</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style="text-align: right;"><strong>200</strong></td>
+</tr>
+</tbody>
+</table>
+<h1 id="fin-de-la-practica">Fin de la práctica<a class="headerlink" href="#fin-de-la-practica" title="Permanent link">¶</a></h1>
+<p>¡Felicidades! Has completado la práctica sobre manipulación de formularios con Spring Boot y Neon. Ahora tienes una comprensión sólida de cómo construir un backend robusto y un frontend interactivo para gestionar clientes y productos. Sigue practicando y explorando nuevas tecnologías para seguir mejorando tus habilidades de desarrollo web. ¡Buen trabajo! 👏🚀</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright © 2025 by K3V1N 117</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../javascripts/katex.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+        <script src="../../javascripts/tablesort.js"></script>
+
+        <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body></html>

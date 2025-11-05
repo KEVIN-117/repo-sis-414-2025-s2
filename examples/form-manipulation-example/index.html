@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Store Manager</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body class="min-h-screen">
+  <h1 class="mb-12 text-4xl font-bold uppercase">Neon Store Manager</h1>
+  <div class="container mx-auto px-4 py-8 flex flex-col items-center justify-center gap-8">
+
+    <!-- Navigation Tabs -->
+    <div class="flex justify-center gap-4 mb-8 flex-wrap">
+      <button class="btn tab-btn active" data-tab="products-list">Lista de Productos</button>
+      <button class="btn tab-btn" data-tab="products-form">Registrar Producto</button>
+      <button class="btn tab-btn" data-tab="clients-list">Lista de Clientes</button>
+      <button class="btn tab-btn" data-tab="clients-form">Registrar Cliente</button>
+    </div>
+
+    <!-- Products List Section -->
+    <div id="products-list" class="tab-content active space-y-8">
+      <div style="--duration: 10s;" class="container-style relative rounded-3xl space-y-6">
+        <!-- Products Form Section -->
+        <h2 class="mb-8">Productos</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="product-list_ui">
+          <!-- <div style="--duration: 50s;"
+            class="container-style-inverted relative rounded-2xl p-6 hover:scale-105 transition-transform duration-300 h-[60vh] flex flex-col justify-between">
+            <img src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_t.png" alt="Product"
+              class="w-full h-80 object-contain mb-4 border-image rounded-lg">
+            <h3
+              class="text-xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)]">
+              Fjallraven Backpack</h3>
+            <p class="text-sm mb-3 line-clamp-3">Your perfect pack for everyday use and walks in the forest. Stash your
+              laptop (up to 15 inches) in the padded sleeve.</p>
+            <div class="flex justify-between items-center mb-3">
+              <span class="text-2xl font-bold text-[var(--primary)]">$109.95</span>
+              <span
+                class="px-3 py-1 rounded-full text-xs bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] text-[var(--dark)] font-semibold">Men's
+                Clothing</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-yellow-400">★</span>
+              <span class="text-sm">3.9 (120 reviews)</span>
+            </div>
+          </div>
+
+          <div style="--duration: 40s;"
+            class="container-style-inverted relative rounded-2xl p-6 hover:scale-105 transition-transform duration-300 h-[60vh] flex flex-col justify-between">
+            <img src="https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_t.png" alt="Product"
+              class="w-full h-80 object-contain mb-4 border-image rounded-lg">
+            <h3
+              class="text-xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)]">
+              Mens Casual Premium Slim Fit T-Shirts</h3>
+            <p class="text-sm mb-3 line-clamp-3">Slim-fitting style, contrast raglan long sleeve, three-button henley
+              placket, light weight & soft fabric.</p>
+            <div class="flex justify-between items-center mb-3">
+              <span class="text-2xl font-bold text-[var(--primary)]">$22.30</span>
+              <span
+                class="px-3 py-1 rounded-full text-xs bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] text-[var(--dark)] font-semibold">Men's
+                Clothing</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-yellow-400">★</span>
+              <span class="text-sm">4.1 (259 reviews)</span>
+            </div>
+          </div>
+
+          <div style="--duration: 50s;"
+            class="container-style-inverted relative rounded-2xl p-6 hover:scale-105 transition-transform duration-300 h-[60vh] flex flex-col justify-between">
+            <img src="https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_t.png" alt="Product"
+              class="w-full h-80 object-contain mb-4 border-image rounded-lg">
+            <h3
+              class="text-xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)]">
+              Mens Cotton Jacket</h3>
+            <p class="text-sm mb-3 line-clamp-3">Great outerwear jackets for Spring/Autumn/Winter, suitable for many
+              occasions.</p>
+            <div class="flex justify-between items-center mb-3">
+              <span class="text-2xl font-bold text-[var(--primary)]">$55.99</span>
+              <span
+                class="px-3 py-1 rounded-full text-xs bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] text-[var(--dark)] font-semibold">Men's
+                Clothing</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-yellow-400">★</span>
+              <span class="text-sm">4.7 (500 reviews)</span>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <div class="relative w-full">
+      <div x-data="{ open: false }" id="products-form" class="tab-content" role="dialog" aria-modal="false"
+        aria-labelledby="form-title">
+        <!-- if form is open hidden button -->
+        <button class="btn tab-btn" data-tab="products-form" @click="open = !open" aria-expanded="false"
+          :aria-expanded="open.toString()">
+          Register New Product
+        </button>
+        <div class="container-style rounded-3xl mx-auto" x-show="open" x-transition duration="500" x-cloak
+          @click.outside="open = false">
+          <h2 class="mb-8">Registrar Nuevo Producto</h2>
+          <form class="space-y-6 w-full" id="product_form">
+            <div>
+              <label for="product-title" class="block mb-2">Título del Producto</label>
+              <input type="text" id="product-title" name="product_title" placeholder="Nombre del producto"
+                class="w-full">
+            </div>
+
+            <div class="flex">
+              <div class="flex-1 pt-6 mt-6 pr-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label for="product-price" class="block mb-2">Precio</label>
+                    <input type="number" id="product-price" placeholder="0.00" step="0.01" class="w-full"
+                      name="product_price">
+                  </div>
+                  <div>
+                    <label for="product-category" class="block mb-2">Categoría</label>
+                    <select id="product-category" class="w-full" name="product_category">
+                      <option value="">Seleccionar categoría</option>
+                      <option value="men's clothing">Men's Clothing</option>
+                      <option value="women's clothing">Women's Clothing</option>
+                      <option value="electronics">Electronics</option>
+                      <option value="jewelery">Jewelery</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label for="product-description" class="block mb-2">Descripción</label>
+                  <input type="text" id="product-description" placeholder="Descripción detallada del producto"
+                    class="w-full" name="product_description">
+                </div>
+              </div>
+
+              <div class="border-l border-[var(--primary)] flex-1 pt-6 mt-6 pl-6">
+                <div>
+                  <label for="product-image" class="block mb-2">URL de Imagen</label>
+                  <input type="url" id="product-image" placeholder="https://example.com/image.jpg" class="w-full"
+                    name="product_image">
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label for="product-rating" class="block mb-2">Rating</label>
+                    <input type="number" id="product-rating" placeholder="0.0" step="0.1" min="0" max="5" class="w-full"
+                      name="product_rating">
+                  </div>
+                  <div>
+                    <label for="product-count" class="block mb-2">Cantidad de Reviews</label>
+                    <input type="number" id="product-count" placeholder="0" class="w-full" name="product_count">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex justify-center pt-4">
+              <button type="submit" class="btn">Registrar Producto</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Clients List Section -->
+    <div id="clients-list" class="tab-content relative space-y-8">
+      <div class="container-style rounded-3xl">
+        <h2 class="mb-8">Clientes</h2>
+        <div class="space-y-4 grid grid-cols-3 gap-6" id="client-list_ui">
+          <!-- Client Card 1 -->
+          <div class="container-style-inverted rounded-2xl p-6 hover:shadow-2xl transition-shadow duration-300">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div>
+                <h3
+                  class="text-lg font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)]">
+                  John Doe</h3>
+                <p class="text-sm"><span class="text-[var(--primary)]">Username:</span> johnd</p>
+                <p class="text-sm"><span class="text-[var(--primary)]">Email:</span> john@gmail.com</p>
+                <p class="text-sm"><span class="text-[var(--primary)]">Phone:</span> 1-570-236-7033</p>
+              </div>
+              <div class="md:col-span-2">
+                <h4 class="text-sm font-semibold mb-2 text-[var(--secondary)]">Dirección</h4>
+                <p class="text-sm">New Road, 7682</p>
+                <p class="text-sm">Kilcoole, 12926-3874</p>
+                <p class="text-sm mt-2"><span class="text-[var(--primary)]">Geolocation:</span> Lat: -37.3159, Long:
+                  81.1496</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Client Card 2 (Example) -->
+          <div class="container-style-inverted rounded-2xl p-6 hover:shadow-2xl transition-shadow duration-300">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div>
+                <h3
+                  class="text-lg font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)]">
+                  Jane Smith</h3>
+                <p class="text-sm"><span class="text-[var(--primary)]">Username:</span> janes</p>
+                <p class="text-sm"><span class="text-[var(--primary)]">Email:</span> jane@gmail.com</p>
+                <p class="text-sm"><span class="text-[var(--primary)]">Phone:</span> 1-555-123-4567</p>
+              </div>
+              <div class="md:col-span-2">
+                <h4 class="text-sm font-semibold mb-2 text-[var(--secondary)]">Dirección</h4>
+                <p class="text-sm">Main Street, 123</p>
+                <p class="text-sm">Springfield, 54321-1234</p>
+                <p class="text-sm mt-2"><span class="text-[var(--primary)]">Geolocation:</span> Lat: 40.7128, Long:
+                  -74.0060</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Client Card 3 (Example) -->
+          <div class="container-style-inverted rounded-2xl p-6 hover:shadow-2xl transition-shadow duration-300">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div>
+                <h3
+                  class="text-lg font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)]">
+                  Bob Johnson</h3>
+                <p class="text-sm"><span class="text-[var(--primary)]">Username:</span> bobj</p>
+                <p class="text-sm"><span class="text-[var(--primary)]">Email:</span> bob@gmail.com</p>
+                <p class="text-sm"><span class="text-[var(--primary)]">Phone:</span> 1-555-987-6543</p>
+              </div>
+              <div class="md:col-span-2">
+                <h4 class="text-sm font-semibold mb-2 text-[var(--secondary)]">Dirección</h4>
+                <p class="text-sm">Oak Avenue, 456</p>
+                <p class="text-sm">Portland, 97201-5678</p>
+                <p class="text-sm mt-2"><span class="text-[var(--primary)]">Geolocation:</span> Lat: 45.5152, Long:
+                  -122.6784</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-full ">
+      <!-- Clients Form Section -->
+      <div x-data="{ open: false }" id="clients-form" class="tab-content" role="dialog">
+        <button class="btn tab-btn mb-8" data-tab="clients-form" @click="open = !open" aria-expanded="false"
+          :aria-expanded="open.toString()">
+          Registrar Nuevo Cliente
+        </button>
+        <div style="--duration: 10s;" class="container-style rounded-3xl max-w-full mx-auto" x-show="open" x-transition
+          duration="500" x-cloak @click.outside="open = false">
+          <h2 class="mb-8">Registrar Nuevo Cliente</h2>
+          <form class="space-y-6 flex flex-col w-full" id="client_form">
+            <div class="flex">
+              <div class="flex-1 pt-6 mt-6 pr-6">
+                <h3
+                  class="text-xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)]">
+                  Dirección</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label for="client-firstname" class="block mb-2">Nombre</label>
+                    <input type="text" id="client-firstname" placeholder="Nombre" class="w-full"
+                      name="client_firstname">
+                  </div>
+                  <div>
+                    <label for="client-lastname" class="block mb-2">Apellido</label>
+                    <input type="text" id="client-lastname" placeholder="Apellido" class="w-full"
+                      name="client_lastname">
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label for="client-username" class="block mb-2">Username</label>
+                    <input type="text" id="client-username" placeholder="username" class="w-full"
+                      name="client_username">
+                  </div>
+                  <div>
+                    <label for="client-email" class="block mb-2">Email</label>
+                    <input type="email" id="client-email" placeholder="email@example.com" class="w-full"
+                      name="client_email">
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label for="client-password" class="block mb-2">Password</label>
+                    <input type="password" id="client-password" placeholder="********" class="w-full"
+                      name="client_password">
+                  </div>
+                  <div>
+                    <label for="client-phone" class="block mb-2">Teléfono</label>
+                    <input type="tel" id="client-phone" placeholder="1-555-123-4567" class="w-full" name="client_phone">
+                  </div>
+                </div>
+              </div>
+
+              <div class="border-l border-[var(--primary)] pt-6 mt-6 flex-1 pl-6">
+                <h3
+                  class="text-xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)]">
+                  Dirección</h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                  <div>
+                    <label for="client-street" class="block mb-2">Calle</label>
+                    <input type="text" id="client-street" placeholder="Nombre de la calle" class="w-full"
+                      name="client_street">
+                  </div>
+                  <div>
+                    <label for="client-number" class="block mb-2">Número</label>
+                    <input type="number" id="client-number" placeholder="123" class="w-full" name="client_number">
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                  <div>
+                    <label for="client-city" class="block mb-2">Ciudad</label>
+                    <input type="text" id="client-city" placeholder="Ciudad" class="w-full" name="client_city">
+                  </div>
+                  <div>
+                    <label for="client-zipcode" class="block mb-2">Código Postal</label>
+                    <input type="text" id="client-zipcode" placeholder="12345-6789" class="w-full"
+                      name="client_zipcode">
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label for="client-lat" class="block mb-2">Latitud</label>
+                    <input type="text" id="client-lat" placeholder="-37.3159" class="w-full" name="client_lat">
+                  </div>
+                  <div>
+                    <label for="client-long" class="block mb-2">Longitud</label>
+                    <input type="text" id="client-long" placeholder="81.1496" class="w-full" name="client_long">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex justify-center pt-4">
+              <button type="submit" class="btn">Registrar Cliente</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./src/main.ts"></script>
+</body>
+
+</html>

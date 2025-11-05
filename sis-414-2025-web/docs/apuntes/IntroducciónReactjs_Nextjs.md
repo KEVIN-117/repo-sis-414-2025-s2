@@ -1,8 +1,10 @@
+# 🧑‍🏫 Introducción a React.js y Next.js
+
 ---
+
 ## 🎯 **Objetivo general**
 
 Comprender los fundamentos de React.js como biblioteca para construir interfaces de usuario basadas en componentes, e introducir los conceptos iniciales de Next.js como framework que extiende React con funcionalidades de enrutamiento, renderizado del lado del servidor y optimización.
----
 
 ## 🧠 **1. Introducción: ¿Por qué React?**
 
