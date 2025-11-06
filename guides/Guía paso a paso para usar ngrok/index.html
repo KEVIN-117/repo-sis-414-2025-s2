@@ -6,7 +6,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>PullRequest - SIS-414 G-2</title>
+        <title>Guía paso a paso para usar ngrok - SIS-414 G-2</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/fontawesome.min.css" rel="stylesheet">
         <link href="../../css/brands.min.css" rel="stylesheet">
@@ -96,11 +96,11 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../Gu%C3%ADa%20paso%20a%20paso%20para%20usar%20ngrok/" class="dropdown-item">Guía paso a paso para usar ngrok</a>
+    <a href="./" class="dropdown-item active" aria-current="page">Guía paso a paso para usar ngrok</a>
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active" aria-current="page">PullRequest</a>
+    <a href="../PullRequest/" class="dropdown-item">PullRequest</a>
 </li>
                                 </ul>
                             </li>
@@ -158,12 +158,12 @@
 
                     <ul class="nav navbar-nav ms-md-auto">
                             <li class="nav-item">
-                                <a rel="prev" href="../Gu%C3%ADa%20paso%20a%20paso%20para%20usar%20ngrok/" class="nav-link">
+                                <a rel="prev" href="../../apuntes/js/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../../laboratorios/Laboratorio%201/" class="nav-link">
+                                <a rel="next" href="../PullRequest/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -185,49 +185,9 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#guia-crear-un-pull-request-en-tu-propio-repositorio" class="nav-link">📘 Guía: Crear un Pull Request en tu propio repositorio</a>
+            <li class="nav-item" data-bs-level="1"><a href="#guia-paso-a-paso-para-usar-ngrok" class="nav-link">Guía paso a paso para usar ngrok</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#0-crear-el-repositorio-en-github" class="nav-link">0) Crear el repositorio en GitHub</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#1-clonar-el-repositorio-a-tu-computadora" class="nav-link">1) Clonar el repositorio a tu computadora</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#2-crear-una-nueva-rama-para-tu-cambio" class="nav-link">2) Crear una nueva rama para tu cambio</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#3-realizar-un-cambio-sencillo" class="nav-link">3) Realizar un cambio sencillo</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#4-agregar-y-hacer-commit-de-los-cambios" class="nav-link">4) Agregar y hacer commit de los cambios</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#5-subir-tu-rama-a-github" class="nav-link">5) Subir tu rama a GitHub</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#6-crear-el-pull-request-pr-en-github" class="nav-link">6) Crear el Pull Request (PR) en GitHub</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#7-si-aparece-un-conflicto" class="nav-link">7) Si aparece un conflicto</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#8-checklist-de-entrega" class="nav-link">8) Checklist de entrega</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#9-errores-comunes-y-soluciones" class="nav-link">9) Errores comunes y soluciones</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#rubrica-sugerida-20-pts" class="nav-link">Rubrica sugerida (20 pts)</a>
+            <li class="nav-item" data-bs-level="2"><a href="#guia-paso-a-paso-para-usar-ngrok_1" class="nav-link">📝 Guía paso a paso para usar ngrok</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -238,137 +198,122 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
+<h1 id="guia-paso-a-paso-para-usar-ngrok">Guía paso a paso para usar ngrok<a class="headerlink" href="#guia-paso-a-paso-para-usar-ngrok" title="Permanent link">¶</a></h1>
+<p><strong>✅ Guía rápida:</strong> <em>ngrok</em> te permite exponer un servidor local a Internet mediante una URL pública segura. En pocas líneas de comando puedes compartir tu aplicación, probar webhooks o mostrar un demo sin necesidad de configurar DNS, puertos o firewalls.</p>
 <hr>
-<h1 id="guia-crear-un-pull-request-en-tu-propio-repositorio">📘 Guía: Crear un Pull Request en tu propio repositorio<a class="headerlink" href="#guia-crear-un-pull-request-en-tu-propio-repositorio" title="Permanent link">¶</a></h1>
-<p><strong>Objetivo:</strong> Crear un repositorio en GitHub, hacer un cambio en una rama y abrir un Pull Request dentro de tu propio repo (de una rama hacia <code>main</code>).</p>
-<p><strong>Requisitos previos:</strong> cuenta en GitHub, Git instalado (o GitHub Desktop), conocimientos básicos de terminal.</p>
-<hr>
-<h2 id="0-crear-el-repositorio-en-github">0) Crear el repositorio en GitHub<a class="headerlink" href="#0-crear-el-repositorio-en-github" title="Permanent link">¶</a></h2>
-<ol>
-<li>Entra a <a href="https://github.com">GitHub</a>.</li>
-<li>Haz clic en <strong>New repository</strong>.</li>
-<li>Ponle un nombre, por ejemplo: <code>repo-practica</code>.</li>
-<li>Marca la opción <strong>Add a README file</strong> (opcional).</li>
-<li>Haz clic en <strong>Create repository</strong>.</li>
-</ol>
-<p>Ahora tienes <code>github.com/tu-usuario/repo-practica</code>.</p>
-<hr>
-<h2 id="1-clonar-el-repositorio-a-tu-computadora">1) Clonar el repositorio a tu computadora<a class="headerlink" href="#1-clonar-el-repositorio-a-tu-computadora" title="Permanent link">¶</a></h2>
-<p>En tu terminal:</p>
-<pre class="highlight"><code class="language-bash"># clona tu repositorio
-git clone https://github.com/tu-usuario/repo-practica.git
-cd repo-practica
+<h2 id="guia-paso-a-paso-para-usar-ngrok_1">📝 Guía paso a paso para usar <strong>ngrok</strong><a class="headerlink" href="#guia-paso-a-paso-para-usar-ngrok_1" title="Permanent link">¶</a></h2>
+<h3 id="1-registro-e-instalacion">1. Registro e instalación<a class="headerlink" href="#1-registro-e-instalacion" title="Permanent link">¶</a></h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/ngrok/image.png" data-desc-position="bottom"><img alt="Ngrok Verify" src="../assets/ngrok/image.png"></a></p>
+<blockquote>
+<p>En mi caso no tengo ngrok instalado, así que empezaré desde cero.</p>
+</blockquote>
+<ul>
+<li>En un navegador web, ve a <a href="https://ngrok.com/">ngrok.com</a> y regístrate.</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/ngrok/image-1.png" data-desc-position="bottom"><img alt="Home Page" src="../assets/ngrok/image-1.png"></a></p>
+<blockquote>
+<p>Haz clic en "Sign up" para crear una cuenta gratuita y sigue todo el proceso de registro. Tambien puedes registrarte usando tu cuenta de GitHub o Google.</p>
+</blockquote>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/ngrok/image-2.png" data-desc-position="bottom"><img alt="Ngrok Dashboard" src="../assets/ngrok/image-2.png"></a></p>
+<blockquote>
+<p>En mi caso ya tengo una cuenta, así que iré directamente al panel de control.</p>
+</blockquote>
+<ul>
+<li><strong>Crea una cuenta gratuita</strong> en <a href="https://ngrok.com/">ngrok.com</a>.</li>
+<li>Descarga el binario de ngrok para tu sistema operativo (Windows, macOS, Linux).</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/ngrok/image-3.png" data-desc-position="bottom"><img alt="Download Options" src="../assets/ngrok/image-3.png"></a></p>
+<blockquote>
+<p>Selecciona la opción en base a tu S.O de tu máquina.</p>
+</blockquote>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/ngrok/image-4.png" data-desc-position="bottom"><img alt="Download" src="../assets/ngrok/image-4.png"></a></p>
+<blockquote>
+<p>Haz clic en el enlace de descarga para obtener el archivo comprimido, es decir en <code>Microsoft Store Installer</code> para Windows o si usa macOS o Linux selecciona la plataforma correspondiente y descarga ejecutando los comandos que te sugiere la web.</p>
+</blockquote>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/ngrok/image-5.png" data-desc-position="bottom"><img alt="Success Download" src="../assets/ngrok/image-5.png"></a></p>
+<blockquote>
+<p>Una vez descargado el archivo comprimido, considero que no deberías de tener ningún problema con el proceso de instalación, considero que es bastante sencillo.</p>
+</blockquote>
+<ul>
+<li>Descomprime el archivo y coloca el ejecutable en una carpeta incluida en tu <code>PATH</code> (ej. <code>/usr/local/bin</code> en Linux o <code>C:\ngrok</code> en Windows).</li>
+</ul>
+<blockquote>
+<p>El paso de descompresión y colocación del ejecutable en una carpeta incluida en tu <code>PATH</code> dependerá de tu sistema operativo, pero generalmente es un proceso sencillo y en muchos casos es un proceso automático en windows pero en macOS o Linux puede que tengas que hacerlo manualmente.</p>
+</blockquote>
+<h3 id="verificacion-de-instalacion">Verificación de instalación<a class="headerlink" href="#verificacion-de-instalacion" title="Permanent link">¶</a></h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/ngrok/image-6.png" data-desc-position="bottom"><img alt="Verifi Instalation" src="../assets/ngrok/image-6.png"></a></p>
+<blockquote>
+<p>Abre una terminal y ejecuta el siguiente comando para verificar que ngrok está instalado correctamente:</p>
+</blockquote>
+<pre class="highlight"><code class="language-bash">ngrok version
 
-# verifica los remotos
-git remote -v
-# origin -&gt; tu repositorio en GitHub</code></pre>
-<hr>
-<h2 id="2-crear-una-nueva-rama-para-tu-cambio">2) Crear una nueva rama para tu cambio<a class="headerlink" href="#2-crear-una-nueva-rama-para-tu-cambio" title="Permanent link">¶</a></h2>
-<p>Nunca trabajes directo en <code>main</code>. Crea una rama con un nombre claro:</p>
-<pre class="highlight"><code class="language-bash">git checkout -b feat/agregar-mi-nombre</code></pre>
-<p>Ejemplos de prefijos:</p>
+# o solo
+ngrok</code></pre>
+<h3 id="2-autenticacion">2. Autenticación<a class="headerlink" href="#2-autenticacion" title="Permanent link">¶</a></h3>
 <ul>
-<li><code>feat/</code> para nueva funcionalidad.</li>
-<li><code>fix/</code> para corrección de errores.</li>
-<li><code>docs/</code> para cambios en documentación.</li>
+<li>Una vez registrado, en tu panel verás un <strong>Authtoken</strong>.</li>
+<li>Copia ese token y ejecútalo en tu terminal:
+  <pre class="highlight"><code class="language-bash">ngrok config add-authtoken TU_AUTHTOKEN</code></pre></li>
+<li>Esto vincula tu instalación local con tu cuenta de ngrok.</li>
 </ul>
-<hr>
-<h2 id="3-realizar-un-cambio-sencillo">3) Realizar un cambio sencillo<a class="headerlink" href="#3-realizar-un-cambio-sencillo" title="Permanent link">¶</a></h2>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/ngrok/image-7.png" data-desc-position="bottom"><img alt="Connect local" src="../assets/ngrok/image-7.png"></a></p>
+<blockquote>
+<p>Reemplaza <code>TU_AUTHTOKEN</code> con el token que copiaste de tu panel de ngrok.</p>
+</blockquote>
+<p>Si todo está correcto, verás un mensaje de confirmación.</p>
+<pre class="highlight"><code class="language-bash">Authtoken saved to configuration file: /home/usuario/.ngrok2/ngrok.yml</code></pre>
+<blockquote>
+<p>Bien ya tenemos ngrok instalado y autenticado con nuestra cuenta, ahora podemos empezar a usarlo.</p>
+</blockquote>
+<h3 id="3-inicia-tu-servidor-local">3. Inicia tu servidor local<a class="headerlink" href="#3-inicia-tu-servidor-local" title="Permanent link">¶</a></h3>
 <ul>
-<li>Abre <code>README.md</code> o crea un archivo nuevo, por ejemplo <code>colaboradores.txt</code>.</li>
-<li>Agrega tu nombre y guarda el archivo.</li>
-</ul>
-<p>Ejemplo de contenido en <code>colaboradores.txt</code>:</p>
-<pre class="highlight"><code>Juan Pérez - Ingeniería de Software</code></pre>
-<hr>
-<h2 id="4-agregar-y-hacer-commit-de-los-cambios">4) Agregar y hacer commit de los cambios<a class="headerlink" href="#4-agregar-y-hacer-commit-de-los-cambios" title="Permanent link">¶</a></h2>
-<pre class="highlight"><code class="language-bash">git add colaboradores.txt
-git commit -m "docs: agregar nombre de Juan Pérez a colaboradores.txt"</code></pre>
-<p>Consejo: el mensaje debe empezar con tipo (<code>feat</code>, <code>fix</code>, <code>docs</code>) y una descripción breve.</p>
-<hr>
-<h2 id="5-subir-tu-rama-a-github">5) Subir tu rama a GitHub<a class="headerlink" href="#5-subir-tu-rama-a-github" title="Permanent link">¶</a></h2>
-<pre class="highlight"><code class="language-bash">git push -u origin feat/agregar-mi-nombre</code></pre>
-<hr>
-<h2 id="6-crear-el-pull-request-pr-en-github">6) Crear el Pull Request (PR) en GitHub<a class="headerlink" href="#6-crear-el-pull-request-pr-en-github" title="Permanent link">¶</a></h2>
-<ol>
-<li>Ve a tu repositorio en GitHub (<code>github.com/tu-usuario/repo-practica</code>).</li>
-<li>
-<p>Verás el botón <strong>Compare &amp; pull request</strong> → haz clic.</p>
+<li>SEjecutamos una aplicación local. Por ejemplo, en spring boot:
+  <pre class="highlight"><code class="language-bash">./mvnw spring-boot:run</code></pre><blockquote>
+<p>Esto iniciará tu aplicación en <code>http://localhost:8080</code> (o el puerto que uses).</p>
+</blockquote>
 </li>
-<li>
-<p><em>Si no aparece:</em> ve a la pestaña <strong>Pull requests</strong> → <strong>New pull request</strong>.</p>
-</li>
-<li>Elige como <strong>base branch</strong>: <code>main</code>.</li>
-<li>Elige como <strong>compare branch</strong>: <code>feat/agregar-mi-nombre</code>.</li>
-<li>Completa el título y descripción.</li>
-</ol>
-<p>Ejemplo:</p>
-<p><strong>Título:</strong></p>
-<pre class="highlight"><code>docs: agregar nombre de Juan Pérez a colaboradores.txt</code></pre>
-<p><strong>Descripción:</strong></p>
-<pre class="highlight"><code>Agrego mi nombre al archivo colaboradores.txt
-
-- Archivo modificado: colaboradores.txt
-- Cambio: añadí "Juan Pérez - Ingeniería de Software"
-- ¿Cómo probar?: revisar el archivo en la pestaña "Files changed"</code></pre>
-<ol>
-<li>Haz clic en <strong>Create pull request</strong>. 🎉</li>
-</ol>
-<hr>
-<h2 id="7-si-aparece-un-conflicto">7) Si aparece un conflicto<a class="headerlink" href="#7-si-aparece-un-conflicto" title="Permanent link">¶</a></h2>
-<p>Si GitHub muestra “This branch has conflicts”, significa que tu rama está desactualizada respecto a <code>main</code>.</p>
-<p>Pasos:</p>
-<pre class="highlight"><code class="language-bash"># estando en tu repo local
-git checkout main
-git pull origin main
-
-# regresar a tu rama
-git checkout feat/agregar-mi-nombre
-git merge main</code></pre>
-<ul>
-<li>Si hay conflictos, Git los marcará en los archivos.</li>
-<li>Resuélvelos en tu editor, guarda y luego:</li>
 </ul>
-<pre class="highlight"><code class="language-bash">git add &lt;archivo-resuelto&gt;
-git commit -m "chore: resolver conflictos con main"
-git push origin feat/agregar-mi-nombre</code></pre>
-<p>El PR se actualizará automáticamente.</p>
-<hr>
-<h2 id="8-checklist-de-entrega">8) Checklist de entrega<a class="headerlink" href="#8-checklist-de-entrega" title="Permanent link">¶</a></h2>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/ngrok/image-8.png" data-desc-position="bottom"><img alt="Server Run" src="../assets/ngrok/image-8.png"></a></p>
+<blockquote>
+<p>Asegúrate de que tu servidor local esté corriendo antes de exponerlo con ngrok.</p>
+</blockquote>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/ngrok/image-9.png" data-desc-position="bottom"><img alt="UI client - API" src="../assets/ngrok/image-9.png"></a></p>
+<blockquote>
+<p>Pero hasta ahora no hemos expuesto nuestra aplicación a Internet, por ahora nuestra aplicación sigue siendo local, para eso usaremos ngrok.</p>
+</blockquote>
+<h3 id="4-exponer-el-servidor-local">4. Exponer el servidor local<a class="headerlink" href="#4-exponer-el-servidor-local" title="Permanent link">¶</a></h3>
 <ul>
-<li>Enlace a tu <strong>Pull Request</strong> en GitHub.</li>
-<li>(Opcional) captura de pantalla mostrando el archivo modificado.</li>
-<li>
-<p>Verifica que tu PR tenga:</p>
-</li>
-<li>
-<p>título claro,</p>
-</li>
-<li>descripción breve,</li>
-<li>al menos un commit.</li>
+<li>Abre tu terminal y ejecuta:
+  <pre class="highlight"><code class="language-bash">ngrok http 8080</code></pre></li>
+<li>ngrok creará un túnel seguro y te dará una <strong>URL pública</strong> (ej. <code>https://abcd1234.ngrok.io</code>).</li>
 </ul>
-<hr>
-<h2 id="9-errores-comunes-y-soluciones">9) Errores comunes y soluciones<a class="headerlink" href="#9-errores-comunes-y-soluciones" title="Permanent link">¶</a></h2>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/ngrok/image-10.png" data-desc-position="bottom"><img alt="Ngrok Expose" src="../assets/ngrok/image-10.png"></a></p>
+<blockquote>
+<p>Ahora ngrok está corriendo y exponiendo tu servidor local a Internet.</p>
+</blockquote>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/ngrok/image-11.png" data-desc-position="bottom"><img alt="Public URL" src="../assets/ngrok/image-11.png"></a></p>
+<blockquote>
+<p>Copia la URL pública que ngrok te proporciona, esta se encuentra en la sección <code>Forwarding</code>.</p>
+</blockquote>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/ngrok/image-12.png" data-desc-position="bottom"><img alt="Warning Window" src="../assets/ngrok/image-12.png"></a></p>
+<blockquote>
+<p>Al ingresar a la URL pública en un navegador, veras un mensaje de advertencia de seguridad, esto es normal ya que ngrok usa un certificado SSL autofirmado, solo debes aceptar el riesgo haciendo clic en <code>Visit Site</code>.
+Ten en cuenta que la URL pública cambiará cada vez que inicies ngrok, a menos que uses un plan de pago con subdominios personalizados.</p>
+</blockquote>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/ngrok/image-13.png" data-desc-position="bottom"><img alt="All access" src="../assets/ngrok/image-13.png"></a></p>
+<blockquote>
+<p>ya podemos acceder a nuestra aplicación local desde cualquier parte del mundo usando la URL pública que ngrok nos proporciona, tambien puedes navegar por las diferentes rutas de tu aplicación.</p>
+</blockquote>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/ngrok/image-14.png" data-desc-position="bottom"><img alt="UI api rest - ngrok" src="../assets/ngrok/image-14.png"></a></p>
+<h3 id="4-compartir-y-probar">4. Compartir y probar<a class="headerlink" href="#4-compartir-y-probar" title="Permanent link">¶</a></h3>
 <ul>
-<li><strong>Olvidé crear una rama y trabajé en <code>main</code>:</strong></li>
+<li>Usa esa URL para compartir tu aplicación con clientes, compañeros o para recibir webhooks.</li>
+<li>Cada petición que llegue a la URL pública será redirigida a tu servidor local.</li>
+<li>Prueba accediendo a la URL desde otro dispositivo o compartiéndola con alguien más.
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/ngrok/image-15.png" data-desc-position="bottom"><img alt="Access from another device" src="../assets/ngrok/image-15.png"></a></li>
 </ul>
-<pre class="highlight"><code class="language-bash">git checkout -b feat/mi-cambio
-git push -u origin feat/mi-cambio</code></pre>
-<p>Luego abre el PR con esa rama.</p>
-<ul>
-<li><strong>Mi push no aparece en el PR:</strong>
-  Asegúrate de haber hecho <code>push</code> a la <strong>misma rama</strong> que usaste en el PR.</li>
-</ul>
-<hr>
-<h2 id="rubrica-sugerida-20-pts">Rubrica sugerida (20 pts)<a class="headerlink" href="#rubrica-sugerida-20-pts" title="Permanent link">¶</a></h2>
-<ul>
-<li>Repo creado y clonado — <strong>3 pts</strong></li>
-<li>Rama creada con nombre apropiado — <strong>3 pts</strong></li>
-<li>Commit(s) con mensaje claro — <strong>4 pts</strong></li>
-<li>Rama subida y PR creado — <strong>6 pts</strong></li>
-<li>Enlace al PR entregado y PR con descripción adecuada — <strong>2 pts</strong></li>
-<li>Manejo básico de conflictos (si aplica) — <strong>2 pts</strong></li>
-</ul></div>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/ngrok/image-16.png" data-desc-position="bottom"><img alt="API access from another device" src="../assets/ngrok/image-16.png"></a></p>
+<hr></div>
             </div>
         </div>
 
