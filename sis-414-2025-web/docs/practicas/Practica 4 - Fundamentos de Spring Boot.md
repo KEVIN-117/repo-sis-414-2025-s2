@@ -19,9 +19,8 @@ authors: ["kevin-117"]
 - Configurar un entorno de desarrollo para proyectos Spring Boot.
 - Desarrollar una aplicación sencilla utilizando las características principales de Spring Boot.
 - Familiarizarse con las herramientas necesarias para el desarrollo moderno en Java.
-  
-!!! TIP "💁‍♂️ Uno de los principales objetivos es:" 
-    - Fomentar la practica del aprendisaje autonomo y el uso de recursos en línea es decir `aprender` a `aprender` siguiendo el concepto de aprendizaje `autodidacta`.
+
+!!! TIP "💁‍♂️ Uno de los principales objetivos es:" - Fomentar la practica del aprendisaje autonomo y el uso de recursos en línea es decir `aprender` a `aprender` siguiendo el concepto de aprendizaje `autodidacta`.
 
 ---
 
@@ -60,15 +59,16 @@ authors: ["kevin-117"]
   - Rama `ejercicio-2` para el Ejercicio 2: Mini-ORM con Spring Boot es decir la segunda parte de la practica.
 
 ## Criterios de evaluación
+
 - Primer ejercicio (Mini-ORM en Java sin Spring Boot): 60%
   - Estructura del proyecto: 5%
   - Implementación de las anotaciones personalizadas: 5%
   - Toda la implementación: 10%
-  - Evaluación primera parte del servicio: 40% 
+  - Evaluación primera parte del servicio: 40%
 - Segundo ejercicio (Mini-ORM con Spring Boot): 40%
 
 !!! warning "💁‍♂️ Tome en cuneta lo siguiente:"  
-    POR CADA VEZ QUE NO CUPLE LAS INTRUCCIONES DE LA PRACTICA, SE LE RESTARAN PUNTOS EXACTAMENTE 5 PUNTOS.
+ POR CADA VEZ QUE NO CUPLE LAS INTRUCCIONES DE LA PRACTICA, SE LE RESTARAN PUNTOS EXACTAMENTE 5 PUNTOS.
 
 ## Ejercicios
 
@@ -185,10 +185,12 @@ Que son las anotaciones?
 Es una forma de agregar metadatos a nuestro código, que luego pueden ser procesados en tiempo de compilación o en tiempo de ejecución. En este caso, usaremos anotaciones para marcar nuestras clases y campos con información relevante para el mapeo ORM.
 
 En esta seccion estaremos creando las anotaciones personalizadas que usaremos para mapear nuestras entidades.
+
 - Cree la carpeta `annotations` dentro de `com.miniorm` si no existe.
 - Dentro de `annotations`, cree los siguientes archivos:
 
 1. `Entity.java`
+
 ```java
 package com.miniorm.annotations;
 
@@ -208,8 +210,8 @@ public @interface Entity {
     - `public @interface Entity`: Define una nueva anotación llamada `Entity`.
     - `String tableName()`: Declara un elemento obligatorio `tableName` que debe proporcionarse al usar la anotación.
 
-
 2. `Column.java`
+
 ```java
 package com.miniorm.annotations;
 
@@ -224,9 +226,10 @@ public @interface Column {
 
 3. `Id.java`
 
-    Ahora es tu turno, crea el archivo `Id.java` dentro de la carpeta `annotations` siguiendo el mismo formato que las anteriores. Recuerda que esta anotación se aplicará a campos (atributos) y no a clases.
+   Ahora es tu turno, crea el archivo `Id.java` dentro de la carpeta `annotations` siguiendo el mismo formato que las anteriores. Recuerda que esta anotación se aplicará a campos (atributos) y no a clases.
 
 4. `GeneratedValue.java`
+
 ```java
 package com.miniorm.annotations;
 
@@ -246,6 +249,7 @@ public @interface GeneratedValue {
     Dentro de `enums`, cree el siguiente archivo:
 
 5. `GenerationType.java`
+
 ```java
 package com.miniorm.enums;
 
@@ -266,9 +270,12 @@ Que son las entidades del dominio (modelos)?
 Son las clases que representan los datos que manejaremos en nuestra aplicación. Cada entidad corresponde a una tabla en la base de datos y sus atributos corresponden a las columnas de esa tabla.
 
 En esta seccion estaremos creando las entidades del dominio que usaremos en nuestra aplicacion.
+
 - Cree la carpeta `models` dentro de `com.miniorm` si no existe.
 - Dentro de `models`, cree los siguientes archivos:
+
 1. `User.java`
+
 ```java
 package com.miniorm.models;
 
@@ -316,21 +323,38 @@ public class User {
 
 ```
 
-!!! warning "⚠️ Investigue como funcionan las relaciones entre entidades en JPA y como se implementan en Spring Data JPA"
-    - Trata de implementar una relación entre dos entidades, por ejemplo, un `Estudiante` puede estar inscrito en muchos `Course` y un `Course` puede tener muchos `Estudiante` (relación muchos a muchos).
-    - Investiga las anotaciones `@OneToMany`, `@ManyToOne`, `@ManyToMany` y `@OneToOne` y trata de replicarlas e implementarlas en el proyecto.
+!!! warning "⚠️ Investigue como funcionan las relaciones entre entidades en JPA y como se implementan en Spring Data JPA" - Trata de implementar una relación entre dos entidades, por ejemplo, un `Estudiante` puede estar inscrito en muchos `Course` y un `Course` puede tener muchos `Estudiante` (relación muchos a muchos). - Investiga las anotaciones `@OneToMany`, `@ManyToOne`, `@ManyToMany` y `@OneToOne` y trata de replicarlas e implementarlas en el proyecto.
 
 Me gustaria que investiguee acerca de como funciona esta clase, para ello le dejo las siguientes preguntas que le ayudaran a entender el codigo:
 
 1. ¿Qué hace la anotación `@Entity` y qué significa el atributo `tableName`?
+
+- La anotación `@Entity` indica que la clase es una entidad JPA y se mapeará a una tabla en la base de datos. El atributo `tableName` especifica el nombre de la tabla en la base de datos a la que se mapeará esta entidad, en este caso, la tabla se llamará "users".
+
 2. ¿Cuál es el propósito de la anotación `@Id` y cómo se usa en esta clase?
+
+- La anotación `@Id` se utiliza para marcar el campo que actuará como la clave primaria de la entidad. En esta clase, el campo `id` está anotado con `@Id`, lo que significa que será el identificador único para cada instancia de la entidad `User` en la base de datos.
+
 3. ¿Qué hace la anotación `@GeneratedValue` y qué significa el atributo `strategy`?
+
+- La anotación `@GeneratedValue` indica que el valor del campo anotado será generado automáticamente por el sistema. El atributo `strategy` especifica la estrategia de generación del valor. En este caso, se utiliza `GenerationType.UUID`, lo que significa que el valor del campo `id` será generado como un UUID (Identificador Universalmente Único) automáticamente cuando se cree una nueva instancia de `User`.
+
 4. ¿Cómo se usan las anotaciones `@Column` y qué información proporcionan?
+
+- La anotación `@Column` se utiliza para mapear un campo de la clase a una columna específica en la tabla de la base de datos. Proporciona información sobre el nombre de la columna en la base de datos mediante el atributo `name`. Por ejemplo, el campo `name` está mapeado a la columna "name" en la tabla "users".
+
 5. ¿Qué papel juegan las anotaciones de Lombok (`@NoArgsConstructor`, `@AllArgsConstructor`, `@Getter`, `@Setter`) en esta clase?
+
+- Las anotaciones de Lombok simplifican la generación de código repetitivo (boilerplate) en la clase: - `@NoArgsConstructor` genera un constructor sin argumentos. - `@AllArgsConstructor` genera un constructor con todos los argumentos. - `@Getter` genera métodos getter para todos los campos. - `@Setter` genera métodos setter para todos los campos.
+  Esto reduce la cantidad de código boilerplate que el desarrollador tiene que escribir manualmente.
+
 6. ¿Qué tipo de datos se utilizan para los atributos `id`, `createdAt` y `updatedAt`, y por qué son apropiados para esos campos?
+
+- El atributo `id` utiliza el tipo de datos `UUID`, que es apropiado para claves primarias porque proporciona un identificador único y difícil de predecir, lo que es útil en sistemas distribuidos. Los atributos `createdAt` y `updatedAt` utilizan el tipo de datos `LocalDateTime`, que es adecuado para almacenar marcas de tiempo sin zona horaria, permitiendo registrar cuándo se creó y actualizó la entidad respectivamente.
+
 7. ¿Cómo funciona el método `toString` y qué información devuelve sobre la instancia de `User`, y qué ventajas tiene usar `String.format` en este contexto?
 
-
+- El método `toString` devuelve una representación en forma de cadena de la instancia de `User`, mostrando los valores de sus atributos en un formato legible. Utiliza un bloque de texto multilínea (text block) para estructurar la salida de manera clara. La ventaja de usar `String.format` (o en este caso, el método `formatted` de Java 15+) es que permite insertar los valores de los atributos directamente en la cadena utilizando marcadores de posición (`%s`), lo que mejora la legibilidad y facilita el mantenimiento del código al separar la estructura del texto de los datos dinámicos.
 
 ## Paso 4: Creamos el repositorio base genérico
 
@@ -348,6 +372,7 @@ En esta seccion estaremos creando el repositorio base generico que usaremos en n
     - Dentro de `repository`, cree los siguientes archivos:
 
 1. `GenericRepository.java`
+
 ```java
 package com.miniorm.core;
 
@@ -381,8 +406,11 @@ Que es un repositorio In-Memory?
 Es una implementación de un repositorio que almacena los datos en la memoria del programa en lugar de una base de datos persistente. Esto es útil para pruebas, desarrollo rápido o aplicaciones simples donde no se requiere almacenamiento a largo plazo. Es decir, esta clase servira como una base de datos en memoria para almacenar nuestras entidades.
 
 En esta seccion estaremos creando el repositorio In-Memory que usaremos en nuestra aplicacion.
+
 - Dentro de la carpeta `core`, cree el siguiente archivo:
+
 1. `InMemoryRepository.java` y copie el siguiente codigo:
+
 ```java
 package com.miniorm.core;
 
@@ -475,7 +503,6 @@ public class InMemoryRepository <ID, T> implements GenericRepository<ID, T> {
 **Notas importantes:**
 
 - Aquí usamos reflexión para encontrar el campo anotado con `@Id` y asignar ids automáticos (secuencia simple).
-    
 - `ConcurrentHashMap` ofrece seguridad básica en concurrencia.
 
 **Preguntas para entender el código:**
@@ -483,19 +510,47 @@ public class InMemoryRepository <ID, T> implements GenericRepository<ID, T> {
 Ahora tu tarea es entender que es lo que hace este codigo, para ello te dejo una una serie de preguntas que te ayudaran a entender el codigo:
 
 1. ¿Qué hace la clase `InMemoryRepository` y qué interfaces implementa?
+
+- La clase `InMemoryRepository` es una implementación genérica de un repositorio que almacena entidades en memoria utilizando un mapa concurrente (`ConcurrentHashMap`). Implementa la interfaz `GenericRepository`, lo que significa que proporciona métodos para realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) sobre las entidades.
+
 2. ¿Cuál es el propósito del mapa `storage` y cómo se utiliza?
+
+- El mapa `storage` es una estructura de datos que almacena las entidades en memoria. La clave del mapa es el identificador de la entidad, y el valor es una lista de mapas que contienen pares de identificador y entidad. Este mapa se utiliza para guardar, buscar, actualizar y eliminar entidades en memoria.
+
 3. ¿Cómo se genera un ID único para las entidades si no se proporciona uno?
+
+- Si no se proporciona un ID al guardar una entidad (es decir, si el ID es nulo o cero), se genera un ID único utilizando un `AtomicInteger` llamado `sequence`. Este entero se incrementa automáticamente cada vez que se guarda una nueva entidad sin ID, asegurando que cada entidad tenga un identificador único.
+
 4. ¿Qué hace el método `getId` y cómo accede al campo ID de una entidad?
+
+- El método `getId` utiliza reflexión para acceder al campo anotado con `@Id` en la entidad. Intenta obtener el valor del campo ID de la entidad pasada como argumento y lo devuelve. Si no puede acceder al campo debido a restricciones de acceso, lanza una excepción.
+
 5. ¿Cómo funciona el método `save` y qué hace si el ID es nulo o cero?
+
+- El método `save` guarda una entidad en el repositorio. Si el ID proporcionado es nulo o cero, genera un ID único utilizando la secuencia. Luego, verifica si ya existe una entrada en el mapa `storage` para el ID de la entidad; si no existe, crea una nueva lista para ese ID. Finalmente, agrega la entidad al mapa bajo su ID correspondiente y devuelve la entidad guardada.
+
 6. ¿Qué hace el método `findById` y cómo busca una entidad por su ID?
+
+- El método `findById` busca una entidad en el repositorio utilizando su ID. Toma el ID y un objeto como parámetros. Busca en el mapa `storage` la lista de mapas asociada al ID proporcionado, luego itera sobre esa lista para encontrar y devolver la entidad correspondiente al ID.
+
 7. ¿Cómo funciona el método `findAll` y qué devuelve?
+
+- El método `findAll` recopila todas las entidades almacenadas en el repositorio y las devuelve como una lista de mapas. Itera sobre todas las listas de mapas en el mapa `storage`, agregando cada mapa a una lista final que se devuelve al final del método.
+
 8. ¿Qué hace el método `delete` y cómo elimina una entidad del almacenamiento?
+
+- El método `delete` elimina una entidad del repositorio utilizando su ID y la entidad misma. Intenta eliminar la entrada correspondiente en el mapa `storage` y devuelve un booleano que indica si la eliminación fue exitosa (es decir, si la entidad existía y fue eliminada).
+
 9. ¿Cómo funciona el método `update` y qué hace si la entidad no existe en el almacenamiento?
+
+- El método `update` actualiza una entidad existente en el repositorio utilizando su ID. Intenta reemplazar la lista de mapas asociada al ID de la entidad con una nueva lista que contiene la entidad actualizada. Si la entidad existía y fue actualizada, devuelve la entidad; de lo contrario, devuelve nulo.
 
 ## 6: Implementamos el `EntityManager` (capa de orquestación)
 
 Dentro del paquete `com.miniorm.core` es decir dentro de la carpeta `core`, cree el siguiente archivo:
+
 1. `EntityManager.java` y copie el siguiente codigo:
+
 ```java
 package com.miniorm.core;
 
@@ -511,14 +566,31 @@ public class EntityManager {
 **Preguntas para entender el código:**
 
 1. ¿Qué hace el método `getRepository` y qué parámetros recibe?
+
+- El método `getRepository` es un método genérico que recibe como parámetro una clase (`Class<T> clazz`) y devuelve una instancia de `GenericRepository<ID, T>`. Este método crea y devuelve un nuevo repositorio en memoria (`InMemoryRepository`) para la clase proporcionada.
+
 2. ¿Qué tipo de repositorio devuelve y cómo se instancia?
+
+- Devuelve un repositorio genérico (`GenericRepository<ID, T>`) que es una instancia de `InMemoryRepository<ID, T>`. Se instancia pasando la clase proporcionada (`clazz`) al constructor de `InMemoryRepository`.
+
 3. ¿Cómo se utiliza el `EntityManager` en la arquitectura general del proyecto?
+
+- El `EntityManager` actúa como una capa de orquestación que proporciona repositorios a la capa de servicio. Permite a los servicios obtener repositorios específicos para las entidades sin preocuparse por los detalles de implementación del repositorio. Esto facilita la gestión de la persistencia y permite cambiar la estrategia de almacenamiento (por ejemplo, cambiar de un repositorio en memoria a uno basado en una base de datos) sin afectar la lógica de negocio.
+
 4. ¿Qué ventajas ofrece tener un `EntityManager` en lugar de instanciar repositorios directamente en los servicios?
+
+- Tener un `EntityManager` ofrece varias ventajas:
+  - **Abstracción:** Los servicios no necesitan conocer los detalles de implementación de los repositorios, lo que reduce el acoplamiento entre capas.
+  - **Flexibilidad:** Permite cambiar la estrategia de persistencia (por ejemplo, cambiar a una base de datos real) sin modificar la lógica de negocio en los servicios.
+  - **Centralización:** Proporciona un punto único para gestionar la creación y configuración de repositorios, facilitando el mantenimiento y la evolución del código.
+  - **Reutilización:** Facilita la reutilización del código al permitir que múltiples servicios compartan la misma lógica para obtener repositorios.
 
 ## 7: Implementamos la capa de servicio (lógica de negocio)
 
 Dentro de la carpeta `service`, cree el siguiente archivo:
+
 1. `UserService.java` y copie el siguiente codigo:
+
 ```java
 package com.miniorm.service;
 
@@ -572,15 +644,47 @@ public class UserService {
 **Preguntas para entender el código:**
 
 1. ¿Cuál es la responsabilidad principal de la clase `UserService`?
+
+- La responsabilidad principal de la clase `UserService` es manejar la lógica de negocio relacionada con la entidad `User`. Proporciona métodos para crear, obtener, actualizar, eliminar y listar usuarios, utilizando un repositorio genérico para interactuar con la capa de persistencia.
+
 2. ¿Cómo se inyecta el repositorio en el servicio y por qué es importante?
+
+- El repositorio se inyecta en el servicio a través del constructor de la clase `UserService`. Esto es importante porque permite la inversión de dependencias, lo que significa que el servicio no depende de una implementación concreta del repositorio. En su lugar, puede trabajar con cualquier implementación que cumpla con la interfaz `GenericRepository`, lo que mejora la flexibilidad y facilita las pruebas unitarias.
+
 3. ¿Qué hace el método `createUser` y cómo utiliza el DTO `RegisterUserDto`?
+
+- El método `createUser` crea una nueva instancia de `User` utilizando los datos proporcionados en el DTO `RegisterUserDto`. Asigna los valores del DTO a los atributos correspondientes del usuario, genera un UUID único para el ID del usuario, establece las marcas de tiempo de creación y actualización, y luego guarda el usuario en el repositorio utilizando el método `save`. Finalmente, devuelve la instancia del usuario creado.
+
 4. ¿Cómo funcionan los métodos `getUserById`, `updateUser`, `deleteUser` y `listAllUsers`?
+
+- `getUserById`: Busca un usuario en el repositorio por su ID utilizando el método `findById` del repositorio. Si el usuario no se encuentra, devuelve `null`.
+- `updateUser`: Actualiza un usuario existente en el repositorio utilizando el método `update` del repositorio y devuelve la instancia actualizada del usuario.
+- `deleteUser`: Elimina un usuario del repositorio utilizando el método `delete` del repositorio y devuelve un booleano que indica si la eliminación fue exitosa.
+- `listAllUsers`: Recupera todos los usuarios del repositorio utilizando el método `findAll` y los imprime en la consola.
+
 5. ¿Qué ventajas ofrece tener una capa de servicio separada de la capa de repositorio?
+
+- Tener una capa de servicio separada ofrece varias ventajas:
+  - **Separación de responsabilidades:** La capa de servicio se encarga de la lógica de negocio, mientras que la capa de repositorio se encarga de la persistencia de datos. Esto facilita el mantenimiento y la evolución del código.
+  - **Reutilización:** La lógica de negocio puede ser reutilizada en diferentes contextos sin depender de la implementación específica del repositorio.
+  - **Facilidad para pruebas unitarias:** La capa de servicio puede ser probada de manera aislada utilizando mocks o stubs para el repositorio, lo que facilita la detección y corrección de errores.
+  - **Flexibilidad:** Permite cambiar la implementación del repositorio (por ejemplo, cambiar a una base de datos real) sin afectar la lógica de negocio en la capa de servicio.
+
 6. ¿Cómo maneja el servicio la creación de IDs y las marcas de tiempo para los usuarios?
+
+- El servicio genera un ID único para cada usuario utilizando `UUID.randomUUID()` cuando se crea un nuevo usuario en el método `createUser`. Además, establece las marcas de tiempo de creación y actualización utilizando la clase `Timestamp` para obtener la hora actual y convertirla a `LocalDateTime`. Estas marcas de tiempo se asignan a los atributos `createdAt` y `updatedAt` del usuario antes de guardarlo en el repositorio.
+
 7. ¿Qué tipo de objeto devuelve el método `getUserById` si no encuentra un usuario con el ID proporcionado?
+
+- Si el método `getUserById` no encuentra un usuario con el ID proporcionado, devuelve `null`. Esto se debe a que utiliza el método `orElse(null)` en el resultado del repositorio, que devuelve `null` si el `Optional` está vacío (es decir, si no se encontró ningún usuario con ese ID).
+
 8. ¿Cómo se asegura el servicio de que los datos del usuario estén completos antes de guardarlos en el repositorio?
+
+- El servicio no realiza validaciones explícitas para asegurarse de que los datos del usuario estén completos antes de guardarlos en el repositorio. Sin embargo, se espera que el DTO `RegisterUserDto` proporcione todos los datos necesarios (nombre, correo electrónico y contraseña) al crear un nuevo usuario. Si se requiere una validación más estricta, se podrían agregar verificaciones adicionales en el método `createUser` para asegurarse de que los campos no estén vacíos o nulos antes de proceder con la creación del usuario.
+
 9. ¿Qué patrón de diseño se está utilizando al inyectar el repositorio en el servicio a través del constructor?
 
+- El patrón de diseño que se está utilizando al inyectar el repositorio en el servicio a través del constructor es el **Patrón de Inversión de Dependencias (Dependency Injection)**. Este patrón permite que las dependencias (en este caso, el repositorio) sean proporcionadas al objeto (el servicio) desde el exterior, en lugar de que el objeto cree o gestione sus propias dependencias. Esto mejora la modularidad, facilita las pruebas unitarias y permite una mayor flexibilidad en la elección de las implementaciones de las dependencias.
 
 Bien hasta este punto de seguro tendra algunos errores que, en especidifco en la funcion `createUser`, esto se debe a que estamos usando un DTO que aun no hemos creado, para ello cree la carpeta `dto` dentro de `com.miniorm` si no existe.
 
@@ -589,7 +693,9 @@ Pero ahora que demonios, que es un DTO?
 DTO significa "Data Transfer Object" (Objeto de Transferencia de Datos). Es un patrón de diseño utilizado para transferir datos entre diferentes capas o componentes de una aplicación, especialmente en aplicaciones distribuidas o basadas en servicios.
 
 Entonces cree el siguiente archivo dentro de la carpeta `dto`:
+
 1. `RegisterUserDto.java` y copie el siguiente codigo:
+
 ```java
 package com.miniorm.dto;
 
@@ -601,8 +707,11 @@ public record RegisterUserDto(String name, String email, String password) {}
 - `public record RegisterUserDto(String name, String email, String password) {}`: Define un `record` llamado `RegisterUserDto` con tres componentes: `name`, `email` y `password`. Estos componentes son inmutables y se inicializan a través del constructor generado automáticamente.
 
 ## 8: Implementamos la capa de presentación (CLI demo)
+
 Dentro de la carpeta `app`, cree el siguiente archivo:
+
 1. `Main.java` y copie el siguiente codigo:
+
 ```java
 package com.miniorm.app;
 
@@ -629,6 +738,7 @@ public class Main {
 ```
 
 Al ejecutar este código, debería ver en la consola la lista de usuarios creados, similar a la siguiente salida:
+
 ```java
 ID: c40b46d2-3436-407b-baa7-c0b25d61e3fb,
 User: User {
@@ -665,12 +775,12 @@ En esta sección usted deberá hacer lo siguiente:
 4. Modificar la clase `Main` para demostrar la creación, actualización, eliminación y listado de productos además de usuarios, se recomienda que lo hagas debajo de la línea `System.out.println("--- Products ---");`.
 5. Documentar el proyecto en el archivo `README.md`, explicando la arquitectura, cómo ejecutar la aplicación y cualquier otro detalle relevante.
 
-
 # Ejercicio 2: 🧭 Mini‑ORM con Spring Boot
 
 En este ejercicio usted debera replicar el ejercicio anterior pero usando Spring Boot, para ello le dejo los siguientes pasos a seguir:
-    
+
 1. Cree un nuevo proyecto Spring Boot usando Spring Initializr (https://start.spring.io/) con las siguientes dependencias:
+
    - Spring Web
    - Spring Data JPA
    - Simule una base de datos en memoria usando (Map, List, etc.) segun su criterio
@@ -683,4 +793,5 @@ En este ejercicio usted debera replicar el ejercicio anterior pero usando Spring
 6. Subir el proyecto a un repositorio de GitHub y compartir el enlace en classroom.
 
 # Conclusión
+
 En esta práctica, hemos explorado los fundamentos de Spring Boot y cómo construir una aplicación sencilla utilizando sus características principales. Hemos aprendido a configurar un entorno de desarrollo, crear un proyecto Spring Boot, y desarrollar una aplicación que incluye controladores, servicios y repositorios. Además, hemos visto cómo utilizar herramientas modernas como Lombok y Maven para mejorar nuestra productividad y gestionar dependencias de manera eficiente.

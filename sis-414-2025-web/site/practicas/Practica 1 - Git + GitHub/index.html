@@ -83,6 +83,10 @@
 </li>
                                     
 <li>
+    <a href="../../apuntes/NextJs/" class="dropdown-item">Introducción a Next.js - Las Bases</a>
+</li>
+                                    
+<li>
     <a href="../../apuntes/PETICIONES/" class="dropdown-item">Peticiones HTTP</a>
 </li>
                                     
@@ -114,6 +118,15 @@
                                     
 <li>
     <a href="../../laboratorios/Laboratorio%202/" class="dropdown-item">Laboratorio 2</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Planning</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../planning/planning/" class="dropdown-item">Planning</a>
 </li>
                                 </ul>
                             </li>
@@ -226,23 +239,8 @@ Conocer los conceptos básicos de Git y GitHub, entender su utilidad en el desar
 <li>EL enlace sera entregado en Clasroom</li>
 </ul>
 <hr>
-<div class="admonition danger">
-<p class="admonition-title">⚡ Tome en cuenta</p>
-<ul>
-<li>Se tomara mucho en cuenta respuestas claras.</li>
-<li>Las preguntas deben ser respondidas puntualmente.</li>
-</ul>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">💁‍♂️ Para realizar la parctica puede usar los siguientes recursos</p>
-<ul>
-<li><a href="https://git-scm.com/doc">Documentacion oficial de Git</a></li>
-<li><a href="https://kevin-117.github.io/repo-sis-414-2025-s2/apuntes/GitGitHub/">Git guia</a></li>
-<li><a href="https://www.w3schools.com/git/default.asp">Git Tutorial</a></li>
-<li><a href="https://github.com/git-guides">Git Guide GitHub</a></li>
-<li><a href="https://education.github.com/git-cheat-sheet-education.pdf">GIT CHEAT SHEET</a></li>
-</ul>
-</div>
+<p>!!! danger "⚡ Tome en cuenta" - Se tomara mucho en cuenta respuestas claras. - Las preguntas deben ser respondidas puntualmente.</p>
+<p>!!! tip "💁‍♂️ Para realizar la parctica puede usar los siguientes recursos" - <a href="https://git-scm.com/doc">Documentacion oficial de Git</a> - <a href="https://kevin-117.github.io/repo-sis-414-2025-s2/apuntes/GitGitHub/">Git guia</a> - <a href="https://www.w3schools.com/git/default.asp">Git Tutorial</a> - <a href="https://github.com/git-guides">Git Guide GitHub</a> - <a href="https://education.github.com/git-cheat-sheet-education.pdf">GIT CHEAT SHEET</a></p>
 <hr>
 <h2 id="criterios-de-evaluacion">📊 Criterios de Evaluación<a class="headerlink" href="#criterios-de-evaluacion" title="Permanent link">¶</a></h2>
 <table>
@@ -284,26 +282,80 @@ Conocer los conceptos básicos de Git y GitHub, entender su utilidad en el desar
 <h3 id="parte-i-investigacion-50"><strong>Parte I – Investigación (50%)</strong><a class="headerlink" href="#parte-i-investigacion-50" title="Permanent link">¶</a></h3>
 <p>En un documento escrito (máx. 2 páginas), responde las siguientes preguntas:</p>
 <ol>
-<li>¿Qué es Git y para qué se utiliza?</li>
-<li>¿Qué diferencia hay entre Git y GitHub?</li>
-<li>Explica en tus palabras qué es un <em>repositorio</em>.</li>
-<li>¿Qué significa hacer un <em>commit</em> en Git?</li>
-<li>Investiga y explica brevemente los siguientes comandos de Git:<ul>
-<li><code>git config --local user.name "&lt;GitHub user name&gt;"</code></li>
-<li><code>git config --local user.email "&lt;GitHub email&gt;"</code></li>
-<li><code>git init</code></li>
-<li><code>git add</code></li>
-<li><code>git commit</code></li>
-<li><code>git push</code></li>
-<li><code>git clone</code></li>
-<li><code>git init --initial-branch=main</code></li>
-<li><code>git remote add origin https://github.com/&lt;user-name&gt;/tarea-git-github.git</code></li>
-<li><code>git add .</code></li>
-<li><code>git commit -m "Initial commit"</code></li>
-<li><code>git push --set-upstream origin main</code></li>
-</ul>
+<li>
+<p>¿Qué es Git y para qué se utiliza?</p>
 </li>
-<li>¿Qué es un archivo <code>README.md</code> y por qué es importante?</li>
+<li>
+<p><strong>Git</strong> es un sistema de control de versiones distribuido que permite a los desarrolladores rastrear cambios en el código fuente durante el desarrollo de software. Se utiliza para gestionar proyectos de software, facilitando la colaboración entre múltiples desarrolladores, permitiendo revertir cambios, y manteniendo un historial detallado de las modificaciones realizadas en los archivos del proyecto.</p>
+</li>
+<li>
+<p><strong>¿Para qué se utiliza?</strong> Git se utiliza para:</p>
+</li>
+<li>
+<p>Controlar versiones del código fuente.</p>
+</li>
+<li>Facilitar la colaboración entre desarrolladores.</li>
+<li>Mantener un historial de cambios.</li>
+<li>Permitir la creación de ramas para desarrollar nuevas características sin afectar la versión principal del proyecto.</li>
+<li>
+<p>Facilitar la integración y despliegue continuo en proyectos de software.</p>
+</li>
+<li>
+<p><strong>GitHub</strong> es una plataforma de alojamiento de código fuente basada en la web que utiliza Git como sistema de control de versiones. Proporciona una interfaz gráfica y herramientas adicionales para facilitar la colaboración, revisión de código, gestión de proyectos y despliegue de aplicaciones.</p>
+</li>
+<li>
+<p><strong>¿Para qué se utiliza?</strong> GitHub se utiliza para:</p>
+</li>
+<li>Alojar repositorios de código fuente.</li>
+<li>Facilitar la colaboración entre desarrolladores a través de pull requests y revisiones de código.</li>
+<li>Gestionar proyectos mediante issues, tableros Kanban y wikis.</li>
+<li>Integrar con herramientas de CI/CD para automatizar pruebas y despliegues.</li>
+<li>
+<p>Compartir código y proyectos con la comunidad de desarrolladores.</p>
+</li>
+<li>
+<p>¿Qué diferencia hay entre Git y GitHub?</p>
+</li>
+<li>
+<p><strong>Diferencia entre Git y GitHub:</strong></p>
+</li>
+<li><strong>Git</strong> es un sistema de control de versiones que se utiliza localmente en la computadora del desarrollador para rastrear cambios en el código fuente.</li>
+<li>
+<p><strong>GitHub</strong> es una plataforma en línea que aloja repositorios Git y proporciona herramientas adicionales para la colaboración, gestión de proyectos y revisión de código. En resumen, Git es la herramienta de control de versiones, mientras que GitHub es un servicio que utiliza Git para facilitar la colaboración y el alojamiento de código.</p>
+</li>
+<li>
+<p>Explica en tus palabras qué es un <em>repositorio</em>.</p>
+</li>
+<li>
+<p>Un <em>repositorio</em> es un espacio donde se almacena y gestiona el código fuente de un proyecto. En Git, un repositorio contiene todos los archivos del proyecto, así como el historial de cambios realizados en esos archivos. Los repositorios pueden ser locales (en la computadora del desarrollador) o remotos (en plataformas como GitHub), y permiten a los desarrolladores colaborar, rastrear modificaciones y mantener versiones del código de manera organizada.</p>
+</li>
+<li>
+<p>¿Qué significa hacer un <em>commit</em> en Git?</p>
+</li>
+<li>
+<p>Hacer un <em>commit</em> en Git significa guardar un conjunto de cambios realizados en los archivos del proyecto en el historial de versiones del repositorio. Un commit actúa como un punto de control que registra el estado actual del código, junto con un mensaje descriptivo que explica qué cambios se hicieron y por qué. Esto permite a los desarrolladores rastrear la evolución del proyecto, revertir cambios si es necesario y colaborar de manera efectiva con otros miembros del equipo.</p>
+</li>
+<li>
+<p>Investiga y explica brevemente los siguientes comandos de Git:</p>
+</li>
+<li><code>git config --local user.name "&lt;GitHub user name&gt;"</code>: Configura el nombre de usuario que se asociará con los commits realizados en el repositorio local. Este nombre aparecerá en el historial de commits para identificar al autor de los cambios.</li>
+<li><code>git config --local user.email "&lt;GitHub email&gt;"</code>: Configura la dirección de correo electrónico que se asociará con los commits realizados en el repositorio local. Al igual que el nombre de usuario, este correo electrónico aparecerá en el historial de commits para identificar al autor.</li>
+<li><code>git init</code>: Inicializa un nuevo repositorio Git en el directorio actual. Crea una carpeta oculta llamada <code>.git</code> que contiene todos los archivos necesarios para rastrear los cambios en el proyecto.</li>
+<li><code>git add</code>: Agrega archivos específicos o todos los archivos modificados al área de preparación (staging area) para que estén listos para ser incluidos en el próximo commit. Por ejemplo, <code>git add .</code> agrega todos los archivos modificados en el directorio actual.</li>
+<li><code>git commit</code>: Crea un nuevo commit que guarda los cambios agregados al área de preparación. Se debe proporcionar un mensaje descriptivo que explique los cambios realizados, por ejemplo, <code>git commit -m "Mensaje del commit"</code>.</li>
+<li><code>git push</code>: Sube los commits locales al repositorio remoto en GitHub. Este comando actualiza el repositorio remoto con los cambios realizados localmente, permitiendo que otros colaboradores accedan a la versión más reciente del código.</li>
+<li><code>git clone</code>: Clona un repositorio remoto desde GitHub (u otra plataforma) a la computadora local. Crea una copia completa del repositorio, incluyendo todo su historial de cambios, permitiendo al desarrollador trabajar en el proyecto de manera local.</li>
+<li><code>git init --initial-branch=main</code>: Inicializa un nuevo repositorio Git en el directorio actual y establece la rama principal con el nombre <code>main</code> en lugar de <code>master</code>.</li>
+<li><code>git remote add origin https://github.com/&lt;user-name&gt;/tarea-git-github.git</code>: Agrega un repositorio remoto llamado <code>origin</code> que apunta a la URL especificada en GitHub. Esto permite que el repositorio local se conecte con el repositorio remoto para subir y descargar cambios.</li>
+<li><code>git add .</code>: Agrega todos los archivos modificados en el directorio actual al área de preparación (staging area) para que estén listos para ser incluidos en el próximo commit.</li>
+<li><code>git commit -m "Initial commit"</code>: Crea un nuevo commit con el mensaje "Initial commit" que guarda todos los cambios agregados al área de preparación.</li>
+<li><code>git push --set-upstream origin main</code>: Sube los commits locales a la rama <code>main</code> del repositorio remoto llamado <code>origin</code> y establece esta rama como la rama predeterminada para futuros pushes.</li>
+<li>
+<p>¿Qué es un archivo <code>README.md</code> y por qué es importante?</p>
+</li>
+<li>
+<p>Un archivo <code>README.md</code> es un documento escrito en formato Markdown que se encuentra en la raíz de un repositorio de código fuente. Su propósito principal es proporcionar información esencial sobre el proyecto, incluyendo una descripción general, instrucciones de instalación, uso, contribución y cualquier otra información relevante para los usuarios y desarrolladores que interactúan con el proyecto.</p>
+</li>
 </ol>
 <hr>
 <h3 id="parte-ii-practica-50"><strong>Parte II – Práctica (50%)</strong><a class="headerlink" href="#parte-ii-practica-50" title="Permanent link">¶</a></h3>
@@ -315,9 +367,10 @@ Conocer los conceptos básicos de Git y GitHub, entender su utilidad en el desar
 <p>Llama al repositorio <code>tarea-git-github</code>.</p>
 </li>
 <li>Agrega un <code>README.md</code> con tu nombre y una breve descripción (ejemplo: "Este es mi primer repositorio en GitHub").</li>
-<li>
-<p>Agrega el archivo (<code>investigacion.md</code>) con las respuestas a las preguntas</p>
-</li>
+<li>Agrega el archivo (<code>investigacion.md</code>) con las respuestas a las preguntas</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="image-19.png" data-desc-position="bottom"><img alt="Create Repo" src="image-19.png"></a></p>
+<ol>
 <li>
 <p><strong>Trabajo local con Git (20 pts):</strong></p>
 </li>
