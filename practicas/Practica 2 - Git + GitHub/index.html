@@ -122,6 +122,15 @@
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Planning</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../planning/planning/" class="dropdown-item">Planning</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown" aria-expanded="false">Practicas</a>
                                 <ul class="dropdown-menu">
                                     
@@ -234,24 +243,8 @@ Profundizar en el uso de Git y GitHub comprendiendo conceptos como ramas, fusion
 <li>EL enlace sera entregado en Clasroom</li>
 </ul>
 <hr>
-<div class="admonition danger">
-<p class="admonition-title">⚡ Tome en cuenta</p>
-<ul>
-<li>Se tomara mucho en cuenta respuestas claras.</li>
-<li>Las preguntas deben ser respondidas puntualmente.</li>
-</ul>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">💁‍♂️ Para realizar la parctica puede usar los siguientes recursos</p>
-<ul>
-<li><a href="https://git-scm.com/doc">Documentacion oficial de Git</a></li>
-<li><a href="https://kevin-117.github.io/repo-sis-414-2025-s2/apuntes/GitGitHub/">Git guia</a></li>
-<li><a href="https://www.w3schools.com/git/default.asp">Git Tutorial</a></li>
-<li><a href="https://github.com/git-guides">Git Guide GitHub</a></li>
-<li><a href="https://education.github.com/git-cheat-sheet-education.pdf">GIT CHEAT SHEET</a></li>
-<li><a href="https://kevin-117.github.io/repo-sis-414-2025-s2/guides/PullRequest/">Guia para Crear un Pull Request (PR)</a></li>
-</ul>
-</div>
+<p>!!! danger "⚡ Tome en cuenta" - Se tomara mucho en cuenta respuestas claras. - Las preguntas deben ser respondidas puntualmente.</p>
+<p>!!! tip "💁‍♂️ Para realizar la parctica puede usar los siguientes recursos" - <a href="https://git-scm.com/doc">Documentacion oficial de Git</a> - <a href="https://kevin-117.github.io/repo-sis-414-2025-s2/apuntes/GitGitHub/">Git guia</a> - <a href="https://www.w3schools.com/git/default.asp">Git Tutorial</a> - <a href="https://github.com/git-guides">Git Guide GitHub</a> - <a href="https://education.github.com/git-cheat-sheet-education.pdf">GIT CHEAT SHEET</a> - <a href="https://kevin-117.github.io/repo-sis-414-2025-s2/guides/PullRequest/">Guia para Crear un Pull Request (PR)</a></p>
 <hr>
 <h2 id="criterios-de-evaluacion">📊 Criterios de Evaluación<a class="headerlink" href="#criterios-de-evaluacion" title="Permanent link">¶</a></h2>
 <table>
@@ -295,12 +288,56 @@ Profundizar en el uso de Git y GitHub comprendiendo conceptos como ramas, fusion
 <hr>
 <h2 id="parte-i-investigacion-40">📝 Parte I – Investigación (40%)<a class="headerlink" href="#parte-i-investigacion-40" title="Permanent link">¶</a></h2>
 <ol>
-<li>¿Qué es una <strong>rama (branch)</strong> en Git y para qué se utiliza?</li>
-<li>Explica con tus palabras qué significa hacer un <strong>merge</strong>.</li>
-<li>¿Qué es un <strong>conflicto de fusión (merge conflict)</strong> y cómo se puede resolver?</li>
-<li>Diferencia entre <strong>fork</strong> y <strong>clone</strong> en GitHub.</li>
-<li>¿Qué es un <strong>pull request</strong> y para qué se usa en proyectos colaborativos?</li>
-<li>Investiga y explica <strong>3 buenas prácticas</strong> para colaborar en equipo usando GitHub.</li>
+<li>
+<p>¿Qué es una <strong>rama (branch)</strong> en Git y para qué se utiliza?</p>
+</li>
+<li>
+<p>Una <strong>rama (branch)</strong> en Git es una línea independiente de desarrollo dentro de un repositorio. Permite a los desarrolladores trabajar en diferentes características, correcciones de errores o experimentos sin afectar la rama principal (generalmente llamada <code>main</code> o <code>master</code>). Las ramas facilitan la colaboración y el manejo de múltiples versiones del código simultáneamente, permitiendo que los cambios se integren (fusionen) cuando estén listos y probados.</p>
+</li>
+<li>
+<p>Explica con tus palabras qué significa hacer un <strong>merge</strong>.</p>
+</li>
+<li>
+<p>Hacer un <strong>merge</strong> en Git significa combinar los cambios realizados en una rama con otra. Por lo general, se utiliza para integrar las modificaciones de una rama de desarrollo (por ejemplo, una nueva característica) en la rama principal del proyecto. Durante el proceso de fusión, Git intenta automáticamente combinar los cambios, pero si hay modificaciones conflictivas en los mismos archivos, puede generar un conflicto que debe resolverse manualmente antes de completar la fusión.</p>
+</li>
+<li>
+<p>¿Qué es un <strong>conflicto de fusión (merge conflict)</strong> y cómo se puede resolver?</p>
+</li>
+<li>
+<p>Un <strong>conflicto de fusión (merge conflict)</strong> ocurre cuando Git no puede combinar automáticamente los cambios de dos ramas debido a modificaciones contradictorias en los mismos archivos o líneas de código. Esto suele suceder cuando dos desarrolladores editan la misma parte del código en diferentes ramas.</p>
+</li>
+</ol>
+<p>Para resolver un conflicto de fusión, se deben seguir estos pasos:</p>
+<ol>
+<li>Identificar los archivos en conflicto, que Git marcará durante el intento de fusión.</li>
+<li>Abrir los archivos afectados y buscar las secciones marcadas por Git, que indican las diferencias entre las ramas.</li>
+<li>Editar manualmente el archivo para decidir qué cambios conservar, eliminando las marcas de conflicto.</li>
+<li>
+<p>Una vez resueltos todos los conflictos, guardar los archivos y hacer un commit para completar la fusión.</p>
+</li>
+<li>
+<p>Diferencia entre <strong>fork</strong> y <strong>clone</strong> en GitHub.</p>
+</li>
+<li>
+<p>Un <strong>fork</strong> es una copia completa de un repositorio existente en GitHub que se crea bajo la cuenta de un usuario diferente. Permite a los usuarios experimentar con cambios sin afectar el proyecto original, facilitando la colaboración en proyectos de código abierto.</p>
+</li>
+<li>
+<p>Un <strong>clone</strong>, por otro lado, es una copia local de un repositorio (ya sea el original o un fork) que se descarga en la computadora del usuario. Clonar un repositorio permite trabajar en él de manera local, realizar cambios y luego sincronizarlos con el repositorio remoto en GitHub.</p>
+</li>
+<li>
+<p>¿Qué es un <strong>pull request</strong> y para qué se usa en proyectos colaborativos?</p>
+</li>
+<li>
+<p>Un <strong>pull request</strong> es una solicitud que un desarrollador hace para que sus cambios en una rama (generalmente en un fork o una rama de características) sean revisados e integrados en otra rama, típicamente la rama principal del proyecto. Se utiliza en proyectos colaborativos para facilitar la revisión de código, discusión y aprobación de cambios antes de que se fusionen en el repositorio principal. Los pull requests permiten a los mantenedores del proyecto evaluar las contribuciones, realizar comentarios y sugerir mejoras antes de aceptar los cambios.</p>
+</li>
+<li>
+<p>Investiga y explica <strong>3 buenas prácticas</strong> para colaborar en equipo usando GitHub.</p>
+</li>
+<li>
+<p><strong>Usar ramas para cada característica o corrección:</strong> Cada nueva característica o corrección de errores debe desarrollarse en una rama separada. Esto permite a los desarrolladores trabajar de manera independiente sin afectar la rama principal, facilitando la revisión y fusión de cambios.</p>
+</li>
+<li><strong>Escribir mensajes de commit claros y descriptivos:</strong> Los mensajes de commit deben ser concisos pero informativos, describiendo claramente qué cambios se realizaron y por qué. Esto facilita la comprensión del historial del proyecto y ayuda a otros colaboradores a seguir el progreso del desarrollo.</li>
+<li><strong>Realizar revisiones de código mediante pull requests:</strong> Antes de fusionar cambios en la rama principal, es importante crear pull requests para que otros miembros del equipo puedan revisar el código. Esto ayuda a identificar errores, mejorar la calidad del código y fomentar la colaboración y el aprendizaje entre los desarrolladores.</li>
 </ol>
 <hr>
 <h2 id="parte-ii-practica-60">🛠️ Parte II – Práctica (60%)<a class="headerlink" href="#parte-ii-practica-60" title="Permanent link">¶</a></h2>
